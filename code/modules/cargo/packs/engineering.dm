@@ -41,7 +41,7 @@
 
 /datum/supply_pack/engineering/inducers
 	name = "Electromagnetic Power Inducers Crate"
-	desc = "No rechargers? No problem, with the NT-75 EPI, you can recharge any standard cell-based equipment anytime, anywhere. Contains two Inducers."
+	desc = "No rechargers? No problem, with the RC-75 EPI, you can recharge any standard cell-based equipment anytime, anywhere. Contains two Inducers."
 	cost = 2300
 	contains = list(/obj/item/inducer/sci/supply, /obj/item/inducer/sci/supply)
 	crate_name = "inducer crate"
@@ -55,6 +55,20 @@
 					/obj/item/stock_parts/cell/high,
 					/obj/item/stock_parts/cell/high)
 	crate_name = "power cell crate"
+	crate_type = /obj/structure/closet/crate/engineering/electrical
+
+/datum/supply_pack/engineering/autolathe
+	name = "Workshop Construction Kit"
+	desc = "Looking to set up your very own workshop? Look no further! Contains a workshop circuit board, three matter bins, a manipulator and some metal and glass to get started. Cables not included."
+	cost = 100
+	contains = list(/obj/item/circuitboard/machine/autolathe/constructionlathe,
+					/obj/item/stock_parts/matter_bin,
+					/obj/item/stock_parts/matter_bin,
+					/obj/item/stock_parts/matter_bin,
+					/obj/item/stock_parts/manipulator,
+					/obj/item/stack/sheet/metal/five,
+					/obj/item/stack/sheet/glass/five)
+	crate_name = "workshop crate"
 	crate_type = /obj/structure/closet/crate/engineering/electrical
 
 /datum/supply_pack/engineering/tools
