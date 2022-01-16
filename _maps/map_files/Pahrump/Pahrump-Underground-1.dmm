@@ -1576,6 +1576,14 @@
 "aZk" = (
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
+"aZw" = (
+/obj/machinery/button{
+	id = "cargodoor";
+	name = "elevator door control";
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "aZR" = (
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -2595,6 +2603,13 @@
 /obj/item/storage/bag/trash,
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/dorms)
+"bEJ" = (
+/obj/machinery/door/airlock/grunge{
+	name = "trade station access";
+	req_one_access_txt = "34"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "bEV" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/ammo,
@@ -6308,6 +6323,12 @@
 /obj/structure/sink/well,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
+"dLa" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "dLl" = (
 /obj/machinery/telecomms/processor/preset_three,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
@@ -11079,6 +11100,15 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/bunker)
+"gyn" = (
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "shopladder"
+	},
+/turf/open/floor/f13{
+	icon_state = "neutralrustyfull"
+	},
+/area/f13/building)
 "gyp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/bench,
@@ -11437,6 +11467,15 @@
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random_high,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
+"gHz" = (
+/obj/machinery/door/airlock/grunge{
+	name = "store ladder access";
+	req_one_access_txt = "34"
+	},
+/turf/open/floor/f13{
+	icon_state = "neutralrustyfull"
+	},
+/area/f13/building)
 "gHA" = (
 /obj/structure/bed/old,
 /obj/structure/sign/poster/contraband/pinup_funk{
@@ -11490,6 +11529,11 @@
 	icon_state = "casino"
 	},
 /area/f13/brotherhood/rnd)
+"gIQ" = (
+/turf/open/floor/f13{
+	icon_state = "neutralrustyfull"
+	},
+/area/f13/building)
 "gJa" = (
 /obj/effect/mine/stun,
 /turf/open/floor/f13{
@@ -12823,6 +12867,16 @@
 /obj/effect/decal/cleanable/robot_debris/old,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"hFa" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	height = 7;
+	id = "supply_home";
+	name = "Cargo Train Station";
+	width = 5
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "hFt" = (
 /obj/structure/decoration/vent/rusty,
 /turf/closed/wall/r_wall/rust,
@@ -13298,6 +13352,12 @@
 	},
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/dorms)
+"hWK" = (
+/obj/effect/decal/waste{
+	icon_state = "goo12"
+	},
+/turf/closed/mineral/random/low_chance,
+/area/f13/caves)
 "hWR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/plantgenes,
@@ -22022,6 +22082,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/caves)
+"onb" = (
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "ont" = (
 /obj/structure/flora/rock/jungle{
 	density = 1
@@ -25230,6 +25294,12 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/brotherhood/rnd)
+"qDI" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "qDQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -31640,6 +31710,13 @@
 /obj/structure/simple_door/wood,
 /turf/open/floor/wood/f13/oak,
 /area/f13/building)
+"vEv" = (
+/obj/machinery/computer/cargo,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "vEB" = (
 /obj/structure/table,
 /obj/item/reagent_containers/hypospray/medipen/medx,
@@ -33418,6 +33495,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/caves)
+"wYQ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "wYT" = (
 /obj/item/bedsheet/hos,
 /obj/structure/bed/pod,
@@ -53752,15 +53835,15 @@ lnr
 uHU
 lnr
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+fka
+fka
+fka
+fka
+fka
+fka
+fka
+fka
 uoO
 tur
 aUb
@@ -54009,15 +54092,15 @@ lnr
 lnr
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 vXU
@@ -54266,15 +54349,15 @@ lnr
 sNX
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 vXU
@@ -54523,15 +54606,15 @@ sNX
 lnr
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 vTJ
@@ -54780,15 +54863,15 @@ lnr
 lnr
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 aUb
@@ -55037,15 +55120,15 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+hFa
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 vXU
@@ -55294,15 +55377,15 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+wYQ
+wYQ
+wYQ
+wYQ
+wYQ
+wYQ
+wYQ
+fka
 uoO
 tur
 vXU
@@ -55551,15 +55634,15 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+vEv
+kiM
+kiM
+kiM
+kiM
+kiM
+onb
+fka
 uoO
 tur
 vXU
@@ -55808,15 +55891,15 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+aZw
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 aUb
@@ -56065,15 +56148,15 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 aUb
@@ -56322,15 +56405,15 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 aUb
@@ -56579,15 +56662,15 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+qDI
+kiM
+kiM
+kiM
+kiM
+kiM
+onb
+fka
 uoO
 tur
 vXU
@@ -56836,15 +56919,15 @@ lnr
 uoO
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 bbI
@@ -57093,15 +57176,15 @@ lnr
 lnr
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 vXU
@@ -57350,15 +57433,15 @@ lnr
 lnr
 rJA
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+kiM
+fka
 uoO
 tur
 aUb
@@ -57606,16 +57689,16 @@ uoO
 lnr
 lnr
 lnr
-lnr
-lnr
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+qDI
+kiM
+kiM
+kiM
+kiM
+kiM
+onb
+fka
 uoO
 tur
 aUb
@@ -57862,17 +57945,17 @@ lnr
 bcX
 lnr
 lnr
-lnr
-lnr
-lnr
 uoO
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+fka
+kiM
+kiM
+dLa
+kiM
+dLa
+kiM
+kiM
+fka
 uoO
 tur
 lLX
@@ -58118,18 +58201,18 @@ lnr
 lnr
 lnr
 lnr
-weW
-weW
-bfu
 lnr
 uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
-uoO
+hWK
+fka
+fka
+fka
+fka
+fka
+fka
+bEJ
+fka
+fka
 uoO
 tur
 aUb
@@ -58374,10 +58457,6 @@ lnr
 lnr
 lnr
 cxN
-weW
-weW
-weW
-weW
 lnr
 lnr
 lnr
@@ -58386,6 +58465,10 @@ uoO
 uoO
 uoO
 uoO
+uoO
+lnr
+lnr
+lnr
 uoO
 uoO
 tur
@@ -58631,18 +58714,18 @@ uoO
 uoO
 lnr
 lnr
-weW
-weW
-weW
-weW
+lnr
 weW
 lnr
 lnr
 lnr
-lnr
-lnr
-rzg
 uoO
+uoO
+uoO
+lnr
+lnr
+lnr
+lnr
 uoO
 uoO
 tur
@@ -58891,8 +58974,6 @@ uoO
 weW
 weW
 weW
-weW
-weW
 lnr
 lnr
 lnr
@@ -58900,7 +58981,9 @@ lnr
 lnr
 lnr
 lnr
-uoO
+lnr
+lnr
+lnr
 uoO
 tur
 vXU
@@ -59928,7 +60011,7 @@ uoO
 uoO
 uoO
 uoO
-uoO
+lnr
 lnr
 rzg
 aUb
@@ -60185,8 +60268,8 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+lnr
+lnr
 rzg
 aUb
 weW
@@ -60442,8 +60525,8 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+lnr
+lnr
 tur
 vXU
 weW
@@ -60699,8 +60782,8 @@ uoO
 uoO
 uoO
 uoO
-uoO
-uoO
+lnr
+lnr
 tur
 vXU
 weW
@@ -60954,10 +61037,10 @@ dXE
 dXE
 dXE
 dXE
-dXE
-dXE
-dXE
-dXE
+fka
+fka
+gHz
+fka
 tur
 vXU
 weW
@@ -61211,10 +61294,10 @@ dXE
 dXE
 dXE
 dXE
-dXE
-dXE
-dXE
-dXE
+fka
+gIQ
+gIQ
+fka
 tur
 vXU
 weW
@@ -61468,10 +61551,10 @@ dXE
 dXE
 dXE
 dXE
-dXE
-dXE
-dXE
-dXE
+fka
+gyn
+gIQ
+fka
 tur
 vXU
 weW
@@ -61725,10 +61808,10 @@ tur
 tur
 tur
 tur
-tur
-tur
-tur
-tur
+fka
+fka
+fka
+fka
 tur
 vXU
 weW
@@ -61981,8 +62064,8 @@ vIQ
 uyS
 cpO
 cpO
-weW
 mNE
+weW
 weW
 weW
 nDf
@@ -62238,8 +62321,8 @@ kFP
 jSa
 jSa
 weW
-bDl
-mNE
+hdu
+weW
 bDl
 weW
 weW
@@ -62495,8 +62578,8 @@ dwn
 opy
 weW
 weW
-weW
-hdu
+mNE
+bDl
 bDl
 bDl
 lYx

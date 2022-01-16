@@ -84,30 +84,30 @@ const CargoStatus = (props, context) => {
           <AnimatedNumber
             value={points}
             format={value => formatMoney(value)} />
-          {' credits'}
+          {' caps'}
         </Box>
       )}>
       <LabeledList>
-        <LabeledList.Item label="Shuttle">
+        <LabeledList.Item label="Elevator">
           {docked && !requestonly && (
             <Button
               content={location}
               onClick={() => act('send')} />
           ) || location}
         </LabeledList.Item>
-        <LabeledList.Item label="CentCom Message">
+        <LabeledList.Item label="Messages">
           {message}
         </LabeledList.Item>
         {!!loan && !requestonly && (
           <LabeledList.Item label="Loan">
             {!loan_dispatched && (
               <Button
-                content="Loan Shuttle"
+                content="Loan Elevator "
                 disabled={!(away && docked)}
                 onClick={() => act('loan')} />
             ) || (
               <Box color="bad">
-                Loaned to Centcom
+                Loaned for extra supplies
               </Box>
             )}
           </LabeledList.Item>
@@ -365,7 +365,7 @@ const CargoCart = (props, context) => {
               onClick={() => act('send')} />
           ) || (
             <Box opacity={0.5}>
-              Shuttle in {location}.
+              Elevator in {location}.
             </Box>
           )}
         </Box>

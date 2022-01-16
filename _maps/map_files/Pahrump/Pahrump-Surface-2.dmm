@@ -13419,16 +13419,13 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "fGT" = (
-/obj/structure/noticeboard{
-	layer = 2.5;
-	pixel_y = 32
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "shopladder"
 	},
-/obj/machinery/button/door{
-	id = "countershutters";
-	name = "counter shutters";
-	pixel_y = 30
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "fHb" = (
 /obj/machinery/hydroponics/constructable,
@@ -14857,6 +14854,11 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /obj/effect/spawner/lootdrop/f13/crafting,
 /obj/effect/spawner/lootdrop/f13/crafting,
+/obj/machinery/button/door{
+	id = "countershutters";
+	name = "counter shutters";
+	pixel_x = -25
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "gln" = (
@@ -15812,6 +15814,11 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /obj/effect/spawner/lootdrop/f13/crafting,
 /obj/effect/spawner/lootdrop/f13/crafting,
+/obj/structure/noticeboard{
+	dir = 4;
+	layer = 2.5;
+	pixel_x = -34
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "gDe" = (
@@ -83529,8 +83536,8 @@ tBN
 uqa
 dCV
 dCV
-dCV
 fGT
+hzm
 ueA
 ueA
 kTf

@@ -113,7 +113,7 @@ const BountyHeader = (props, context) => {
       <AnimatedNumber
         value={stored_cash}
         format={value => formatMoney(value)} />
-      {' credits'}
+      {' caps'}
     </Box>
   );
 };

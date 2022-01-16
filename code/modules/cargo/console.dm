@@ -7,10 +7,10 @@
 	var/requestonly = FALSE
 	var/contraband = FALSE
 	var/self_paid = FALSE
-	var/safety_warning = "For safety reasons, the automated supply shuttle \
-		cannot transport live organisms, human remains, classified nuclear weaponry, \
+	var/safety_warning = "For safety reasons, the supply elevator \
+		cannot transport live organisms, whole human remains, classified nuclear weaponry, \
 		homing beacons or machinery housing any form of artificial intelligence."
-	var/blockade_warning = "Bluespace instability detected. Shuttle movement impossible."
+	var/blockade_warning = "Elevator malfunction detected. Movement impossible."
 	/// radio used by the console to send messages on supply channel
 	var/obj/item/radio/headset/radio
 	/// var that tracks message cooldown
@@ -149,10 +149,10 @@
 				SSshuttle.supply.export_categories = get_export_categories()
 				SSshuttle.moveShuttle("supply", "supply_away", TRUE)
 				say("The supply shuttle is departing.")
-				investigate_log("[key_name(usr)] sent the supply shuttle away.", INVESTIGATE_CARGO)
+				investigate_log("[key_name(usr)] sent the supply elevator away.", INVESTIGATE_CARGO)
 			else
-				investigate_log("[key_name(usr)] called the supply shuttle.", INVESTIGATE_CARGO)
-				say("The supply shuttle has been called and will arrive in [SSshuttle.supply.timeLeft(600)] minutes.")
+				investigate_log("[key_name(usr)] called the supply elevator.", INVESTIGATE_CARGO)
+				say("The supply elevator has been called and will arrive in [SSshuttle.supply.timeLeft(600)] minutes.")
 				SSshuttle.moveShuttle("supply", "supply_home", TRUE)
 			. = TRUE
 		/*if("loan")
