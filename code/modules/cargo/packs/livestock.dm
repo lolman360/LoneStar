@@ -13,7 +13,7 @@
 /datum/supply_pack/critter/animal_feed
 	name = "Animal Feed Crate"
 	desc = "Feed for livestock, like cows and hens. Contains fifty Wheat bundles and fifty Oat bundles."
-	cost = 1500
+	cost = 150
 	contains = list(/obj/item/reagent_containers/food/snacks/grown/wheat,
 					/obj/item/reagent_containers/food/snacks/grown/oat)
 	crate_name = "animal feed crate"
@@ -24,38 +24,10 @@
 	for(var/i in 1 to 49)
 		new /obj/item/reagent_containers/food/snacks/grown/wheat(.)
 
-
-/datum/supply_pack/critter/parrot
-	name = "Bird Crate"
-	desc = "Contains five expert telecommunication birds."
-	cost = 4000
-	contains = list(/mob/living/simple_animal/parrot)
-	crate_name = "parrot crate"
-
-/datum/supply_pack/critter/parrot/generate()
-	. = ..()
-	for(var/i in 1 to 4)
-		new /mob/living/simple_animal/parrot(.)
-	if(prob(1))
-		new /mob/living/simple_animal/parrot/clock_hawk(.)
-
-/datum/supply_pack/critter/butterfly
-	name = "Butterflies Crate"
-	desc = "Not a very dangerous insect, but they do give off a better image than, say, flies or cockroaches."//is that a motherfucking worm reference
-	contraband = TRUE
-	cost = 5000
-	contains = list(/mob/living/simple_animal/butterfly)
-	crate_name = "entomology samples crate"
-
-/datum/supply_pack/critter/butterfly/generate()
-	. = ..()
-	for(var/i in 1 to 49)
-		new /mob/living/simple_animal/butterfly(.)
-
 /datum/supply_pack/critter/cat
 	name = "Cat Crate"
 	desc = "The cat goes meow! Comes with a collar and a nice cat toy! Cheeseburger not included."//i can't believe im making this reference
-	cost = 5000 //Cats are worth as much as corgis.
+	cost = 500//Cats are worth as much as corgis.
 	contains = list(/mob/living/simple_animal/pet/cat,
 					/obj/item/clothing/neck/petcollar,
 					/obj/item/toy/cattoy)
@@ -71,14 +43,14 @@
 /datum/supply_pack/critter/chick
 	name = "Chicken Crate"
 	desc = "The chicken goes bwaak!"
-	cost = 2000
+	cost = 100
 	contains = list(/mob/living/simple_animal/chick)
 	crate_name = "chicken crate"
 
 /datum/supply_pack/critter/crab
 	name = "Crab Rocket"
 	desc = "CRAAAAAAB ROCKET. CRAB ROCKET. CRAB ROCKET. CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB ROCKET. CRAFT. ROCKET. BUY. CRAFT ROCKET. CRAB ROOOCKET. CRAB ROOOOCKET. CRAB CRAB CRAB CRAB CRAB CRAB CRAB CRAB ROOOOOOOOOOOOOOOOOOOOOOCK EEEEEEEEEEEEEEEEEEEEEEEEE EEEETTTTTTTTTTTTAAAAAAAAA AAAHHHHHHHHHHHHH. CRAB ROCKET. CRAAAB ROCKEEEEEEEEEGGGGHHHHTT CRAB CRAB CRAABROCKET CRAB ROCKEEEET."//fun fact: i actually spent like 10 minutes and transcribed the entire video.
-	cost = 5000
+	cost = 500
 	contains = list(/mob/living/simple_animal/crab)
 	crate_name = "look sir free crabs"
 	DropPodOnly = TRUE
@@ -91,7 +63,7 @@
 /datum/supply_pack/critter/corgi
 	name = "Corgi Crate"
 	desc = "Considered the optimal dog breed by thousands of research scientists, this Corgi is but one dog from the millions of Ian's noble bloodline. Comes with a cute collar!"
-	cost = 5000
+	cost = 500
 	contains = list(/mob/living/simple_animal/pet/dog/corgi,
 					/obj/item/clothing/neck/petcollar)
 	crate_name = "corgi crate"
@@ -104,70 +76,26 @@
 			qdel(D)
 			new /mob/living/simple_animal/pet/dog/corgi/Lisa(.)
 
-/datum/supply_pack/critter/corgis/exotic
-	name = "Exotic Corgi Crate"
-	desc = "Corgis fit for a king, these corgis come in a unique color to signify their superiority. Comes with a cute collar!"
-	cost = 5500
-	contains = list(/mob/living/simple_animal/pet/dog/corgi/exoticcorgi,
-					/obj/item/clothing/neck/petcollar)
-	crate_name = "exotic corgi crate"
 
 /datum/supply_pack/critter/cow
-	name = "Cow Crate"
+	name = "Brahmin Crate"
 	desc = "The cow goes moo!"
-	cost = 3000
-	contains = list(/mob/living/simple_animal/cow)
-	crate_name = "cow crate"
-
-/datum/supply_pack/critter/fox
-	name = "Fox Crate"
-	desc = "The fox goes...? Comes with a collar!"//what does the fox say
-	cost = 5000
-	contains = list(/mob/living/simple_animal/pet/fox,
-					/obj/item/clothing/neck/petcollar)
-	crate_name = "fox crate"
+	cost = 100
+	contains = list(/mob/living/simple_animal/cow/brahmin)
+	crate_name = "brahmin crate"
 
 /datum/supply_pack/critter/goat
-	name = "Goat Crate"
-	desc = "The goat goes baa! Warranty void if used as a replacement for Pete."
-	cost = 2500
-	contains = list(/mob/living/simple_animal/hostile/retaliate/goat)
-	crate_name = "goat crate"
+	name = "Bighorner Crate"
+	desc = "Big and rude."
+	cost = 100
+	contains = list(/mob/living/simple_animal/hostile/retaliate/goat/bighorn)
+	crate_name = "bighorner crate"
 
-/datum/supply_pack/critter/goose
-	name = "Goose Crate"
-	desc = "Angry and violent birds. Evil, evil creatures."
-	cost = 2500
-	contains = list(/mob/living/simple_animal/hostile/retaliate/goose)
-	crate_name = "goose crate"
-
-/datum/supply_pack/critter/pug
-	name = "Pug Crate"
-	desc = "Like a normal dog, but... squished. Comes with a nice collar!"
-	cost = 5000
-	contains = list(/mob/living/simple_animal/pet/dog/pug,
-					/obj/item/clothing/neck/petcollar)
-	crate_name = "pug crate"
-
-/datum/supply_pack/critter/kiwi
-	name = "Space kiwi Crate"
-	cost = 2000
-	contains = list( /mob/living/simple_animal/kiwi)
-	crate_name = "space kiwi crate"
-
-/datum/supply_pack/critter/snake
-	name = "Snake Crate"
-	desc = "Tired of these MOTHER FUCKING snakes on this MOTHER FUCKING space station? Then this isn't the crate for you. Contains three poisonous snakes."
-	cost = 3000
-	contains = list(/mob/living/simple_animal/hostile/retaliate/poison/snake,
-					/mob/living/simple_animal/hostile/retaliate/poison/snake,
-					/mob/living/simple_animal/hostile/retaliate/poison/snake)
-	crate_name = "snake crate"
 
 /datum/supply_pack/critter/mouse
 	name = "Mouse Crate"
 	desc = "Good for snakes and lizards of all ages. Contains ~12 feeder mice."
-	cost = 2000
+	cost = 60
 	contains = list(/mob/living/simple_animal/mouse,)
 	crate_name = "mouse crate"
 
@@ -175,14 +103,3 @@
 	. = ..()
 	for(var/i in 1 to 11)
 		new /mob/living/simple_animal/mouse(.)
-
-/datum/supply_pack/critter/secbat
-	name = "Security Bat Crate"
-	desc = "Contains five security bats, perfect to Bat-up any security officer."
-	cost = 2500
-	contains = list(/mob/living/simple_animal/hostile/retaliate/bat/secbat,
-					/mob/living/simple_animal/hostile/retaliate/bat/secbat,
-					/mob/living/simple_animal/hostile/retaliate/bat/secbat,
-					/mob/living/simple_animal/hostile/retaliate/bat/secbat,
-					/mob/living/simple_animal/hostile/retaliate/bat/secbat)
-	crate_name = "security bat crate"

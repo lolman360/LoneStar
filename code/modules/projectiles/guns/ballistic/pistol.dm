@@ -77,7 +77,7 @@
 
 //the Executive							Keywords: UNIQUE, 10mm, Automatic, 12/24 round magazine. Special modifiers: damage +4
 /obj/item/gun/ballistic/automatic/pistol/n99/executive
-	name = "the Executive"
+	name = "\improper The Executive"
 	desc = "A modified N99 pistol with an accurate two-round-burst and a blue Vault-Tec finish, a status symbol for some Overseers."
 	icon_state = "executive"
 	burst_size = 2
@@ -150,7 +150,7 @@
 
 //side grade to the peacemaker 		    Keywords: OASIS, 9mm, Semi-auto, +5 damage, 10 round magazine, 0 spread, faster rate of fire, bullet speed +100, probably needs a new sprite
 /obj/item/gun/ballistic/automatic/pistol/sig/commissioner
-	name = "The Defender"
+	name = "\improper The Defender"
 	desc = "A modified Sig P225 salvaged from the boneyard. Boasts a faster rate of fire and laser-like accuracy. It has 'To Protect and Serve' etched on the side."
 	w_class = WEIGHT_CLASS_SMALL
 	extra_damage = 5

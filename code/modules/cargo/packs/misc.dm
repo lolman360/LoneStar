@@ -20,6 +20,16 @@
 	cost = 7500
 	contains = list(/obj/structure/anvil/obtainable/basic)
 
+/datum/supply_pack/misc/glasswork
+	name = "Glass Blower Kit Crate"
+	desc = "Learn and make glassworks of useful things for a profit! Contains glassworking tools and blowing rods. Glass not included."
+	cost = 1000
+	contains = list(/obj/item/glasswork/glasskit,
+					/obj/item/glasswork/glasskit,
+					/obj/item/glasswork/blowing_rod,
+					/obj/item/glasswork/blowing_rod)
+	crate_name = "glassblower gear crate"
+
 /datum/supply_pack/misc/artsupply
 	name = "Art Supplies"
 	desc = "Make some happy little accidents with six canvasses, two easels, two boxes of crayons, and a rainbow crayon!"
@@ -77,13 +87,12 @@
 	crate_name = "bureaucracy crate"
 
 /datum/supply_pack/misc/captain_pen
-	name = "Captain Pen"
-	desc = "A spare Captain fountain pen."
-	access = ACCESS_CAPTAIN
+	name = "Fountain Pen"
+	desc = "A spare golden fountain pen."
 	cost = 5000
 	contains = list(/obj/item/pen/fountain/captain)
 	crate_name = "captain pen"
-	crate_type = /obj/structure/closet/crate/secure/weapon //It is a combat pen
+	crate_type = /obj/structure/closet/crate
 
 /datum/supply_pack/misc/fountainpens
 	name = "Calligraphy Crate"
@@ -112,14 +121,6 @@
 					/obj/item/bedsheet/black,
 					/obj/item/bedsheet/rainbow)
 	crate_name = "colored bedsheet crate"
-
-/datum/supply_pack/misc/bicycle
-	name = "Bicycle"
-	desc = "Nanotrasen reminds all employees to never toy with powers outside their control."
-	cost = 1000000
-	contains = list(/obj/vehicle/ridden/bicycle)
-	crate_name = "Bicycle Crate"
-	crate_type = /obj/structure/closet/crate/large
 
 /datum/supply_pack/misc/bigband
 	name = "Big Band Instrument Collection"
@@ -155,65 +156,6 @@
 					/obj/item/circuitboard/computer/slot_machine)
 	crate_name = "casino crate"
 
-/datum/supply_pack/misc/coincrate
-	name = "Coin Crate"
-	desc = "Psssst, hey, you. Yes, you. I've heard that coins can do some special things on your station, give you access to some pretty cool stuff. Here's the deal, you give me some credits, and I give so some coins. Sound like a deal? I'll give you 10 for 10000 creds."
-	contraband = TRUE
-	cost = 3000
-	contains = list(/obj/item/coin/silver) // 400 x 10 = 2 sheets of silver for 2300cr
-	crate_name = "coin crate"
-	crate_type = /obj/structure/closet/crate/large
-
-/datum/supply_pack/misc/coincrate/generate()
-	. = ..()
-	for(var/i in 1 to 9)
-		new /obj/item/coin/silver(.)
-
-/datum/supply_pack/misc/dueling_stam
-	name = "Dueling Pistols"
-	desc = "Resolve all your quarrels with some nonlethal fun."
-	cost = 2000
-	contains = list(/obj/item/storage/lockbox/dueling/hugbox/stamina)
-	crate_name = "dueling pistols"
-
-/datum/supply_pack/misc/dueling_stam/generate()
-	. = ..()
-	for(var/i in 1 to 3)
-		new /obj/item/storage/lockbox/dueling/hugbox/stamina(.)
-
-/datum/supply_pack/misc/dueling_lethal
-	name = "Lethal Dueling Pistols"
-	desc = "Settle your differences the true spaceman way."
-	cost = 3000
-	contraband = TRUE
-	contains = list(/obj/item/storage/lockbox/dueling/hugbox,
-	/obj/item/storage/lockbox/dueling/hugbox,
-	/obj/item/storage/lockbox/dueling/hugbox)
-	crate_name = "dueling pistols (lethal)"
-
-/datum/supply_pack/misc/dueling_death
-	name = "Elimination Dueling Pistols"
-	desc = "It's high noon."
-	cost = 5000
-	hidden = TRUE
-	contains = list(/obj/item/storage/lockbox/dueling)
-	crate_name = "dueling pistols (elimination)"
-
-/datum/supply_pack/misc/dirtymags
-	name = "Dirty Magazines"
-	desc = "Get your mind out of the gutter operative, you have work to do. Three items per order. Possible Results: .357 Speedloaders, Kitchen Gun patented magazines, or Stetchkin magazines."
-	hidden = TRUE
-	cost = 4000
-	var/num_contained = 3
-	contains = list(/obj/item/ammo_box/a357)
-	crate_name = "crate"
-
-/datum/supply_pack/misc/dirtymags/fill(obj/structure/closet/crate/C)
-	var/list/L = contains.Copy()
-	for(var/i in 1 to num_contained)
-		var/item = pick_n_take(L)
-		new item(C)
-
 //////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// Misc Supplies //////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -229,7 +171,7 @@
 
 /datum/supply_pack/misc/exoticfootwear
 	name = "Exotic Footwear Crate"
-	desc = "Popularised by lizards and exotic dancers, the footwear included in this shipment is sure to give your feet the breathing room they deserve. Sweet Kicks Inc. is not responsible for any damage, distress, or @r0u$a1 caused by this shipment."
+	desc = "Popularised by mutants and exotic dancers, the footwear included in this shipment is sure to give your feet the breathing room they deserve. Sweet Kicks Inc. is not responsible for any damage, distress, or loss of life or limb caused by this shipment."
 	cost = 4337
 	contains = list(/obj/item/clothing/shoes/wraps,
 					/obj/item/clothing/shoes/wraps,
@@ -277,19 +219,9 @@
 	contains = list(/obj/machinery/jukebox)
 	crate_name = "Jukebox"
 
-/datum/supply_pack/misc/abandonedcrate
-	name = "Loot Box"
-	desc = "Try your luck with these highly secure loot boxes! Solve the lock, win great prizes! WARNING: EXPLOSIVE FAILURE."
-	contraband = TRUE
-	cost = 15000
-	contains = list(/obj/structure/closet/crate/secure/loot)
-	crate_name = "abandoned crate"
-	crate_type = /obj/structure/closet/crate/large
-	dangerous = TRUE
-
 /datum/supply_pack/misc/potted_plants
 	name = "Potted Plants Crate"
-	desc = "Spruce up the station with these lovely plants! Contains a random assortment of five potted plants from Nanotrasen's potted plant research division. Warranty void if thrown."
+	desc = "Spruce up the place with these lovely plants! Contains a random assortment of five potted plants. Warranty void if thrown."
 	cost = 730
 	contains = list(/obj/item/kirbyplants/random,
 					/obj/item/kirbyplants/random,
@@ -323,7 +255,7 @@
 					/obj/item/reagent_containers/rag/towel,
 					/obj/item/bikehorn/rubberducky,
 					/obj/item/bikehorn/rubberducky,
-					/obj/item/soap/nanotrasen)
+					/obj/item/soap)
 	crate_name = "shower crate"
 
 //////////////////////////////////////////////////////////////////////////////
@@ -399,38 +331,16 @@
 //////////////////////////////// Lewd Supplies ///////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-/datum/supply_pack/misc/lewd
-	name = "Lewd Crate" // OwO
-	desc = "Pssst, want to have a good time with your sluts? Well I got what you want! Maid clothing, dildos, collars and more!"
-	cost = 5250
-	contraband = TRUE
-	contains = list(/obj/item/dildo/custom,
-					/obj/item/dildo/custom,
-					/obj/item/clothing/under/costume/maid,
-					/obj/item/clothing/under/costume/maid,
-					/obj/item/electropack/shockcollar,
-					/obj/item/electropack/shockcollar,
-					/obj/item/restraints/handcuffs/fake/kinky,
-					/obj/item/restraints/handcuffs/fake/kinky)
-	crate_name = "lewd kit"
-	crate_type = /obj/structure/closet/crate
 
 ///Special supply crate that generates random syndicate gear up to a determined TC value
 
 /datum/supply_pack/misc/syndicate
-
 	name = "Assorted Syndicate Gear"
-
 	desc = "Contains a random assortment of syndicate gear."
-
 	special = TRUE ///Cannot be ordered via cargo
-
 	contains = list()
-
 	crate_name = "syndicate gear crate"
-
 	crate_type = /obj/structure/closet/crate
-
 	var/crate_value = 30 ///Total TC worth of contained uplink items
 
 
