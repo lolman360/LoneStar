@@ -17,13 +17,13 @@
 /datum/supply_pack/misc/anvil
 	name = "Anvil Crate"
 	desc = "An anvil in a crate, we had to dig this out of the old warehouse. It's got wheels on it so you can move it."
-	cost = 7500
+	cost = 275
 	contains = list(/obj/structure/anvil/obtainable/basic)
 
 /datum/supply_pack/misc/glasswork
 	name = "Glass Blower Kit Crate"
 	desc = "Learn and make glassworks of useful things for a profit! Contains glassworking tools and blowing rods. Glass not included."
-	cost = 1000
+	cost = 45
 	contains = list(/obj/item/glasswork/glasskit,
 					/obj/item/glasswork/glasskit,
 					/obj/item/glasswork/blowing_rod,
@@ -33,7 +33,7 @@
 /datum/supply_pack/misc/artsupply
 	name = "Art Supplies"
 	desc = "Make some happy little accidents with six canvasses, two easels, two boxes of crayons, and a rainbow crayon!"
-	cost = 800
+	cost = 80
 	contains = list(/obj/structure/easel,
 					/obj/structure/easel,
 					/obj/item/canvas/nineteenXnineteen,
@@ -53,7 +53,7 @@
 /datum/supply_pack/misc/book_crate
 	name = "Book Crate"
 	desc = "Surplus from the Nanotrasen Archives, these five books are sure to be good reads."
-	cost = 1500
+	cost = 15
 	contains = list(/obj/item/book/codex_gigas,
 					/obj/item/book/manual/random/,
 					/obj/item/book/manual/random/,
@@ -63,8 +63,8 @@
 
 /datum/supply_pack/misc/paper
 	name = "Bureaucracy Crate"
-	desc = "High stacks of papers on your desk Are a big problem - make it Pea-sized with these bureaucratic supplies! Contains five pens, some camera film, hand labeler supplies, a paper bin, three folders, two clipboards and two stamps as well as a briefcase."//that was too forced
-	cost = 1500
+	desc = "High stacks of papers on your desk are a big problem - make it pea-sized with these bureaucratic supplies! Contains five pens, some camera film, hand labeler supplies, a paper bin, three folders, two clipboards and two stamps as well as a briefcase."//that was too forced
+	cost = 15
 	contains = list(/obj/structure/filingcabinet/chestdrawer/wheeled,
 					/obj/item/camera_film,
 					/obj/item/hand_labeler,
@@ -89,7 +89,7 @@
 /datum/supply_pack/misc/captain_pen
 	name = "Fountain Pen"
 	desc = "A spare golden fountain pen."
-	cost = 5000
+	cost = 500
 	contains = list(/obj/item/pen/fountain/captain)
 	crate_name = "captain pen"
 	crate_type = /obj/structure/closet/crate
@@ -97,7 +97,7 @@
 /datum/supply_pack/misc/fountainpens
 	name = "Calligraphy Crate"
 	desc = "Sign death warrants in style with these seven executive fountain pens."
-	cost = 730
+	cost = 30
 	contains = list(/obj/item/storage/box/fountainpens,
 					/obj/item/paper_bin)
 	crate_type = /obj/structure/closet/crate/wooden
@@ -110,7 +110,7 @@
 /datum/supply_pack/misc/coloredsheets
 	name = "Bedsheet Crate"
 	desc = "Give your night life a splash of color with this crate filled with bedsheets! Contains a total of nine different-colored sheets."
-	cost = 1250
+	cost = 15
 	contains = list(/obj/item/bedsheet/blue,
 					/obj/item/bedsheet/green,
 					/obj/item/bedsheet/orange,
@@ -124,8 +124,8 @@
 
 /datum/supply_pack/misc/bigband
 	name = "Big Band Instrument Collection"
-	desc = "Get your sad station movin' and groovin' with this fine collection! Contains nine different instruments!"
-	cost = 5000
+	desc = "Get your sad town movin' and groovin' with this fine collection! Contains nine different instruments!"
+	cost = 50
 	crate_name = "Big band musical instruments collection"
 	contains = list(/obj/item/instrument/violin,
 					/obj/item/instrument/guitar,
@@ -141,7 +141,7 @@
 /datum/supply_pack/misc/casinocrate
 	name = "Casino Crate"
 	desc = "Start up your own grand casino with this crate filled with slot machine and arcade boards!"
-	cost = 3000
+	cost = 30
 	contains = list(/obj/item/circuitboard/computer/arcade/battle,
 					/obj/item/circuitboard/computer/arcade/battle,
 					/obj/item/circuitboard/computer/arcade/orion_trail,
@@ -163,7 +163,7 @@
 /datum/supply_pack/misc/candles
 	name = "Candle Crate"
 	desc = "Set up a romantic dinner or host a séance with these extra candles and crayons."
-	cost = 850
+	cost = 10
 	contains = list(/obj/item/storage/fancy/candle_box,
 					/obj/item/storage/fancy/candle_box,
 					/obj/item/storage/box/matches)
@@ -172,7 +172,7 @@
 /datum/supply_pack/misc/exoticfootwear
 	name = "Exotic Footwear Crate"
 	desc = "Popularised by mutants and exotic dancers, the footwear included in this shipment is sure to give your feet the breathing room they deserve. Sweet Kicks Inc. is not responsible for any damage, distress, or loss of life or limb caused by this shipment."
-	cost = 4337
+	cost = 23
 	contains = list(/obj/item/clothing/shoes/wraps,
 					/obj/item/clothing/shoes/wraps,
 					/obj/item/clothing/shoes/wraps/silver,
@@ -187,7 +187,7 @@
 /datum/supply_pack/misc/funeral
 	name = "Funeral Supplies"
 	desc = "Mourn your dead properly buy sending them off with love filled notes, clean clothes, and a proper ceremony. Contains two candle packs, funeral garb, flowers, a paperbin , and crayons to help aid in religious rituals. Coffin included."
-	cost = 1200
+	cost = 15
 	contains = list(/obj/item/clothing/under/misc/burial,
 					/obj/item/storage/fancy/candle_box,
 					/obj/item/storage/fancy/candle_box,
@@ -206,7 +206,7 @@
 /datum/supply_pack/misc/jewelry
 	name = "Jewelry Crate"
 	desc = "Bling out with this crate of jewelry. Includes gold necklace and a set of two rings."
-	cost = 5000
+	cost = 50
 	contains = list(/obj/item/clothing/neck/necklace/dope,
 					/obj/item/storage/fancy/ringbox,
 					/obj/item/storage/fancy/ringbox/silver
@@ -215,14 +215,14 @@
 
 /datum/supply_pack/misc/jukebox
 	name = "Jukebox"
-	cost = 10000
+	cost = 100
 	contains = list(/obj/machinery/jukebox)
 	crate_name = "Jukebox"
 
 /datum/supply_pack/misc/potted_plants
 	name = "Potted Plants Crate"
 	desc = "Spruce up the place with these lovely plants! Contains a random assortment of five potted plants. Warranty void if thrown."
-	cost = 730
+	cost = 50
 	contains = list(/obj/item/kirbyplants/random,
 					/obj/item/kirbyplants/random,
 					/obj/item/kirbyplants/random,
@@ -234,7 +234,7 @@
 /datum/supply_pack/misc/religious_supplies
 	name = "Religious Supplies Crate"
 	desc = "Keep your local chaplain happy and well-supplied, lest they call down judgement upon your cargo bay. Contains two bottles of holywater, bibles, chaplain robes, and burial garmets."
-	cost = 4000	// it costs so much because the Space Church needs funding to build a cathedral
+	cost = 40	// it costs so much because the Space Church needs funding to build a cathedral
 	contains = list(/obj/item/reagent_containers/food/drinks/bottle/holywater,
 					/obj/item/reagent_containers/food/drinks/bottle/holywater,
 					/obj/item/storage/book/bible/booze,
@@ -246,7 +246,7 @@
 /datum/supply_pack/misc/shower
 	name = "Shower Supplies"
 	desc = "Everyone needs a bit of R&R. Make sure you get can get yours by ordering this crate filled with towels, rubber duckies, and some soap!"
-	cost = 1000
+	cost = 10
 	contains = list(/obj/item/reagent_containers/rag/towel,
 					/obj/item/reagent_containers/rag/towel,
 					/obj/item/reagent_containers/rag/towel,
@@ -266,7 +266,7 @@
 	goody = PACK_GOODY_PUBLIC
 	name = "Classic Carpet Single-Pack"
 	desc = "Plasteel floor tiles getting on your nerves? This 50 units stack of extra soft carpet will tie any room together."
-	cost = 200
+	cost = 20
 	contains = list(/obj/item/stack/tile/carpet/fifty)
 
 /datum/supply_pack/misc/carpet/black
@@ -280,7 +280,7 @@
 /datum/supply_pack/misc/carpet/premium
 	name = "Monochrome Carpet Single-Pack"
 	desc = "Exotic carpets for all your decorating needs. This 30 units stack of extra soft carpet will tie any room together."
-	cost = 250
+	cost = 25
 	contains = list(/obj/item/stack/tile/carpet/monochrome/thirty)
 
 /datum/supply_pack/misc/carpet/premium/blackred
@@ -322,7 +322,7 @@
 /datum/supply_pack/misc/noslipfloor
 	name = "High-traction Floor Tiles"
 	desc = "Make slipping a thing of the past with sixty industrial-grade anti-slip floortiles!"
-	cost = 2000
+	cost = 20
 	contains = list(/obj/item/stack/tile/noslip/thirty,
 					/obj/item/stack/tile/noslip/thirty)
 	crate_name = "high-traction floor tiles crate"

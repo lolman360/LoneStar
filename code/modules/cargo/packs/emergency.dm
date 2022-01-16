@@ -28,7 +28,7 @@
 /datum/supply_pack/emergency/bio
 	name = "Biological Emergency Crate"
 	desc = "This crate holds 2 full bio suits which will protect you from viruses, along with a bio bag and two spaceacillin syringes."
-	cost = 200
+	cost = 50
 	contains = list(/obj/item/clothing/head/bio_hood,
 					/obj/item/clothing/head/bio_hood,
 					/obj/item/clothing/suit/bio_suit,
@@ -43,7 +43,7 @@
 /datum/supply_pack/emergency/medicalemergency
 	name = "Emergency Medical Supplies" //Almost all of this can be ordered seperatly for a much cheaper price, but the HUD increases it.
 	desc = "Emergency supplies for a front-line medic. Contains two boxes of body bags, a medical HUD, a defib unit, medical belt, toxin bottles, epipens, and several types of medical kits."
-	cost = 500
+	cost = 250
 	contains = list(/obj/item/storage/box/bodybags,
 					/obj/item/storage/box/bodybags,
 					/obj/item/clothing/glasses/hud/health,
@@ -62,7 +62,7 @@
 /datum/supply_pack/emergency/medemergencylite
 	name = "Emergency Medical Supplies (Lite)"
 	desc = "A less than optimal, but still effective, set of tools for emergency care. Contains a box of bodybags, some normal (and advanced) health analyzers, healing sprays, a single first aid kit, charcoal, some gauze, a bottle of toxins, and some spare medipens."
-	cost = 280
+	cost = 140
 	contains = list(/obj/item/storage/box/bodybags,
 					/obj/item/stack/medical/gauze,
 					/obj/item/stack/medical/gauze,
@@ -86,7 +86,7 @@
 /datum/supply_pack/emergency/radiatione_emergency
 	name = "Emergency Radiation Protection Crate"
 	desc = "Survive the Nuclear Apocalypse and Supermatter Engine alike with two sets of Radiation suits. Each set contains a helmet, suit, and Geiger counter. We'll even throw in a single pack of RadAway, no charge!"
-	cost = 250
+	cost = 125
 	contains = list(/obj/item/clothing/head/radiation,
 					/obj/item/clothing/head/radiation,
 					/obj/item/clothing/suit/radiation,
@@ -101,7 +101,7 @@
 /datum/supply_pack/emergency/firefighting
 	name = "Firefighting Crate"
 	desc = "Only you can prevent fires. Partner up with two firefighter suits, gas masks, flashlights, large oxygen tanks, extinguishers, and hardhats!"
-	cost = 120
+	cost = 60
 	contains = list(/obj/item/clothing/suit/fire,
 					/obj/item/clothing/mask/gas,
 					/obj/item/clothing/mask/gas,
@@ -118,7 +118,7 @@
 /datum/supply_pack/emergency/atmostank
 	name = "Firefighting Tank Backpack"
 	desc = "Mow down fires with this high-capacity fire fighting tank backpack."
-	cost = 100
+	cost = 50
 	contains = list(/obj/item/watertank/atmos)
 	crate_name = "firefighting backpack crate"
 	crate_type = /obj/structure/closet/crate
@@ -126,7 +126,7 @@
 
 /datum/supply_pack/emergency/metalfoam
 	name = "Metal Foam Grenade Crate"
-	desc = "Seal up those pesky hull breaches with 14 Metal Foam Grenades."
+	desc = "Seal up those pesky holes with 14 Metal Foam Grenades."
 	cost = 150
 	contains = list(/obj/item/storage/box/metalfoam,
 					/obj/item/storage/box/metalfoam)
@@ -135,7 +135,7 @@
 /datum/supply_pack/emergency/mre
 	name = "MRE Packs (Emergency Rations)"
 	desc = "The lights are out. Oxygen's running low. You've run out of food except space weevils. Don't let this be you! This pack contains 5 MRE packs with a randomized menu."
-	cost = 200
+	cost = 20
 	contains = list(/obj/item/storage/box/mre/menu1/safe,
 					/obj/item/storage/box/mre/menu1/safe,
 					/obj/item/storage/box/mre/menu2/safe,
@@ -145,8 +145,8 @@
 
 /datum/supply_pack/emergency/radiation
 	name = "Radiation Protection Crate"
-	desc = "Survive the Nuclear Apocalypse and Supermatter Engine alike with two sets of Radiation suits. Each set contains a helmet, suit, and Geiger counter. We'll even throw in a bottle of vodka and some glasses too, considering the life-expectancy of people who order this."
-	cost = 130
+	desc = "Survive the most irradiated depths of the wasteland with two sets of Radiation suits. Each set contains a helmet, suit, and Geiger counter. We'll even throw in a bottle of vodka and some glasses too, considering the life-expectancy of people who order this."
+	cost = 20
 	contains = list(/obj/item/clothing/head/radiation,
 					/obj/item/clothing/head/radiation,
 					/obj/item/clothing/suit/radiation,

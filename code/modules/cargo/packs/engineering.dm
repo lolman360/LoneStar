@@ -42,7 +42,7 @@
 /datum/supply_pack/engineering/inducers
 	name = "Electromagnetic Power Inducers Crate"
 	desc = "No rechargers? No problem, with the RC-75 EPI, you can recharge any standard cell-based equipment anytime, anywhere. Contains two Inducers."
-	cost = 2300
+	cost = 100
 	contains = list(/obj/item/inducer/sci/supply, /obj/item/inducer/sci/supply)
 	crate_name = "inducer crate"
 	crate_type = /obj/structure/closet/crate/engineering/electrical

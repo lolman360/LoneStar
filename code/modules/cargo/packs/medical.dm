@@ -43,7 +43,7 @@
 /datum/supply_pack/medical/chemical
 	name = "Chemical Starter Kit Crate"
 	desc = "Contains twelve different chemicals, for all the fun experiments you can make."
-	cost = 170
+	cost = 150
 	contains = list(/obj/item/reagent_containers/glass/bottle/hydrogen,
 					/obj/item/reagent_containers/glass/bottle/carbon,
 					/obj/item/reagent_containers/glass/bottle/nitrogen,
@@ -64,7 +64,7 @@
 /datum/supply_pack/medical/defibs
 	name = "Defibrillator Crate"
 	desc = "Contains two defibrillators for bringing the recently deceased back to life."
-	cost = 200
+	cost = 150 //cheaper than individual defibs
 	contains = list(/obj/item/defibrillator/loaded,
 					/obj/item/defibrillator/loaded)
 	crate_name = "defibrillator crate"
@@ -80,7 +80,7 @@
 /datum/supply_pack/medical/supplies
 	name = "Medical Supplies Crate"
 	desc = "Contains seven beakers, syringes, and bodybags. Three morphine bottles, four insulin pills. Two charcoal bottles, epinephrine bottles, antitoxin bottles, and large beakers. Finally, a single roll of medical gauze, as well as a bottle of stimulant pills for long, hard work days. German doctor not included."
-	cost = 250
+	cost = 125
 	contains = list(/obj/item/reagent_containers/glass/bottle/charcoal,
 					/obj/item/reagent_containers/glass/bottle/charcoal,
 					/obj/item/reagent_containers/glass/bottle/epinephrine,
@@ -109,7 +109,7 @@
 /datum/supply_pack/medical/adv_surgery_tools
 	name = "Med-Co Advanced Surgery Tools"
 	desc = "A full set of advanced pre-war surgery tools and a sterilizine sprayer."
-	cost = 400
+	cost = 300
 	contains = list(/obj/item/storage/belt/medical/surgery_belt_adv,
 					/obj/item/reagent_containers/medspray/sterilizine)
 	crate_name = "pre-war surgery tools"
@@ -118,7 +118,7 @@
 /datum/supply_pack/medical/surgery
 	name = "Surgical Supplies Crate"
 	desc = "Do you want to perform surgery, but don't have one of those fancy shmancy degrees? Just get started with this crate containing a medical duffelbag, Sterilizine spray and collapsible roller bed."
-	cost = 130
+	cost = 120
 	contains = list(/obj/item/storage/backpack/duffelbag/med/surgery,
 					/obj/item/reagent_containers/medspray/sterilizine,
 					/obj/item/roller)
@@ -130,8 +130,8 @@
 
 /datum/supply_pack/medical/sprays
 	name = "Medical Sprays"
-	desc = "Contains two cans of Styptic Spray, Silver Sulfadiazine Spray, Synthflesh Spray and Sterilizer Compound Spray."
-	cost = 225
+	desc = "Contains two cans of Styptic Spray, Silver Sulfadiazine Spray, Synthflesh Spray and Sterilizer Spray."
+	cost = 150
 	contains = list(/obj/item/reagent_containers/medspray/styptic,
 					/obj/item/reagent_containers/medspray/styptic,
 					/obj/item/reagent_containers/medspray/silver_sulf,
@@ -145,7 +145,7 @@
 /datum/supply_pack/medical/advrad
 	name = "Radiation Treatment Crate"
 	desc = "A crate for when radiation is out of hand. Contains two IV packs of RadAway as well as two geiger counters."
-	cost = 125
+	cost = 100
 	contains = list(/obj/item/reagent_containers/blood/radaway,
 					/obj/item/reagent_containers/blood/radaway,
 					/obj/item/geiger_counter,
@@ -156,7 +156,7 @@
 /datum/supply_pack/medical/medipen_variety
 	name = "Medipen Variety-Pak"
 	desc = "Contains eight different medipens in three different varieties, to assist in quickly treating seriously injured patients."
-	cost = 125
+	cost = 100
 	contains = list(/obj/item/reagent_containers/hypospray/medipen/,
 					/obj/item/reagent_containers/hypospray/medipen/,
 					/obj/item/reagent_containers/hypospray/medipen/ekit,

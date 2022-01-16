@@ -7,25 +7,25 @@
 /datum/supply_pack/goody/combatknives_single
 	name = "Combat Knife Single-Pack"
 	desc = "Contains one sharpened combat knive. Guaranteed to fit snugly inside any Nanotrasen-standard boot."
-	cost = 80
+	cost = 20
 	contains = list(/obj/item/melee/onehanded/knife/hunting)
 
 /datum/supply_pack/goody/sologamermitts
 	name = "Insulated Gloves Single-Pack"
 	desc = "The backbone of modern society. Barely ever ordered for actual engineering."
-	cost = 80
+	cost = 20
 	contains = list(/obj/item/clothing/gloves/color/yellow)
 
 /datum/supply_pack/goody/firstaidbruises_single
 	name = "Bruise Treatment Kit Single-Pack"
 	desc = "A single brute first-aid kit, perfect for recovering from stubbed toes."
-	cost = 33
+	cost = 30
 	contains = list(/obj/item/storage/firstaid/brute)
 
 /datum/supply_pack/goody/firstaidburns_single
 	name = "Burn Treatment Kit Single-Pack"
 	desc = "A single burn first-aid kit."
-	cost = 33
+	cost = 30
 	contains = list(/obj/item/storage/firstaid/fire)
 
 /datum/supply_pack/goody/firstaid_single
@@ -37,13 +37,13 @@
 /datum/supply_pack/goody/firstaidoxygen_single
 	name = "Oxygen Deprivation Kit Single-Pack"
 	desc = "A single oxygen deprivation first-aid kit, marketed heavily to those with crippling fears of asphyxiation."
-	cost = 33
+	cost = 30
 	contains = list(/obj/item/storage/firstaid/o2)
 
 /datum/supply_pack/goody/firstaidtoxins_single
 	name = "Toxin Treatment Kit Single-Pack"
 	desc = "A single first aid kit focused on healing damage dealt by heavy toxins."
-	cost = 33
+	cost = 30
 	contains = list(/obj/item/storage/firstaid/toxin)
 
 /datum/supply_pack/goody/toolbox // mostly just to water down coupon probability
@@ -79,5 +79,5 @@
 /datum/supply_pack/goody/medipen_twopak
 	name = "Medipen Two-Pak"
 	desc = "Contains one standard epinephrine medipen and one standard emergency first-aid kit medipen. For when you want to prepare for the worst."
-	cost = 50
+	cost = 15
 	contains = list(/obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/hypospray/medipen/ekit)

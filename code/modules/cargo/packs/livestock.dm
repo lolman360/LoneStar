@@ -43,7 +43,7 @@
 /datum/supply_pack/critter/chick
 	name = "Chicken Crate"
 	desc = "The chicken goes bwaak!"
-	cost = 100
+	cost = 75
 	contains = list(/mob/living/simple_animal/chick)
 	crate_name = "chicken crate"
 
@@ -80,14 +80,14 @@
 /datum/supply_pack/critter/cow
 	name = "Brahmin Crate"
 	desc = "The cow goes moo!"
-	cost = 100
+	cost = 75
 	contains = list(/mob/living/simple_animal/cow/brahmin)
 	crate_name = "brahmin crate"
 
 /datum/supply_pack/critter/goat
 	name = "Bighorner Crate"
 	desc = "Big and rude."
-	cost = 100
+	cost = 75
 	contains = list(/mob/living/simple_animal/hostile/retaliate/goat/bighorn)
 	crate_name = "bighorner crate"
 
