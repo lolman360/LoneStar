@@ -1,6 +1,6 @@
 /datum/export/material
 	k_elasticity = 0
-	cost = 5 // Cost per MINERAL_MATERIAL_AMOUNT, which is 2000cm3 as of April 2016.
+	cost = 0.5 // Cost per MINERAL_MATERIAL_AMOUNT, which is 2000cm3 as of April 2016.
 	message = "cm3 of developer's tears. Please, report this on github"
 	var/material_id = null
 	export_types = list(
@@ -28,42 +28,42 @@
 // Materials. Selling raw can lead to a big payout but takes a lot of work for miners to get a lot. Best to craft art/rnd gear
 
 /datum/export/material/diamond
-	cost = 250
+	cost = 25
 	material_id = /datum/material/diamond
 	message = "cm3 of diamonds"
 
 /datum/export/material/plasma
-	cost = 100
+	cost = 10
 	material_id = /datum/material/plasma
 	message = "cm3 of plasma"
 
 /datum/export/material/uranium
-	cost = 50
+	cost = 5
 	material_id = /datum/material/uranium
 	message = "cm3 of uranium"
 
 /datum/export/material/gold
-	cost = 60
+	cost = 6
 	material_id = /datum/material/gold
 	message = "cm3 of gold"
 
 /datum/export/material/silver
-	cost = 25
+	cost = 2.5
 	material_id = /datum/material/silver
 	message = "cm3 of silver"
 
 /datum/export/material/titanium
-	cost = 60
+	cost = 6
 	material_id = /datum/material/titanium
 	message = "cm3 of titanium"
 
 /datum/export/material/plastic
-	cost = 5
+	cost = 0.5
 	material_id = /datum/material/plastic
 	message = "cm3 of plastic"
 
 /datum/export/material/metal
-	cost = 3
+	cost = 0.3
 	message = "cm3 of metal"
 	material_id = /datum/material/iron
 	export_types = list(
@@ -71,28 +71,28 @@
 		/obj/item/stack/rods, /obj/item/stack/ore, /obj/item/coin)
 
 /datum/export/material/glass
-	cost = 3
+	cost = 0.3
 	message = "cm3 of glass"
 	material_id = /datum/material/glass
 	export_types = list(/obj/item/stack/sheet/glass, /obj/item/stack/ore,
 		/obj/item/shard)
 
 /datum/export/material/adamantine
-	cost = 300
+	cost = 30
 	material_id = /datum/material/adamantine
 	message = "cm3 of adamantine"
 
 /datum/export/material/mythril
-	cost = 1000
+	cost = 100
 	material_id = /datum/material/mythril
 	message = "cm3 of mythril"
 
 /datum/export/material/bscrystal
-	cost = 150
-	message = "cm3 of bluespace crystals"
+	cost = 15
+	message = "cm3 of quantum mesh"
 	material_id = /datum/material/bluespace
 
 /datum/export/material/runite
-	cost = 300
+	cost = 30
 	message = "cm3 of runite"
 	material_id = /datum/material/runite
