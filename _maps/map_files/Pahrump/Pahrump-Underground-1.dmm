@@ -1582,6 +1582,7 @@
 	name = "elevator door control";
 	pixel_y = 32
 	},
+/obj/machinery/computer/bounty,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "aZR" = (
@@ -12875,6 +12876,9 @@
 	name = "Cargo Train Station";
 	width = 5
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "hFt" = (
@@ -15452,6 +15456,12 @@
 	icon_state = "housewood3-broken"
 	},
 /area/f13/caves)
+"jAa" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "jAd" = (
 /obj/effect/decal/fakelattice,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -23183,6 +23193,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/den)
+"pgr" = (
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "pgt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random_high,
@@ -33496,8 +33510,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/caves)
 "wYQ" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
+/obj/effect/turf_decal/loading_area{
+	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
@@ -55121,13 +55135,13 @@ uoO
 uoO
 uoO
 fka
-kiM
+jAa
 hFa
-kiM
-kiM
-kiM
-kiM
-kiM
+jAa
+jAa
+jAa
+jAa
+jAa
 fka
 uoO
 tur
@@ -55378,13 +55392,13 @@ uoO
 uoO
 uoO
 fka
+kiM
+kiM
 wYQ
 wYQ
 wYQ
-wYQ
-wYQ
-wYQ
-wYQ
+kiM
+kiM
 fka
 uoO
 tur
@@ -56150,10 +56164,10 @@ uoO
 uoO
 fka
 kiM
-kiM
-kiM
-kiM
-kiM
+pgr
+pgr
+pgr
+pgr
 kiM
 kiM
 fka
@@ -56664,10 +56678,10 @@ uoO
 uoO
 fka
 qDI
-kiM
-kiM
-kiM
-kiM
+pgr
+pgr
+pgr
+pgr
 kiM
 onb
 fka
@@ -57178,10 +57192,10 @@ uoO
 uoO
 fka
 kiM
-kiM
-kiM
-kiM
-kiM
+pgr
+pgr
+pgr
+pgr
 kiM
 kiM
 fka
@@ -57692,10 +57706,10 @@ lnr
 uoO
 fka
 qDI
-kiM
-kiM
-kiM
-kiM
+pgr
+pgr
+pgr
+pgr
 kiM
 onb
 fka

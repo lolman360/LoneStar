@@ -32,14 +32,15 @@
 	cost = 140
 	contains = list(/obj/item/grenade/stingbang)
 
-/datum/supply_pack/security/22lr
+/datum/supply_pack/security/pistol22lr
 	name = ".22LR pistol"
 	desc = "A suppressed firearm chambered in .22LR."
 	cost = 125
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/pistol22)
 	crate_name = ".22 pistol crate"
 
-/datum/supply_pack/security/10mm
+
+/datum/supply_pack/security/pistol10mm
 	name = "10mm pistol"
 	desc = "A large-frame pre-war 10mm pistol."
 	cost = 200

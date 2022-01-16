@@ -4964,9 +4964,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "ceT" = (
-/obj/item/reagent_containers/food/snacks/grown/pumpkin{
-	pixel_y = 16
-	},
+/obj/machinery/computer/cargo/request,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -8381,6 +8379,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/building)
+"dDY" = (
+/obj/item/reagent_containers/food/snacks/grown/pumpkin{
+	pixel_y = 16
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/wasteland)
 "dEc" = (
 /obj/effect/decal/cleanable/glass,
 /obj/effect/decal/cleanable/dirt,
@@ -22629,6 +22635,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/machinery/computer/bounty,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkdirtysolid"
 	},
@@ -86624,7 +86631,7 @@ ozq
 ozq
 aRl
 uIa
-mHj
+dDY
 ydO
 mHj
 eKY
