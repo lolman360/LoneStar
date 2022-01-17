@@ -85,8 +85,8 @@
 
 /datum/supply_pack/emergency/radiatione_emergency
 	name = "Emergency Radiation Protection Crate"
-	desc = "Survive the Nuclear Apocalypse and Supermatter Engine alike with two sets of Radiation suits. Each set contains a helmet, suit, and Geiger counter. We'll even throw in a single pack of RadAway, no charge!"
-	cost = 125
+	desc = "Survive the most irradiated depths of the wasteland with two sets of Radiation suits. Each set contains a helmet, suit, and Geiger counter. We'll even throw in a single pack of RadAway, no charge!"
+	cost = 30
 	contains = list(/obj/item/clothing/head/radiation,
 					/obj/item/clothing/head/radiation,
 					/obj/item/clothing/suit/radiation,
@@ -134,7 +134,7 @@
 
 /datum/supply_pack/emergency/mre
 	name = "MRE Packs (Emergency Rations)"
-	desc = "The lights are out. Oxygen's running low. You've run out of food except space weevils. Don't let this be you! This pack contains 5 MRE packs with a randomized menu."
+	desc = "The lights are out. Oxygen's running low. You've run out of food except weevils and rats. Don't let this be you! This pack contains 5 MRE packs with a randomized menu."
 	cost = 20
 	contains = list(/obj/item/storage/box/mre/menu1/safe,
 					/obj/item/storage/box/mre/menu1/safe,
