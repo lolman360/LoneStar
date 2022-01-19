@@ -915,6 +915,10 @@ Mayor
 		return
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/a180)
+
 
 /datum/outfit/job/den/f13shopkeeper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

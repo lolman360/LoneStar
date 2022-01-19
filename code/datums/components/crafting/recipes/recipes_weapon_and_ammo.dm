@@ -656,6 +656,20 @@
 	subcategory = CAT_WEAPON
 	always_available = FALSE
 
+//BoS plasma pistol
+/datum/crafting_recipe/lightplasmapistol
+	name = "Lightweight Plasma Pistol"
+	result = /obj/item/gun/energy/laser/plasma/pistol/light
+	reqs = list(/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/crafting/electronicparts = 2
+				)
+	tools = list(TOOL_AWORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
 //uzi
 /datum/crafting_recipe/uzi
 	name = "Uzi SMG"
@@ -779,6 +793,22 @@
 				/obj/item/stack/crafting/metalparts = 10,
 				/obj/item/stack/sheet/mineral/wood = 5,
 				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/stack/crafting/goodparts = 5
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 120
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+	always_available = FALSE
+
+//a180
+/datum/crafting_recipe/a180
+	name = "American 180"
+	result = /obj/item/gun/ballistic/automatic/smg/american180
+	reqs = list(/obj/item/stack/sheet/metal = 15,
+				/obj/item/stack/crafting/metalparts = 15,
+				/obj/item/stack/sheet/mineral/wood = 10,
+				/obj/item/advanced_crafting_components/alloys = 2,
 				/obj/item/stack/crafting/goodparts = 5
 				)
 	tools = list(TOOL_WORKBENCH)

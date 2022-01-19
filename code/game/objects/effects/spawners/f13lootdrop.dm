@@ -1939,6 +1939,24 @@
 		/obj/item/attachments/auto_sear
 	)
 
+/obj/effect/spawner/lootdrop/f13/blueprintLowPartsWeighted
+	name = "parts and mods spawner (weighted towards parts)"
+	icon_state = "blueprint_loot"
+	lootcount = 3
+	lootdoubles = FALSE
+	loot = list(
+		/obj/item/advanced_crafting_components/flux = 2,
+		/obj/item/advanced_crafting_components/lenses = 2,
+		/obj/item/advanced_crafting_components/conductors = 2,
+		/obj/item/advanced_crafting_components/receiver = 2,
+		/obj/item/advanced_crafting_components/assembly = 2,
+		/obj/item/advanced_crafting_components/alloys = 2,
+		/obj/item/attachments/scope,
+		/obj/item/attachments/burst_improvement,
+		/obj/item/attachments/recoil_decrease,
+		/obj/item/attachments/auto_sear
+	)
+
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
 	icon_state = "blueprint_loot"
@@ -2076,4 +2094,3 @@
 			/obj/effect/spawner/bundle/testi = 10,
 			/obj/effect/spawner/bundle/testj = 10,
 			)
-
