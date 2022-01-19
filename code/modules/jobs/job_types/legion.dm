@@ -47,7 +47,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_broken)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_ncr)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_ncr)
-	
+
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
 	belt = /obj/item/storage/belt/military/assault/legion
@@ -986,10 +986,14 @@ commented out pending rework*/
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/grease_gun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/brush)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/colt6520)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionlance)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/strongrocket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/crossbow)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/cheaparrow)
 
 
 

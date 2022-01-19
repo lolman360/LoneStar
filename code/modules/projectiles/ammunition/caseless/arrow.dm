@@ -7,7 +7,16 @@
 	icon_state = "arrow"
 	throwforce = 8 //good luck hitting someone with the pointy end of the arrow
 	throw_speed = 3
-	w_class = 3
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_casing/caseless/arrow/cheap
+	name = "cheap arrow"
+	desc = "A cheap, small, lightweight arrow made from wood. Not as effective against armor."
+	projectile_type = /obj/item/projectile/bullet/reusable/arrow/cheap
+	caliber = "arrow" //todo
+	icon_state = "arrow"
+	throwforce = 6
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/ammo_casing/caseless/arrow/ap
 	name = "sturdy arrow"
