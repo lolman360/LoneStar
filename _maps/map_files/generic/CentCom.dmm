@@ -10416,11 +10416,11 @@
 /obj/docking_port/stationary{
 	dir = 8;
 	dwidth = 1;
-	height = 7;
+	height = 5;
 	id = "supply_away";
 	json_key = "cargo";
 	name = "CentCom";
-	width = 5
+	width = 7
 	},
 /turf/open/space/basic,
 /area/f13/underground/mountain)
