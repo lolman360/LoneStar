@@ -2,7 +2,7 @@
 	k_elasticity = 0
 
 /datum/export/large/crate
-	cost = 50
+	cost = 10
 	k_elasticity = 0
 	unit_name = "crate"
 	export_types = list(/obj/structure/closet/crate)
@@ -14,7 +14,7 @@
 		. += " Thanks for participating in Nanotrasen Crates Recycling Program."
 
 /datum/export/large/crate/wooden
-	cost = 10
+	cost = 5
 	unit_name = "large wooden crate"
 	export_types = list(/obj/structure/closet/crate/large)
 	exclude_types = list()
@@ -24,23 +24,29 @@
 	export_types = list(/obj/structure/ore_box)
 
 /datum/export/large/crate/wood
-	cost = 14
+	cost = 5
 	unit_name = "wooden crate"
 	export_types = list(/obj/structure/closet/crate/wooden)
-	exclude_types = list()
+	exclude_types = list(/obj/structure/closet/crate/wooden/cheap)
+
+/datum/export/large/crate/wood/cheap
+	cost = 0
+	unit_name = "dingy wood crate"
+	export_types = list(/obj/structure/closet/crate/wooden/cheap)
+
 
 /datum/export/large/barrel
-	cost = 30 //double the wooden cost of a coffin.
+	cost = 10 //double the wooden cost of a coffin.
 	unit_name = "wooden barrel"
 	export_types = list(/obj/structure/fermenting_barrel)
 
 /datum/export/large/crate/coffin
-	cost = 15
+	cost = 5
 	unit_name = "coffin"
 	export_types = list(/obj/structure/closet/crate/coffin)
 
 /datum/export/large/reagent_dispenser
-	cost = 10
+	cost = 20
 
 /datum/export/large/reagent_dispenser/water
 	unit_name = "watertank"

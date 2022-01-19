@@ -165,7 +165,7 @@
 /datum/supply_pack/organic/hydroponics/hydrotank
 	name = "Watering Backpack Crate"
 	desc = "Bring on the flood with this high-capacity backpack crate. Contains 500 units of life-giving H2O."
-	cost = 5
+	cost = 25
 	contains = list(/obj/item/watertank)
 	crate_name = "hydroponics backpack crate"
 	crate_type = /obj/structure/closet/crate/hydroponics

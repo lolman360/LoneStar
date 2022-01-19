@@ -13,6 +13,42 @@
 //////////////////// Paperwork and Writing Supplies //////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
+/datum/supply_pack/misc/tencap
+	name = "10 Caps"
+	desc = "Redeem some of your hard-earned cash from your account."
+	cost = 10
+	contains = list(/obj/item/stack/f13Cash/caps/ten)
+	crate_name = "cash crate"
+	crate_type = /obj/structure/closet/crate/wooden/cheap
+
+/datum/supply_pack/misc/fiftycap
+	name = "50 Caps"
+	desc = "Redeem some of your hard-earned cash from your account."
+	cost = 50
+	contains = list(/obj/item/stack/f13Cash/caps/ten,
+					/obj/item/stack/f13Cash/caps/ten,
+					/obj/item/stack/f13Cash/caps/ten,
+					/obj/item/stack/f13Cash/caps/ten,
+					/obj/item/stack/f13Cash/caps/ten)
+	crate_name = "cash crate"
+	crate_type = /obj/structure/closet/crate/wooden/cheap
+
+/datum/supply_pack/misc/hundredcap
+	name = "100 Caps"
+	desc = "Redeem some of your hard-earned cash from your account."
+	cost = 100
+	contains = list(/obj/item/stack/f13Cash/caps/hundred)
+	crate_name = "cash crate"
+	crate_type = /obj/structure/closet/crate/wooden/cheap
+
+/datum/supply_pack/misc/fivehundredcap
+	name = "500 Caps"
+	desc = "Redeem some of your hard-earned cash from your account."
+	cost = 500
+	contains = list(/obj/item/stack/f13Cash/caps/fivezerozero)
+	crate_name = "cash crate"
+	crate_type = /obj/structure/closet/crate/wooden/cheap
+
 
 /datum/supply_pack/misc/anvil
 	name = "Anvil Crate"
