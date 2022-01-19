@@ -3,7 +3,6 @@
 	icon_state = "black"
 	name = "\proper nothing"
 	intact = 0
-	blocks_air = 1 //to prevent cargo shuttle shitting up atmos and to prevent atmos bugs since space shouldn't exist
 	//turf/open density = 1 WHYYY
 /*lonestar edit. don't need space. so dont initialize it.
 	initial_temperature = TCMB
@@ -24,6 +23,8 @@
 /turf/open/space/basic/New()	//Do not convert to Initialize
 	//This is used to optimize the map loader
 	return
+
+
 
 /turf/open/space/examine() //nothing, nowhere
 	return
