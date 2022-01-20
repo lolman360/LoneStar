@@ -74,3 +74,9 @@
 	icon_prefix = "xbow"
 	extra_damage = 3 //generally won't reduce TTK, but does increase performance against armor, especially with AP arrows
 	mag_type = /obj/item/ammo_box/magazine/internal/bow/xbow
+
+
+/obj/item/gun/ballistic/bow/xbow/attackby(obj/item/I, mob/user, params)
+	if (magazine.attackby(I, user, params, 1))
+		to_chat(user, "<span class='notice'>You slide the arrow into the magazine.</span>")
+		update_icon()
