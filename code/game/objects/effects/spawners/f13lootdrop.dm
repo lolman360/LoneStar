@@ -2012,6 +2012,29 @@
 		/obj/item/book/granter/crafting_recipe/blueprint/bozar
 	)
 
+/obj/effect/spawner/lootdrop/f13/blueprintVHighPartsWeighted
+	name = "parts and mods spawner (weighted towards blueprints)"
+	icon_state = "blueprint_loot"
+	lootcount = 3
+	lootdoubles = FALSE
+	loot = list(
+		/obj/item/book/granter/crafting_recipe/blueprint/r91 ,
+		/obj/item/book/granter/crafting_recipe/blueprint/r84 ,
+		/obj/item/book/granter/crafting_recipe/blueprint/gauss = 3,
+		/obj/item/book/granter/crafting_recipe/blueprint/neostead = 3,
+		/obj/item/book/granter/crafting_recipe/blueprint/aer9 = 3,
+		/obj/item/book/granter/crafting_recipe/blueprint/am_rifle = 3,
+		/obj/item/book/granter/crafting_recipe/blueprint/citykiller = 3,
+		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster = 3,
+		/obj/item/book/granter/crafting_recipe/blueprint/bozar = 3,
+		/obj/item/advanced_crafting_components/flux,
+		/obj/item/advanced_crafting_components/lenses,
+		/obj/item/advanced_crafting_components/conductors,
+		/obj/item/advanced_crafting_components/receiver,
+		/obj/item/advanced_crafting_components/assembly,
+		/obj/item/advanced_crafting_components/alloys,
+	)
+
 /obj/effect/spawner/lootdrop/f13/advcrafting
 	name = "advanced_crafting"
 	lootcount = 1

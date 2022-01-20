@@ -5394,7 +5394,7 @@
 	desc = "After YEARS of research, prototyping, and testing, the brotherhood created the sequel to the table. Advanced flat surface technology at work!";
 	name = "advanced table"
 	},
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique,
+/obj/effect/spawner/lootdrop/f13/blueprintVHighPartsWeighted,
 /turf/open/floor/mineral/plastitanium,
 /area/f13/bunker)
 "gqm" = (
@@ -9944,7 +9944,7 @@
 "maf" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique,
+/obj/effect/spawner/lootdrop/f13/blueprintVHighPartsWeighted,
 /turf/open/floor/pod/dark,
 /area/f13/underground/cave)
 "mao" = (
