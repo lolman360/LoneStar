@@ -22,8 +22,7 @@
 /obj/item/gun/energy/laser/plasma/pistol/light
 	name = "lightweight plasma pistol"
 	slowdown = 0.1
-	item_state = "plasma-pistol" //todo
-	icon_state = "plasma-pistol"
+	icon_state = "light-plasma-pistol"
 	desc = "A lightweight modification of the common REPCONN-built plasma pistol. Fires heavy low penetration plasma clots at a slower rate than the regular design due to reduced cooling."
 	fire_delay = 5
 

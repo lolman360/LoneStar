@@ -69,10 +69,8 @@
 /obj/item/gun/ballistic/bow/xbow
 	name = "magazine-fed crossbow"
 	desc = "A somewhat primitive projectile weapon. Has a spring-loaded magazine, but still requires drawing back before firing. Fires arrows slightly faster than regular bows, improving damage"
-	icon_state = "bow" //todo
-	item_state = "bow"
-	icon_prefix = "bow"
-	extra_damage = 2
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY //need both hands to fire
+	icon_state = "xbow"
+	item_state = "xbow"
+	icon_prefix = "xbow"
+	extra_damage = 3 //generally won't reduce TTK, but does increase performance against armor, especially with AP arrows
 	mag_type = /obj/item/ammo_box/magazine/internal/bow/xbow
