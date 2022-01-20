@@ -31,8 +31,7 @@
 
 /obj/item/gun/ballistic/bow/attack_self(mob/living/user)
 	if (chambered)
-		var/obj/item/ammo_casing/AC = magazine.get_round(0)
-		user.put_in_hands(AC)
+		user.put_in_hands(chambered)
 		chambered = null
 		to_chat(user, "<span class='notice'>You gently release the bowstring, removing the arrow.</span>")
 	else if (get_ammo())
