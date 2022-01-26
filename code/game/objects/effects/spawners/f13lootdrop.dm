@@ -565,7 +565,7 @@
 				/obj/item/melee/onehanded/knife/throwing,
 				/obj/item/melee/onehanded/knife/throwing,
 				)
-	
+
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier1 //TIER 1 MELEE WEAPON
 	name = "tier 1 melee"
@@ -784,7 +784,8 @@
 				/obj/effect/spawner/bundle/f13/revolver45,
 				/obj/effect/spawner/bundle/f13/thatgun,
 				/obj/effect/spawner/bundle/f13/marksman,
-				/obj/effect/spawner/bundle/f13/dkssniper,
+				/obj/effect/spawner/bundle/f13/hunting,
+				/obj/effect/spawner/bundle/f13/m1garand,
 				/obj/item/gun/ballistic/automatic/smg/american180
 				)
 
@@ -792,9 +793,8 @@
 	name = "high tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/assault_rifle = 20,
 				/obj/effect/spawner/bundle/f13/r84 = 10,
-				/obj/effect/spawner/bundle/f13/hunting = 15,
+				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/guns/tommygun = 15,
-				/obj/effect/spawner/bundle/f13/m1garand = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
 				)
