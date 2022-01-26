@@ -3,14 +3,13 @@
 //PLASMA WEAPONS//
 //////////////////
 
-
 //Plasma pistol
 /obj/item/gun/energy/laser/plasma/pistol
 	name ="plasma pistol"
 	slowdown = 0.2
 	item_state = "plasma-pistol"
 	icon_state = "plasma-pistol"
-	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires heavy low penetration plasma clots."
+	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas."
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT
 	slot_flags = ITEM_SLOT_BELT
@@ -25,6 +24,12 @@
 	icon_state = "light-plasma-pistol"
 	desc = "A lightweight modification of the common REPCONN-built plasma pistol. Fires heavy low penetration plasma clots at a slower rate than the regular design due to reduced cooling."
 	fire_delay = 5
+
+/obj/item/gun/energy/laser/plasma/pistol/worn
+	name ="shoddy plasma pistol"
+	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas. This one's internal parts have loose seals and corroded electronics."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/worn)
+	fire_delay = 4.5
 
 //Glock 86 Plasma pistol
 /obj/item/gun/energy/laser/plasma/glock
