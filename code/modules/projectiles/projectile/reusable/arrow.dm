@@ -30,7 +30,7 @@
 /obj/item/projectile/bullet/reusable/arrow/cheap
 	name = "lightweight arrow"
 	desc = "A cheap, lightweight wooden arrow. Not as effective against armor."
-	damage = 35
+	damage = 40
 	armour_penetration = -0.25
 	icon_state = "arrow"
 	ammo_type = /obj/item/ammo_casing/caseless/arrow/cheap
