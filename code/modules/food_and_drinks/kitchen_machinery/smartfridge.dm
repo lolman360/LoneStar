@@ -235,13 +235,16 @@
 // ----------------------------
 /obj/machinery/smartfridge/drying_rack
 	name = "drying rack"
-	desc = "A wooden case atop a large electric hot-plate, used to dry plant products, food and hide."
-	icon = 'icons/obj/hydroponics/equipment.dmi'
+	desc = "A sandstone oven with racks above for hanging produce, used to dry plant products, food and hide."
+	icon = 'icons/fallout/farming/farming_structures.dmi'
 	icon_state = "drying_rack"
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 15
 	active_power_usage = 600
 	visible_contents = FALSE
+	proj_pass_rate = 30
+	pass_flags = LETPASSTHROW
+	pass_flags_self = PASSTABLE | LETPASSTHROW
 	var/drying = FALSE
 
 /obj/machinery/smartfridge/drying_rack/Initialize()
@@ -595,12 +598,13 @@
 /obj/machinery/smartfridge/bottlerack/gardentool
 	name = "garden toolrack"
 	desc = "The wasteland farmers organisational tool storage."
+	icon = 'icons/fallout/farming/farming_structures.dmi'
 	icon_state = "gardentool"
 	layer = ABOVE_OBJ_LAYER
 	max_n_of_items = 30
 
 /obj/machinery/smartfridge/bottlerack/gardentool/accept_check(obj/item/O)
-	if(istype(O, /obj/item/plant_analyzer) || istype(O, /obj/item/reagent_containers/spray) || istype(O, /obj/item/cultivator) || istype(O, /obj/item/hatchet) || istype(O, /obj/item/scythe) || istype(O, /obj/item/reagent_containers/glass/bottle/nutrient) || istype(O, /obj/item/reagent_containers/glass/bottle/killer) || istype(O, /obj/item/shovel) || istype(O, /obj/item/twohanded/fireaxe) || istype(O, /obj/item/reagent_containers/glass/bucket) || istype(O, /obj/item/storage/bag/plants) || istype(O, /obj/item/storage/bag/plants/portaseeder))
+	if(istype(O, /obj/item/plant_analyzer) || istype(O, /obj/item/reagent_containers/spray) || istype(O, /obj/item/cultivator) || istype(O, /obj/item/hatchet) || istype(O, /obj/item/scythe) || istype(O, /obj/item/reagent_containers/glass/bottle/nutrient) || istype(O, /obj/item/reagent_containers/glass/bottle/killer) || istype(O, /obj/item/shovel) || istype(O, /obj/item/twohanded/fireaxe) || istype(O, /obj/item/reagent_containers/glass/bucket) || istype(O, /obj/item/storage/bag/plants) || istype(O, /obj/item/storage/bag/plants/portaseeder) || istype(O, /obj/item/book/manual/advice_farming))
 		return TRUE
 	return FALSE
 
@@ -614,27 +618,60 @@
 	. = ..()
 	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE | ROTATION_COUNTERCLOCKWISE | ROTATION_VERBS ,null,CALLBACK(src, .proc/can_be_rotated))
 
+// Preloaded simple farming rack for mapping
+/obj/machinery/smartfridge/bottlerack/gardentool/primitive
+	initial_contents = list(
+		/obj/item/shovel = 2,
+		/obj/item/hatchet = 2,
+		/obj/item/cultivator/rake  = 2,
+		/obj/item/scythe = 1,
+		/obj/item/reagent_containers/glass/bucket/wood = 3,
+		/obj/item/storage/bag/plants = 2,
+		/obj/item/book/manual/advice_farming = 1)
+
+
 // -------------------------
 //  Seedbin
 // -------------------------
 /obj/machinery/smartfridge/bottlerack/seedbin
 	name = "seed bin"
 	desc = "Organised dumping ground for the starters of life."
+	icon = 'icons/fallout/farming/farming_structures.dmi'
 	icon_state = "seedbin"
 	max_n_of_items = 400
+	proj_pass_rate = 70
+	pass_flags = LETPASSTHROW
+	pass_flags_self = PASSTABLE | LETPASSTHROW
+	var/climbable = TRUE
 
 /obj/machinery/smartfridge/bottlerack/seedbin/accept_check(obj/item/O)
 	if(istype(O, /obj/item/seeds))
 		return TRUE
 	return FALSE
+
+// Preloaded primitive seedbin for mapping. A little too complete for my taste but with the current farming economy its fine.
+/obj/machinery/smartfridge/bottlerack/seedbin/primitive
+	initial_contents = list(
+		/obj/item/seeds/wheat = 3,
+		/obj/item/seeds/poppy/broc = 2,
+		/obj/item/seeds/xander = 2,
+		/obj/item/seeds/feracactus = 1,
+		/obj/item/seeds/fungus = 1,
+		/obj/item/seeds/punga = 1,)
+
 //-------------------------
-// Foodbin
+// Grownbin
 //-------------------------
 /obj/machinery/smartfridge/bottlerack/grownbin
 	name = "grownbin"
 	desc = "A large box, to contain the harvest that the Earth has blessed upon you."
-	icon_state = "seedbin"
+	icon = 'icons/fallout/farming/farming_structures.dmi'
+	icon_state = "grownbin"
 	max_n_of_items = 1000
+	proj_pass_rate = 70
+	pass_flags = LETPASSTHROW
+	pass_flags_self = PASSTABLE | LETPASSTHROW
+	var/climbable = TRUE
 
 /obj/machinery/smartfridge/bottlerack/grownbin/accept_check(obj/item/O)
 	if(istype(O, /obj/item/reagent_containers/food/snacks/grown))
@@ -655,6 +692,22 @@
 	if(istype(O, /obj/item/reagent_containers/pill/patch) || istype(O, /obj/item/reagent_containers/glass/bottle/primitive) || istype(O, /obj/item/stack/medical/poultice) || istype(O, /obj/item/smelling_salts))
 		return TRUE
 	return FALSE
+
+//-------------------------
+// Drug Rack - Drugs, medicines, stuff like that. Made from rusting metal. Not buildable.
+//-------------------------
+/obj/machinery/smartfridge/bottlerack/drug_storage
+	name = "drug storage"
+	desc = "Rusting metal shelves stocked with various drugs and medicines."
+	icon = 'icons/fallout/structures/racks.dmi'
+	icon_state = "drugrack"
+	max_n_of_items = 100
+
+/obj/machinery/smartfridge/bottlerack/drug_storage/accept_check(obj/item/O)
+	if(istype(O, /obj/item/reagent_containers/pill/patch) || istype(O, /obj/item/reagent_containers/glass/bottle) || istype(O, /obj/item/storage/pill_bottle) || istype(O, /obj/item/reagent_containers/hypospray/medipen))
+		return TRUE
+	return FALSE
+
 // -------------------------
 // LOOTABLE RACKS - PREWAR SHELVES ETC
 // -------------------------------------------------------------------------

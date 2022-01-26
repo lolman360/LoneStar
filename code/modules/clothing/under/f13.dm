@@ -13,31 +13,28 @@
 
 /obj/item/clothing/under/f13/enclave/science
 	name = "science officer uniform"
-	desc = "(I)Off-white military style uniform for scientists."
+	desc = "Off-white military style uniform for scientists."
 	icon_state = "uniform_enclave_science"
 	item_state = "uniform_enclave_science"
-	armor = list("tier" = 1, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
+
 
 /obj/item/clothing/under/f13/enclave/peacekeeper
 	name = "peacekeeper uniform"
-	desc = "(II)Khaki standard issue uniform over a black turtleneck."
+	desc = "Khaki standard issue uniform over a black turtleneck."
 	icon_state = "uniform_enclave_peacekeeper"
 	item_state = "uniform_enclave_peacekeeper"
-	armor = list("tier" = 2)
 
 /obj/item/clothing/under/f13/enclave/officer
 	name = "officer uniform"
-	desc = "(II)Khaki officers uniform with gold trimming over a black turtleneck."
+	desc = "Khaki officers uniform with gold trimming over a black turtleneck."
 	icon_state = "uniform_enclave_officer"
 	item_state = "uniform_enclave_officer"
-	armor = list("tier" = 2)
-
+	
 /obj/item/clothing/under/f13/enclave/intel
 	name = "intel officer uniform"
-	desc = "(III)Dark pants and turtleneck with hidden kevlar layers, since intel officers often wear no proper armor."
+	desc = "Dark pants and turtleneck with hidden kevlar layers, since intel officers often wear no proper armor."
 	icon_state = "uniform_enclave_intel"
 	item_state = "uniform_enclave_intel"
-	armor = list("tier" = 3)
 
 //Vault
 
@@ -600,11 +597,46 @@
 
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
-	desc = "The uniform of the the Great Khans."
-	icon_state = "khan"
-	item_state = "khan"
-	item_color = "khan"
+	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants, but jorts is a acceptable alternative."
+	icon = 'icons/fallout/clothing/khans.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
+	icon_state = "khan_uniform"
+	item_state = "khan_uniform"
+	item_color = "khan_uniform"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
+	var/uniformtoggled = FALSE
+
+// Testing fixed toggle uniform so icon updates properly
+/obj/item/clothing/under/f13/khan/AltClick(mob/user)
+	. = ..()
+	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	uniform_toggle(user)
+	return TRUE
+
+/obj/item/clothing/under/f13/khan/ui_action_click()
+	uniform_toggle()
+
+/obj/item/clothing/under/f13/khan/proc/uniform_toggle()
+	set src in usr
+
+	if(!can_use(usr))
+		return 0
+
+	to_chat(usr, "<span class='notice'>You adjust the [src].</span>")
+	if(src.uniformtoggled)
+		src.icon_state = "[initial(icon_state)]"
+		src.item_state = "[initial(icon_state)]"
+		src.uniformtoggled = FALSE
+	else if(!src.uniformtoggled)
+		src.icon_state = "[initial(icon_state)]_t"
+		src.item_state = "[initial(icon_state)]_t"
+		src.uniformtoggled = TRUE
+	usr.update_inv_w_uniform()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
 
 //WAYFARER TRIBAL
 /obj/item/clothing/under/f13/tribe
@@ -750,10 +782,6 @@
 //Jackals
 
 //Powder Gangers
-
-//White Legs
-
-//Dead Horses
 
 //The Kings
 
@@ -1341,13 +1369,6 @@
 	icon_state = "caravan"
 	item_color = "caravan"
 
-/obj/item/clothing/under/pants/f13/khan
-	name = "Great Khan pants"
-	desc = "A cloth pants with leather armor pads attached on sides.<br>These are commonly worn by the Great Khans raiders."
-	icon_state = "khan"
-	item_color = "khan"
-	body_parts_covered = LEGS
-
 /obj/item/clothing/under/pants/f13/warboy //Mad Max 4 2015 babe!
 	name = "war boy pants"
 	desc = "A pair of dark brown pants, perfect for the one who grabs the sun, riding to Valhalla."
@@ -1613,3 +1634,79 @@
 	desc = "A dark grey, and finely pressed suit, complete with kneepads and a suspiciously golden silk shirt, only the best."
 	icon_state = "den_suit"
 	item_state = "den_suit"
+
+//TRIBALS
+
+/obj/item/clothing/under/f13/whitelegs
+	name = "White Legs garb"
+	desc = "A segmented pair of dark leather shorts with an orange belt, paired with a distinct facewrap, worn by members of the White Legs tribe."
+	icon_state = "white_legs_under"
+	item_state = "white_legs_under"
+	item_color = "white_legs_under"
+	can_adjust = TRUE
+
+/obj/item/clothing/under/f13/female/whitelegs
+	name = "White Legs garb"
+	desc = "A segmented pair of dark leather shorts with an orange belt and matching sports bra, paired with a distinct facewrap, worn by members of the White Legs tribe."
+	icon_state = "white_legs_under_f"
+	item_state = "white_legs_under_f"
+	item_color = "white_legs_under_f"
+	can_adjust = TRUE
+
+/obj/item/clothing/under/f13/rustwalkers
+	name = "Rustwalkers outfit"
+	desc = "A plaid shirt with torn short sleeves with a set of grey cargo pants, commonly worn by members of the Rustwalkers tribe."
+	icon_state = "rustwalkers_under"
+	item_state = "rustwalkers_under"
+	item_color = "rustwalkers_under"
+	can_adjust = TRUE
+
+/obj/item/clothing/under/f13/female/rustwalkers
+	name = "Rustwalkers outfit"
+	desc = "A cropped red leather jacket with a torn sleeve, alongside a pair of torn brown trousers patched with fishnets, commonly worn by members of the Rustwalkers tribe."
+	icon_state = "rustwalkers_under_f"
+	item_state = "rustwalkers_under_f"
+	item_color = "rustwalkers_under_f"
+
+/obj/item/clothing/under/f13/eighties
+	name = "Eighties outfit"
+	desc = "A thin, short sleeved grey shirt that's longer down the back, with black jeans and a series of chains used as a belt. Commonly worn by members of the Eighties tribe."
+	icon_state = "80s_under"
+	item_state = "80s_under"
+	item_color = "80s_under"
+
+/obj/item/clothing/under/f13/female/eighties
+	name = "Eighties outfit"
+	desc = "A simple grey corset with brown jeans and a series of chains used as a belt and harness. Commonly worn by members of the Eighties tribe."
+	icon_state = "80s_under_f"
+	item_state = "80s_under_f"
+	item_color = "80s_under_f"
+
+/obj/item/clothing/under/f13/deadhorses
+	name = "Dead Horses garb"
+	desc = "A simple leather bandolier with a pouch, paired with a gecko-hide loincloth. Commonly worn by members of the Dead Horses tribe."
+	icon_state = "dead_horses_under"
+	item_state = "dead_horses_under"
+	item_color = "dead_horses_under"
+
+/obj/item/clothing/under/f13/female/deadhorses
+	name = "Dead Horses garb"
+	desc = "A simple gecko-hide sports bra and loincloth. Commonly worn by members of the Dead Horses tribe."
+	icon_state = "dead_horses_under_f"
+	item_state = "dead_horses_under_f"
+	item_color = "dead_horses_under_f"
+
+/obj/item/clothing/under/f13/sorrows
+	name = "Sorrows garb"
+	desc = "A simple pair of blue shorts with a length of the fabric extending down each leg. Commonly worn by members of the Sorrows tribe."
+	icon_state = "sorrows_under"
+	item_state = "sorrows_under"
+	item_color = "sorrows_under"
+
+/obj/item/clothing/under/f13/female/sorrows
+	name = "Sorrows garb"
+	desc = "A simple set of blue shorts with a length of the fabric extending down each leg and similarly coloured sports bra. Commonly worn by members of the Sorrows tribe."
+	icon_state = "sorrows_under_f"
+	item_state = "sorrows_under_f"
+	item_color = "sorrows_under_f"
+

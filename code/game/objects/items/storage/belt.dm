@@ -95,6 +95,10 @@
 	new /obj/item/multitool(src)
 	new /obj/item/stack/cable_coil(src,30,pick("red"))
 
+// --------------------------------------------------------
+// FALLOUT BELTS
+
+// Wasteland toolbelt
 /obj/item/storage/belt/utility/waster
 	name = "wastelander toolbelt"
 	desc = "Holds a collection of simple tools."
@@ -129,6 +133,7 @@
 	new /obj/item/wirecutters/basic(src)
 	new /obj/item/stack/cable_coil(src,30,pick("yellow","orange"))
 
+// Forgemaster toolbelt (made to make the old chainsaw 2h component bearable, phase out unless needed, wasteland toobelt should suffice)
 /obj/item/storage/belt/utility/waster/forgemaster
 	name = "forgemasters toolbelt"
 	desc = "Has a collection of basic tools and a hook rigging to sling a chainsaw from."
@@ -140,6 +145,48 @@
 	new /obj/item/weldingtool/basic(src)
 	new /obj/item/wirecutters/basic(src)
 	new /obj/item/twohanded/chainsaw(src)
+
+// Gardener belt. Hold farming stuff thats small, also flasks (think hip flasks, not bottles as such)
+/obj/item/storage/belt/utility/gardener
+	name = "gardeners toolbelt"
+	desc = "Leather belt with straps for various smaller farming equipment, bags and hip flasks."
+	icon = 'icons/fallout/clothing/belts.dmi'
+	icon_state = "gardener"
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
+
+/obj/item/storage/belt/utility/gardener/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	var/static/list/can_hold = typecacheof(list(
+		/obj/item/shovel/spade,
+		/obj/item/cultivator,
+		/obj/item/hatchet,
+		/obj/item/book/manual/advice_farming,
+		/obj/item/reagent_containers/glass/bottle/nutrient,
+		/obj/item/reagent_containers/glass/bottle/killer,
+		/obj/item/reagent_containers/food/drinks/flask,
+		/obj/item/storage/bag/plants, // remove if it gets abused to breaking somehow
+		/obj/item/plant_analyzer, // out of place but mechanically useful for the foreseeable future, so included for QoL
+		))
+	STR.can_hold = can_hold
+
+// Primitive medical belt, meant to be part of a ghetto surgery improvement at some point
+/obj/item/storage/belt/medical/primitive
+	name = "primitive medical toolbelt"
+	desc = "This might look a bit like a toolbelt for a carpenter, but the items inside are meant to be used in surgery. No really."
+	content_overlays = FALSE
+
+/obj/item/storage/belt/medical/legion/PopulateContents()
+	new /obj/item/surgical_drapes(src)
+	new /obj/item/scalpel (src)
+	new /obj/item/handsaw(src)
+	new /obj/item/retractor(src)
+	new /obj/item/hemostat(src)
+	new /obj/item/weldingtool/basic(src)
+	new /obj/item/bonesetter(src)
+
+// END OF FALLOUT BELTS
+// ------------------------------------------------------ 
 
 /obj/item/storage/belt/utility/servant/PopulateContents()
 	new /obj/item/screwdriver/brass(src)
@@ -212,19 +259,7 @@
 		/obj/item/handsaw
 		))
 
-/obj/item/storage/belt/medical/primitive
-	name = "primitive medical toolbelt"
-	desc = "This might look a bit like a toolbelt for a carpenter, but the items inside are meant to be used in surgery. No really."
-	content_overlays = FALSE
 
-/obj/item/storage/belt/medical/legion/PopulateContents()
-	new /obj/item/surgical_drapes(src)
-	new /obj/item/scalpel (src)
-	new /obj/item/handsaw(src)
-	new /obj/item/retractor(src)
-	new /obj/item/hemostat(src)
-	new /obj/item/weldingtool/basic(src)
-	new /obj/item/bonesetter(src)
 
 /obj/item/storage/belt/medical/surgery_belt_adv
 	name = "surgical supply belt"
@@ -603,20 +638,37 @@
 		/obj/item/stack/cable_coil
 		))
 
+// ---------------------------------------------
+// BANDOLIER - since TG style bandolier was useless, now takes 3 boxes of shotgun ammo, or flasks, or grenades, or improvised bombs/molotovs
 /obj/item/storage/belt/bandolier
 	name = "bandolier"
-	desc = "A bandolier for holding ammunition."
+	desc = "A bandolier for holding shotgun boxes, flasks, las musket cells or various grenades."
 	icon_state = "bandolier"
 	item_state = "bandolier"
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 
 /obj/item/storage/belt/bandolier/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 18
-	STR.display_numerical_stacking = TRUE
+	STR.max_items = 3
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.can_hold = typecacheof(list(
-		/obj/item/ammo_casing
+		/obj/item/ammo_box/shotgun,
+		/obj/item/ammo_box/lasmusket,
+		/obj/item/reagent_containers/food/drinks/flask,
+		/obj/item/grenade/f13,
+		/obj/item/reagent_containers/food/drinks/bottle/molotov,
+		/obj/item/grenade/homemade
 		))
+
+/obj/item/storage/belt/utility
+	name = "toolbelt" //Carn: utility belt is nicer, but it bamboozles the text parsing.
+	desc = "Holds tools."
+	icon_state = "utilitybelt"
+	item_state = "utility"
+	content_overlays = TRUE
+	custom_premium_price = 300
+
 
 /obj/item/storage/belt/bandolier/durathread
 	name = "durathread bandolier"
