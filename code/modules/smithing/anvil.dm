@@ -289,7 +289,7 @@
 	name = "basalt brick anvil"
 	desc = "A big block of basalt. Useable as an anvil, better than sandstone. Igneous!"
 	icon_state = "sandvilnoir"
-	anvilquality = -0.5
+	anvilquality = -1
 	itemqualitymax = 8
 
 /obj/structure/anvil/obtainable/basic
