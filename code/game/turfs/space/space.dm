@@ -3,7 +3,7 @@
 	icon_state = "black"
 	name = "\proper nothing"
 	intact = 0
-	//turf/open density = 1 WHYYY
+	density = 1//turf/open density = 1 WHYYY
 /*lonestar edit. don't need space. so dont initialize it.
 	initial_temperature = TCMB
 	thermal_conductivity = 0
