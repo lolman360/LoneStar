@@ -1065,7 +1065,7 @@
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/stack/sheet/mineral/plastic = 5,
+				/obj/item/stack/sheet/plastic = 5,
 				/obj/item/stack/crafting/goodparts = 5
 				)
 	tools = list(TOOL_AWORKBENCH)
