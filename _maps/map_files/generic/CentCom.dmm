@@ -8763,6 +8763,10 @@
 "zK" = (
 /turf/open/floor/plating/f13/outside/road,
 /area/centcom/evac)
+"zL" = (
+/obj/machinery/door/airlock/mining/glass,
+/turf/open/floor/plasteel,
+/area/centcom/supply)
 "zM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/cigarette,
@@ -10159,6 +10163,9 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/three)
+"Fz" = (
+/turf/closed/indestructible/riveted,
+/area/centcom/supply)
 "FK" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 9
@@ -10388,6 +10395,11 @@
 /obj/structure/table/wood/poker,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/centcom/evac)
+"HC" = (
+/obj/machinery/door/airlock/mining/glass,
+/obj/machinery/door/airlock/mining/glass,
+/turf/open/floor/plasteel,
+/area/centcom/supply)
 "HH" = (
 /obj/machinery/light,
 /turf/open/floor/wood,
@@ -10400,6 +10412,18 @@
 "HL" = (
 /turf/open/floor/plasteel/vault,
 /area/tdome/tdomeobserve)
+"HM" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 1;
+	height = 5;
+	id = "supply_away";
+	json_key = "cargo";
+	name = "CentCom";
+	width = 7
+	},
+/turf/open/space/basic,
+/area/f13/underground/mountain)
 "HN" = (
 /obj/structure/chair,
 /obj/effect/landmark/thunderdome/observe,
@@ -10826,6 +10850,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/centcom/evac)
+"JT" = (
+/obj/machinery/computer/cargo,
+/turf/open/floor/plasteel,
+/area/centcom/supply)
 "JV" = (
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/escape/backup)
@@ -11136,12 +11164,12 @@
 "Ls" = (
 /obj/docking_port/stationary{
 	dir = 8;
-	dwidth = 1;
-	height = 5;
+	dwidth = 8;
+	height = 7;
 	id = "supply_away";
 	json_key = "cargo";
-	name = "Lower";
-	width = 7
+	name = "CentCom";
+	width = 20
 	},
 /turf/open/space,
 /area/f13/underground/mountain)
@@ -11397,6 +11425,12 @@
 "MB" = (
 /turf/open/indestructible/binary,
 /area/fabric_of_reality)
+"MC" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/centcom/supply)
 "ME" = (
 /obj/machinery/computer/camera_advanced{
 	dir = 4
@@ -11519,6 +11553,12 @@
 /obj/item/seeds/pumpkin/blumpkin,
 /turf/open/floor/plasteel/whitegreen,
 /area/centcom/holding)
+"NP" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/centcom/supply)
 "NR" = (
 /obj/machinery/light{
 	dir = 8
@@ -11622,6 +11662,9 @@
 /obj/machinery/washing_machine,
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
+"Pe" = (
+/turf/open/floor/plasteel,
+/area/centcom/supply)
 "Ph" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/wood,
@@ -12455,6 +12498,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/one)
+"VR" = (
+/obj/machinery/door/airlock/mining/glass,
+/turf/open/floor/plasteel,
+/area/tdome/tdomeobserve)
 "VT" = (
 /turf/open/floor/plasteel/dark,
 /area/tdome/tdomeobserve)
@@ -12537,6 +12584,14 @@
 /obj/machinery/vending/donksofttoyvendor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/centcom/evac)
+"WH" = (
+/obj/machinery/button{
+	id = "cargodoor";
+	name = "elevator door control";
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel,
+/area/centcom/supply)
 "WK" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 1
@@ -35059,7 +35114,7 @@ aa
 aa
 aa
 aa
-aa
+HM
 aa
 aa
 aa
@@ -35315,13 +35370,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fz
+Fz
+zL
+HC
+zL
+Fz
+Fz
 aa
 aa
 aa
@@ -35572,13 +35627,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fz
+JT
+Pe
+Pe
+Pe
+Pe
+Fz
 aa
 aa
 aa
@@ -35829,13 +35884,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fz
+WH
+Pe
+Pe
+Pe
+Pe
+Fz
 aa
 aa
 aa
@@ -36086,13 +36141,13 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fz
+Pe
+Pe
+Pe
+Pe
+Pe
+Fz
 aa
 aa
 aa
@@ -36343,17 +36398,17 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-rb
+Fz
+Pe
+Pe
+Pe
+Pe
+Pe
+Fz
+Fz
+Fz
+Fz
+Fz
 ix
 iE
 iE
@@ -36600,18 +36655,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-rb
-rb
-rb
-rb
-ix
+Fz
+MC
+Pe
+Pe
+MC
+Pe
+zL
+Pe
+NP
+Pe
+Pe
+VR
 iE
 iE
 iE
@@ -36857,15 +36912,15 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-rb
-jU
+Fz
+Fz
+Fz
+Fz
+Fz
+Fz
+Fz
+Fz
+qx
 ix
 ix
 ix

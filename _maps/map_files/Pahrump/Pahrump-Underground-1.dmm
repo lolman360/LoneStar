@@ -7833,10 +7833,6 @@
 /obj/structure/timeddoor,
 /turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
-"eCg" = (
-/obj/machinery/mineral/wasteland_vendor/medical,
-/turf/closed/wall/f13/supermart,
-/area/f13/followers)
 "eCr" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -22072,6 +22068,8 @@
 /area/f13/caves)
 "olt" = (
 /obj/structure/table/glass,
+/obj/item/stock_parts/cell/high,
+/obj/item/stock_parts/cell/high,
 /turf/open/floor/f13{
 	icon_state = "bluerustysolid"
 	},
@@ -26566,13 +26564,6 @@
 /area/f13/tunnel)
 "rxv" = (
 /obj/effect/decal/cleanable/oil/slippery,
-/obj/machinery/cell_charger{
-	pixel_y = 8
-	},
-/obj/structure/table,
-/obj/item/stock_parts/cell/high,
-/obj/item/stock_parts/cell/high,
-/obj/item/stock_parts/cell/high,
 /turf/open/floor/f13{
 	icon_state = "neutralfull2"
 	},
@@ -75513,7 +75504,7 @@ faq
 xnl
 faq
 faq
-eCg
+ylz
 jYZ
 jYZ
 gfI
