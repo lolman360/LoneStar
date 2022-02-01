@@ -1389,13 +1389,13 @@
 /datum/chemical_reaction/broctea
 	name = "Broc Tea"
 	id = "broctea"
-	results = list(/datum/reagent/broctea = 3)
+	results = list(/datum/reagent/consumable/tea/broctea = 3)
 	required_reagents = list(/datum/reagent/consumable/brocjuice = 1, /datum/reagent/water = 2)
 	required_temp = 315
 
 /datum/chemical_reaction/xandertea
 	name = "Xander Tea"
 	id = "xandertea"
-	results = list(/datum/reagent/xandertea = 3)
+	results = list(/datum/reagent/consumable/tea/xandertea = 3)
 	required_reagents = list(/datum/reagent/consumable/xanderjuice = 1, /datum/reagent/water = 2)
 	required_temp = 315
