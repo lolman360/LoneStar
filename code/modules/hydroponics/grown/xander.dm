@@ -21,7 +21,7 @@
 	desc = "Xander roots are large, hardy, turnip-like roots with mild healing properties."
 	icon_state = "xander"
 	filling_color = "#FF6347"
-	juice_results = list(/datum/reagent/xandertea = 0)
+	juice_results = list(/datum/reagent/xanderjuice = 0)
 	distill_reagent = /datum/reagent/consumable/ethanol/salgam
 
 /obj/item/reagent_containers/food/snacks/grown/xander/add_juice()
