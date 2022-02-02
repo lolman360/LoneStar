@@ -23,7 +23,7 @@
 	desc = "Barrel cactus fruit are found on spherical barrel cacti and are both nutritious and highly toxic."
 	icon_state = "feracactus"
 	filling_color = "#FF6347"
-	juice_results = list(/datum/reagent/consumable/feratea = 0)
+	juice_results = list(/datum/reagent/consumable/tea/feratea = 0)
 	distill_reagent = /datum/reagent/consumable/yellowpulque
 
 /obj/item/reagent_containers/food/snacks/grown/feracactus/add_juice()

@@ -70,3 +70,21 @@
 	results = list(/datum/reagent/moonsugar = 1, /datum/reagent/medicine/morphine = 2.5)
 	required_temp = 315 //a little above normal body temperature
 	required_reagents = list(/datum/reagent/drug/skooma = 1)
+
+/datum/chemical_reaction/jet
+	name = "Jet"
+	id = /datum/reagent/drug/jet
+	results = list(/datum/reagent/drug/jet = 3)
+	required_reagents = list(/datum/reagent/drug/nicotine = 2, /datum/reagent/consumable/milk = 2, /datum/reagent/fuel = 1, /datum/reagent/consumable/ethanol = 1)
+	OptimalTempMin 		= 600
+	OptimalTempMax		= 675
+	ExplodeTemp			= 700
+	OptimalpHMin		= 8
+	OptimalpHMax		= 10
+	ReactpHLim			= 2
+	CurveSharpT 		= 5
+	CurveSharppH 		= 0.7
+	ThermicConstant		= -6
+	HIonRelease 		= -0.5
+	RateUpLim 			= 5
+	FermiChem 			= TRUE

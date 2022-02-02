@@ -158,13 +158,13 @@
 
 /datum/reagent/consumable/tea/pricklytea
 	name = "Prickly Tea"
-	description = "A sweet and fruitfel rememedy steeped from barrel cactus fruit. Keeps you on edge."
+	description = "A sweet and fruity rememedy steeped from prickly pear fruit. Keeps you on edge."
 	color = "#FF6347"
 	nutriment_factor = 0
 	taste_description = "sweetness"
 	glass_icon_state = "cafe_latte"
 	glass_name = "Prickly Tea"
-	glass_desc = "A sour and dry rememedy steeped from barrel cactus fruit. Keeps you on edge."
+	glass_desc = "A sweet and fruity rememedy steeped from prickly pear fruit. Keeps you on edge."
 
 /datum/reagent/consumable/tea/pricklytea/on_mob_life(mob/living/carbon/M)
 	if(prob(33))

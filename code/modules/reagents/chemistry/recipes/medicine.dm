@@ -407,6 +407,24 @@ datum/chemical_reaction/rezadone
 	FermiChem 			= TRUE//If the chemical uses the Fermichem reaction mechanics
 	FermiExplode 		= FALSE //If the chemical explodes in a special way
 
+/datum/chemical_reaction/medx
+	name = "Med-X"
+	id = /datum/reagent/medicine/medx
+	results = list(/datum/reagent/medicine/medx = 2)
+	required_reagents = list(/datum/reagent/consumable/ethanol/pungajuice = 1, /datum/reagent/consumable/daturajuice = 1, /datum/reagent/consumable/coyotejuice = 1, /datum/reagent/consumable/brocjuice = 1, /datum/reagent/consumable/xanderjuice = 1)
+	OptimalTempMin 		= 800
+	OptimalTempMax		= 821
+	ExplodeTemp			= 824
+	OptimalpHMin		= 11
+	OptimalpHMax		= 14
+	ReactpHLim			= 1
+	CurveSharpT 		= 10
+	CurveSharppH 		= 0.5
+	ThermicConstant		= 8
+	HIonRelease 		= -0.5
+	RateUpLim 			= 40
+	FermiChem 			= TRUE
+
 
 /datum/chemical_reaction/mentats
 	name = "mentats"
