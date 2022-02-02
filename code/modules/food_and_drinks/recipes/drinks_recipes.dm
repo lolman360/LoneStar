@@ -949,7 +949,7 @@
 	name = "Cold Scales"
 	id = /datum/reagent/consumable/ethanol/species_drink/coldscales
 	results = list(/datum/reagent/consumable/ethanol/species_drink/coldscales = 3)
-	required_reagents = list(/datum/reagent/consumable/tea = 1, /datum/reagent/celugel = 1,  /datum/reagent/consumable/menthol = 1)
+	required_reagents = list(/datum/reagent/consumable/tea = 1, /datum/reagent/toxin/slimejelly = 1,  /datum/reagent/consumable/menthol = 1)
 
 /datum/chemical_reaction/oil_drum
 	name = "Oil Drum"
@@ -1010,7 +1010,7 @@
 	name = "Jell Wyrm"
 	id = /datum/reagent/consumable/ethanol/species_drink/jell_wyrm
 	results = list(/datum/reagent/consumable/ethanol/species_drink/jell_wyrm = 2)
-	required_reagents = list(/datum/reagent/celugel = 1,  /datum/reagent/toxin/carpotoxin = 1, /datum/reagent/carbondioxide = 5)
+	required_reagents = list(/datum/reagent/toxin/slimejelly = 1,  /datum/reagent/toxin/carpotoxin = 1, /datum/reagent/carbondioxide = 5)
 	required_temp = 333 // (59.85'C)
 
 /datum/chemical_reaction/laval_spit
@@ -1385,3 +1385,17 @@
 	id = "yuccashake"
 	results = list(/datum/reagent/consumable/yuccashake = 3)
 	required_reagents = list(/datum/reagent/consumable/yuccajuice = 1, /datum/reagent/consumable/milk = 1, /datum/reagent/consumable/cream = 1)
+
+/datum/chemical_reaction/broctea
+	name = "Broc Tea"
+	id = "broctea"
+	results = list(/datum/reagent/consumable/tea/broctea = 3)
+	required_reagents = list(/datum/reagent/consumable/brocjuice = 1, /datum/reagent/water = 2)
+	required_temp = 315
+
+/datum/chemical_reaction/xandertea
+	name = "Xander Tea"
+	id = "xandertea"
+	results = list(/datum/reagent/consumable/tea/xandertea = 3)
+	required_reagents = list(/datum/reagent/consumable/xanderjuice = 1, /datum/reagent/water = 2)
+	required_temp = 315
