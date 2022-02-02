@@ -394,6 +394,41 @@
 	color = "#302000" // rgb: 48, 32, 0
 	taste_description = "dirt"
 
+/datum/reagent/consumable/agavejuice
+	name = "Agave Leaf Juice"
+	description = "Ground up agave leaf, mashed into juicy pulp."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = "#BAE3B4"
+	taste_description = "plants"
+
+/datum/reagent/consumable/ferajuice
+	name = "Barrel Fruit Juice"
+	description = "Squeezed barrelfruit juice."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = "#E8E67E"
+	taste_description = "bitter"
+
+/datum/reagent/consumable/daturajuice
+	name = "Datura Juice"
+	description = "Ground up bits of the datura plant."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = "#ACDFCE"
+	taste_description = "bitter leaves"
+
+/datum/reagent/consumable/coyotejuice
+	name = "Coyote Leaf Juice"
+	description = "Juiced coyote tobacco leaves."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = "#168B64"
+	taste_description = "leaves"
+
+/datum/reagent/consumable/cavefungusjuice
+	name = "Cave Fungus Juice"
+	description = "Juiced cave fungus fruiting bodies."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = "#274E13" 
+	taste_description = "nuts"
+
 /datum/reagent/consumable/blackpepper
 	name = "Black Pepper"
 	description = "A powder ground from peppercorns. *AAAACHOOO*"
@@ -889,4 +924,3 @@
 	taste_mult = 2
 	taste_description = "fizzy sweetness"
 	value = REAGENT_VALUE_COMMON
-

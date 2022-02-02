@@ -407,6 +407,25 @@ datum/chemical_reaction/rezadone
 	FermiChem 			= TRUE//If the chemical uses the Fermichem reaction mechanics
 	FermiExplode 		= FALSE //If the chemical explodes in a special way
 
+/datum/chemical_reaction/superstimpak
+	name = "Super Stimpak Fluid"
+	id = /datum/reagent/medicine/super_stimpak
+	results = list(/datum/reagent/medicine/super_stimpak = 1)
+	required_reagents = list(/datum/reagent/blood/synthetics = 1, /datum/reagent/medicine/medx = 1, /datum/reagent/medicine/stimpak = 1, /datum/reagent/consumable/mutjuice = 1, /datum/reagent/medicine/salglu_solution = 1, /datum/reagent/medicine/pen_acid/pen_jelly = 1, /datum/reagent/medicine/regen_jelly = 1, /datum/reagent/medicine/clonexadone = 0.1)
+	OptimalTempMin 		= 45
+	OptimalTempMax		= 80
+	ExplodeTemp			= 85
+	OptimalpHMin		= 1
+	OptimalpHMax		= 3
+	ReactpHLim			= 1
+	CurveSharpT 		= 20
+	CurveSharppH 		= 0.5
+	ThermicConstant		= 5
+	HIonRelease 		= 0.75
+	RateUpLim 			= 15
+	FermiChem 			= TRUE
+	FermiExplode 		= FALSE
+
 /datum/chemical_reaction/medx
 	name = "Med-X"
 	id = /datum/reagent/medicine/medx
