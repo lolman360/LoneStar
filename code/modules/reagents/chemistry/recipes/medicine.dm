@@ -152,7 +152,7 @@ datum/chemical_reaction/rezadone
 	name = "Pentetic Jelly"
 	id = /datum/reagent/medicine/pen_acid/pen_jelly
 	results = list(/datum/reagent/medicine/pen_acid/pen_jelly = 2)
-	required_reagents = list(/datum/reagent/medicine/pen_acid = 1, /datum/reagent/toxin/slimejelly = 1)
+	required_reagents = list(/datum/reagent/medicine/pen_acid = 1, /datum/reagent/celugel = 1)
 
 /datum/chemical_reaction/sal_acid
 	name = "Salicyclic Acid"
@@ -260,7 +260,7 @@ datum/chemical_reaction/rezadone
 	name = "Pyroxadone"
 	id = /datum/reagent/medicine/pyroxadone
 	results = list(/datum/reagent/medicine/pyroxadone = 2)
-	required_reagents = list(/datum/reagent/medicine/cryoxadone = 1, /datum/reagent/toxin/slimejelly = 1)
+	required_reagents = list(/datum/reagent/medicine/cryoxadone = 1, /datum/reagent/celugel = 1)
 
 /datum/chemical_reaction/clonexadone
 	name = "Clonexadone"
@@ -303,7 +303,7 @@ datum/chemical_reaction/rezadone
 	name = "Regenerative Jelly"
 	id = /datum/reagent/medicine/regen_jelly
 	results = list(/datum/reagent/medicine/regen_jelly = 2)
-	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/toxin/slimejelly = 1)
+	required_reagents = list(/datum/reagent/medicine/tricordrazine = 1, /datum/reagent/celugel = 1)
 
 /datum/chemical_reaction/jelly_convert
 	name = "Blood Jelly Conversion"
