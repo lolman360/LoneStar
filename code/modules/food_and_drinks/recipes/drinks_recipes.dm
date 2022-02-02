@@ -1417,7 +1417,7 @@
 /datum/chemical_reaction/daturatea
 	name = "Datura Tea"
 	id = "daturatea"
-	results = list(/datum/reagent/consumable/tea/daturatea = 3)
+	results = list(/datum/reagent/consumable/ethanol/daturatea = 3)
 	required_reagents = list(/datum/reagent/consumable/daturajuice = 1, /datum/reagent/water = 2)
 	required_temp = 315
 
