@@ -391,8 +391,8 @@ datum/chemical_reaction/rezadone
 /datum/chemical_reaction/stimpak2
 	name = "Imitation Stimpak Fluid"
 	id = /datum/reagent/medicine/stimpakimitation
-	results = list(/datum/reagent/medicine/stimpakimitation = 1)
-	required_reagents = list(/datum/reagent/consumable/brocjuice = 3, /datum/reagent/consumable/xanderjuice = 3)
+	results = list(/datum/reagent/medicine/stimpakimitation = 2)
+	required_reagents = list(/datum/reagent/consumable/brocjuice = 3, /datum/reagent/consumable/xanderjuice = 3, /datum/reagent/blood = 1)
 	OptimalTempMin 		= 500 // Lower area of bell curve for determining heat based rate reactions
 	OptimalTempMax		= 650 // Upper end for above
 	ExplodeTemp			= 9999 //Temperature at which reaction explodes
