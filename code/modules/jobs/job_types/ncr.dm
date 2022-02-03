@@ -454,7 +454,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		/datum/outfit/loadout/vrclassic, // AMR, Sequoia
 		/datum/outfit/loadout/vrlite, // Brush Gun, Sequoia
 		/datum/outfit/loadout/vrcqc, // 2 x .45 Long colt revolvers
-		/datum/outfit/loadout/shotter //Riot shotty, Sequoia
+		/datum/outfit/loadout/vrshotgunner //Riot shotty, Sequoia
 		)
 
 /datum/outfit/job/ncr/f13vetranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -505,8 +505,8 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		/obj/item/ammo_box/c4570 = 1,
 		)
 
-/datum/outfit/loadout/shotter
-	name = "Veteran Shotter"
+/datum/outfit/loadout/vrshotgunner
+	name = "Veteran Reanger Shotgunner"
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
