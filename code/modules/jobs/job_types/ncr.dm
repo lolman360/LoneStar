@@ -506,7 +506,7 @@ Weapons		Service Rifle, Rockwell, 9mm pistol, all good.
 		)
 
 /datum/outfit/loadout/vrshotgunner
-	name = "Veteran Reanger Shotgunner"
+	name = "Veteran Ranger Shotgunner"
 	suit_store = /obj/item/gun/ballistic/automatic/shotgun/riot
 	backpack_contents = list(
 		/obj/item/ammo_box/shotgun/buck = 2,
