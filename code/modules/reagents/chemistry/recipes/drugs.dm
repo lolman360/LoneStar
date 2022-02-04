@@ -110,7 +110,7 @@
 /datum/chemical_reaction/psycho
 	name = "Psycho"
 	id = /datum/reagent/drug/psycho
-	results = list(/datum/reagent/drug/psycho = 1)
+	results = list(/datum/reagent/drug/psycho = 2)
 	required_reagents = list(/datum/reagent/consumable/ferajuice = 3, /datum/reagent/consumable/cavefungusjuice = 3, /datum/reagent/consumable/nuka_cola = 1)
 	OptimalTempMin 		= 273
 	OptimalTempMax		= 303
@@ -128,7 +128,7 @@
 /datum/chemical_reaction/buffout
 	name = "Buffout"
 	id = /datum/reagent/drug/buffout
-	results = list(/datum/reagent/drug/buffout = 0.5)
+	results = list(/datum/reagent/drug/buffout = 2)
 	required_reagents = list(/datum/reagent/consumable/yuccajuice = 3, /datum/reagent/consumable/mutjuice = 3, /datum/reagent/consumable/ethanol/buffalo = 3, /datum/reagent/consumable/nuka_cola = 3, /datum/reagent/carbondioxide = 1, /datum/reagent/nitrous_oxide = 1)
 	OptimalTempMin 		= 165
 	OptimalTempMax		= 215
