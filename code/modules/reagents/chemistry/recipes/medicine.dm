@@ -410,7 +410,7 @@ datum/chemical_reaction/rezadone
 /datum/chemical_reaction/superstimpak
 	name = "Super Stimpak Fluid"
 	id = /datum/reagent/medicine/super_stimpak
-	results = list(/datum/reagent/medicine/super_stimpak = 1)
+	results = list(/datum/reagent/medicine/super_stimpak = 2)
 	required_reagents = list(/datum/reagent/blood/synthetics = 1, /datum/reagent/drug/aranesp = 1, /datum/reagent/medicine/stimpak = 1, /datum/reagent/consumable/mutjuice = 1, /datum/reagent/medicine/salglu_solution = 1, /datum/reagent/medicine/pen_acid/pen_jelly = 1, /datum/reagent/medicine/regen_jelly = 1, /datum/reagent/medicine/cryoxadone = 1)
 	OptimalTempMin 		= 65
 	OptimalTempMax		= 100
