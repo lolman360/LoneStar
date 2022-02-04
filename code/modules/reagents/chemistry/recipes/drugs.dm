@@ -135,7 +135,7 @@
 	ExplodeTemp			= 223
 	OptimalpHMin		= 8
 	OptimalpHMax		= 10
-	ReactpHLim			= 0.5
+	ReactpHLim			= 1
 	CurveSharpT 		= 5
 	CurveSharppH 		= 0.7
 	ThermicConstant		= 15
