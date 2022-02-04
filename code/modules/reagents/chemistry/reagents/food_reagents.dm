@@ -461,10 +461,18 @@
 	color = "#274E13"
 	taste_description = "nuts"
 
-
 /datum/reagent/consumable/cavefungusjuice/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
 	..()
+
+/datum/reagent/consumable/tato_juice
+	name = "Tato Juice"
+	description = "Juiced tatos."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = "#274E13"
+	taste_description = "tato"
+
+
 
 /datum/reagent/consumable/blackpepper
 	name = "Black Pepper"
