@@ -412,17 +412,17 @@ datum/chemical_reaction/rezadone
 	id = /datum/reagent/medicine/super_stimpak
 	results = list(/datum/reagent/medicine/super_stimpak = 1)
 	required_reagents = list(/datum/reagent/blood/synthetics = 1, /datum/reagent/drug/aranesp = 1, /datum/reagent/medicine/stimpak = 1, /datum/reagent/consumable/mutjuice = 1, /datum/reagent/medicine/salglu_solution = 1, /datum/reagent/medicine/pen_acid/pen_jelly = 1, /datum/reagent/medicine/regen_jelly = 1, /datum/reagent/medicine/cryoxadone = 1)
-	OptimalTempMin 		= 45
-	OptimalTempMax		= 80
-	ExplodeTemp			= 85
-	OptimalpHMin		= 1
+	OptimalTempMin 		= 65
+	OptimalTempMax		= 100
+	ExplodeTemp			= 105
+	OptimalpHMin		= 0.5
 	OptimalpHMax		= 3
 	ReactpHLim			= 1
-	CurveSharpT 		= 20
+	CurveSharpT 		= 1 //flat tcurve
 	CurveSharppH 		= 0.5
 	ThermicConstant		= 5
 	HIonRelease 		= 0.75
-	RateUpLim 			= 15
+	RateUpLim 			= 50 //this seems quite high but 1. runaway thermals 2. it's very slow since it's 100K
 	FermiChem 			= TRUE
 	FermiExplode 		= FALSE
 
