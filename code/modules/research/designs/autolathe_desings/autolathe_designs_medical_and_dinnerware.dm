@@ -176,7 +176,7 @@
 	name = "Extra-Large Beaker"
 	id = "xl_beaker"
 	build_type = AUTOLATHE
-	materials = list(MAT_GLASS = 2500, /datum/material/plastic = 3000)
+	materials = list(/datum/material/glass = 2500, /datum/material/plastic = 3000)
 	build_path = /obj/item/reagent_containers/glass/beaker/plastic
 	category = list("initial", "Medical")
 
