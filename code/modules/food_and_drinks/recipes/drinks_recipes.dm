@@ -1422,7 +1422,7 @@
 	required_temp = 315
 
 /datum/chemical_reaction/coyotetea
-	name = "Xander Tea"
+	name = "Coyote Tea"
 	id = "coyotetea"
 	results = list(/datum/reagent/consumable/tea/coyotetea = 3)
 	required_reagents = list(/datum/reagent/consumable/coyotejuice = 1, /datum/reagent/water = 2)

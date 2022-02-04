@@ -27,3 +27,13 @@
 	bitesize_mod = 3
 	foodtype = FRUIT
 	distill_reagent = /datum/reagent/consumable/ethanol/buffalo
+
+/obj/item/seeds/buffalogourd/microwave_act(obj/machinery/microwave/MW) //The act allows it to be cooked over a bonfire grille too.
+	..()
+	new /obj/item/reagent_containers/food/snacks/roastseeds/buffalogourd(drop_location())
+	qdel(src)
+
+/obj/item/reagent_containers/food/snacks/roastseeds/buffalogourd
+	name = "roasted gourd seeds"
+	desc = "Well prepared crispy buffalo gourd seeds, full of chewy protein."
+	list_reagents = list(/datum/reagent/consumable/cooking_oil = 1, /datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 1.5)
