@@ -15,7 +15,7 @@
 	icon_harvest = "broc-harvest"
 	icon_grow = "broc-grow"
 	icon_dead = "broc-dead"
-	mutatelist = list(/obj/item/seeds/lilyseed) //spaceman's trumpet
+	mutatelist = list(/obj/item/seeds/poppy/lily) //spaceman's trumpet
 	reagents_add = list(/datum/reagent/medicine/dexalin = 0.2, /datum/reagent/medicine/salglu_solution = 0.05, /datum/reagent/consumable/nutriment = 0.1, /datum/reagent/medicine/bicaridine = 0.1,)
 
 /obj/item/reagent_containers/food/snacks/grown/broc

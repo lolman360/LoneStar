@@ -1,4 +1,4 @@
--/obj/item/seeds/agave
+/obj/item/seeds/agave
 	name = "pack of agave seeds"
 	desc = "These seeds grow into an agave plant."
 	icon = 'icons/obj/hydroponics/seeds.dmi'
