@@ -413,8 +413,8 @@ datum/chemical_reaction/rezadone
 	results = list(/datum/reagent/medicine/super_stimpak = 2)
 	required_reagents = list(/datum/reagent/blood/synthetics = 1, /datum/reagent/drug/aranesp = 1, /datum/reagent/medicine/stimpak = 1, /datum/reagent/consumable/mutjuice = 1, /datum/reagent/medicine/salglu_solution = 1, /datum/reagent/medicine/pen_acid/pen_jelly = 1, /datum/reagent/medicine/regen_jelly = 1, /datum/reagent/medicine/atropine = 1)
 	OptimalTempMin 		= 65
-	OptimalTempMax		= 100
-	ExplodeTemp			= 105
+	OptimalTempMax		= 95
+	ExplodeTemp			= 100
 	OptimalpHMin		= 0.5
 	OptimalpHMax		= 3
 	ReactpHLim			= 1
