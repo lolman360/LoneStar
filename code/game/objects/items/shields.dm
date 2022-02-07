@@ -217,7 +217,7 @@
 			S.use(1)
 			obj_integrity = max_integrity
 			to_chat(user, "<span class='notice'>You repair [src] with [S].</span>")
-	else
+	else if(istype(W, /obj/item/melee))
 		if(cooldown < world.time - 25)
 			user.visible_message("<span class='warning'>[user] bashes [src] with [W]!</span>")
 			playsound(user.loc, 'sound/effects/shieldbash.ogg', 50, 1)
