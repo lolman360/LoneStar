@@ -650,7 +650,7 @@
 /obj/item/gun/ballistic/automatic/varmint/verminkiller
 	name = "verminkiller rifle"
 	desc = "Legends are told of the \"Ratslayer\", a custom-made souped-up varmint rifle with a sick paintjob. This is a pale imitation, made of chopped-up bits of other guns."
-	icon_state = "ratslayer"
+	icon_state = "verminrifle"
 	item_state = "ratslayer"
 	extra_damage = 25
 	suppressed = 1
