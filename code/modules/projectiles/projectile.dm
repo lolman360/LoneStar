@@ -242,12 +242,6 @@
 
 	var/mob/living/L = target
 
-	if(LAZYLEN(supereffective_faction))
-		for(var/F in L.faction)
-			if(F in supereffective_faction)
-				damage += supereffective_damage
-				break
-
 	if(blocked != 100) // not completely blocked
 		if(damage && L.blood_volume && damage_type == BRUTE)
 			var/splatter_dir = dir
@@ -368,6 +362,12 @@
 #define FORCE_QDEL 3		//Force deletion.
 
 /obj/item/projectile/proc/process_hit(turf/T, atom/target, qdel_self, hit_something = FALSE)		//probably needs to be reworked entirely when pixel movement is done.
+	if(LAZYLEN(supereffective_faction) && isliving(target)))
+		var/mob/living/L = target
+		for(var/F in L.faction)
+			if(F in supereffective_faction)
+				damage += supereffective_damage
+				break
 	if(QDELETED(src) || !T || !target)		//We're done, nothing's left.
 		if((qdel_self == FORCE_QDEL) || ((qdel_self == QDEL_SELF) && !temporary_unstoppable_movement && !CHECK_BITFIELD(movement_type, UNSTOPPABLE)))
 			qdel(src)
