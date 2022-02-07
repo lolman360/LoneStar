@@ -142,7 +142,8 @@
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak/super
 	reqs = list(/datum/reagent/medicine/stimpak = 10,
 				/obj/item/stack/sheet/leather = 2,
-				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 2)
+				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 2,
+				/obj/item/reagent_containers/syringe = 1)
 	tools = list(TOOL_WORKBENCH)
 	blacklist = list(/obj/item/reagent_containers/hypospray/medipen/stimpak/imitation)
 	time = 50
@@ -155,9 +156,9 @@
 	result = /obj/item/storage/box/medicine/stimpaks/superstimpaks5
 	reqs = list(/datum/reagent/medicine/stimpak = 50,
 				/obj/item/stack/sheet/leather = 10,
-				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 10)
+				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 10,
+				/obj/item/reagent_containers/syringe = 5)
 	tools = list(TOOL_WORKBENCH)
-	blacklist = list(/obj/item/reagent_containers/hypospray/medipen/stimpak/imitation)
 	time = 60
 	category = CAT_MEDICAL
 	blacklist = list(/obj/item/reagent_containers/hypospray/medipen/stimpak/super,
