@@ -171,6 +171,7 @@
 	time = 20
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
+	blacklist = list(/obj/item/reagent_containers/hypospray/medipen/stimpak/custom)
 
 
 /datum/crafting_recipe/jet
