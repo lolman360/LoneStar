@@ -269,7 +269,7 @@
 	result = /obj/item/ammo_casing/caseless/arrow/bone
 	time = 30
 	reqs = list(/obj/item/stack/sheet/bone = 1,
-				/obj/item/stack/sheet/minera/wood = 1)
+				/obj/item/stack/sheet/mineral/wood = 1)
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
 	always_available = FALSE
