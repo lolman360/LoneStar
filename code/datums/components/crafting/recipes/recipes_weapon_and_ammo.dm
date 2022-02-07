@@ -384,6 +384,22 @@
 	subcategory = CAT_WEAPON
 	always_available = FALSE
 
+//craftable psuedo-ratslayer
+/datum/crafting_recipe/verminkiller
+	name = "Upgraded Varmint Rifle"
+	result = /obj/item/gun/ballistic/automatic/varmint/verminkiller
+	reqs = list(/obj/item/gun/ballistic/automatic/varmint = 1,
+				/obj/item/gun/ballistic/automatic/delisle = 1,
+				/obj/item/weaponcrafting/improvised_parts/trigger_assembly = 1,
+				/obj/item/advanced_crafting_components/lenses = 1, //scope
+				/obj/item/stack/crafting/goodparts = 3,
+				/obj/item/stack/sheet/mineral/wood = 2,
+				/obj/item/stack/sheet/metal = 15)
+	tools = list(TOOL_WORKBENCH)
+	time = 300 //30 sec
+	category = CAT_WEAPONRY
+	subcategory = CAT_WEAPON
+
 /datum/crafting_recipe/policerifle
 	name = "Police Rifle"
 	result = /obj/item/gun/ballistic/automatic/marksman/policerifle
