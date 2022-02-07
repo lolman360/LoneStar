@@ -147,6 +147,9 @@
 	var/impact_effect_type //what type of impact effect to show when hitting something
 	var/log_override = FALSE //is this type spammed enough to not log? (KAs)
 
+	var/supereffective_damage = 0
+	var/list/supereffective_faction //Any mob with a faction that exists in this list will take bonus damage
+
 	var/temporary_unstoppable_movement = FALSE
 
 	///If defined, on hit we create an item of this type then call hitby() on the hit target with this, mainly used for embedding items (bullets) in targets
@@ -238,6 +241,12 @@
 		return BULLET_ACT_HIT
 
 	var/mob/living/L = target
+
+	if(LAZYLEN(supereffective_faction))
+		for(var/F in L.faction)
+			if(F in supereffective_faction)
+				damage += supereffective_damage
+				break
 
 	if(blocked != 100) // not completely blocked
 		if(damage && L.blood_volume && damage_type == BRUTE)
