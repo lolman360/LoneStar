@@ -145,11 +145,8 @@
 				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 2,
 				/obj/item/reagent_containers/syringe = 1)
 	tools = list(TOOL_WORKBENCH)
-	blacklist = list(/obj/item/reagent_containers/hypospray/medipen/stimpak/imitation)
 	time = 50
 	category = CAT_MEDICAL
-	blacklist = list(/obj/item/reagent_containers/hypospray/medipen/stimpak/super,
-					/obj/item/reagent_containers/hypospray/medipen/stimpak/custom)
 
 /datum/crafting_recipe/superstimpak5
 	name = "Super Stimpak (x5)"
@@ -161,8 +158,6 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_MEDICAL
-	blacklist = list(/obj/item/reagent_containers/hypospray/medipen/stimpak/super,
-					/obj/item/reagent_containers/hypospray/medipen/stimpak/custom)
 
 /datum/crafting_recipe/salvage_stimpak
 	name = "Salvage injector"
