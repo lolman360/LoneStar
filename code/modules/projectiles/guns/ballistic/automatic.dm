@@ -658,6 +658,8 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	can_scope = FALSE
+	can_unsuppress = FALSE
+	suppressor_state = "none"
 	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 //Ratslayer									Keywords: UNIQUE, 5.56, 10/20/30 round magazine, Suppressed, Scoped, Extra damage +3
