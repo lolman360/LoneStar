@@ -724,14 +724,12 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	var/on = FALSE
 	var/force_on = 27 //10 more dps than chainsaw, but less perhit
 	var/force_off = 10
-	var/description_on = "<span class ='warning'>[user] pulls the cord, starting up the [src] with a roar and letting the blades spin up.</span>"
-	var/description_off = "<span class ='notice'>[user] presses the off button, stopping the noise and the carnage.</span>"
 	var/on_sound = 'sound/weapons/chainsawhit.ogg'
 
 /obj/item/twohanded/steelsaw/attack_self(mob/user)
 	on = !on
 	if(on)
-		user.visible_message(description_on)
+		user.visible_message("<span class ='warning'>[user] pulls the cord, starting up the [src] with a roar and letting the blades spin up.</span>")
 		icon_state = on_icon_state
 		item_state = on_item_state
 		w_class = weight_class_on
@@ -740,7 +738,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
 		playsound(loc, on_sound, 50, TRUE)
 	else
-		user.visible_message(description_off)
+		user.visible_message("<span class ='notice'>[user] presses the off button, stopping the noise and the carnage.</span>")
 		icon_state = off_icon_state
 		item_state = off_item_state
 		w_class = WEIGHT_CLASS_BULKY
@@ -787,6 +785,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	item_state = "autoaxe"
 	icon_prefix = "autoaxe"
 	force_on = 29
+	attack_speed = CLICK_CD_MELEE * 1.5
 	armour_penetration = 0.3
 	on_icon_state = "autoaxe_on"
 	off_icon_state = "autoaxe"
@@ -794,8 +793,27 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	off_item_state = "autoaxe"
 	toolspeed = 2
 	structure_bonus_damage = 40
-	description_on = "<span class ='warning'>[user] turns the starting crank on the [src], starting it up with a guttral roar.</span>"
-	description_off = "<span class ='notice'>[user] cuts the throttle on the [src], letting the blades slowly spin down.</span>"
+
+/obj/item/twohanded/steelsaw/autoaxe/attack_self(mob/user)
+	on = !on
+	if(on)
+		user.visible_message("<span class ='warning'>[user] turns the starting crank on the [src], starting it up with a guttral roar.</span>")
+		icon_state = on_icon_state
+		item_state = on_item_state
+		w_class = weight_class_on
+		force = force_on
+		attack_speed = CLICK_CD_MELEE * 0.5
+		attack_verb = list("sawed", "torn", "cut", "chopped", "diced")
+		playsound(loc, on_sound, 50, TRUE)
+	else
+		user.visible_message("<span class ='notice'>[user] cuts the throttle on the [src], letting the blades slowly spin down.</span>")
+		icon_state = off_icon_state
+		item_state = off_item_state
+		w_class = WEIGHT_CLASS_BULKY
+		force = force_off
+		attack_verb = list("poked", "scraped")
+		attack_speed = CLICK_CD_MELEE * 1.5
+	add_fingerprint(user)
 /*
 CODE ARCHIVE
 
