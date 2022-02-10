@@ -707,6 +707,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	force = 4
 	toolspeed = 0.5
 	wound_bonus = 20
+	bare_wound_bonus = 20
 	hitsound = 'sound/weapons/chainsawhit.ogg'
 	tool_behaviour = TOOL_SAW
 	sharpness = SHARP_EDGED
