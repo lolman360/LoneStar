@@ -97,12 +97,15 @@ Prevents players on higher Zs from seeing into buildings they arent meant to.
 			else
 				to_chat(user, "<span class='warning'>You need two rods to build a catwalk!</span>")
 			return
-		if(R.use(1))
-			to_chat(user, "<span class='notice'>You construct a lattice.</span>")
-			playsound(src, 'sound/weapons/genhit.ogg', 50, TRUE)
-			ReplaceWithLattice()
+		if(istype(SSmapping.get_turf_below(src), /turf/closed))
+			if(R.use(1))
+				to_chat(user, "<span class='notice'>You construct a lattice.</span>")
+				playsound(src, 'sound/weapons/genhit.ogg', 50, TRUE)
+				ReplaceWithLattice()
+			else
+				to_chat(user, "<span class='warning'>You need one rod to build a lattice.</span>")
 		else
-			to_chat(user, "<span class='warning'>You need one rod to build a lattice.</span>")
+			to_chat(user, "<span class='warning'>You need some support under this space to make a lattice.</span>")
 		return
 	if(istype(C, /obj/item/stack/tile/plasteel))
 		if(!CanCoverUp())
@@ -130,7 +133,7 @@ Prevents players on higher Zs from seeing into buildings they arent meant to.
 			if(L)
 				return list("mode" = RCD_FLOORWALL, "delay" = 0, "cost" = 1)
 			else
-				return list("mode" = RCD_FLOORWALL, "delay" = 0, "cost" = 3)
+				return FALSE
 	return FALSE
 
 /turf/open/transparent/openspace/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
