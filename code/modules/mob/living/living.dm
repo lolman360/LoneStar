@@ -421,6 +421,8 @@
 /mob/living/verb/lookup()
 	set name = "Look Up"
 	set category = "IC"
+	if(src.incapacitated())
+		to_chat(src, "<span class='warning'>You can't look up right now!</span>")
 	var/turf/T = SSmapping.get_turf_above(get_turf(src))
 	if(!istype(T, /turf/open/transparent/openspace))
 		if(istype(T, /turf/open) || istype(T, /turf/closed))
