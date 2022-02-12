@@ -439,6 +439,12 @@
 
 /mob/living/proc/stop_looking_up()
 	reset_perspective(null)
+	UnregisterSignal(src, COMSIG_MOB_CLIENT_CHANGE_VIEW, .proc/stop_looking_up) //no binos/scops
+	UnregisterSignal(src, COMSIG_MOVABLE_MOVED, .proc/stop_looking_up)
+	UnregisterSignal(src, COMSIG_LIVING_STATUS_KNOCKDOWN, .proc/stop_looking_up)
+	UnregisterSignal(src, COMSIG_LIVING_STATUS_PARALYZE, .proc/stop_looking_up)
+	UnregisterSignal(src, COMSIG_LIVING_STATUS_UNCONSCIOUS, .proc/stop_looking_up)
+	UnregisterSignal(src, COMSIG_LIVING_STATUS_SLEEP, .proc/stop_looking_up)
 
 /mob/living/incapacitated(ignore_restraints = FALSE, ignore_grab = FALSE, check_immobilized = FALSE)
 	if(stat || IsUnconscious() || IsStun() || IsParalyzed() || (combat_flags & COMBAT_FLAG_HARD_STAMCRIT) || (check_immobilized && IsImmobilized()) || (!ignore_restraints && restrained(ignore_grab)))
