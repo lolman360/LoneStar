@@ -11,7 +11,6 @@
 	fire_sound = 'sound/weapons/bowfire.wav'
 	slot_flags = ITEM_SLOT_BACK
 	item_flags = NONE
-	casing_ejector = FALSE
 	inaccuracy_modifier = 0 //to counteract the innaccuracy from WEAPON_HEAVY, bows are supposed to be accurate but only able to be fired with both hands
 	pin = null
 	no_pin_required = TRUE
@@ -23,18 +22,26 @@
 	dryfire_sound = ""
 
 /obj/item/gun/ballistic/bow/process_chamber(mob/living/user, empty_chamber = 0)
-	return ..() //changed argument value
+	var/obj/item/ammo_casing/AC = chambered //Find chambered round
+	if(istype(AC)) //there's a chambered round
+		if(casing_ejector)
+			AC.forceMove(drop_location()) //Eject casing onto ground.
+			AC.bounce_away(TRUE)
+			chambered = null
+		else if(empty_chamber)
+			chambered = null
 
 /obj/item/gun/ballistic/bow/can_shoot()
 	return chambered
 
 /obj/item/gun/ballistic/bow/attack_self(mob/living/user)
-	if(recentdraw > world.time)
-		return
 	if(chambered)
 		user.put_in_hands(chambered)
 		chambered = null
+		update_icon()
 		to_chat(user, "<span class='notice'>You gently release the bowstring, removing the arrow.</span>")
+		return
+	if(recentdraw > world.time || !get_ammo(FALSE))
 		return
 	draw(user, TRUE)
 	recentdraw = world.time + 2
@@ -45,7 +52,7 @@
 		M.visible_message("<span class='warning'>[M] draws the string on [src]!</span>", "<span class='warning'>You draw the string on [src]!</span>")
 	playsound(M, draw_sound, 60, 1)
 	draw_load(M)
-	update_icon()	//I.E. fix the desc
+	update_icon()
 	return 1
 
 /obj/item/gun/ballistic/bow/proc/draw_load(mob/M)
@@ -59,13 +66,13 @@
 		to_chat(user, "<span class='notice'>You load [A] into \the [src].</span>")
 		update_icon()
 
-/obj/item/gun/ballistic/bow/update_icon_state()
+/obj/item/gun/ballistic/bow/update_icon()
 	icon_state = "[initial(icon_state)]_[get_ammo() ? (chambered ? "firing" : "loaded") : "unloaded"]"
 
 
 /obj/item/gun/ballistic/bow/do_fire(atom/target, mob/living/user, message = TRUE, params, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	..()
-	if(HAS_TRAIT(user, TRAIT_AUTO_DRAW) && !chambered)
+	if(HAS_TRAIT(user, TRAIT_AUTO_DRAW) && !chambered && get_ammo(FALSE))
 		user.visible_message("<span class='warning'>[user] instinctively draws the string on [src]!</span>", "<span class='warning'>You instinctively draw the string on [src]!</span>")
 		draw(user, FALSE)
 		recentdraw = world.time + 2
