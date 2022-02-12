@@ -29,7 +29,7 @@
 	casing_ejector = FALSE
 	var/recentpump = 0 // to prevent spammage
 	spawnwithmagazine = TRUE
-	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
+	var/pump_sound = 'sound/weapons/shotgunpump.ogg'playsound(src, 'sound/weapons/bowdraw.wav', 75, 0) //gets way too high pitched if the freq varies
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
 
 /obj/item/gun/ballistic/rifle/process_chamber(mob/living/user, empty_chamber = 0)
