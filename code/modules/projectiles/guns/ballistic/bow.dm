@@ -40,7 +40,7 @@
 	recentdraw = world.time + 2
 	return
 
-/obj/item/gun/ballistic/rifle/bow/draw(mob/M, visible = TRUE)
+/obj/item/gun/ballistic/bow/draw(mob/M, visible = TRUE)
 	if(visible)
 		M.visible_message("<span class='warning'>[M] draws the string on [src]!</span>", "<span class='warning'>You draw the string on [src]!</span>")
 	playsound(M, draw_sound, 60, 1)
@@ -48,7 +48,7 @@
 	update_icon()	//I.E. fix the desc
 	return 1
 
-/obj/item/gun/ballistic/rifle/proc/draw_load(mob/M)
+/obj/item/gun/ballistic/bow/proc/draw_load(mob/M)
 	if(!magazine.ammo_count())
 		return 0
 	var/obj/item/ammo_casing/AC = magazine.get_round() //load next casing.
@@ -66,7 +66,7 @@
 /obj/item/gun/ballistic/bow/do_fire(atom/target, mob/living/user, message = TRUE, params, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	..()
 	if(HAS_TRAIT(user, TRAIT_AUTO_DRAW) && !chambered)
-		M.visible_message("<span class='warning'>[M] instinctively draws the string on [src]!</span>", "<span class='warning'>You instinctively draw the string on [src]!</span>")
+		user.visible_message("<span class='warning'>[M] instinctively draws the string on [src]!</span>", "<span class='warning'>You instinctively draw the string on [src]!</span>")
 		draw(user, FALSE)
 		recentdraw = world.time + 2
 
@@ -113,7 +113,7 @@
 	extra_speed = 300
 
 //Silver Bow
-/obj/item/gun/ballistic/automatic/silverbow
+/obj/item/gun/ballistic/bow/silver
 	name = "silver bow"
 	desc = "A firm sturdy silver bow created by the earth, its durability and rather strong material allow it to be an excellent option for those looking for the ability to fire more arrows than normally."
 	icon_state = "pipebow"
@@ -124,7 +124,7 @@
 	fire_delay = 1.5
 
 //Crossbow
-/obj/item/gun/ballistic/automatic/crossbow
+/obj/item/gun/ballistic/bow/crossbow
 	name = "crossbow"
 	desc = "A crossbow."
 	icon_state = "crossbow"
