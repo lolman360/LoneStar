@@ -1651,7 +1651,7 @@ datum/job/wasteland/f13dendoctor
 	head = /obj/item/clothing/head/helmet/f13/wayfarer/antler
 	neck = /obj/item/clothing/neck/mantle/brown
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/sturdybow = 1,
+		/obj/item/gun/ballistic/bow/sturdy = 1,
 		/obj/item/storage/belt/tribe_quiver/bone = 1,
 		/obj/item/storage/belt/tribe_quiver = 1,
 		/obj/item/binoculars = 1,
