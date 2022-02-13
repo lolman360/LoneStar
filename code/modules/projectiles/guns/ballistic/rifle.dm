@@ -255,10 +255,9 @@
 	icon_state = "enfield2"
 	item_state = "308"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
-	extra_damage = 39
-	extra_penetration = 0.2
+	extra_damage = 37
 	extra_speed = 600
-	fire_delay = 1
+	fire_delay = 7
 	slowdown = 0.35
 	force = 16
 	can_scope = TRUE
