@@ -101,6 +101,7 @@ Prevents players on higher Zs from seeing into buildings they arent meant to.
 		for(var/turf/T in range(2, SSmapping.get_turf_below(src)))
 			if(istype(T, /turf/closed))
 				support++
+				break
 		if(support)
 			if(R.use(1))
 				to_chat(user, "<span class='notice'>You construct a lattice.</span>")
