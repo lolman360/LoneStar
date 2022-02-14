@@ -83,6 +83,7 @@ Prevents players on higher Zs from seeing into buildings they arent meant to.
 	if(!CanBuildHere())
 		return
 	if(istype(C, /obj/item/stack/rods))
+		var/support
 		var/obj/item/stack/rods/R = C
 		var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
 		var/obj/structure/lattice/catwalk/W = locate(/obj/structure/lattice/catwalk, src)
@@ -97,7 +98,10 @@ Prevents players on higher Zs from seeing into buildings they arent meant to.
 			else
 				to_chat(user, "<span class='warning'>You need two rods to build a catwalk!</span>")
 			return
-		if(istype(SSmapping.get_turf_below(src), /turf/closed))
+		for(var/turf/T in range(2, SSmapping.get_turf_below(src)))
+			if(istype(T, /turf/closed))
+				support++
+		if(support)
 			if(R.use(1))
 				to_chat(user, "<span class='notice'>You construct a lattice.</span>")
 				playsound(src, 'sound/weapons/genhit.ogg', 50, TRUE)
