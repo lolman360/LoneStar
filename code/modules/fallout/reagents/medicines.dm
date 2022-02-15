@@ -71,7 +71,7 @@
 /datum/reagent/medicine/stimpakimitation/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0)
 		metabolization_rate = 1000 * REAGENTS_METABOLISM //instant metabolise if it won't help you, prevents prehealing before combat
-	if(!M.reagents.has_reagent(/datum/reagent/medicine/healing_powder)
+	if(!M.reagents.has_reagent(/datum/reagent/medicine/healing_powder))
 		M.adjustBruteLoss(-2.5*REAGENTS_EFFECT_MULTIPLIER)
 		M.adjustFireLoss(-2.5*REAGENTS_EFFECT_MULTIPLIER)
 		M.AdjustKnockdown(-5*REAGENTS_EFFECT_MULTIPLIER, 0)
