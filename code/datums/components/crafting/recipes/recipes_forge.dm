@@ -475,7 +475,7 @@
 	reqs = list(
 		/obj/item/stack/sheet/metal = 25,
 		/obj/item/stack/crafting/metalparts = 2,
-		/obj/item/stack/crafting/electronicparts = 3,
+		/obj/item/stack/crafting/electronicparts = 3
 		)
 	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
 	category = CAT_WEAPONRY
@@ -488,7 +488,7 @@
 	reqs = list(
 		/obj/item/kinetic_crusher/glaive
 		/obj/item/stack/sheet/mineral/titanium = 1,
-		/obj/item/stack/crafting/electronicparts = 5,
+		/obj/item/stack/crafting/electronicparts = 5
 		)
 	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
 	category = CAT_WEAPONRY
