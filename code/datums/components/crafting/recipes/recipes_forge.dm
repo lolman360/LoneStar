@@ -486,7 +486,7 @@
 	result = /obj/item/kinetic_crusher/glaive
 	time = 100
 	reqs = list(
-		/obj/item/kinetic_crusher/glaive
+		/obj/item/kinetic_crusher = 1,
 		/obj/item/stack/sheet/mineral/titanium = 1,
 		/obj/item/stack/crafting/electronicparts = 5
 		)
