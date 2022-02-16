@@ -79,7 +79,7 @@
 	OptimalTempMin 		= 600
 	OptimalTempMax		= 675
 	ExplodeTemp			= 700
-	OptimalpHMin		= 8
+	OptimalpHMin		= 7
 	OptimalpHMax		= 10
 	ReactpHLim			= 2
 	CurveSharpT 		= 5
@@ -112,15 +112,15 @@
 	id = /datum/reagent/drug/psycho
 	results = list(/datum/reagent/drug/psycho = 4)
 	required_reagents = list(/datum/reagent/consumable/ferajuice = 2, /datum/reagent/consumable/cavefungusjuice = 2, /datum/reagent/consumable/nuka_cola = 1)
-	OptimalTempMin 		= 273
+	OptimalTempMin 		= 223
 	OptimalTempMax		= 303
 	ExplodeTemp			= 323
 	OptimalpHMin		= 3
-	OptimalpHMax		= 5
+	OptimalpHMax		= 6
 	ReactpHLim			= 1
 	CurveSharpT 		= 5
 	CurveSharppH 		= 0.7
-	ThermicConstant		= 7
+	ThermicConstant		= 5
 	HIonRelease 		= 0.5
 	RateUpLim 			= 5
 	FermiChem 			= TRUE
@@ -134,11 +134,11 @@
 	OptimalTempMax		= 215
 	ExplodeTemp			= 223
 	OptimalpHMin		= 8
-	OptimalpHMax		= 10
+	OptimalpHMax		= 11
 	ReactpHLim			= 1
 	CurveSharpT 		= 5
 	CurveSharppH 		= 0.7
-	ThermicConstant		= 15
+	ThermicConstant		= 3
 	HIonRelease 		= 0.5
 	RateUpLim 			= 1
 	FermiChem 			= TRUE

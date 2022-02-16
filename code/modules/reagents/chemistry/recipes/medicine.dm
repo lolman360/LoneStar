@@ -420,8 +420,8 @@ datum/chemical_reaction/rezadone
 	ReactpHLim			= 1
 	CurveSharpT 		= 1 //flat tcurve
 	CurveSharppH 		= 0.5
-	ThermicConstant		= 5
-	HIonRelease 		= 0.75
+	ThermicConstant		= 1.5
+	HIonRelease 		= 0.1
 	RateUpLim 			= 50 //this seems quite high but 1. runaway thermals 2. it's very slow since it's 100K
 	FermiChem 			= TRUE
 	FermiExplode 		= FALSE
@@ -431,10 +431,10 @@ datum/chemical_reaction/rezadone
 	id = /datum/reagent/medicine/medx
 	results = list(/datum/reagent/medicine/medx = 4)
 	required_reagents = list(/datum/reagent/consumable/ethanol/pungajuice = 1, /datum/reagent/consumable/daturajuice = 1, /datum/reagent/consumable/coyotejuice = 1, /datum/reagent/medicine/stimpakimitation = 1)
-	OptimalTempMin 		= 800
+	OptimalTempMin 		= 780
 	OptimalTempMax		= 821
 	ExplodeTemp			= 824
-	OptimalpHMin		= 11
+	OptimalpHMin		= 10
 	OptimalpHMax		= 14
 	ReactpHLim			= 1
 	CurveSharpT 		= 10
