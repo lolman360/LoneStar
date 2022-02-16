@@ -401,11 +401,11 @@
 				var/obj/effect/decal/cleanable/crayon/C = new(target, paint_color, drawing, temp, graf_rot)
 				C.add_hiddenprint(user)
 				if(precision_mode)
-						C.pixel_x = clamp(precision_x, -(world.icon_size/2), world.icon_size/2)
-						C.pixel_y = clamp(precision_y, -(world.icon_size/2), world.icon_size/2)
-					else
-						C.pixel_x = clickx
-						C.pixel_y = clicky
+					C.pixel_x = clamp(precision_x, -(world.icon_size/2), world.icon_size/2)
+					C.pixel_y = clamp(precision_y, -(world.icon_size/2), world.icon_size/2)
+				else
+					C.pixel_x = clickx
+					C.pixel_y = clicky
 				affected_turfs += target
 			if(PAINT_LARGE_HORIZONTAL)
 				var/turf/left = locate(target.x-1,target.y,target.z)
