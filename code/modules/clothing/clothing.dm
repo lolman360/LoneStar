@@ -286,8 +286,8 @@
 	if(armor.acid)
 		durability_list += list("ACID" = armor.acid)
 
-	//if(LAZYLEN(armor_list) || LAZYLEN(durability_list))
-	//	. += "<span class='notice'>It has a <a href='?src=[REF(src)];list_armor=1'>tag</a> listing its protection classes.</span>"
+	if(LAZYLEN(armor_list) || LAZYLEN(durability_list))
+		. += "<span class='notice'>It has a <a href='?src=[REF(src)];list_armor=1'>tag</a> listing its protection classes.</span>"
 
 /obj/item/clothing/Topic(href, href_list)
 	. = ..()
@@ -298,48 +298,16 @@
 			readout += "\n<b>ARMOR</b>"
 			for(var/dam_type in armor_list)
 				var/armor_amount = armor_list[dam_type]
-				readout += "\n[dam_type] [armor_to_protection_class(armor_amount)]" //e.g. BOMB IV
+				readout += "\n[dam_type] [armor_amount]" //e.g. MELEE 27
 		if(LAZYLEN(durability_list))
 			readout += "\n<b>DURABILITY</b>"
 			for(var/dam_type in durability_list)
 				var/durability_amount = durability_list[dam_type]
-				readout += "\n[dam_type] [armor_to_protection_class(durability_amount)]" //e.g. FIRE II
+				readout += "\n[dam_type] [durability_amount]" //e.g. ACID 20
 		readout += "</span>"
 
 		to_chat(usr, "[readout.Join()]")
 
-/**
- * Rounds armor_value to nearest 10, divides it by 10 and then expresses it in roman numerals up to 10
- *
- * Rounds armor_value to nearest 10, divides it by 10
- * and then expresses it in roman numerals up to 10
- * Arguments:
- * * armor_value - Number we're converting
- */
-/obj/item/clothing/proc/armor_to_protection_class(armor_value)
-	armor_value = round(armor_value,10) / 10
-	switch (armor_value)
-		if (1)
-			. = "I"
-		if (2)
-			. = "II"
-		if (3)
-			. = "III"
-		if (4)
-			. = "IV"
-		if (5)
-			. = "V"
-		if (6)
-			. = "VI"
-		if (7)
-			. = "VII"
-		if (8)
-			. = "VIII"
-		if (9)
-			. = "IX"
-		if (10 to INFINITY)
-			. = "X"
-	return .
 
 /obj/item/clothing/obj_break(damage_flag)
 	damaged_clothes = CLOTHING_DAMAGED
