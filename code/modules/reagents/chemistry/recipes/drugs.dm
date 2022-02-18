@@ -93,7 +93,7 @@
 	name = "Turbo"
 	id = /datum/reagent/drug/turbo
 	results = list(/datum/reagent/drug/turbo = 4)
-	required_reagents = list(/datum/reagent/cellulose = 1, /datum/chemical_reaction/cyanide = 1, /datum/reagent/consumable/brocjuice = 1, /datum/reagent/drug/jet = 1) //fairly close to the ingame recipe
+	required_reagents = list(/datum/reagent/cellulose = 1, /datum/reagent/toxin/cyanide = 1, /datum/reagent/consumable/brocjuice = 1, /datum/reagent/drug/jet = 1) //fairly close to the ingame recipe
 	OptimalTempMin 		= 410
 	OptimalTempMax		= 525
 	ExplodeTemp			= 585
