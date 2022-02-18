@@ -177,7 +177,7 @@
 	attack_verb = list("stabbed", "diced", "sliced", "cleaved", "chopped", "lacerated", "cut", "jabbed", "punctured")
 	icon_state = "crusher-glaive"
 	item_state = "crusher0-glaive"
-	detonation_damage = 60
+	detonation_damage = 40
 	block_parry_data = /datum/block_parry_data/crusherglaive
 	//ideas: altclick that lets you pummel people with the handguard/handle?
 	//parrying functionality?
