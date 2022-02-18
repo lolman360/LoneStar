@@ -25,7 +25,7 @@
 	var/list/trophies = list()
 	var/charged = TRUE
 	var/charge_time = 15
-	var/detonation_damage = 60
+	var/detonation_damage = 30
 	var/backstab_bonus = 30
 	var/wielded = FALSE // track wielded status on item
 
@@ -177,6 +177,7 @@
 	attack_verb = list("stabbed", "diced", "sliced", "cleaved", "chopped", "lacerated", "cut", "jabbed", "punctured")
 	icon_state = "crusher-glaive"
 	item_state = "crusher0-glaive"
+	detonation_damage = 60
 	block_parry_data = /datum/block_parry_data/crusherglaive
 	//ideas: altclick that lets you pummel people with the handguard/handle?
 	//parrying functionality?
