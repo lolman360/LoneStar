@@ -111,7 +111,7 @@
 	name = "Psycho"
 	id = /datum/reagent/drug/psycho
 	results = list(/datum/reagent/drug/psycho = 3)
-	required_reagents = list(/datum/reagent/toxin/acid = 1, /datum/reagent/consumable/cavefungusjuice = 1, /datum/reagent/ash = 1)
+	required_reagents = list(/datum/reagent/toxin/acid = 1, /datum/reagent/consumable/cavefungusjuice = 1, /datum/reagent/ash = 1, /datum/reagent/drug/methamphetamine = 1)
 	OptimalTempMin 		= 223
 	OptimalTempMax		= 303
 	ExplodeTemp			= 323
@@ -128,8 +128,8 @@
 /datum/chemical_reaction/buffout
 	name = "Buffout"
 	id = /datum/reagent/drug/buffout
-	results = list(/datum/reagent/drug/buffout = 4)
-	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/phosphorus = 1, /datum/reagent/sulfur = 1, /datum/reagent/consumable/nuka_cola = 1, /datum/reagent/carbondioxide = 1, /datum/reagent/nitrous_oxide = 1, /datum/reagent/consumable/yuccajuice = 2)
+	results = list(/datum/reagent/drug/buffout = 5)
+	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/phosphorus = 1, /datum/reagent/sulfur = 1, /datum/reagent/drug/crank = 1, /datum/reagent/carbondioxide = 1, /datum/reagent/nitrous_oxide = 1, /datum/reagent/consumable/yuccajuice = 2)
 	OptimalTempMin 		= 165
 	OptimalTempMax		= 215
 	ExplodeTemp			= 223
