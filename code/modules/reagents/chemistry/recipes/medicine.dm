@@ -411,7 +411,7 @@ datum/chemical_reaction/rezadone
 	name = "Super Stimpak Fluid"
 	id = /datum/reagent/medicine/super_stimpak
 	results = list(/datum/reagent/medicine/super_stimpak = 3)
-	required_reagents = list(/datum/reagent/blood/synthetics = 1, /datum/reagent/drug/aranesp = 1, /datum/reagent/medicine/stimpak = 1, /datum/reagent/consumable/mutjuice = 1)
+	required_reagents = list(/datum/reagent/blood/synthetics = 1, /datum/reagent/medicine/stimpak = 1, /datum/reagent/consumable/mutjuice = 1)
 	OptimalTempMin 		= 65
 	OptimalTempMax		= 95
 	ExplodeTemp			= 100
@@ -430,7 +430,7 @@ datum/chemical_reaction/rezadone
 	name = "Med-X"
 	id = /datum/reagent/medicine/medx
 	results = list(/datum/reagent/medicine/medx = 4)
-	required_reagents = list(/datum/reagent/consumable/ethanol/pungajuice = 1, /datum/reagent/consumable/daturajuice = 1, /datum/reagent/consumable/coyotejuice = 1, /datum/reagent/medicine/stimpakimitation = 1)
+	required_reagents = list(/datum/reagent/drug/aranesp = 1, /datum/reagent/phenol = 1, /datum/reagent/medicine/salglu_solution = 1, /datum/reagent/medicine/stimpakimitation = 1)
 	OptimalTempMin 		= 780
 	OptimalTempMax		= 821
 	ExplodeTemp			= 824
