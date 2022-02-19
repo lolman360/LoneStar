@@ -599,6 +599,7 @@
 				/obj/item/wrench,
 				/obj/item/kitchen/knife,
 				/obj/item/kitchen/rollingpin,
+				/obj/item/weldingtool,
 				)
 
 
@@ -622,6 +623,7 @@
 				/obj/item/twohanded/spear/scrapspear,
 				/obj/item/melee/onehanded/club,
 				/obj/item/melee/onehanded/knife/cosmicdirty,
+				/obj/item/melee/onehanded/machete,
 				/obj/item/melee/unarmed/brass,
 				/obj/item/melee/unarmed/brass/spiked,
 				)
@@ -632,12 +634,10 @@
 
 	loot = list(
 				/obj/effect/spawner/bundle/f13/throwingknife3,
-				/obj/item/weldingtool,
 				/obj/item/twohanded/spear,
 				/obj/item/twohanded/baseball,
 				/obj/item/kitchen/knife/butcher,
 				/obj/item/twohanded/baseball/golfclub,
-				/obj/item/melee/onehanded/machete,
 				/obj/item/melee/onehanded/machete/forgedmachete,
 				/obj/item/shield/riot/buckler,
 				/obj/item/melee/unarmed/tigerclaw,
@@ -689,14 +689,18 @@
 			/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 = 10
 			)
 
+/obj/effect/spawner/lootdrop/f13/weapon/melee/random_mid
+	name = "mid tier random melee loot"
+	loot = list(
+			/obj/effect/spawner/lootdrop/f13/weapon/melee/tier3 = 20,
+			/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 = 10
+			)
+
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random_high
 	name = "high tier random melee loot"
 	lootcount = 1
-
-	loot = list(
-			/obj/effect/spawner/lootdrop/f13/weapon/melee/tier3 = 45,
-			/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 = 35,
-			/obj/effect/spawner/lootdrop/f13/weapon/melee/tier5 = 20
+	loot = list(/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 = 2,
+			/obj/effect/spawner/lootdrop/f13/weapon/melee/tier5 = 1
 			)
 
 /*	------------------------------------------------
@@ -2053,7 +2057,7 @@
 		/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7,
 		/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine,
-
+		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintHigh
@@ -2063,7 +2067,6 @@
 	loot = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/leveraction,
 		/obj/item/book/granter/crafting_recipe/blueprint/r91,
-		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
 		/obj/item/book/granter/crafting_recipe/blueprint/r84,
 		/obj/item/book/granter/crafting_recipe/blueprint/deagle,
 		/obj/item/book/granter/crafting_recipe/blueprint/marksman,
@@ -2076,7 +2079,6 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-
 		/obj/item/book/granter/crafting_recipe/blueprint/neostead,
 		/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9,
@@ -2100,15 +2102,10 @@
 	lootcount = 3
 	lootdoubles = FALSE
 	loot = list(
-		/obj/item/book/granter/crafting_recipe/blueprint/r91 ,
-		/obj/item/book/granter/crafting_recipe/blueprint/r84 ,
-		/obj/item/book/granter/crafting_recipe/blueprint/gauss = 3,
-		/obj/item/book/granter/crafting_recipe/blueprint/neostead = 3,
-		/obj/item/book/granter/crafting_recipe/blueprint/aer9 = 3,
+		/obj/item/book/granter/crafting_recipe/blueprint/r91 = 3,
+		/obj/item/book/granter/crafting_recipe/blueprint/r84 = 3,
 		/obj/item/book/granter/crafting_recipe/blueprint/am_rifle = 3,
-		/obj/item/book/granter/crafting_recipe/blueprint/citykiller = 3,
 		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster = 3,
-		/obj/item/book/granter/crafting_recipe/blueprint/bozar = 3,
 		/obj/item/advanced_crafting_components/flux,
 		/obj/item/advanced_crafting_components/lenses,
 		/obj/item/advanced_crafting_components/conductors,
