@@ -128,8 +128,8 @@
 /datum/chemical_reaction/buffout
 	name = "Buffout"
 	id = /datum/reagent/drug/buffout
-	results = list(/datum/reagent/drug/buffout = 5)
-	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/phosphorus = 1, /datum/reagent/sulfur = 1, /datum/reagent/drug/crank = 1, /datum/reagent/carbondioxide = 1, /datum/reagent/nitrous_oxide = 1, /datum/reagent/consumable/yuccajuice = 2)
+	results = list(/datum/reagent/drug/buffout = 10)
+	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/phosphorus = 1, /datum/reagent/sulfur = 1, /datum/reagent/drug/crank = 1, /datum/reagent/carbondioxide = 1, /datum/reagent/nitrous_oxide = 1, /datum/reagent/consumable/yuccajuice = 1)
 	OptimalTempMin 		= 165
 	OptimalTempMax		= 215
 	ExplodeTemp			= 223
@@ -138,7 +138,7 @@
 	ReactpHLim			= 1
 	CurveSharpT 		= 5
 	CurveSharppH 		= 0.7
-	ThermicConstant		= 3
-	HIonRelease 		= 0.5
+	ThermicConstant		= 2
+	HIonRelease 		= 0.25
 	RateUpLim 			= 3
 	FermiChem 			= TRUE
