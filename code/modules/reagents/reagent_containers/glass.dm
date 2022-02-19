@@ -337,6 +337,7 @@
 	desc = "An ancient, simple tool used in conjunction with a mortar to grind or juice items."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bone_pestle"
+	w_class = WEIGHT_CLASS_SMALL
 	force = 6
 
 /obj/item/reagent_containers/glass/mortar
@@ -344,11 +345,12 @@
 	desc = "A specially formed bowl of ancient design. It is possible to crush or juice items placed in it using a pestle; however the process, unlike modern methods, is slow and physically exhausting."
 	icon_state = "bone_mortar"
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5, 10, 15, 20, 25, 30, 50)
+	possible_transfer_amounts = list(5, 10, 15, 20, 25, 30, 50, 60, 120)
+	volume = 120
 	item_flags = NO_MAT_REDEMPTION
 	reagent_flags = OPENCONTAINER
 	spillable = TRUE
-	var/obj/item/grinded
+	var/list/holdingitems
 	var/mortar_mode = MORTAR_JUICE
 	var/blacklistchems = list(
 		/obj/item/reagent_containers/pill/patch/turbo,
@@ -362,11 +364,13 @@
 	. += "<span class='notice'>Alt-click while the mortar is empty to change between grind/juice mode.</span>"
 
 /obj/item/reagent_containers/glass/mortar/AltClick(mob/user)
-	if(grinded)
-		grinded.forceMove(drop_location())
-		grinded = null
-		to_chat(user, "<span class='notice'>You eject the item inside.</span>")
-		return TRUE
+	if(LAZYLEN(holdingitems))
+		for(var/i in holdingitems)
+			var/obj/item/O = i
+			O.forceMove(drop_location())
+			holdingitems -= O
+			to_chat(user, "<span class='notice'>You eject the item inside.</span>")
+			return TRUE
 	else
 		mortar_mode = !mortar_mode
 		to_chat(user, "<span class='notice'>You decide to hold [src] differently to [mortar_mode == MORTAR_JUICE ? "juice the harvest" : "grind the harvest"].</span>")
@@ -375,28 +379,46 @@
 	if (is_type_in_list(I, blacklistchems))
 		return
 	..()
+	if(istype(I, /obj/item/storage/bag))
+		var/list/inserted = list()
+		if(SEND_SIGNAL(I, COMSIG_TRY_STORAGE_TAKE_TYPE, /obj/item/reagent_containers/food/snacks/grown, src, 20 - length(holdingitems), null, null, user, inserted))
+			for(var/i in inserted)
+				holdingitems[i] = TRUE
+			if(!I.contents.len)
+				to_chat(user, "<span class='notice'>You empty [I] into [src].</span>")
+			else
+				to_chat(user, "<span class='notice'>You fill [src] to the brim.</span>")
+		return
 	if(istype(I,/obj/item/pestle))
-		if(grinded)
+		if(LAZYLEN(holdingitems))
 			if(IS_STAMCRIT(user))
 				to_chat(user, "<span class='warning'>You are too tired to work!</span>")
 				return
-			to_chat(user, "<span class='notice'>You start grinding...</span>")
-			if((do_after(user, 25, target = src)))
-				user.adjustStaminaLoss(15)
-				if(grinded.juice_results && (mortar_mode== MORTAR_JUICE)) // will prioritize juicing IF the Mortar's toggled to juice.
-					grinded.on_juice()
-					reagents.add_reagent_list(grinded.juice_results)
-					to_chat(user, "<span class='notice'>You juice [grinded] into a fine liquid.</span>")
-					QDEL_NULL(grinded)
-					return
-				grinded.on_grind()
-				reagents.add_reagent_list(grinded.grind_results)
-				if(grinded.reagents && (mortar_mode== MORTAR_GRIND)) //food and pills
-					grinded.reagents.trans_to(src, grinded.reagents.total_volume, log = "mortar powdering")
-				to_chat(user, "<span class='notice'>You grind [grinded] into a fine powder.</span>")
-				QDEL_NULL(grinded)
+			user.adjustStaminaLoss(5)
+			if(mortar_mode== MORTAR_JUICE)
+				for(var/obj/item/i in holdingitems)
+					if(reagents.total_volume >= reagents.maximum_volume)
+						break
+					var/obj/item/I = i
+					if(I.juice_results)
+						I.on_juice()
+						reagents.add_reagent_list(I.juice_results)
+						to_chat(user, "<span class='notice'>You juice [I] into a fine liquid.</span>")
+						QDEL_NULL(I)
 				return
-			return
+			else
+				for(var/i in holdingitems)
+					if(reagents.total_volume >= reagents.maximum_volume)
+						break
+					var/obj/item/I = i
+					if(I.grind_results)
+						I.on_grind()
+						reagents.add_reagent_list(I.grind_results)
+						if(I.reagents && (mortar_mode== MORTAR_GRIND)) //food and pills
+							I.reagents.trans_to(src, I.reagents.total_volume, log = "mortar powdering")
+						to_chat(user, "<span class='notice'>You grind [I] into a fine powder.</span>")
+						QDEL_NULL(I)
+				return
 		else
 			to_chat(user, "<span class='warning'>There is nothing to grind!</span>")
 			return
