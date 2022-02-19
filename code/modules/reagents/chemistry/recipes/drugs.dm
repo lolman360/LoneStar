@@ -86,7 +86,7 @@
 	CurveSharppH 		= 0.7
 	ThermicConstant		= -6
 	HIonRelease 		= -0.5
-	RateUpLim 			= 5
+	RateUpLim 			= 10
 	FermiChem 			= TRUE
 
 /datum/chemical_reaction/turbo
@@ -104,7 +104,7 @@
 	CurveSharppH 		= 0.7
 	ThermicConstant		= 8
 	HIonRelease 		= 0.5
-	RateUpLim 			= 5
+	RateUpLim 			= 7
 	FermiChem 			= TRUE
 
 /datum/chemical_reaction/psycho
@@ -140,5 +140,5 @@
 	CurveSharppH 		= 0.7
 	ThermicConstant		= 3
 	HIonRelease 		= 0.5
-	RateUpLim 			= 1
+	RateUpLim 			= 3
 	FermiChem 			= TRUE
