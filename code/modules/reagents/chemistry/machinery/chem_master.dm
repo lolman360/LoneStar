@@ -531,11 +531,44 @@
 	flags_1 = NODECONSTRUCT_1
 	can_be_unanchored = TRUE
 
+/obj/machinery/chem_master/primitive/Initialize()
+	..()
+	reagents.maximum_volume = 240
+
+
 /obj/machinery/chem_master/primitive/update_icon_state()
 	if(beaker)
 		icon_state = "alchemy_table"
 	else
 		icon_state = "alchemy_table"
+
+/obj/machinery/chem_master/primitive/attackby(obj/item/I, mob/user, params)
+	if(default_unfasten_wrench(user, I))
+		return
+	if(istype(I, /obj/item/reagent_containers) && !(I.item_flags & ABSTRACT) && I.is_open_container())
+		. = TRUE // no afterattack
+		if(panel_open)
+			to_chat(user, "<span class='warning'>You can't use the [src.name] while its panel is opened!</span>")
+			return
+		var/obj/item/reagent_containers/B = I
+		if(!user.transferItemToLoc(B, src))
+			return
+		replace_beaker(user, B)
+		to_chat(user, "<span class='notice'>You add [B] to [src].</span>")
+		updateUsrDialog()
+		update_icon()
+	else if(!condi && istype(I, /obj/item/storage/pill_bottle))
+		. = TRUE // no afterattack
+		if(panel_open)
+			to_chat(user, "<span class='warning'>You can't use the [src.name] while its panel is opened!</span>")
+			return
+		if(!user.transferItemToLoc(I, src))
+			return
+		replace_pillbottle(user, I)
+		to_chat(user, "<span class='notice'>You add [I] into the dispenser slot.</span>")
+		updateUsrDialog()
+	else
+		return ..()
 
 /obj/machinery/chem_master/primitive/ui_interact(mob/living/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
