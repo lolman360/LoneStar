@@ -423,8 +423,8 @@
 		else
 			to_chat(user, "<span class='warning'>There is nothing to grind!</span>")
 			return
-	if(grinded)
-		to_chat(user, "<span class='warning'>There is something inside already!</span>")
+	if(holdingitems.len >= 10)
+		to_chat(user, "<span class='warning'>There [src] is full!</span>")
 		return
 	if(I.juice_results || I.grind_results)
 		if(user.transferItemToLoc(I, src))
