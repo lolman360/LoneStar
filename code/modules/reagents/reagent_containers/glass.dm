@@ -390,6 +390,7 @@
 				to_chat(user, "<span class='notice'>You fill [src] to the brim.</span>")
 		return
 	if(istype(I,/obj/item/pestle))
+		var/obj/item/GI
 		if(LAZYLEN(holdingitems))
 			if(IS_STAMCRIT(user))
 				to_chat(user, "<span class='warning'>You are too tired to work!</span>")
@@ -399,25 +400,25 @@
 				for(var/obj/item/i in holdingitems)
 					if(reagents.total_volume >= reagents.maximum_volume)
 						break
-					var/obj/item/I = i
-					if(I.juice_results)
-						I.on_juice()
-						reagents.add_reagent_list(I.juice_results)
-						to_chat(user, "<span class='notice'>You juice [I] into a fine liquid.</span>")
-						QDEL_NULL(I)
+					GI = i
+					if(GI.juice_results)
+						GI.on_juice()
+						reagents.add_reagent_list(GI.juice_results)
+						to_chat(user, "<span class='notice'>You juice [GI] into a fine liquid.</span>")
+						QDEL_NULL(GI)
 				return
 			else
 				for(var/i in holdingitems)
 					if(reagents.total_volume >= reagents.maximum_volume)
 						break
-					var/obj/item/I = i
-					if(I.grind_results)
-						I.on_grind()
-						reagents.add_reagent_list(I.grind_results)
-						if(I.reagents && (mortar_mode== MORTAR_GRIND)) //food and pills
-							I.reagents.trans_to(src, I.reagents.total_volume, log = "mortar powdering")
-						to_chat(user, "<span class='notice'>You grind [I] into a fine powder.</span>")
-						QDEL_NULL(I)
+					GI = i
+					if(GI.grind_results)
+						GI.on_grind()
+						reagents.add_reagent_list(GI.grind_results)
+						if(GI.reagents && (mortar_mode== MORTAR_GRIND)) //food and pills
+							GI.reagents.trans_to(src, GI.reagents.total_volume, log = "mortar powdering")
+						to_chat(user, "<span class='notice'>You grind [GI] into a fine powder.</span>")
+						QDEL_NULL(GI)
 				return
 		else
 			to_chat(user, "<span class='warning'>There is nothing to grind!</span>")
@@ -426,7 +427,8 @@
 		to_chat(user, "<span class='warning'>There is something inside already!</span>")
 		return
 	if(I.juice_results || I.grind_results)
-		I.forceMove(src)
-		grinded = I
-		return
-	to_chat(user, "<span class='warning'>You can't grind this!</span>")
+		if(user.transferItemToLoc(I, src))
+			to_chat(user, "<span class='notice'>You add [I] to [src].</span>")
+			holdingitems[I] = TRUE
+			return
+	to_chat(user, "<span class='warning'>You can't put this in the mortar!</span>")
