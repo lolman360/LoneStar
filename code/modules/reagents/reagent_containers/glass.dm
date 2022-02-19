@@ -394,7 +394,7 @@
 			if(IS_STAMCRIT(user))
 				to_chat(user, "<span class='warning'>You are too tired to work!</span>")
 				return
-			user.adjustStaminaLoss(5)
+			user.adjustStaminaLoss(2 * holdingitems.len) //max 40
 			if(mortar_mode== MORTAR_JUICE)
 				for(var/obj/item/i in holdingitems)
 					if(reagents.total_volume >= reagents.maximum_volume)
