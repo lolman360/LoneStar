@@ -396,7 +396,7 @@
 				/obj/item/clothing/suit/armor/f13/leather_jacket/combat/riotpolice,
 				/obj/item/clothing/head/helmet/f13/rangerbroken
 				)
-				
+
 /obj/effect/spawner/bundle/f13/armor/vault
 	name = "vault armor spawner"
 	items = list(
@@ -725,6 +725,13 @@
 				/obj/effect/spawner/bundle/f13/ionrifle = 5
 				)
 
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh //overlaps with midtier
+	name = "mid-high tier energy gun"
+	loot = list(/obj/effect/spawner/bundle/f13/aer12,
+				/obj/effect/spawner/bundle/f13/wattz2kext,
+				/obj/effect/spawner/bundle/f13/plasmapistol,
+				/obj/effect/spawner/bundle/f13/ionrifle
+				)
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high
 	name = "high tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/plasmarifle = 25,
@@ -756,57 +763,70 @@
 				/obj/item/gun/ballistic/revolver/hobo/knifegun,
 				/obj/item/gun/ballistic/revolver/hobo/knucklegun,
 				/obj/effect/spawner/bundle/f13/autopipe,
+				/obj/effect/spawner/bundle/f13/pistol22,
+				/obj/item/gun/ballistic/revolver/winchesterrebored
+				)
+
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow
+	name = "very low tier non-hobo ballistic gun"
+	loot = list(/obj/effect/spawner/bundle/f13/ninemil,
+				/obj/effect/spawner/bundle/f13/sig,
 				/obj/effect/spawner/bundle/f13/caravan_shotgun,
 				/obj/effect/spawner/bundle/f13/mosin,
 				/obj/effect/spawner/bundle/f13/remington,
-				/obj/item/gun/ballistic/revolver/winchesterrebored,
 				/obj/effect/spawner/bundle/f13/widowmaker,
 				/obj/effect/spawner/bundle/f13/varmint
 				)
+
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/low
 	name = "low tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/m1911,
 				/obj/effect/spawner/bundle/f13/m1911c,
-				/obj/effect/spawner/bundle/f13/ninemil,
+				/obj/effect/spawner/bundle/f13/thatgun,
 				/obj/effect/spawner/bundle/f13/n99,
-				/obj/effect/spawner/bundle/f13/pistol22,
 				/obj/effect/spawner/bundle/f13/colt6520,
 				/obj/effect/spawner/bundle/f13/colt357,
 				/obj/effect/spawner/bundle/f13/beretta,
-				/obj/effect/spawner/bundle/f13/mk23,
-				/obj/effect/spawner/bundle/f13/sig,
 				/obj/effect/spawner/bundle/f13/huntingshotgun,
 				/obj/effect/spawner/bundle/f13/police_pistol,
 				/obj/effect/spawner/bundle/f13/guns/commando,
 				/obj/effect/spawner/bundle/f13/m1carbine
 				)
 
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid
+	name = "low-mid tier ballistic gun"
+	loot = list(/obj/effect/spawner/bundle/f13/cowboy,
+				/obj/effect/spawner/bundle/f13/mk23,
+				/obj/effect/spawner/bundle/f13/guns/rockwell,
+				/obj/effect/spawner/bundle/f13/hunting,
+				/obj/effect/spawner/bundle/f13/trenchshotgun,
+				/obj/effect/spawner/lootdrop/f13/weapon/gun/44spawner,
+				/obj/effect/spawner/bundle/f13/revolver45
+		)
+
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid
 	name = "mid tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/trail,
-				/obj/effect/spawner/bundle/f13/cowboy,
 				/obj/effect/spawner/bundle/f13/service,
 				/obj/effect/spawner/bundle/f13/miniuzi,
+				/obj/effect/spawner/bundle/f13/auto5,
+				/obj/effect/spawner/bundle/f13/marksman,
+				/obj/effect/spawner/bundle/f13/m1garand,
+				/obj/item/gun/ballistic/automatic/smg/american180
+				)
+
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/highmid
+	name = "high-mid tier ballistic gun"
+	loot = list(/obj/effect/spawner/bundle/f13/mp5,
 				/obj/effect/spawner/bundle/f13/smg10mm,
-				/obj/effect/spawner/bundle/f13/guns/rockwell,
-				/obj/effect/spawner/bundle/f13/mp5,
-				/obj/effect/spawner/bundle/f13/revolver44,
-				/obj/effect/spawner/bundle/f13/revolverm29,
-				/obj/effect/spawner/bundle/f13/revolverm29alt,
 				/obj/effect/spawner/bundle/f13/needler,
 				/obj/effect/spawner/bundle/f13/deagle,
 				/obj/effect/spawner/bundle/f13/automag,
 				/obj/effect/spawner/bundle/f13/beretta/select,
-				/obj/effect/spawner/bundle/f13/shotgunlever,
-				/obj/effect/spawner/bundle/f13/auto5,
-				/obj/effect/spawner/bundle/f13/trenchshotgun,
-				/obj/effect/spawner/bundle/f13/revolver45,
-				/obj/effect/spawner/bundle/f13/thatgun,
 				/obj/effect/spawner/bundle/f13/marksman,
-				/obj/effect/spawner/bundle/f13/hunting,
-				/obj/effect/spawner/bundle/f13/m1garand,
-				/obj/item/gun/ballistic/automatic/smg/american180
+				/obj/effect/spawner/bundle/f13/guns/tommygun,
+				/obj/effect/spawner/bundle/f13/shotgunlever
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high
@@ -814,7 +834,6 @@
 	loot = list(/obj/effect/spawner/bundle/f13/assault_rifle = 20,
 				/obj/effect/spawner/bundle/f13/r84 = 10,
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
-				/obj/effect/spawner/bundle/f13/guns/tommygun = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
 				)
@@ -846,6 +865,19 @@
 				/obj/item/gun/ballistic/automatic/marksman/sniper/gold,
 				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil
 				)
+
+
+//Random-pick pools so that regular spawners aren't super diluted with shit like 3 .44 revolver variants
+
+/obj/effect/spawner/lootdrop/f13/weapon/gun/44spawner
+	name = "random spawner for .44 revolvers/variants"
+	loot = list(/obj/effect/spawner/bundle/f13/revolverm29,
+				/obj/effect/spawner/bundle/f13/revolverm29alt,
+				/obj/effect/spawner/bundle/f13/revolver44,
+				/obj/effect/spawner/bundle/f13/revolverm29snub
+	)
+
+
 
 //Gun Bundles
 /obj/effect/spawner/bundle/f13/zipgun
@@ -980,6 +1012,14 @@
 				/obj/item/gun/ballistic/revolver/m29/alt,
 				/obj/item/ammo_box/m44
 	)
+
+/obj/effect/spawner/bundle/f13/revolverm29snub
+	name = "m29 snub-nose revolver and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/revolver/m29/snub,
+				/obj/item/ammo_box/m44/
+				)
+
 
 /obj/effect/spawner/bundle/f13/automag
 	name = "automag and ammo spawner"
@@ -1991,22 +2031,29 @@
 		/obj/item/attachments/auto_sear
 	)
 
+/obj/effect/spawner/lootdrop/f13/blueprintLowMid
+	name = "blueprint-tier(Mid-Low) item spawner"
+	icon_state = "blueprint_loot"
+	lootcount = 1
+	loot = list(
+		/obj/item/book/granter/crafting_recipe/blueprint/thatgun,
+		/obj/item/book/granter/crafting_recipe/blueprint/uzi,
+		/obj/item/book/granter/crafting_recipe/blueprint/greasegun,
+		/obj/item/book/granter/crafting_recipe/blueprint/commando,
+		/obj/item/book/granter/crafting_recipe/blueprint/m1carbine,
+	)
 /obj/effect/spawner/lootdrop/f13/blueprintMid
 	name = "blueprint-tier(Mid) item spawner"
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/book/granter/crafting_recipe/blueprint/greasegun,
 		/obj/item/book/granter/crafting_recipe/blueprint/r82,
 		/obj/item/book/granter/crafting_recipe/blueprint/service,
 		/obj/item/book/granter/crafting_recipe/blueprint/trailcarbine,
-		/obj/item/book/granter/crafting_recipe/blueprint/thatgun,
-		/obj/item/book/granter/crafting_recipe/blueprint/uzi,
 		/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7,
-		/obj/item/book/granter/crafting_recipe/blueprint/m1carbine,
 		/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine,
-		/obj/item/book/granter/crafting_recipe/blueprint/commando,
+
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintHigh
@@ -2017,7 +2064,6 @@
 		/obj/item/book/granter/crafting_recipe/blueprint/leveraction,
 		/obj/item/book/granter/crafting_recipe/blueprint/r91,
 		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
-		/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
 		/obj/item/book/granter/crafting_recipe/blueprint/r84,
 		/obj/item/book/granter/crafting_recipe/blueprint/deagle,
 		/obj/item/book/granter/crafting_recipe/blueprint/marksman,
@@ -2030,8 +2076,9 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
-		/obj/item/book/granter/crafting_recipe/blueprint/gauss,
+
 		/obj/item/book/granter/crafting_recipe/blueprint/neostead,
+		/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9,
 	)
 
@@ -2040,6 +2087,7 @@
 	icon_state = "blueprint_loot"
 	lootcount = 1
 	loot = list(
+		/obj/item/book/granter/crafting_recipe/blueprint/gauss,
 		/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
 		/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
 		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
