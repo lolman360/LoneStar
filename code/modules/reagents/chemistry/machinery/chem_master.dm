@@ -11,7 +11,7 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	circuit = /obj/item/circuitboard/machine/chem_master
 
-
+	var/basereagents = 100
 	var/obj/item/reagent_containers/beaker = null
 	var/obj/item/storage/pill_bottle/bottle = null
 	var/mode = 1
@@ -26,7 +26,7 @@
 	var/fermianalyze //Give more detail on fermireactions on analysis
 
 /obj/machinery/chem_master/Initialize()
-	create_reagents(100)
+	create_reagents(basereagents)
 
 	//Calculate the span tags and ids fo all the available pill icons
 	var/datum/asset/spritesheet/simple/assets = get_asset_datum(/datum/asset/spritesheet/simple/pills)
@@ -530,10 +530,11 @@
 	idle_power_usage = 0
 	flags_1 = NODECONSTRUCT_1
 	can_be_unanchored = TRUE
+	basereagents = 240
 
 /obj/machinery/chem_master/primitive/Initialize()
-	..()
-	reagents.maximum_volume = 240
+	. = ..()
+
 
 
 /obj/machinery/chem_master/primitive/update_icon_state()
