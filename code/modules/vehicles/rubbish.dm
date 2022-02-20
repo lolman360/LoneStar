@@ -34,7 +34,7 @@
 
 /obj/structure/car/welder_act(mob/living/user, obj/item/I)
 	. = TRUE
-	
+
 	if(inuse || uses_left <= 0) //this means that if mappers or admins want an nonharvestable version, set the uses_left to 0
 		return
 	inuse = TRUE //one at a time boys, this isn't some kind of weird party
@@ -57,9 +57,9 @@
 	var/obj/item/l = user.get_inactive_held_item()
 	if(istype(l,/obj/item/weldingtool))
 		var/obj/item/weldingtool/WO = l
-			if(WO.tool_start_check(user, amount=3))
-				WO.use(3)
-				modifier++
+		if(WO.tool_start_check(user, amount=3))
+			WO.use(3)
+			modifier++
 	for(var/i2 in 1 to (2+modifier))
 		if(prob(50))
 			new /obj/item/salvage/low(usr_turf)
