@@ -43,7 +43,7 @@
 		return //the tool fails this check, so stop
 	user.visible_message("[user] starts disassembling [src].")
 	for(var/i1 in 1 to 2)
-		if(!I.use_tool(src, user, 100, volume=100))
+		if(!I.use_tool(src, user, 75, volume=100))
 			user.visible_message("[user] stops disassembling [src].")
 			inuse = FALSE
 			return //you did something, like moving, so stop
