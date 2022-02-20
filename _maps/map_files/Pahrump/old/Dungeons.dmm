@@ -13995,7 +13995,7 @@
 /obj/item/crafting/capacitor,
 /obj/item/crafting/capacitor,
 /obj/item/crafting/capacitor,
-/obj/item/assembly/sensor,
+/obj/item/assembly/prox_sensor,
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
 	},
@@ -14704,7 +14704,7 @@
 "On" = (
 /obj/structure/rack,
 /obj/item/crafting/large_gear,
-/obj/item/assembly/sensor,
+/obj/item/assembly/prox_sensor,
 /obj/item/crafting/small_gear,
 /obj/item/crafting/transistor,
 /obj/item/crafting/transistor,
@@ -15604,7 +15604,7 @@
 /obj/structure/table,
 /obj/item/crafting/board,
 /obj/item/crafting/board,
-/obj/item/assembly/sensor,
+/obj/item/assembly/prox_sensor,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "QA" = (

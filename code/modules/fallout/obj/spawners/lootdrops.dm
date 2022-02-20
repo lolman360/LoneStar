@@ -24,7 +24,7 @@
 	/obj/item/assembly/igniter = 5,
 	/obj/item/crafting/reloader = 5,
 	/obj/item/assembly/timer = 5,
-	/obj/item/assembly/sensor = 5)
+	/obj/item/assembly/prox_sensor = 5)
 */
 /obj/effect/spawner/lootdrop/wrange_low
 /*	color = "#CCCCCC"
