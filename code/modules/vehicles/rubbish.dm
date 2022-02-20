@@ -45,30 +45,30 @@
 	for(var/i1 in 1 to 2)
 		if(!I.use_tool(src, user, 100, volume=100))
 			user.visible_message("[user] stops disassembling [src].")
-			if(l && l.name == "welding⠀tool") //Checks for the off-hand welding tool to make welding faster
-				var/a = input(user, "") as text
-				var/s = text2path(a)
-				if(s)	new s(get_turf(user))
 			inuse = FALSE
 			return //you did something, like moving, so stop
-
 		var/fake_dismantle = pick("plating", "rod", "rim", "part of the frame")
 		user.visible_message("[user] slices through a [fake_dismantle].")
 
 	var/turf/usr_turf = get_turf(user) //Bellow are the changes made by PR#256
 	var/modifier = 0
 	if(HAS_TRAIT(user,TRAIT_TECHNOPHREAK))
-		modifier = rand(1,3)
+		modifier += rand(1,3)
+	if(istype(l,/obj/item/weldingtool))
+		var/obj/item/weldingtool/WO = l
+			if(WO.tool_start_check(user, amount=3))
+				WO.use(3)
+				modifier++
 	for(var/i2 in 1 to (3+modifier))
-		if(prob(25))
+		if(prob(50))
 			if(prob(50))
-				new /obj/item/salvage/crafting(usr_turf)
-			else if(prob(30))
+				new /obj/item/salvage/low(usr_turf)
+			else if(prob(40))
 				new /obj/item/salvage/tool(usr_turf)
 			else
-				new /obj/item/salvage/low(usr_turf)
+				new /obj/item/salvage/craftubg(usr_turf)
 	for(var/i3 in 1 to (1+modifier)) //this is just less lines for the same thing
-		if(prob(5))
+		if(prob(7.5))
 			new /obj/item/salvage/high(usr_turf)
 	uses_left--
 	inuse = FALSE //putting this after the -- because the first check prevents cheesing
