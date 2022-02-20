@@ -66,7 +66,7 @@
 			else if(prob(40))
 				new /obj/item/salvage/tool(usr_turf)
 			else
-				new /obj/item/salvage/craftubg(usr_turf)
+				new /obj/item/salvage/crafting(usr_turf)
 	for(var/i3 in 1 to (1+modifier)) //this is just less lines for the same thing
 		if(prob(7.5))
 			new /obj/item/salvage/high(usr_turf)
