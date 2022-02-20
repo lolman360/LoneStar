@@ -1760,7 +1760,7 @@
 				/obj/item/stack/crafting/electronicparts/three,
 				/obj/item/stack/crafting/electronicparts/five,
 				/obj/item/reagent_containers/glass/bottle/blackpowder,
-				/obj/item/crafting/timer,
+				/obj/item/assembly/timer,
 				/obj/item/crafting/wonderglue,
 				/obj/item/crafting/duct_tape)
 
