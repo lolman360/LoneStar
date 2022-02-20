@@ -27,7 +27,7 @@
 	resistance_flags = INDESTRUCTIBLE
 	bound_height = 64
 	bound_width = 64
-	var/uses_left = 5
+	var/uses_left = 2
 	var/inuse = FALSE
 
 
@@ -59,14 +59,13 @@
 			if(WO.tool_start_check(user, amount=3))
 				WO.use(3)
 				modifier++
-	for(var/i2 in 1 to (3+modifier))
+	for(var/i2 in 1 to (2+modifier))
 		if(prob(50))
-			if(prob(50))
-				new /obj/item/salvage/low(usr_turf)
-			else if(prob(40))
-				new /obj/item/salvage/tool(usr_turf)
-			else
-				new /obj/item/salvage/crafting(usr_turf)
+			new /obj/item/salvage/low(usr_turf)
+		else if(prob(40))
+			new /obj/item/salvage/tool(usr_turf)
+		else
+			new /obj/item/salvage/crafting(usr_turf)
 	for(var/i3 in 1 to (1+modifier)) //this is just less lines for the same thing
 		if(prob(7.5))
 			new /obj/item/salvage/high(usr_turf)
