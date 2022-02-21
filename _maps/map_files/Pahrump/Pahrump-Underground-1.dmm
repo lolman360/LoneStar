@@ -169,7 +169,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "agq" = (
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /turf/open/floor/plating/tunnel,
 /area/f13/caves)
 "agw" = (
@@ -433,7 +433,7 @@
 /turf/closed/mineral/random/high_chance,
 /area/f13/caves)
 "aon" = (
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/door/poddoor{
@@ -2677,7 +2677,7 @@
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
 "bGS" = (
-/obj/effect/mine/shrapnel,
+/obj/item/mine/shrapnel,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -3481,7 +3481,7 @@
 /area/f13/tunnel)
 "cgk" = (
 /obj/structure/simple_door/metal/barred,
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /obj/structure/decoration/rag,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -5307,7 +5307,7 @@
 /area/f13/bunker)
 "diE" = (
 /obj/structure/barricade/wooden,
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "diH" = (
@@ -6749,7 +6749,7 @@
 /turf/closed/wall/r_wall/rust,
 /area/f13/clinic)
 "dZM" = (
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "dZO" = (
@@ -7135,7 +7135,7 @@
 /area/f13/brotherhood/rnd)
 "ejr" = (
 /obj/structure/barricade/wooden,
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "ejv" = (
@@ -11380,7 +11380,7 @@
 	},
 /area/f13/brotherhood/reactor)
 "gGG" = (
-/obj/effect/mine/explosive,
+/obj/item/mine/explosive,
 /obj/machinery/light/small,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
@@ -11455,7 +11455,7 @@
 	},
 /area/f13/brotherhood/rnd)
 "gJa" = (
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -11809,7 +11809,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "gQO" = (
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "gQR" = (
@@ -14540,7 +14540,7 @@
 	},
 /area/f13/brotherhood/operations)
 "iXe" = (
-/obj/effect/mine/shrapnel,
+/obj/item/mine/shrapnel,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "iXo" = (
@@ -15971,7 +15971,7 @@
 	},
 /area/f13/bunker)
 "jXX" = (
-/obj/effect/mine/shrapnel,
+/obj/item/mine/shrapnel,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -25366,7 +25366,7 @@
 /turf/open/floor/plating/dirt,
 /area/f13/caves)
 "qNw" = (
-/obj/effect/mine/shrapnel,
+/obj/item/mine/shrapnel,
 /turf/open/floor/plating/dirt/dark,
 /area/f13/caves)
 "qNx" = (
@@ -25586,7 +25586,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/medical)
 "qUq" = (
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
@@ -26663,7 +26663,7 @@
 /area/f13/tunnel)
 "rJW" = (
 /obj/structure/simple_door/metal/barred,
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /obj/structure/decoration/rag,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
@@ -27417,7 +27417,7 @@
 /area/f13/caves)
 "smN" = (
 /obj/machinery/light/small,
-/obj/effect/mine/shrapnel,
+/obj/item/mine/shrapnel,
 /turf/open/water,
 /area/f13/caves)
 "snm" = (
@@ -27793,7 +27793,7 @@
 	},
 /area/f13/den)
 "sHo" = (
-/obj/effect/mine/explosive,
+/obj/item/mine/explosive,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "sHv" = (
@@ -30304,7 +30304,7 @@
 /turf/open/floor/carpet/black,
 /area/f13/brotherhood/offices2nd)
 "uKd" = (
-/obj/effect/mine/shrapnel,
+/obj/item/mine/shrapnel,
 /turf/open/water,
 /area/f13/caves)
 "uKf" = (
@@ -32858,7 +32858,7 @@
 "wLN" = (
 /obj/structure/simple_door/metal/barred,
 /obj/structure/decoration/rag,
-/obj/effect/mine/stun,
+/obj/item/mine/stun,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
