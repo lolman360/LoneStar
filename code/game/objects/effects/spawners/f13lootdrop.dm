@@ -590,9 +590,7 @@
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier1 //TIER 1 MELEE WEAPON
 	name = "tier 1 melee"
 	lootcount = 1
-
-	loot = list(
-				/obj/item/crowbar,
+	loot = list(/obj/item/crowbar,
 				/obj/item/extinguisher,
 				/obj/item/hatchet,
 				/obj/item/pickaxe/mini,
@@ -613,8 +611,7 @@
 	name = "tier 2 melee"
 	lootcount = 1
 
-	loot = list(
-				/obj/effect/spawner/bundle/f13/throwingknife3,
+	loot = list(/obj/effect/spawner/bundle/f13/throwingknife3,
 				/obj/item/melee/onehanded/knife/switchblade,
 				/obj/item/throwing_star/spear,
 				/obj/item/melee/onehanded/knife/hunting,
@@ -647,8 +644,7 @@
 	name = "tier 4 melee"
 	lootcount = 1
 
-	loot = list(
-				/obj/item/twohanded/fireaxe,
+	loot = list(/obj/item/twohanded/fireaxe,
 				/obj/item/twohanded/sledgehammer,
 				/obj/item/twohanded/fireaxe/bmprsword,
 				/obj/item/melee/unarmed/lacerator,
@@ -662,8 +658,7 @@
 	name = "tier 5 melee"
 	lootcount = 1
 
-	loot = list(
-				/obj/item/twohanded/thermic_lance,
+	loot = list(/obj/item/twohanded/thermic_lance,
 				/obj/item/twohanded/chainsaw,
 				/obj/item/twohanded/sledgehammer/rockethammer,
 				/obj/item/melee/powered/ripper,
@@ -800,8 +795,8 @@
 				/obj/effect/spawner/bundle/f13/cowboy,
 				/obj/effect/spawner/bundle/f13/mk23,
 				/obj/effect/spawner/bundle/f13/hunting,
+				/obj/effect/spawner/lootdrop/f13/weapon/revolver44variants,
 				/obj/effect/spawner/bundle/f13/trenchshotgun,
-				/obj/effect/spawner/lootdrop/f13/weapon/gun/44variant,
 				/obj/effect/spawner/bundle/f13/m1carbine,
 				/obj/effect/spawner/bundle/f13/huntingshotgun,
 				/obj/effect/spawner/bundle/f13/revolver45
@@ -815,6 +810,8 @@
 				/obj/effect/spawner/bundle/f13/auto5,
 				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/m1garand,
+				/obj/effect/spawner/bundle/f13/deagle,
+				/obj/effect/spawner/bundle/f13/automag,
 				/obj/item/gun/ballistic/automatic/smg/american180
 				)
 
@@ -823,8 +820,6 @@
 	loot = list(/obj/effect/spawner/bundle/f13/mp5,
 				/obj/effect/spawner/bundle/f13/smg10mm,
 				/obj/effect/spawner/bundle/f13/needler,
-				/obj/effect/spawner/bundle/f13/deagle,
-				/obj/effect/spawner/bundle/f13/automag,
 				/obj/effect/spawner/bundle/f13/beretta/select,
 				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/guns/tommygun,
@@ -869,7 +864,7 @@
 
 //Random-pick pools so that regular spawners aren't super diluted with shit like 3 .44 revolver variants
 
-/obj/effect/spawner/lootdrop/f13/weapon/gun/44variant
+/obj/effect/spawner/lootdrop/f13/weapon/revolver44variants
 	name = "random spawner for .44 revolvers/variants"
 	loot = list(/obj/effect/spawner/bundle/f13/revolverm29,
 				/obj/effect/spawner/bundle/f13/revolverm29alt,
