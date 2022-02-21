@@ -138,7 +138,7 @@
 	cost = 6
 
 /datum/uplink_item/stealthy_weapons/f13
-	cost = 25 //f13 uplinks start with 100
+	cost = 25 //f13 uplinks start with 120
 	surplus = 0
 	cant_discount = FALSE
 	refundable = TRUE
