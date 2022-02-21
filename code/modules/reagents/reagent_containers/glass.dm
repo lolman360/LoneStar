@@ -373,12 +373,11 @@
 			return TRUE
 	else
 		mortar_mode = !mortar_mode
-		to_chat(user, "<span class='notice'>You decide to hold [src] differently to [mortar_mode == MORTAR_JUICE ? "juice the harvest" : "grind the harvest"].</span>")
+		to_chat(user, "<span class='notice'>You decide to [mortar_mode == MORTAR_JUICE ? "juice the harvest" : "grind the harvest"].</span>")
 
 /obj/item/reagent_containers/glass/mortar/attackby(obj/item/I, mob/living/carbon/human/user)
-	if (is_type_in_list(I, blacklistchems))
+	if(is_type_in_list(I, blacklistchems))
 		return
-	..()
 	if(istype(I, /obj/item/storage/bag))
 		var/list/inserted = list()
 		if(SEND_SIGNAL(I, COMSIG_TRY_STORAGE_TAKE_TYPE, /obj/item/reagent_containers/food/snacks/grown, src, 10 - length(holdingitems), null, null, user, inserted))
@@ -388,47 +387,73 @@
 				to_chat(user, "<span class='notice'>You empty [I] into [src].</span>")
 			else
 				to_chat(user, "<span class='notice'>You fill [src] to the brim.</span>")
-		return
+		return TRUE
 	if(istype(I,/obj/item/pestle))
-		var/obj/item/GI
 		if(LAZYLEN(holdingitems))
 			if(IS_STAMCRIT(user))
 				to_chat(user, "<span class='warning'>You are too tired to work!</span>")
 				return
 			user.adjustStaminaLoss(2 * holdingitems.len) //max 40
 			if(mortar_mode== MORTAR_JUICE)
-				for(var/obj/item/i in holdingitems)
-					if(reagents.total_volume >= reagents.maximum_volume)
-						break
-					GI = i
-					if(GI.juice_results)
-						GI.on_juice()
-						reagents.add_reagent_list(GI.juice_results)
-						to_chat(user, "<span class='notice'>You juice [GI] into a fine liquid.</span>")
-						QDEL_NULL(GI)
+				juice()
 				return
 			else
-				for(var/i in holdingitems)
-					if(reagents.total_volume >= reagents.maximum_volume)
-						break
-					GI = i
-					if(GI.grind_results)
-						GI.on_grind()
-						reagents.add_reagent_list(GI.grind_results)
-						if(GI.reagents && (mortar_mode== MORTAR_GRIND)) //food and pills
-							GI.reagents.trans_to(src, GI.reagents.total_volume, log = "mortar powdering")
-						to_chat(user, "<span class='notice'>You grind [GI] into a fine powder.</span>")
-						QDEL_NULL(GI)
+				grind()
 				return
 		else
 			to_chat(user, "<span class='warning'>There is nothing to grind!</span>")
 			return
 	if(holdingitems.len >= 10)
-		to_chat(user, "<span class='warning'>There [src] is full!</span>")
+		to_chat(user, "<span class='warning'>The [src] is full!</span>")
+		return
+	if(!I.grind_requirements(src)) //Error messages should be in the objects' definitions
 		return
 	if(I.juice_results || I.grind_results)
 		if(user.transferItemToLoc(I, src))
 			to_chat(user, "<span class='notice'>You add [I] to [src].</span>")
 			holdingitems[I] = TRUE
-			return
+			return FALSE
 	to_chat(user, "<span class='warning'>You can't put this in the mortar!</span>")
+	..()
+
+/obj/item/reagent_containers/glass/mortar/proc/eject(mob/user)
+	for(var/i in holdingitems)
+		var/obj/item/O = i
+		O.forceMove(drop_location())
+		holdingitems -= O
+
+/obj/item/reagent_containers/glass/mortar/proc/remove_object(obj/item/O)
+	holdingitems -= O
+	qdel(O)
+
+/obj/item/reagent_containers/glass/mortar/proc/juice()
+	for(var/obj/item/i in holdingitems)
+		if(reagents.total_volume >= reagents.maximum_volume)
+			break
+		var/obj/item/I = i
+		if(I.juice_results)
+			juice_item(I)
+
+/obj/item/reagent_containers/glass/mortar/proc/juice_item(obj/item/I) //Juicing results can be found in respective object definitions
+	if(I.on_juice(src) == -1)
+		to_chat(usr, "<span class='danger'>[src] cannot juice [I].</span>")
+		return
+	reagents.add_reagent_list(I.juice_results)
+	remove_object(I)
+
+/obj/item/reagent_containers/glass/mortar/proc/grind()
+	for(var/i in holdingitems)
+		if(reagents.total_volume >= reagents.maximum_volume)
+			break
+		var/obj/item/I = i
+		if(I.grind_results)
+			grind_item(i)
+
+/obj/item/reagent_containers/glass/mortar/proc/grind_item(obj/item/I) //Grind results can be found in respective object definitions
+	if(I.on_grind(src) == -1) //Call on_grind() to change amount as needed, and stop grinding the item if it returns -1
+		to_chat(usr, "<span class='danger'>[src] cannot grind [I].</span>")
+		return
+	reagents.add_reagent_list(I.grind_results)
+	if(I.reagents)
+		I.reagents.trans_to(reagents, I.reagents.total_volume)
+	remove_object(I)

@@ -532,11 +532,6 @@
 	can_be_unanchored = TRUE
 	basereagents = 240
 
-/obj/machinery/chem_master/primitive/Initialize()
-	. = ..()
-
-
-
 /obj/machinery/chem_master/primitive/update_icon_state()
 	if(beaker)
 		icon_state = "alchemy_table"
