@@ -218,3 +218,10 @@
 /obj/item/mine/sound/bwoink
 	name = "bwoink mine"
 	sound = 'sound/effects/adminhelp.ogg'
+
+/obj/item/mine/emp
+	name = 'pulse mine'
+	var/range = 2
+
+/obj/item/mine/emp/mineEffect(mob/victim)
+	empulse_using_range(src, 2)
