@@ -83,6 +83,18 @@
 			. += span_warning("It seems activated!")
 
 
+
+
+/obj/item/grenade/plastic/c4/New()
+	wires = new /datum/wires/explosive/c4(src)
+	..()
+
+/obj/item/grenade/plastic/c4/Destroy()
+	qdel(wires)
+	wires = null
+	target = null
+	return ..()
+
 /obj/item/mine
 	name = "dummy mine"
 	desc = "Better stay away from that thing."
@@ -92,8 +104,26 @@
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "uglymine"
 	var/armed = TRUE //we can be armed and unanchored if we want, but this isn't normally the case
+	var/random = FALSE //are our wires random?
 	/// We manually check to see if we've been triggered in case multiple atoms cross us in the time between the mine being triggered and it actually deleting, to avoid a race condition with multiple detonations
 	var/triggered = FALSE
+
+/obj/item/mine/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/empprotection, EMP_PROTECT_WIRES)
+
+/obj/item/mine/plastic/c4/Initialize()
+	if(random)
+		wires = new /datum/wires/explosive/mine/random(src)
+	else
+		wires = new /datum/wires/explosive/mine(src)
+	..()
+
+/obj/item/grenade/plastic/c4/Destroy()
+	qdel(wires)
+	wires = null
+	target = null
+	return ..()
 
 /obj/item/mine/attack_self(mob/user)
 	if(armed)
@@ -160,6 +190,11 @@
 /obj/item/mine/explosive/mineEffect(mob/victim)
 	explosion(loc, range_devastation, range_heavy, range_light, range_flash)
 
+/obj/item/mine/explosive/random
+	random = TRUE
+	anchored = FALSE
+	armed = FALSE
+
 /obj/item/mine/stun
 	name = "stun mine"
 	var/stun_time = 80
@@ -167,6 +202,11 @@
 /obj/item/mine/stun/mineEffect(mob/living/victim)
 	if(isliving(victim))
 		victim.DefaultCombatKnockdown(stun_time)
+
+/obj/item/mine/stun/random
+	random = TRUE
+	anchored = FALSE
+	armed = FALSE
 
 /obj/item/mine/shrapnel
 	name = "shrapnel mine"
@@ -177,9 +217,19 @@
 	AddComponent(/datum/component/pellet_cloud, projectile_type=shrapnel_type, magnitude=shrapnel_magnitude)
 	explosion(loc, 0, 0, 2, 2)
 
+/obj/item/mine/shrapnel/random
+	random = TRUE
+	anchored = FALSE
+	armed = FALSE
+
 /obj/item/mine/shrapnel/sting
 	name = "stinger mine"
 	shrapnel_type = /obj/item/projectile/bullet/pellet/stingball
+
+/obj/item/mine/shrapnel/sting
+	random = TRUE
+	anchored = FALSE
+	armed = FALSE
 
 /obj/item/mine/kickmine
 	name = "kick mine"
@@ -220,7 +270,12 @@
 
 /obj/item/mine/emp
 	name = 'pulse mine'
-	var/range = 2
+	var/range = 3
 
 /obj/item/mine/emp/mineEffect(mob/victim)
-	empulse_using_range(src, 2)
+	empulse_using_range(src, range)
+
+/obj/item/mine/emp/random
+	random = TRUE
+	anchored = FALSE
+	armed = FALSE

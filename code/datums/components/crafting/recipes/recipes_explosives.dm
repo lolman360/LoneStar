@@ -48,7 +48,7 @@
 
 /datum/crafting_recipe/shrapnelmine
 	name = "Shrapnel Mine"
-	result = /obj/item/mine/shrapnel
+	result = /obj/item/mine/shrapnel/random
 	reqs = list(
 			/obj/item/stack/sheet/metal = 15,
 			/obj/item/stack/crafting/metalparts = 2,
@@ -63,7 +63,7 @@
 
 /datum/crafting_recipe/explomine
 	name = "High-Explosive Mine"
-	result = /obj/item/mine/explosive
+	result = /obj/item/mine/explosive/random
 	reqs = list(
 			/obj/item/stack/sheet/metal = 10,
 			/obj/item/stack/crafting/metalparts = 2,
@@ -79,7 +79,7 @@
 
 /datum/crafting_recipe/stingmine
 	name = "Stingball Mine"
-	result = /obj/item/mine/shrapnel/sting
+	result = /obj/item/mine/shrapnel/sting/random
 	reqs = list(
 			/obj/item/stack/sheet/metal = 5,
 			/obj/item/stack/sheet/plastic = 1,
@@ -95,11 +95,11 @@
 
 /datum/crafting_recipe/pulsemine
 	name = "Pulse Mine"
-	result = /obj/item/mine/emp
+	result = /obj/item/mine/emp/random
 	reqs = list(
-			/obj/item/stack/sheet/metal = 15,
-			/obj/item/stack/crafting/metalparts = 5,
-			/obj/item/stack/crafting/goodparts = 2,
+			/obj/item/stack/sheet/metal = 10,
+			/obj/item/stack/crafting/metalparts = 3,
+			/obj/item/stack/crafting/goodparts = 1,
 			/obj/item/stack/crafting/electronicparts = 5,
 			/obj/item/assembly/prox_sensor = 1,
 			/datum/reagent/iron = 30,

@@ -83,7 +83,7 @@
 
 /datum/wires/explosive/mine
 	holder_type = /obj/item/mine
-	randomize = TRUE //be careful!
+	randomize = FALSE
 	req_skill = JOB_SKILL_UNTRAINED
 
 /datum/wires/explosive/mine/New(atom/holder)
@@ -119,3 +119,6 @@
 			P.anchored = FALSE
 		else // Boom
 			arm()
+
+/datum/wires/explosive/mine/random
+	randomize = TRUE //be careful!
