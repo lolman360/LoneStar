@@ -153,7 +153,7 @@
 		/obj/item/gun/ballistic/revolver/hobo/piperifle = 10,
 		/obj/effect/spawner/bundle/f13/zipgun = 8,
 		/obj/item/gun/ballistic/revolver/hobo/pepperbox = 8,
-		/obj/item/gun/ballistic/revolver/colt6520 = 9,
+		/obj/item/gun/ballistic/automatic/pistol/n99 = 9,
 		/obj/item/gun/ballistic/rifle/hunting/obrez = 5,
 		/obj/item/gun/ballistic/revolver/colt357 = 4,
 		/obj/item/gun/ballistic/revolver/winchesterrebored = 4,

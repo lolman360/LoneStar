@@ -653,7 +653,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/police = 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/gun/ballistic/automatic/smg/rockwell = 1,
+		/obj/item/gun/ballistic/automatic/smg/greasegun = 1,
 		/obj/item/ammo_box/magazine/uzim9mm/rockwell = 2,
 		/obj/item/card/id/dogtag/town/mafia=1,
 		)
@@ -745,7 +745,7 @@ Raider
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	head = /obj/item/clothing/head/welding
 	r_hand = /obj/item/weldingtool/largetank
-	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1)
+	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911=1)
 
 /datum/outfit/loadout/scavenger
 	name = "Scavenger"
@@ -756,7 +756,7 @@ Raider
 	backpack_contents = list(/obj/item/mining_scanner=1,
 							/obj/item/metaldetector=1,
 							/obj/item/shovel=1,
-							/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1)
+							/obj/item/gun/ballistic/automatic/pistol/m1911=1)
 
 /datum/outfit/loadout/settler
 	name = "Settler"
@@ -788,7 +788,7 @@ Raider
 							/obj/item/smelling_salts=1,
 							/obj/item/healthanalyzer=1,
 							/obj/item/stack/sheet/mineral/silver=1,
-							/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1,
+							/obj/item/gun/ballistic/automatic/pistol/m1911=1,
 							/obj/item/lighter=1,
 							/obj/item/screwdriver=1,
 							/obj/item/wirecutters=1,
@@ -805,7 +805,7 @@ Raider
 	glasses = /obj/item/clothing/glasses/f13/biker
 	l_hand = /obj/item/gun/ballistic/revolver/caravan_shotgun
 	backpack_contents =  list(/obj/item/storage/box/vendingmachine=1,
-							/obj/item/gun/ballistic/automatic/pistol/m1911/compact=1)
+							/obj/item/gun/ballistic/automatic/pistol/m1911=1)
 
 //end new
 

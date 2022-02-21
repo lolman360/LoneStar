@@ -599,7 +599,13 @@
 				/obj/item/wrench,
 				/obj/item/kitchen/knife,
 				/obj/item/kitchen/rollingpin,
-				/obj/item/weldingtool,
+				/obj/item/weldingtool
+				/obj/item/gavelhammer,
+				/obj/item/oar,
+				/obj/item/pickaxe,
+				/obj/item/shovel,
+				/obj/item/instrument/guitar,
+				/obj/item/surgicaldrill
 				)
 
 
@@ -609,31 +615,24 @@
 
 	loot = list(
 				/obj/effect/spawner/bundle/f13/throwingknife3,
-				/obj/item/gavelhammer,
-				/obj/item/oar,
-				/obj/item/pickaxe,
-				/obj/item/shovel,
 				/obj/item/melee/onehanded/knife/switchblade,
 				/obj/item/throwing_star/spear,
-				/obj/item/surgicaldrill,
 				/obj/item/melee/onehanded/knife/hunting,
 				/obj/item/melee/onehanded/knife/survival,
 				/obj/item/melee/onehanded/knife/bone,
-				/obj/item/instrument/guitar,
 				/obj/item/twohanded/spear/scrapspear,
 				/obj/item/melee/onehanded/club,
 				/obj/item/melee/onehanded/knife/cosmicdirty,
 				/obj/item/melee/onehanded/machete,
 				/obj/item/melee/unarmed/brass,
-				/obj/item/melee/unarmed/brass/spiked,
+				/obj/item/melee/unarmed/brass/spiked
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3 //TIER 3 MELEE WEAPON
 	name = "tier 3 melee"
 	lootcount = 1
 
-	loot = list(
-				/obj/effect/spawner/bundle/f13/throwingknife3,
+	loot = list(/obj/effect/spawner/bundle/f13/throwingknife3,
 				/obj/item/twohanded/spear,
 				/obj/item/twohanded/baseball,
 				/obj/item/kitchen/knife/butcher,
@@ -641,7 +640,7 @@
 				/obj/item/melee/onehanded/machete/forgedmachete,
 				/obj/item/shield/riot/buckler,
 				/obj/item/melee/unarmed/tigerclaw,
-				/obj/item/melee/unarmed/sappers,
+				/obj/item/melee/unarmed/sappers
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier4 //TIER 4 MELEE WEAPON
@@ -657,7 +656,6 @@
 				/obj/item/melee/unarmed/punchdagger,
 				/obj/item/twohanded/baseball/louisville,
 				/obj/item/shield/riot,
-				/obj/effect/spawner/bundle/f13/throwingknife3
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier5 //TIER 5 MELEE WEAPON
@@ -761,7 +759,7 @@
 //Ballistic Weapon Spawners
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/hobo
 	name = "hobo tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/piperifle,
+	loot = list(/obj/effect/spawner/bundle/f13/pepperbox,
 				/obj/effect/spawner/bundle/weapon/piperifle,
 				/obj/effect/spawner/bundle/f13/zipgun,
 				/obj/item/gun/ballistic/revolver/hobo/knifegun,
@@ -786,10 +784,8 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/low
 	name = "low tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/m1911,
-				/obj/effect/spawner/bundle/f13/m1911c,
 				/obj/effect/spawner/bundle/f13/thatgun,
 				/obj/effect/spawner/bundle/f13/n99,
-				/obj/effect/spawner/bundle/f13/colt6520,
 				/obj/effect/spawner/bundle/f13/colt357,
 				/obj/effect/spawner/bundle/f13/beretta,
 				/obj/effect/spawner/bundle/f13/huntingshotgun,
@@ -800,12 +796,14 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid
 	name = "low-mid tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/cowboy,
+	loot = list(/obj/effect/spawner/bundle/f13/n99,
+				/obj/effect/spawner/bundle/f13/cowboy,
 				/obj/effect/spawner/bundle/f13/mk23,
-				/obj/effect/spawner/bundle/f13/guns/rockwell,
 				/obj/effect/spawner/bundle/f13/hunting,
 				/obj/effect/spawner/bundle/f13/trenchshotgun,
 				/obj/effect/spawner/lootdrop/f13/weapon/gun/44spawner,
+				/obj/effect/spawner/bundle/f13/m1carbine,
+				/obj/effect/spawner/bundle/f13/huntingshotgun,
 				/obj/effect/spawner/bundle/f13/revolver45
 		)
 
@@ -840,6 +838,7 @@
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
+				/obj/item/gun/ballistic/rocketlauncher = 5
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh
@@ -940,13 +939,6 @@
 				/obj/item/ammo_box/magazine/m9mm
 				)
 
-/obj/effect/spawner/bundle/f13/colt6520
-	name = "Colt 6520 and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/revolver/colt6520,
-				/obj/item/ammo_box/l10mm
-				)
-
 /obj/effect/spawner/bundle/f13/varmint
 	name = "varmint rifle and ammo spawner"
 	items = list(
@@ -959,13 +951,6 @@
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/pistol22,
 				/obj/item/ammo_box/magazine/m22
-				)
-
-/obj/effect/spawner/bundle/f13/m1911c
-	name = "compact m1911 and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/pistol/m1911/compact,
-				/obj/item/ammo_box/magazine/m45/
 				)
 
 /obj/effect/spawner/bundle/f13/beretta
@@ -982,7 +967,7 @@
 				/obj/item/ammo_box/magazine/m9mm/
 				)
 
-/obj/effect/spawner/bundle/f13/piperifle
+/obj/effect/spawner/bundle/f13/pepperbox
 	name = "pepperbox gun spawner"
 	items = list(
 				/obj/item/gun/ballistic/revolver/hobo/pepperbox,
@@ -1120,13 +1105,6 @@
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/mini_uzi,
 				/obj/item/ammo_box/magazine/uzim9mm/
-				)
-
-/obj/effect/spawner/bundle/f13/guns/rockwell
-	name = "rockwell gun and ammo spawner"
-	items = list(
-				/obj/item/gun/ballistic/automatic/smg/rockwell,
-				/obj/item/ammo_box/magazine/uzim9mm/rockwell/
 				)
 
 /obj/effect/spawner/bundle/f13/smg10mm
