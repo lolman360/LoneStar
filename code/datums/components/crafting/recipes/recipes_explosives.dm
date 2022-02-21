@@ -144,7 +144,7 @@
 			/obj/item/stack/crafting/metalparts = 5,
 			/obj/item/stack/crafting/goodparts = 1,
 			/obj/item/stack/crafting/electronicparts = 5,
-			/obj/item/stack/ore/blackpowder = 2,
+			/obj/item/stack/ore/blackpowder = 5,
 			/obj/item/assembly/prox_sensor = 1,
 			/obj/item/stack/cable_coil = 5
 	)

@@ -170,11 +170,11 @@
 	. = ..()
 	triggermine()
 
-/obj/item/mine/screwdriver_act(user, I)
+/obj/item/mine/screwdriver_act(mob/living/user, obj/item/S)
 	if(!armed)
 		return
 	to_chat(user, "<span class='danger'>You begin carefully disarming [src].</span>")
-	if(I.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
+	if(S.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
 		to_chat(user, "<span class='notice'>You carefully destroy the detonator of the mine!</span>")
 		qdel(src)
 	else

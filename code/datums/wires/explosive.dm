@@ -109,7 +109,7 @@
 				P.anchored = FALSE
 		else
 			if(!mend)
-				arm()
+				P.arm()
 
 /datum/wires/explosive/mine/on_pulse(wire)
 	var/obj/item/mine/P = holder
@@ -118,7 +118,7 @@
 			P.armed = FALSE
 			P.anchored = FALSE
 		else // Boom
-			arm()
+			P.arm()
 
 /datum/wires/explosive/mine/random
 	randomize = TRUE //be careful!
