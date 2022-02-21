@@ -1,4 +1,4 @@
-/proc/get_uplink_items(datum/game_mode/gamemode, allow_sales = TRUE, allow_restricted = TRUE, other_filter = list())
+/proc/get_uplink_items(datum/game_mode/gamemode, allow_sales = TRUE, allow_restricted = TRUE, other_filter = list(), special_type = null)
 	var/list/filtered_uplink_items = GLOB.uplink_categories.Copy() // list of uplink categories without associated values.
 	var/list/sale_items = list()
 
@@ -19,6 +19,8 @@
 		if (I.restricted && !allow_restricted)
 			continue
 		if (I.type in other_filter)
+			continue
+		if (special_type && (special_type = I.special_type)
 			continue
 		LAZYSET(filtered_uplink_items[I.category], I.name, I)
 
@@ -74,6 +76,7 @@
 	var/purchase_log_vis = TRUE // Visible in the purchase log?
 	var/restricted = FALSE // Adds restrictions for VR/Events
 	var/illegal_tech = TRUE // Can this item be deconstructed to unlock certain techweb research nodes?
+	var/special_type = null //do we have a special type we're tied to?
 
 /datum/uplink_item/proc/get_discount()
 	return pick(4;0.75,2;0.5,1;0.25)

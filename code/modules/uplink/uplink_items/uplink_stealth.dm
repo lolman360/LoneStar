@@ -136,3 +136,11 @@
 	desc = "A traditional clusterbang grenade with a payload consisting entirely of Syndicate soap. Useful in any scenario!"
 	item = /obj/item/grenade/clusterbuster/soap
 	cost = 6
+
+/datum/uplink_item/stealthy_weapons/f13
+	cost = 25 //f13 uplinks start with 100
+	surplus = 0
+	cant_discount = FALSE
+	refundable = TRUE
+	illegal_tech = FALSE
+	special_type = "f13"

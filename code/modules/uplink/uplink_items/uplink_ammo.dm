@@ -310,3 +310,73 @@
 	item = /obj/item/ammo_box/a357
 	cost = 6
 	include_modes = list(/datum/game_mode/nuclear)
+
+/datum/uplink_item/ammo/f13
+	cost = 5 //f13 uplinks start with 100
+	surplus = 0
+	cant_discount = FALSE
+	refundable = FALSE
+	illegal_tech = FALSE
+	special_type = "f13"
+
+/datum/uplink_item/ammo/f13/m9mm
+	name = "9mm Single-Stack Magazine"
+	desc = "A 9mm single-stack magazine suitable for the Browning Hi-Power and Sig 220 pistols."
+	item = /obj/item/ammo_box/magazine/m9mm
+
+/datum/uplink_item/ammo/f13/greasemag
+	name = "9mm Grease Gun Magazine"
+	desc = "A 9mm magazine designed for the Grease Gun."
+	cost = 10
+	item = /obj/item/ammo_box/magazine/greasegun
+
+/datum/uplink_item/ammo/f13/m10mm
+	name = "10mm Pistol Magazine"
+	desc = "A 10mm pistol magazine."
+	item = /obj/item/ammo_box/magazine/m10mm_adv
+
+/datum/uplink_item/ammo/f13/m10mmext
+	name = "10mm Extended Magazine"
+	desc = "A 10mm extended magazine."
+	cost = 10
+	item = /obj/item/ammo_box/magazine/m10mm_adv/ext
+
+/datum/uplink_item/ammo/f13/m45
+	name = "M1911 Magazine"
+	desc = "A magazine for the M1911 and variants."
+	item = /obj/item/ammo_box/magazine/m45
+
+/datum/uplink_item/ammo/f13/c38
+	name = ".38 Speedloader"
+	desc = "A .38 speedloader."
+	item = /obj/item/ammo_box/c38
+
+/datum/uplink_item/ammo/f13/a357
+	name = ".357 Speedloader"
+	desc = "A .357 speedloader."
+	item = /obj/item/ammo_box/a357
+
+/datum/uplink_item/ammo/f13/c45rev
+	name = ".45 ACP Speedloader"
+	desc = "A .45 ACP speedloader."
+	item = /obj/item/ammo_box/c45rev
+
+/datum/uplink_item/ammo/f13/c44
+	name = ".44 Speedloader"
+	desc = "A .44 speedloader."
+	item = /obj/item/ammo_box/m44
+
+/datum/uplink_item/ammo/f13/m556assault
+	name = "5.56mm 20rnd Magazine"
+	desc = "A 20rnd 5.56mm magazine."
+	item = /obj/item/ammo_box/magazine/m556/rifle
+
+/datum/uplink_item/ammo/f13/shotbuck
+	name = "12g Buckshot Box"
+	desc = "A box of 12 12ga buckshells."
+	item = /obj/item/ammo_box/shotgun/buck
+
+/datum/uplink_item/ammo/f13/shotbean
+	name = "12g Beanbag Box"
+	desc = "A box of 12 12ga beanbag shells."
+	item = /obj/item/ammo_box/shotgun/bean

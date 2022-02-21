@@ -80,3 +80,11 @@
 	item = /obj/item/melee/powerfist
 	cost = 8
 	exclude_modes = list(/datum/game_mode/traitor/internal_affairs)
+
+/datum/uplink_item/dangeous/f13
+	cost = 25 //f13 uplinks start with 100
+	surplus = 0
+	cant_discount = FALSE
+	refundable = TRUE
+	illegal_tech = FALSE
+	special_type = "f13"

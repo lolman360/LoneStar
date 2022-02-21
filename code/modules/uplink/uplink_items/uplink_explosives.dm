@@ -132,3 +132,11 @@
 	cost = 5
 	surplus = 35
 	include_modes = list(/datum/game_mode/nuclear)
+
+/datum/uplink_item/explosives/f13
+	cost = 20 //f13 uplinks start with 100
+	surplus = 0
+	cant_discount = FALSE
+	refundable = TRUE
+	illegal_tech = FALSE
+	special_type = "f13"

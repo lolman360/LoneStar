@@ -112,3 +112,11 @@
 	item = /obj/item/storage/backpack/satchel/flat
 	cost = 1
 	surplus = 30
+
+/datum/uplink_item/stealthy_tools/f13
+	cost = 15 //f13 uplinks start with 100
+	surplus = 0
+	cant_discount = FALSE
+	refundable = TRUE
+	illegal_tech = FALSE
+	special_type = "f13"

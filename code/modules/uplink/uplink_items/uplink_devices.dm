@@ -277,3 +277,10 @@
 	limited_stock = 1
 */
 
+/datum/uplink_item/device_tools/f13
+	cost = 10 //f13 uplinks start with 100
+	surplus = 0
+	cant_discount = FALSE
+	refundable = TRUE
+	illegal_tech = FALSE
+	special_type = "f13"

@@ -104,3 +104,164 @@
 	desc = "An eyepatch that connects itself to your eye socket, enhancing your shooting to an impossible degree, allowing your bullets to ricochet far more often than usual."
 	item = /obj/item/clothing/glasses/eyepatch/syndicate
 	cost = 8
+
+/datum/uplink_item/suits/f13
+	cost = 0 //f13 uplinks start with 100
+	limited_stock = 1 //this is soley for clothes/armor, they are free
+	surplus = 0
+	cant_discount = FALSE
+	refundable = TRUE
+	illegal_tech = FALSE
+	special_type = "f13"
+
+/datum/uplink_item/suits/f13/settler
+	name = "Settler Outfit"
+	item = /obj/item/clothing/under/f13/settler
+
+/datum/uplink_item/suits/f13/brahminm
+	name = "Brahminskin Outfit"
+	item = /obj/item/clothing/under/f13/brahminm
+
+/datum/uplink_item/suits/f13/lumberjack
+	name = "Lumberjack Outfit"
+	item = /obj/item/clothing/under/f13/lumberjack
+
+/datum/uplink_item/suits/f13/roving
+	name = "Roving Trader Outfit"
+	item = /obj/item/clothing/under/f13/roving
+
+/datum/uplink_item/suits/f13/machinist
+	name = "Machinist Outfit"
+	item = /obj/item/clothing/under/f13/machinist
+
+/datum/uplink_item/suits/f13/follower
+	name = "Follower's Outfit"
+	item = /obj/item/clothing/under/f13/follower
+
+/datum/uplink_item/suits/f13/merchant
+	name = "Merchant's Outfit"
+	item = /obj/item/clothing/under/f13/merchant
+
+/datum/uplink_item/suits/f13/vault
+	name = "Vault Jumpsuit"
+	item = /obj/item/clothing/under/f13/vault
+
+/datum/uplink_item/suits/f13/doctor
+	name = "Doctor's Outfit"
+	item = /obj/item/clothing/under/f13/doctor
+
+/datum/uplink_item/suits/f13/ncrcaravan
+	name = "NCR Caravaneer Outfit"
+	item = /obj/item/clothing/under/f13/ncrcaravan
+
+/datum/uplink_item/suits/f13/desert_ranger_scout
+	name = "Desert Ranger's Scoutfit"
+	item = /obj/item/clothing/under/f13/desert_ranger_scout
+
+/datum/uplink_item/suits/f13/chaplain
+	name = "Chaplain's Outfit"
+	item = /obj/item/clothing/under/f13/chaplain
+
+/datum/uplink_item/suits/f13/whitelegs
+	name = "White-Legs Outfit"
+	item = /obj/item/clothing/under/f13/whitelegs
+
+/datum/uplink_item/suits/f13/whitelegsf
+	name = "Female White-Legs Outfit"
+	item = /obj/item/clothing/under/f13/female/whitelegs
+
+/datum/uplink_item/suits/f13/deadhorses
+	name = "Dead Horses Outfit"
+	item = /obj/item/clothing/under/f13/deadhorses
+
+/datum/uplink_item/suits/f13/deadhorsesf
+	name = "Female Dead Horses Outfit"
+	item = /obj/item/clothing/under/f13/female/deadhorses
+
+/datum/uplink_item/suits/f13/sorrows
+	name = "Sorrows Outfit"
+	item = /obj/item/clothing/under/f13/sorrows
+
+/datum/uplink_item/suits/f13/sorrowsf
+	name = "Female Sorrows Outfit"
+	item = /obj/item/clothing/under/f13/female/sorrows
+
+/datum/uplink_item/suits/f13/eighties
+	name = "Eighties Outfit"
+	item = /obj/item/clothing/under/f13/eighties
+
+/datum/uplink_item/suits/f13/eightiesf
+	name = "Female Eighties Outfit"
+	item = /obj/item/clothing/under/f13/female/eighties
+
+/datum/uplink_item/suits/f13/wayfarer
+	name = "Wayfarer Outfit"
+	item = /obj/item/clothing/under/f13/wayfarer
+
+/datum/uplink_item/suits/f13/rustwalkers
+	name = "Rustwalkers Outfit"
+	item = /obj/item/clothing/under/f13/rustwalkers
+
+/datum/uplink_item/suits/f13/lumberjack
+	name = "Female Rustwalkers Outfit"
+	item = /obj/item/clothing/under/f13/female/rustwalkers
+
+/datum/uplink_item/suits/f13/helmet
+	cost = 12 //armor+helmet/weapon/skillbook should be (13+12)/25/25, leaving 26 to spend on misc, ammo, etc
+
+/datum/uplink_item/suits/f13/helmet/eyebot
+	name = "Eyebot Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/eyebot
+
+/datum/uplink_item/suits/f13/helmet/arclight
+	name = "Arclight Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/arclight
+
+/datum/uplink_item/suits/f13/helmet/blastmaster
+	name = "Blastmaster Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/blastmaster
+
+/datum/uplink_item/suits/f13/helmet/yankee
+	name = "Yankee Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/yankee
+
+/datum/uplink_item/suits/f13/helmet/psychotic
+	name = "Psycho-Tic Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/psychotic
+
+/datum/uplink_item/suits/f13/helmet/fiend
+	name = "Fiend Helmet"
+	item = /obj/item/clothing/head/helmet/f13/fiend
+
+/datum/uplink_item/suits/f13/helmet/eyebot
+	name = "Eyebot Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/eyebot
+
+/datum/uplink_item/suits/f13/helmet/arclight
+	name = "Arclight Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/arclight
+
+/datum/uplink_item/suits/f13/helmet/blastmaster
+	name = "Blastmaster Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/blastmaster
+
+/datum/uplink_item/suits/f13/helmet/yankee
+	name = "Yankee Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/yankee
+
+/datum/uplink_item/suits/f13/helmet/psychotic
+	name = "Psycho-Tic Helmet"
+	item = /obj/item/clothing/head/helmet/f13/raider/psychotic
+
+/datum/uplink_item/suits/f13/helmet/fiend
+	name = "Fiend Helmet"
+	item = /obj/item/clothing/head/helmet/f13/fiend
+
+/datum/uplink_item/suits/f13/armor
+	cost = 13 //armor+helmet/weapon/skillbook should be (13+12)/25/25, leaving 26 to spend on misc, ammo, etc
+		/obj/item/clothing/suit/armor/f13/raider/supafly
+		/obj/item/clothing/suit/armor/f13/raider/yankee
+		/obj/item/clothing/suit/armor/f13/raider/sadist
+		/obj/item/clothing/suit/armor/f13/raider/blastmaster
+		/obj/item/clothing/suit/armor/f13/raider/badlands
+		/obj/item/clothing/suit/armor/f13/raider/painspike)
