@@ -145,9 +145,8 @@
 		return
 	to_chat(user, "<span class='danger'>You begin carefully disarming [src].</span>")
 	if(W.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
-		to_chat(user, "<span class='notice'>You carefully remove the detonator from the mine!</span>")
-		armed = FALSE
-		anchored = FALSE
+		to_chat(user, "<span class='notice'>You carefully destroy the detonator of the mine!</span>")
+		qdel(src)
 	else
 		triggermine(user)
 
