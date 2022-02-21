@@ -319,32 +319,48 @@
 	illegal_tech = FALSE
 	special_type = "f13"
 
+/datum/uplink_item/ammo/f13/quiver
+	name = "Arrow Quiver"
+	desc = "A beltquiver filled with metal arrows."
+	item = /obj/item/storage/belt/tribe_quiver
+
+/datum/uplink_item/ammo/f13/bonequiver
+	name = "Bone Arrow Quiver"
+	desc = "A beltquiver filled with bone arrows."
+	item = /obj/item/storage/belt/tribe_quiver/bone
+
 /datum/uplink_item/ammo/f13/m9mm
 	name = "9mm Single-Stack Magazine"
-	desc = "A 9mm single-stack magazine suitable for the Browning Hi-Power and Sig 220 pistols."
+	desc = "A 10-round 9mm single-stack magazine suitable for the Browning Hi-Power and Sig 220 pistols."
 	item = /obj/item/ammo_box/magazine/m9mm
 
 /datum/uplink_item/ammo/f13/greasemag
 	name = "9mm Grease Gun Magazine"
-	desc = "A 9mm magazine designed for the Grease Gun."
+	desc = "A 30-round 9mm magazine designed for the Grease Gun."
 	cost = 10
 	item = /obj/item/ammo_box/magazine/greasegun
 
 /datum/uplink_item/ammo/f13/m10mm
 	name = "10mm Pistol Magazine"
-	desc = "A 10mm pistol magazine."
+	desc = "A 10-round 10mm pistol magazine."
 	item = /obj/item/ammo_box/magazine/m10mm_adv
 
 /datum/uplink_item/ammo/f13/m10mmext
 	name = "10mm Extended Magazine"
-	desc = "A 10mm extended magazine."
+	desc = "A 24-round 10mm extended magazine."
 	cost = 10
 	item = /obj/item/ammo_box/magazine/m10mm_adv/ext
 
 /datum/uplink_item/ammo/f13/m45
 	name = "M1911 Magazine"
-	desc = "A magazine for the M1911 and variants."
+	desc = "A seven-round magazine for the M1911 and variants."
 	item = /obj/item/ammo_box/magazine/m45
+
+/datum/uplink_item/ammo/f13/tommygunm45s
+	name = "Tommygun Stickmag"
+	desc = "A 30-round magazine for the Thompson Sub-Machinegun."
+	cost = 10
+	item = /obj/item/ammo_box/magazine/tommygunm45/stick
 
 /datum/uplink_item/ammo/f13/c38
 	name = ".38 Speedloader"
@@ -368,7 +384,7 @@
 
 /datum/uplink_item/ammo/f13/m556assault
 	name = "5.56mm 20rnd Magazine"
-	desc = "A 20rnd 5.56mm magazine."
+	desc = "A 20-round 5.56mm magazine."
 	cost = 10
 	item = /obj/item/ammo_box/magazine/m556/rifle
 

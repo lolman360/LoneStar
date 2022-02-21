@@ -209,6 +209,14 @@
 /datum/uplink_item/suits/f13/helmet
 	cost = 15
 
+/datum/uplink_item/suits/f13/helmet/wayfarerantler
+	name = "Antler Skullcap"
+	item = /obj/item/clothing/head/helmet/f13/wayfarer/antler
+
+/datum/uplink_item/suits/f13/helmet/wayfarerhunter
+	name = "Hunter's Skullcap"
+	item = /obj/item/clothing/head/helmet/f13/wayfarer/hunter
+
 /datum/uplink_item/suits/f13/helmet/eyebot
 	name = "Eyebot Helmet"
 	item = /obj/item/clothing/head/helmet/f13/raider/eyebot
@@ -260,6 +268,66 @@
 /datum/uplink_item/suits/f13/armor
 	cost = 15 //armor+helmet/weapon/skillbook should be 30/30/30, leaving 30 to spend on misc, ammo, etc
 
+/datum/uplink_item/suits/f13/armor/kit
+	name = "Armorkit"
+	item = /obj/item/clothing/suit/armor/f13/kit
+
+/datum/uplink_item/suits/f13/armor/lightcloak
+	name = "Light Armored Cloak"
+	item = /obj/item/clothing/suit/armor/f13/lightcloak
+
+/datum/uplink_item/suits/f13/armor/tribalraider
+	name = "Tribal Light Armor"
+	item = /obj/item/clothing/suit/armored/light/tribalraider
+
+/datum/uplink_item/suits/f13/armor/tribal
+	name = "Tribal Armor"
+	item = /obj/item/clothing/suit/armor/f13/tribal
+
+/datum/uplink_item/suits/f13/armor/desert
+	name = "Desert Wanderer's Cloak"
+	item = /obj/item/clothing/suit/hooded/cloak/desert
+
+/datum/uplink_item/suits/f13/armor/whitelegs
+	name = "White-Legs Armor"
+	item = /obj/item/clothing/suit/f13/tribal/whitelegs
+
+/datum/uplink_item/suits/f13/armor/lightwhitelegs
+	name = "White-Legs Light Armor"
+	item = /obj/item/clothing/suit/f13/tribal/light/whitelegs
+
+/datum/uplink_item/suits/f13/armor/deadhorses
+	name = "Dead Horses Armor"
+	item = /obj/item/clothing/suit/f13/tribal/deadhorses
+
+/datum/uplink_item/suits/f13/armor/heavydeadhorses
+	name = "Dead Horses Heavy Armor"
+	item = /obj/item/clothing/suit/f13/tribal/heavy/deadhorses
+
+/datum/uplink_item/suits/f13/armor/lightsorrows
+	name = "Sorrows Light Armor"
+	item = /obj/item/clothing/suit/f13/tribal/light/sorrows
+
+/datum/uplink_item/suits/f13/armor/lighteighties
+	name = "Eighties Light Armor"
+	item = /obj/item/clothing/suit/f13/tribal/light/eighties
+
+/datum/uplink_item/suits/f13/armor/eighties
+	name = "Eighties Armor"
+	item = /obj/item/clothing/suit/f13/tribal/eighties
+
+/datum/uplink_item/suits/f13/armor/heavyeighties
+	name = "Eighties Heavy Armor"
+	item = /obj/item/clothing/suit/f13/tribal/heavy/eighties
+
+/datum/uplink_item/suits/f13/armor/lightrustwalkers
+	name = "Rustwalkers Light Armor"
+	item = /obj/item/clothing/suit/f13/tribal/light/rustwalkers
+
+/datum/uplink_item/suits/f13/armor/rustwalkers
+	name = "Rustwalkers Armor"
+	item = /obj/item/clothing/suit/f13/tribal/rustwalkers
+
 /datum/uplink_item/suits/f13/armor/supafly
 	name = "Supa-Fly Armor"
 	item = /obj/item/clothing/suit/armor/f13/raider/supafly
@@ -279,7 +347,6 @@
 /datum/uplink_item/suits/f13/armor/badlands
 	name = "Badlands Raider Armor"
 	item = /obj/item/clothing/suit/armor/f13/raider/badlands
-
 
 /datum/uplink_item/suits/f13/armor/painspike
 	name = "Painspike Armor"
