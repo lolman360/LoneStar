@@ -599,7 +599,7 @@
 				/obj/item/wrench,
 				/obj/item/kitchen/knife,
 				/obj/item/kitchen/rollingpin,
-				/obj/item/weldingtool
+				/obj/item/weldingtool,
 				/obj/item/gavelhammer,
 				/obj/item/oar,
 				/obj/item/pickaxe,
@@ -843,14 +843,11 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh
 	name = "superhigh tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/citykiller = 12,
-				/obj/effect/spawner/bundle/f13/riotshotgun = 13,
-				/obj/effect/spawner/bundle/f13/bozar = 6,
+	loot = list(/obj/effect/spawner/bundle/f13/riotshotgun = 5,
 				/obj/effect/spawner/bundle/f13/amr = 10,
 				/obj/effect/spawner/bundle/f13/brushgun = 15,
-				/obj/effect/spawner/bundle/f13/rangemaster = 18,
-				/obj/effect/spawner/bundle/f13/gauss = 10,
-				/obj/effect/spawner/bundle/f13/fnfal = 6,
+				/obj/effect/spawner/bundle/f13/rangemaster = 15,
+				/obj/effect/spawner/bundle/f13/fnfal = 5,
 				/obj/item/gun/ballistic/rocketlauncher = 10,
 				)
 
