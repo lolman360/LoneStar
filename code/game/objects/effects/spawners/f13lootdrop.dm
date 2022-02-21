@@ -801,7 +801,7 @@
 				/obj/effect/spawner/bundle/f13/mk23,
 				/obj/effect/spawner/bundle/f13/hunting,
 				/obj/effect/spawner/bundle/f13/trenchshotgun,
-				/obj/effect/spawner/lootdrop/f13/weapon/gun/44spawner,
+				/obj/effect/spawner/lootdrop/f13/weapon/gun/44variant,
 				/obj/effect/spawner/bundle/f13/m1carbine,
 				/obj/effect/spawner/bundle/f13/huntingshotgun,
 				/obj/effect/spawner/bundle/f13/revolver45
@@ -869,7 +869,7 @@
 
 //Random-pick pools so that regular spawners aren't super diluted with shit like 3 .44 revolver variants
 
-/obj/effect/spawner/lootdrop/f13/weapon/gun/44spawner
+/obj/effect/spawner/lootdrop/f13/weapon/gun/44variant
 	name = "random spawner for .44 revolvers/variants"
 	loot = list(/obj/effect/spawner/bundle/f13/revolverm29,
 				/obj/effect/spawner/bundle/f13/revolverm29alt,
