@@ -108,7 +108,7 @@
 				P.armed = FALSE
 				P.anchored = FALSE
 		else
-			if(!mend && !P.bomb_defused)
+			if(!mend)
 				arm()
 
 /datum/wires/explosive/mine/on_pulse(wire)
