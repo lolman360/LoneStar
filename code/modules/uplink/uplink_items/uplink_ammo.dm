@@ -369,6 +369,7 @@
 /datum/uplink_item/ammo/f13/m556assault
 	name = "5.56mm 20rnd Magazine"
 	desc = "A 20rnd 5.56mm magazine."
+	cost = 10
 	item = /obj/item/ammo_box/magazine/m556/rifle
 
 /datum/uplink_item/ammo/f13/shotbuck

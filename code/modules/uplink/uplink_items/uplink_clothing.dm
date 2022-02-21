@@ -207,7 +207,7 @@
 	item = /obj/item/clothing/under/f13/female/rustwalkers
 
 /datum/uplink_item/suits/f13/helmet
-	cost = 12 //armor+helmet/weapon/skillbook should be (13+12)/25/25, leaving 26 to spend on misc, ammo, etc
+	cost = 15
 
 /datum/uplink_item/suits/f13/helmet/eyebot
 	name = "Eyebot Helmet"
@@ -258,10 +258,29 @@
 	item = /obj/item/clothing/head/helmet/f13/fiend
 
 /datum/uplink_item/suits/f13/armor
-	cost = 13 //armor+helmet/weapon/skillbook should be (13+12)/25/25, leaving 26 to spend on misc, ammo, etc
-		/obj/item/clothing/suit/armor/f13/raider/supafly
-		/obj/item/clothing/suit/armor/f13/raider/yankee
-		/obj/item/clothing/suit/armor/f13/raider/sadist
-		/obj/item/clothing/suit/armor/f13/raider/blastmaster
-		/obj/item/clothing/suit/armor/f13/raider/badlands
-		/obj/item/clothing/suit/armor/f13/raider/painspike)
+	cost = 15 //armor+helmet/weapon/skillbook should be 30/30/30, leaving 30 to spend on misc, ammo, etc
+
+/datum/uplink_item/suits/f13/armor/supafly
+	name = "Supa-Fly Armor"
+	item = /obj/item/clothing/suit/armor/f13/raider/supafly
+
+/datum/uplink_item/suits/f13/armor/yankee
+	name = "Yankee Armor"
+	item = /obj/item/clothing/suit/armor/f13/raider/yankee
+
+/datum/uplink_item/suits/f13/armor/sadist
+	name = "Sadist Armor"
+	item = /obj/item/clothing/suit/armor/f13/raider/sadist
+
+/datum/uplink_item/suits/f13/armor/blastmaster
+	name = "Blastmaster Armor"
+	item = /obj/item/clothing/suit/armor/f13/raider/blastmaster
+
+/datum/uplink_item/suits/f13/armor/badlands
+	name = "Badlands Raider Armor"
+	item = /obj/item/clothing/suit/armor/f13/raider/badlands
+
+
+/datum/uplink_item/suits/f13/armor/painspike
+	name = "Painspike Armor"
+	item = /obj/item/clothing/suit/armor/f13/raider/painspike
