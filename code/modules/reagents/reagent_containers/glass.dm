@@ -357,7 +357,9 @@
 		/obj/item/reagent_containers/pill/buffout,
 		/obj/item/reagent_containers/pill/patch/jet,
 	)
-
+/obj/item/reagent_containers/glass/mortar/Initialize()
+	. = ..()
+	holdingitems = list()
 /obj/item/reagent_containers/glass/mortar/examine(mob/user)
 	. = ..()
 	. += "<span class='notice'>Alt-click to eject any item put inside.</span>"
@@ -365,12 +367,7 @@
 
 /obj/item/reagent_containers/glass/mortar/AltClick(mob/user)
 	if(LAZYLEN(holdingitems))
-		for(var/i in holdingitems)
-			var/obj/item/O = i
-			O.forceMove(drop_location())
-			holdingitems -= O
-			to_chat(user, "<span class='notice'>You eject the item inside.</span>")
-			return TRUE
+		eject()
 	else
 		mortar_mode = !mortar_mode
 		to_chat(user, "<span class='notice'>You decide to [mortar_mode == MORTAR_JUICE ? "juice the harvest" : "grind the harvest"].</span>")
@@ -378,16 +375,6 @@
 /obj/item/reagent_containers/glass/mortar/attackby(obj/item/I, mob/living/carbon/human/user)
 	if(is_type_in_list(I, blacklistchems))
 		return
-	if(istype(I, /obj/item/storage/bag))
-		var/list/inserted = list()
-		if(SEND_SIGNAL(I, COMSIG_TRY_STORAGE_TAKE_TYPE, /obj/item/reagent_containers/food/snacks/grown, src, 10 - length(holdingitems), null, null, user, inserted))
-			for(var/i in inserted)
-				holdingitems[i] = TRUE
-			if(!I.contents.len)
-				to_chat(user, "<span class='notice'>You empty [I] into [src].</span>")
-			else
-				to_chat(user, "<span class='notice'>You fill [src] to the brim.</span>")
-		return TRUE
 	if(istype(I,/obj/item/pestle))
 		if(LAZYLEN(holdingitems))
 			if(IS_STAMCRIT(user))
@@ -406,6 +393,16 @@
 	if(holdingitems.len >= 10)
 		to_chat(user, "<span class='warning'>The [src] is full!</span>")
 		return
+	if(istype(I, /obj/item/storage/bag))
+		var/list/inserted = list()
+		if(SEND_SIGNAL(I, COMSIG_TRY_STORAGE_TAKE_TYPE, /obj/item/reagent_containers/food/snacks/grown, src, 10 - length(holdingitems), null, null, user, inserted))
+			for(var/i in inserted)
+				holdingitems[i] = TRUE
+			if(!I.contents.len)
+				to_chat(user, "<span class='notice'>You empty [I] into [src].</span>")
+			else
+				to_chat(user, "<span class='notice'>You fill [src] to the brim.</span>")
+		return TRUE
 	if(!I.grind_requirements(src)) //Error messages should be in the objects' definitions
 		return
 	if(I.juice_results || I.grind_results)
