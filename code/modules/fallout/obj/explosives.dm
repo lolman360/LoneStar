@@ -145,7 +145,7 @@
 	to_chat(victim, "<span class='danger'>*click*</span>")
 
 /obj/item/mine/Crossed(atom/movable/AM)
-	if(triggered || !isturf(loc) || !isliving(AM) || isstructure(AM) || isnottriggermine(A))
+	if(triggered || !isturf(loc) || !isliving(AM) || isstructure(AM) || isnottriggermine(AM))
 		return
 	. = ..()
 
@@ -174,7 +174,7 @@
 	if(!armed)
 		return
 	to_chat(user, "<span class='danger'>You begin carefully disarming [src].</span>")
-	if(W.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
+	if(I.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
 		to_chat(user, "<span class='notice'>You carefully destroy the detonator of the mine!</span>")
 		qdel(src)
 	else
@@ -226,7 +226,7 @@
 	name = "stinger mine"
 	shrapnel_type = /obj/item/projectile/bullet/pellet/stingball
 
-/obj/item/mine/shrapnel/sting
+/obj/item/mine/shrapnel/sting/random
 	random = TRUE
 	anchored = FALSE
 	armed = FALSE
@@ -259,17 +259,17 @@
 	gas_type = "n2o"
 
 /obj/item/mine/sound
-	name = 'dummy mine'
+	name = "dummy mine"
+	var/soundtoplay
 
 /obj/item/mine/sound/mineEffect(mob/victim)
-	playsound(loc, sound, 100, 1)
+	playsound(loc, soundtoplay, 100, 1)
 
 /obj/item/mine/sound/bwoink
-	name = "bwoink mine"
-	sound = 'sound/effects/adminhelp.ogg'
+	soundtoplay = 'sound/effects/adminhelp.ogg'
 
 /obj/item/mine/emp
-	name = 'pulse mine'
+	name = "pulse mine"
 	var/range = 3
 
 /obj/item/mine/emp/mineEffect(mob/victim)
