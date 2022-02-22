@@ -270,7 +270,7 @@
 	icon = 'icons/obj/crates.dmi'
 	icon_state = "weaponcrate"
 	item_state = "syringe_kit"
-	
+
 /obj/item/choice_beacon/weapon/follower
 	name = "Follower of the Apocalpyse standard issue self-defense weapon crate"
 	desc = "Has that weapon you ordered"
@@ -278,10 +278,10 @@
 	"lethal, energy" = /obj/item/gun/energy/laser/wattz,
 	"lethal, ballistics" = /obj/item/gun/ballistic/revolver/colt357,
 	)
-	
+
 /obj/item/choice_beacon/weapon/follower/generate_display_names()
 	return follower_guns
-	
+
 /obj/item/choice_beacon/weapon/wastelander
 	name = "personal weapon stash"
 	desc = "contains your personal weapon, whatever it may be"
@@ -292,3 +292,33 @@
 	".357 Single Action Revolver" = /obj/item/gun/ballistic/revolver/colt357,
 	"5.56mm Varmint Rifle" = /obj/item/gun/ballistic/automatic/varmint
 	)
+
+/obj/item/choice_beacon/box/clothes
+	name = "choice box (clothes)"
+	desc = "A box of quantum-entangled superthread that will wavestate collapse into clothes once you open it."
+	var/static/list/clothes_list = list("Settler Outfit" = /obj/item/clothing/under/f13/settler,
+	"Brahminskin Outfit" = /obj/item/clothing/under/f13/brahminm,
+	"Lumberjack Outfit" = /obj/item/clothing/under/f13/lumberjack,
+	"Roving Trader Outfit" = /obj/item/clothing/under/f13/roving,
+	"Machinist Outfit" = /obj/item/clothing/under/f13/machinist,
+	"Follower's Outfit" = /obj/item/clothing/under/f13/follower,
+	"Merchant's Outfit" = /obj/item/clothing/under/f13/merchant,
+	"Vault Jumpsuit" = /obj/item/clothing/under/f13/vault,
+	"Doctor's Outfit" = /obj/item/clothing/under/f13/doctor,
+	"NCR Caravaneer Outfit" = /obj/item/clothing/under/f13/ncrcaravan,
+	"Desert Ranger's Scoutfit" = /obj/item/clothing/under/f13/desert_ranger_scout,
+	"Chaplain's Outfit" = /obj/item/clothing/under/f13/chaplain,
+	"White-Legs Outfit" = /obj/item/clothing/under/f13/whitelegs,
+	"Female White-Legs Outfit" = /obj/item/clothing/under/f13/female/whitelegs,
+	"Dead Horses Outfit" = /obj/item/clothing/under/f13/deadhorses,
+	"Female Dead Horses Outfit" = /obj/item/clothing/under/f13/female/deadhorses,
+	"Sorrows Outfit" = /obj/item/clothing/under/f13/sorrows,
+	"Female Sorrows Outfit" = /obj/item/clothing/under/f13/female/sorrows,
+	"Eighties Outfit" = /obj/item/clothing/under/f13/eighties,
+	"Female Eighties Outfit" = /obj/item/clothing/under/f13/female/eighties,
+	"Wayfarer Outfit" = /obj/item/clothing/under/f13/wayfarer,
+	"Rustwalkers Outfit" = /obj/item/clothing/under/f13/rustwalkers,
+	"Female Rustwalkers Outfit" = /obj/item/clothing/under/f13/female/rustwalkers)
+
+/obj/item/choice_beacon/box/clothes/generate_display_names()
+	return clothes_list
