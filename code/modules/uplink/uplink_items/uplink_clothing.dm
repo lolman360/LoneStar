@@ -109,8 +109,8 @@
 	cost = 0 //f13 uplinks start with 100
 	limited_stock = 1 //this is soley for clothes/armor, they are free
 	surplus = 0
-	cant_discount = FALSE
-	refundable = TRUE
+	cant_discount = TRUE
+	refundable = FALSE
 	illegal_tech = FALSE
 	special_type = "f13"
 
@@ -120,6 +120,7 @@
 
 /datum/uplink_item/suits/f13/helmet
 	cost = 15
+
 
 /datum/uplink_item/suits/f13/helmet/wayfarerantler
 	name = "Antler Skullcap"

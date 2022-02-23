@@ -228,3 +228,21 @@
 	desc = "Twenty telecrystals in their rawest and purest form; can be utilized on active uplinks to increase their telecrystal count."
 	item = /obj/item/stack/telecrystal/twenty
 	cost = 20
+
+/datum/uplink_item/bundles_TC/f13
+	cost = 90 //f13 uplinks start with 120
+	surplus = 0
+	cant_discount = TRUE
+	illegal_tech = FALSE
+	special_type = "f13"
+
+/datum/uplink_item/bundles_TC/f13/blastmaster
+	name = "Blastmaster's Bundle"
+	desc = "Contains 4 flask-firebombs and 4 coffeepot-IEDs, as well as a bottlecap mine, a minelaying booklet and an explosives crafting booklet."
+	item = /obj/item/storage/box/blastmaster
+
+/datum/uplink_item/bundles_TC/f13/yankee
+	name = "Yankee Raider Bundle"
+	desc = "Contains a shishkebackpack, a tin of buffout, a pack of cigs and a megaphone."
+	cost = 100
+	item = /obj/item/storage/box/yankee

@@ -1162,7 +1162,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
-	
+
 /obj/item/storage/box/sparelimbs
 	name = "box of prosthethic limbs"
 	desc = "Contains superior prosthethic limbs, one of each type."
@@ -1174,7 +1174,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/bodypart/r_arm/robot(src)
 	new /obj/item/bodypart/l_leg/robot(src)
 	new /obj/item/bodypart/r_leg/robot(src)
-	
+
 //Colored boxes.
 /obj/item/storage/box/green
 	icon_state = "box_green"
@@ -1433,3 +1433,45 @@ list(/obj/item/stack/sheet/metal = 20,
 	new /obj/item/weldingtool(src)
 	new /obj/item/stack/f13Cash/random/med(src)
 	new /obj/item/stack/f13Cash/random/med(src)
+
+/obj/item/storage/box/blastmaster
+	name = "Blastmaster's Bundle"
+	desc = "A box containing all the necessary items for anarcho-primitivist praxis."
+
+/obj/item/storage/box/blastmaster/PopulateContents()
+	. = ..()
+	new /obj/item/grenade/homemade/firebomb(src)
+	new /obj/item/grenade/homemade/firebomb(src)
+	new /obj/item/grenade/homemade/firebomb(src)
+	new /obj/item/grenade/homemade/firebomb(src)
+	new /obj/item/bottlecap_mine(src)
+	new /obj/item/grenade/homemade/coffeepotbomb(src)
+	new /obj/item/grenade/homemade/coffeepotbomb(src)
+	new /obj/item/grenade/homemade/coffeepotbomb(src)
+	new /obj/item/grenade/homemade/coffeepotbomb(src)
+	new /obj/item/book/granter/crafting_recipe/blueprint/trapper(src)
+	new /obj/item/book/granter/trait/explosives(src)
+
+/obj/item/storage/box/yankee
+	name = "Yankee Raider Bundle"
+	desc = "A box containing all the necessary items for laying waste to the entire wasteland. Assuming nobody has a gun. Or a bola."
+
+/obj/item/storage/box/yankee/PopulateContents()
+	. = ..()
+	new /obj/item/shishkebabpack(src)
+	new /obj/item/storage/fancy/cigarettes/cigpack_cannabis(src)
+	new /obj/item/megaphone(src)
+	new /obj/item/storage/pill_bottle/chem_tin/buffout(src)
+
+/obj/item/storage/box/wastermed
+	name = "Wasteland Doctor's Box"
+	desc = "A box containing some basic medical supplies."
+
+/obj/item/storage/box/wastermed/PopulateContents()
+	. = ..()
+	new /obj/item/reagent_containers/medspray/synthflesh(src)
+	new /obj/item/reagent_containers/medspray/synthflesh(src)
+	new /obj/item/stack/medical/suture/emergency/fifteen(src)
+	new /obj/item/stack/medical/ointment/twelve(src)
+	new /obj/item/healthanalyzer(src)
+	new /obj/item/stack/sheet/mineral/silver(src)

@@ -134,9 +134,24 @@
 	include_modes = list(/datum/game_mode/nuclear)
 
 /datum/uplink_item/explosives/f13
-	cost = 20 //f13 uplinks start with 100
+	cost = 20 //f13 uplinks start with 120
 	surplus = 0
-	cant_discount = FALSE
+	cant_discount = TRUE
 	refundable = TRUE
 	illegal_tech = FALSE
 	special_type = "f13"
+
+/datum/uplink_item/explosives/f13/coffied
+	name = "Coffeepot Bomb"
+	cost = 20
+	item = /obj/item/grenade/homemade/coffeepotbomb
+
+/datum/uplink_item/explosives/f13/flaskied
+	name = "Flask Firebomb"
+	cost = 20
+	item = /obj/item/grenade/homemade/firebomb
+
+/datum/uplink_item/explosives/f13/bottlecapmine
+	name = "Bottlecap Mine"
+	cost = 20
+	item = /obj/item/bottlecap_mine

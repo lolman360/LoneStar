@@ -278,9 +278,114 @@
 */
 
 /datum/uplink_item/device_tools/f13
-	cost = 10 //f13 uplinks start with 100
+	cost = 10 //f13 uplinks start with 120
 	surplus = 0
-	cant_discount = FALSE
-	refundable = TRUE
+	cant_discount = TRUE
 	illegal_tech = FALSE
 	special_type = "f13"
+
+/datum/uplink_item/device_tools/f13/skillbook
+	cost = 30 //f13 uplinks start with 120
+	surplus = 0
+	cant_discount = TRUE
+	illegal_tech = FALSE
+	special_type = "f13"
+
+
+/datum/uplink_item/device_tools/f13/skillbook/trekking
+	name = "Wasteland Survival Guide"
+	item = /obj/item/book/granter/trait/trekking
+
+/datum/uplink_item/device_tools/f13/skillbook/midsurgery
+	name = "D.C. Journal of Internal Medicine"
+	item = /obj/item/book/granter/trait/midsurgery
+
+/datum/uplink_item/device_tools/f13/skillbook/bigleagues
+	name = "Grognak the Barbarian"
+	item = /obj/item/book/granter/trait/bigleagues
+
+/datum/uplink_item/device_tools/f13/skillbook/chemistry
+	name = "Big Book O' Science"
+	item = /obj/item/book/granter/trait/chemistry
+
+/datum/uplink_item/device_tools/f13/skillbook/techno
+	name = "Dean's Electronics"
+	item = /obj/item/book/granter/trait/techno
+
+/datum/uplink_item/device_tools/f13/skillbook/scav_one
+	name = "SCAV! Issue One"
+	cost = 15
+	item = /obj/item/book/granter/crafting_recipe/scav_one
+
+/datum/uplink_item/device_tools/f13/skillbook/tagger
+	name = "Picket Fences"
+	cost = 5
+	desc = "Often known by its longer name; Picket Fences, Or: How I Learnt To Stop Worrying And Paint An Entire House With A Single Spraycan"
+	item = /obj/item/book/granter/trait/tagger
+
+/datum/uplink_item/device_tools/f13/skillbook/trapper
+	name = "Minelaying 101"
+	item = /obj/item/book/granter/crafting_recipe/blueprint/trapper
+
+/datum/uplink_item/device_tools/f13/skillbook/explosives
+	name = "Industrial Society and Its Future"
+	item = /obj/item/book/granter/trait/explosives
+
+/datum/uplink_item/device_tools/f13/skillbook/gunslinger
+	name = "Tycho: Life of a Lawman"
+	desc = "Note: Does not concern the life of Tycho Brahe, astronomer."
+	item = /obj/item/book/granter/trait/gunslinger
+
+/datum/uplink_item/device_tools/f13/skillbook/rifleman
+	name = "Riflery Primer"
+	desc = "An old book with blood and vodka stains on it. Freshly pulled from a dusty crate in some old warehouse, \
+			this primer of questionable worth and value is rumored to increase your rifle-bolt-working and/or shotgun \
+			racking fivefold. Then again, the techniques here only work on bolt-actions and pump-actions..."
+	item = /obj/item/book/granter/trait/rifleman
+	cost = 15 //cheap
+
+/datum/uplink_item/device_tools/f13/medx
+	name = "Medx"
+	desc = "Medx, the tool of many great heroes. Makes you nearly immune to non-lethal weaponry for about \
+			5 minutes after injection."
+	item = /obj/item/reagent_containers/hypospray/medipen/medx
+
+/datum/uplink_item/device_tools/f13/syndicate_eyepatch
+	name = "Mechanical Eyepatch"
+	desc = "An eyepatch that connects itself to your eye socket, enhancing your shooting to an impossible degree, allowing your bullets to ricochet far more often than usual."
+	cost = 30
+	item = /obj/item/clothing/glasses/eyepatch/syndicate
+
+/datum/uplink_item/device_tools/f13/military_belt
+	name = "Chest Rig"
+	desc = "A robust seven-slot set of webbing that is capable of holding all manner of tactical equipment."
+	cost = 20
+	item = /obj/item/storage/belt/military
+
+/datum/uplink_item/device_tools/f13/duffel
+	name = "Ultralight Duffel Bag"
+	cost = 30
+	desc = "A lightweight duffel bag."
+	item = /obj/item/storage/backpack/duffelbag/syndie
+
+/datum/uplink_item/device_tools/f13/surgerybag
+	name = "Surgery Supplies Duffelbag"
+	desc = "A fully-loaded surgery duffel bag, with every basic surgery tool, a sterilizine spray, bone tape and gel."
+	cost = 15
+	item = /obj/item/storage/backpack/duffelbag/med/surgery
+
+/datum/uplink_item/device_tools/f13/wastermed
+	name = "Wasteland Doctor's Supplies Box"
+	desc = "Two synthflesh sprays, a stack each of basic sutures and ointment, a health analyzer and some silver for a surgery table."
+	cost = 15
+	item = /obj/item/storage/box/wastermed
+
+/datum/uplink_item/device_tools/f13/defibrillatorprim
+	name = "Car Battery"
+	desc = "A car battery. You could probably revive people with this!"
+	item = /obj/item/defibrillator/primitive
+
+/datum/uplink_item/device_tools/f13/smelling_salts
+	name = "Smelling Salts"
+	desc = "Smelling salts. You could probably revive people with this!"
+	item = /obj/item/smelling_salts

@@ -89,11 +89,6 @@
 	illegal_tech = FALSE
 	special_type = "f13"
 
-/datum/uplink_item/dangeous/f13/shishkebabpack
-	name = "Shishkebab"
-	cost = 50 //balanced
-	item = /obj/item/shishkebabpack
-
 /datum/uplink_item/dangeous/f13/steelsaw
 	name = "Steel Saw"
 	cost = 35

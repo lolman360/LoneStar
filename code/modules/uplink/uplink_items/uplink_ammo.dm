@@ -314,7 +314,7 @@
 /datum/uplink_item/ammo/f13
 	cost = 5 //f13 uplinks start with 100
 	surplus = 0
-	cant_discount = FALSE
+	cant_discount = TRUE
 	refundable = FALSE
 	illegal_tech = FALSE
 	special_type = "f13"
