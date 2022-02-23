@@ -71,3 +71,16 @@
 	hidden_uplink.set_gamemode(/datum/game_mode/nuclear)
 	hidden_uplink.name = "debug nuclear uplink"
 	hidden_uplink.debug = TRUE
+
+/obj/item/uplink/loadoutselector
+	name = "loadout selector"
+	desc = "A device that will let you pick your loadout."
+	icon = 'icons/effects/landmarks_static.dmi'
+	icon_state = "random_loot"
+
+/obj/item/uplink/old/Initialize(mapload, owner, tc_amount = 120)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, ROUNDSTART_TRAIT)
+	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
+	hidden_uplink.name = "loadout selector"
+	hidden_uplink.special_type = f13

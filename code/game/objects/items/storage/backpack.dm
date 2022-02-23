@@ -22,13 +22,13 @@
 	max_integrity = 300
 
 /obj/item/storage/backpack/ComponentInitialize()
-	. = ..()	
+	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	//STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
 	STR.max_combined_w_class = 21
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_items = 21
-	
+
 
 /*
  * Backpack Types
@@ -380,6 +380,22 @@
 /obj/item/storage/backpack/duffelbag/equipment/update_icon_state()
 	if(contents.len == 0)
 		qdel(src)
+
+
+/obj/item/storage/backpack/duffelbag/settler
+	name = "settler's duffel bag"
+	desc = "A large duffel bag stuffed with metal, wood, sandstone and glass. All you need to start your own life on the frontier."
+
+/obj/item/storage/backpack/duffelbag/settler/PopulateContents()
+	. = ..()
+	new /obj/item/stack/sheet/metal/fifty(src)
+	new /obj/item/stack/sheet/mineral/wood/fifty(src)
+	new /obj/item/stack/sheet/mineral/sandstone/fifty(src)
+	new /obj/item/pickaxe/mini(src)
+	new /obj/item/toy/crayon/spraycan(src)
+	new /obj/item/cultivator(src)
+	new /obj/item/reagent_containers/glass/bucket(src)
+	new /obj/item/storage/bag/plants/portaseeder(src)
 
 /obj/item/storage/backpack/duffelbag/scavengers
 	name = "scavenger's duffel bag"

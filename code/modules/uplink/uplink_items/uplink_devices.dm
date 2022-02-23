@@ -374,6 +374,12 @@
 	cost = 15
 	item = /obj/item/storage/backpack/duffelbag/med/surgery
 
+/datum/uplink_item/device_tools/f13/settlerbag
+	name = "Settler's Duffelbag"
+	desc = "A fully-loaded duffel bag, with fifty sheets of metal, glass, sandstone, basic mining and gardening tools and a spraycan."
+	cost = 15
+	item = /obj/item/storage/backpack/duffelbag/settler
+
 /datum/uplink_item/device_tools/f13/wastermed
 	name = "Wasteland Doctor's Supplies Box"
 	desc = "Two synthflesh sprays, a stack each of basic sutures and ointment, a health analyzer and some silver for a surgery table."
