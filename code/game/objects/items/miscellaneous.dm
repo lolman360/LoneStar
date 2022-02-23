@@ -322,3 +322,12 @@
 
 /obj/item/choice_beacon/box/clothes/generate_display_names()
 	return clothes_list
+
+/obj/item/choice_beacon/box/permit
+	name = "choice box (citizenship permit)"
+	desc = "A box of quantum-entangled superthread that will wavestate collapse into a faction's citizenship permit once you open it."
+	var/static/list/listofpermit = list("Legion Permit" = /obj/item/card/id/dogtag/town/legion,
+	"NCR Permit" = /obj/item/card/id/dogtag/town/ncr)
+
+/obj/item/choice_beacon/box/clothes/generate_display_names()
+	return listofpermit

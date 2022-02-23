@@ -107,7 +107,7 @@
 
 /datum/uplink_item/suits/f13
 	cost = 0 //f13 uplinks start with 100
-	limited_stock = 1 //this is soley for clothes/armor, they are free
+	limited_stock = 1 //this is soley for clothes, they are free
 	surplus = 0
 	cant_discount = TRUE
 	refundable = FALSE
@@ -117,6 +117,10 @@
 /datum/uplink_item/suits/f13/choice
 	name = "clothes choice box"
 	item = /obj/item/choice_beacon/box/clothes
+
+/datum/uplink_item/suits/f13/citizen
+	name = "citizenship permit choice box"
+	item = /obj/item/choice_beacon/box/permit
 
 /datum/uplink_item/suits/f13/helmet
 	cost = 15
