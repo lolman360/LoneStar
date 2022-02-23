@@ -380,6 +380,12 @@
 	cost = 15
 	item = /obj/item/storage/backpack/duffelbag/settler
 
+/datum/uplink_item/device_tools/f13/utilityfull
+	name = "Full Toolbelt"
+	desc = "A fully-loaded toolbelt."
+	cost = 15
+	item = /obj/item/storage/belt/utility/full
+
 /datum/uplink_item/device_tools/f13/wastermed
 	name = "Wasteland Doctor's Supplies Box"
 	desc = "Two synthflesh sprays, a stack each of basic sutures and ointment, a health analyzer and some silver for a surgery table."
