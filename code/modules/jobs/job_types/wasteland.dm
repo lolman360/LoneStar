@@ -494,7 +494,7 @@ Raider
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/throwing = 5,
 		/obj/item/clothing/mask/gas/explorer/folded=1,
-		/obj/item/storage/belt/tribe_quiver = 1,
+		/obj/item/storage/belt = 1,
 		/obj/item/restraints/legcuffs/beartrap = 2,
 		/obj/item/reverse_bear_trap = 1,
 		/obj/item/melee/unarmed/lacerator = 1,
@@ -1415,7 +1415,8 @@ datum/job/wasteland/f13dendoctor
 	/datum/outfit/loadout/eightiesshaman,
 	/datum/outfit/loadout/rustwalkersscipher,
 	/datum/outfit/loadout/rustwalkersscrapper,
-	/datum/outfit/loadout/rustwalkersshaman
+	/datum/outfit/loadout/rustwalkersshaman,
+	/datum/outfit/loadout/bonedancerexile
 	)
 
 /datum/outfit/job/wasteland/f13tribal/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1702,8 +1703,20 @@ datum/job/wasteland/f13dendoctor
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/storage/belt/utility/full = 1,
 		/obj/item/book/granter/crafting_recipe/tribal/rustwalkers = 1
-)
 
+	)
+//Bone Dancer
+/datum/outfit/loadout/bonedancerexile
+	name = "Bone Dancer Exile"
+	backpack_contents = list(
+		/obj/item/clothing/under/f13/bone = 1,
+		/obj/item/clothing/head/helmet/skull/bone = 1,
+		/obj/item/book/granter/crafting_recipe/tribal/bone = 1,
+		/obj/item/twohanded/spear/bonespear = 1,
+		/obj/item/warpaint_bowl=1,
+		/obj/item/reagent_containers/pill/patch/healpoultice = 2
+
+	)
 /datum/outfit/job/wasteland/f13tribal/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
