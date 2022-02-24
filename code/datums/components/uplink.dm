@@ -35,7 +35,8 @@ GLOBAL_LIST_EMPTY(uplinks)
 /datum/component/uplink/Initialize(_owner, _lockable = TRUE, _enabled = FALSE, datum/game_mode/_gamemode, starting_tc = 20, datum/traitor_class/traitor_class, _special_type)
 	if(!isitem(parent))
 		return COMPONENT_INCOMPATIBLE
-
+	if(_special_type)
+		special_type = _special_type
 
 	RegisterSignal(parent, COMSIG_PARENT_ATTACKBY, .proc/OnAttackBy)
 	RegisterSignal(parent, COMSIG_ITEM_ATTACK_SELF, .proc/interact)
@@ -71,8 +72,7 @@ GLOBAL_LIST_EMPTY(uplinks)
 	if(!lockable)
 		active = TRUE
 		locked = FALSE
-	if(_special_type)
-		special_type = _special_type
+
 	saved_player_population = GLOB.joined_player_list.len
 
 /datum/component/uplink/InheritComponent(datum/component/uplink/U)
