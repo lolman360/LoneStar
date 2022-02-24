@@ -28,9 +28,11 @@ GLOBAL_LIST_EMPTY(uplinks)
 	var/debug = FALSE
 	var/saved_player_population = 0
 	var/list/filters = list()
+	var/special_type = null
+	var/disappearing = FALSE //do we disappear when we run out of tc?
 
 
-/datum/component/uplink/Initialize(_owner, _lockable = TRUE, _enabled = FALSE, datum/game_mode/_gamemode, starting_tc = 20, datum/traitor_class/traitor_class)
+/datum/component/uplink/Initialize(_owner, _lockable = TRUE, _enabled = FALSE, datum/game_mode/_gamemode, starting_tc = 20, datum/traitor_class/traitor_class, _special_type)
 	if(!isitem(parent))
 		return COMPONENT_INCOMPATIBLE
 
@@ -53,7 +55,7 @@ GLOBAL_LIST_EMPTY(uplinks)
 	if(istype(traitor_class))
 		filters = traitor_class.uplink_filters
 		starting_tc = traitor_class.TC
-	uplink_items = get_uplink_items(gamemode, TRUE, allow_restricted, filters)
+	uplink_items = get_uplink_items(gamemode, TRUE, allow_restricted, filters, special_type)
 
 	if(_owner)
 		owner = _owner
@@ -69,6 +71,8 @@ GLOBAL_LIST_EMPTY(uplinks)
 	if(!lockable)
 		active = TRUE
 		locked = FALSE
+	if(_special_type)
+		special_type = _special_type
 	saved_player_population = GLOB.joined_player_list.len
 
 /datum/component/uplink/InheritComponent(datum/component/uplink/U)
@@ -341,3 +345,8 @@ GLOBAL_LIST_EMPTY(uplinks)
 	log_game("[key_name(user)] triggered an uplink failsafe explosion. The owner of the uplink was [key_name(owner)].")
 	explosion(T,1,2,3)
 	qdel(parent) //Alternatively could brick the uplink.
+
+/datum/component/uplink/proc/destroyuplink()
+	if(!parent)
+		return
+	qdel(parent)

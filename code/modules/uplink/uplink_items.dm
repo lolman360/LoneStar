@@ -20,7 +20,7 @@
 			continue
 		if (I.type in other_filter)
 			continue
-		if (special_type && (special_type = I.special_type)
+		if(special_type != I.special_type)
 			continue
 		LAZYSET(filtered_uplink_items[I.category], I.name, I)
 
@@ -85,6 +85,8 @@
 	var/atom/A = spawn_item(item, user, U)
 	if(purchase_log_vis && U.purchase_log)
 		U.purchase_log.LogPurchase(A, src, cost)
+	if(U.disappearing && ((U.hidden_crystals + U.telecrystals) <= 0))
+		U.destroyuplink()
 
 /datum/uplink_item/proc/spawn_item(spawn_path, mob/user, datum/component/uplink/U)
 	if(!spawn_path)

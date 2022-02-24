@@ -19,9 +19,9 @@
 	throw_range = 7
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/uplink/Initialize(mapload, owner, tc_amount = 20)
+/obj/item/uplink/Initialize(mapload, owner, tc_amount = 20, special = null)
 	. = ..()
-	AddComponent(/datum/component/uplink, owner, FALSE, TRUE, null, tc_amount)
+	AddComponent(/datum/component/uplink, owner, FALSE, TRUE, null, tc_amount, _special_type = special)
 
 /obj/item/uplink/nuclear/Initialize()
 	. = ..()
@@ -78,9 +78,8 @@
 	icon = 'icons/effects/landmarks_static.dmi'
 	icon_state = "random_loot"
 
-/obj/item/uplink/old/Initialize(mapload, owner, tc_amount = 120)
+/obj/item/uplink/loadoutselector/Initialize(mapload, owner, tc_amount = 120, special = "f13")
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, ROUNDSTART_TRAIT)
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
 	hidden_uplink.name = "loadout selector"
-	hidden_uplink.special_type = f13

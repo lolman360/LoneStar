@@ -116,155 +116,22 @@
 
 /datum/uplink_item/suits/f13/choice
 	name = "clothes choice box"
+	desc = "Allows you to pick your sick threads."
 	item = /obj/item/choice_beacon/box/clothes
 
 /datum/uplink_item/suits/f13/citizen
 	name = "citizenship permit choice box"
+	desc = "Ever wanted to pay taxes? Here's your chance."
 	item = /obj/item/choice_beacon/box/permit
 
 /datum/uplink_item/suits/f13/helmet
+	name = "Helmet Selector"
+	desc = "Allows you to pick between a variety of different helmets."
+	item = /obj/item/choice_beacon/box/helmet
 	cost = 15
 
-
-/datum/uplink_item/suits/f13/helmet/wayfarerantler
-	name = "Antler Skullcap"
-	item = /obj/item/clothing/head/helmet/f13/wayfarer/antler
-
-/datum/uplink_item/suits/f13/helmet/wayfarerhunter
-	name = "Hunter's Skullcap"
-	item = /obj/item/clothing/head/helmet/f13/wayfarer/hunter
-
-/datum/uplink_item/suits/f13/helmet/eyebot
-	name = "Eyebot Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/eyebot
-
-/datum/uplink_item/suits/f13/helmet/arclight
-	name = "Arclight Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/arclight
-
-/datum/uplink_item/suits/f13/helmet/blastmaster
-	name = "Blastmaster Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/blastmaster
-
-/datum/uplink_item/suits/f13/helmet/yankee
-	name = "Yankee Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/yankee
-
-/datum/uplink_item/suits/f13/helmet/psychotic
-	name = "Psycho-Tic Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/psychotic
-
-/datum/uplink_item/suits/f13/helmet/fiend
-	name = "Fiend Helmet"
-	item = /obj/item/clothing/head/helmet/f13/fiend
-
-/datum/uplink_item/suits/f13/helmet/eyebot
-	name = "Eyebot Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/eyebot
-
-/datum/uplink_item/suits/f13/helmet/arclight
-	name = "Arclight Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/arclight
-
-/datum/uplink_item/suits/f13/helmet/blastmaster
-	name = "Blastmaster Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/blastmaster
-
-/datum/uplink_item/suits/f13/helmet/yankee
-	name = "Yankee Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/yankee
-
-/datum/uplink_item/suits/f13/helmet/psychotic
-	name = "Psycho-Tic Helmet"
-	item = /obj/item/clothing/head/helmet/f13/raider/psychotic
-
-/datum/uplink_item/suits/f13/helmet/fiend
-	name = "Fiend Helmet"
-	item = /obj/item/clothing/head/helmet/f13/fiend
-
 /datum/uplink_item/suits/f13/armor
+	name = "Armor Selector"
+	desc = "Allows you to pick between a variety of different armors."
+	item = /obj/item/choice_beacon/box/armor
 	cost = 15 //armor+helmet/weapon/skillbook should be 30/30/30, leaving 30 to spend on misc, ammo, etc
-
-/datum/uplink_item/suits/f13/armor/kit
-	name = "Armorkit"
-	item = /obj/item/clothing/suit/armor/f13/kit
-
-/datum/uplink_item/suits/f13/armor/lightcloak
-	name = "Light Armored Cloak"
-	item = /obj/item/clothing/suit/armor/f13/lightcloak
-
-/datum/uplink_item/suits/f13/armor/tribalraider
-	name = "Tribal Light Armor"
-	item = /obj/item/clothing/suit/armored/light/tribalraider
-
-/datum/uplink_item/suits/f13/armor/tribal
-	name = "Tribal Armor"
-	item = /obj/item/clothing/suit/armor/f13/tribal
-
-/datum/uplink_item/suits/f13/armor/desert
-	name = "Desert Wanderer's Cloak"
-	item = /obj/item/clothing/suit/hooded/cloak/desert
-
-/datum/uplink_item/suits/f13/armor/whitelegs
-	name = "White-Legs Armor"
-	item = /obj/item/clothing/suit/f13/tribal/whitelegs
-
-/datum/uplink_item/suits/f13/armor/lightwhitelegs
-	name = "White-Legs Light Armor"
-	item = /obj/item/clothing/suit/f13/tribal/light/whitelegs
-
-/datum/uplink_item/suits/f13/armor/deadhorses
-	name = "Dead Horses Armor"
-	item = /obj/item/clothing/suit/f13/tribal/deadhorses
-
-/datum/uplink_item/suits/f13/armor/heavydeadhorses
-	name = "Dead Horses Heavy Armor"
-	item = /obj/item/clothing/suit/f13/tribal/heavy/deadhorses
-
-/datum/uplink_item/suits/f13/armor/lightsorrows
-	name = "Sorrows Light Armor"
-	item = /obj/item/clothing/suit/f13/tribal/light/sorrows
-
-/datum/uplink_item/suits/f13/armor/lighteighties
-	name = "Eighties Light Armor"
-	item = /obj/item/clothing/suit/f13/tribal/light/eighties
-
-/datum/uplink_item/suits/f13/armor/eighties
-	name = "Eighties Armor"
-	item = /obj/item/clothing/suit/f13/tribal/eighties
-
-/datum/uplink_item/suits/f13/armor/heavyeighties
-	name = "Eighties Heavy Armor"
-	item = /obj/item/clothing/suit/f13/tribal/heavy/eighties
-
-/datum/uplink_item/suits/f13/armor/lightrustwalkers
-	name = "Rustwalkers Light Armor"
-	item = /obj/item/clothing/suit/f13/tribal/light/rustwalkers
-
-/datum/uplink_item/suits/f13/armor/rustwalkers
-	name = "Rustwalkers Armor"
-	item = /obj/item/clothing/suit/f13/tribal/rustwalkers
-
-/datum/uplink_item/suits/f13/armor/supafly
-	name = "Supa-Fly Armor"
-	item = /obj/item/clothing/suit/armor/f13/raider/supafly
-
-/datum/uplink_item/suits/f13/armor/yankee
-	name = "Yankee Armor"
-	item = /obj/item/clothing/suit/armor/f13/raider/yankee
-
-/datum/uplink_item/suits/f13/armor/sadist
-	name = "Sadist Armor"
-	item = /obj/item/clothing/suit/armor/f13/raider/sadist
-
-/datum/uplink_item/suits/f13/armor/blastmaster
-	name = "Blastmaster Armor"
-	item = /obj/item/clothing/suit/armor/f13/raider/blastmaster
-
-/datum/uplink_item/suits/f13/armor/badlands
-	name = "Badlands Raider Armor"
-	item = /obj/item/clothing/suit/armor/f13/raider/badlands
-
-/datum/uplink_item/suits/f13/armor/painspike
-	name = "Painspike Armor"
-	item = /obj/item/clothing/suit/armor/f13/raider/painspike

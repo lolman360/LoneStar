@@ -84,6 +84,7 @@
 /datum/uplink_item/dangeous/f13
 	cost = 20 //f13 uplinks start with 120, 20 for mainarm 10 for sidearm generally
 	surplus = 0
+	category = "Conspicuous Weapons"
 	cant_discount = FALSE
 	refundable = TRUE
 	illegal_tech = FALSE

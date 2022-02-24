@@ -329,5 +329,49 @@
 	var/static/list/listofpermit = list("Legion Permit" = /obj/item/card/id/dogtag/town/legion,
 	"NCR Permit" = /obj/item/card/id/dogtag/town/ncr)
 
-/obj/item/choice_beacon/box/clothes/generate_display_names()
+/obj/item/choice_beacon/box/permit/generate_display_names()
 	return listofpermit
+
+/obj/item/choice_beacon/box/helmet
+	name = "choice box (helmet)"
+	desc = "A box containing a single helmet of your choice."
+	var/static/list/headlist = list("Antler Skullcap" = /obj/item/clothing/head/helmet/f13/wayfarer/antler,
+	"Hunter's Skullcap" = /obj/item/clothing/head/helmet/f13/wayfarer/hunter,
+	"Eyebot Helmet" = /obj/item/clothing/head/helmet/f13/raider/eyebot,
+	"Arclight Helmet" = /obj/item/clothing/head/helmet/f13/raider/arclight,
+	"Blastmaster Helmet" = /obj/item/clothing/head/helmet/f13/raider/blastmaster,
+	"Yankee Helmet" = /obj/item/clothing/head/helmet/f13/raider/yankee,
+	"Psycho-Tic Helmet" = /obj/item/clothing/head/helmet/f13/raider/psychotic,
+	"Supa-Fly Helmet" = /obj/item/clothing/head/helmet/f13/raider/supafly,
+	"Fiend Helmet" = /obj/item/clothing/head/helmet/f13/fiend)
+
+/obj/item/choice_beacon/box/helmet/generate_display_names()
+	return headlist
+
+/obj/item/choice_beacon/box/armor
+	name = "choice box (armor)"
+	desc = "A box containing a single armor of your choice."
+	var/static/list/armorlist = list("Armorkit" = /obj/item/clothing/suit/armor/f13/kit,
+	"Light Armored Cloak" = /obj/item/clothing/suit/armor/f13/lightcloak,
+	"Tribal Light Armor" = /obj/item/clothing/suit/armored/light/tribalraider,
+	"Tribal Armor" = /obj/item/clothing/suit/armor/f13/tribal,
+	"Desert Wanderer's Cloak" = /obj/item/clothing/suit/hooded/cloak/desert,
+	"White-Legs Armor" = /obj/item/clothing/suit/f13/tribal/whitelegs,
+	"White-Legs Light Armor" = /obj/item/clothing/suit/f13/tribal/light/whitelegs,
+	"Dead Horses Armor" = /obj/item/clothing/suit/f13/tribal/deadhorses,
+	"Dead Horses Heavy Armor" = /obj/item/clothing/suit/f13/tribal/heavy/deadhorses,
+	"Sorrows Light Armor" = /obj/item/clothing/suit/f13/tribal/light/sorrows,
+	"Eighties Light Armor" = /obj/item/clothing/suit/f13/tribal/light/eighties,
+	"Eighties Armor" = /obj/item/clothing/suit/f13/tribal/eighties,
+	"Eighties Heavy Armor" = /obj/item/clothing/suit/f13/tribal/heavy/eighties,
+	"Rustwalkers Light Armor" = /obj/item/clothing/suit/f13/tribal/light/rustwalkers,
+	"Rustwalkers Armor" = /obj/item/clothing/suit/f13/tribal/rustwalkers,
+	"Supa-Fly Armor" = /obj/item/clothing/suit/armor/f13/raider/supafly,
+	"Yankee Armor" = /obj/item/clothing/suit/armor/f13/raider/yankee,
+	"Sadist Armor" = /obj/item/clothing/suit/armor/f13/raider/sadist,
+	"Blastmaster Armor" = /obj/item/clothing/suit/armor/f13/raider/blastmaster,
+	"Badlands Raider Armor" = /obj/item/clothing/suit/armor/f13/raider/badlands,
+	"Painspike Armor" = /obj/item/clothing/suit/armor/f13/raider/painspike)
+
+/obj/item/choice_beacon/box/armor/generate_display_names()
+	return armorlist
