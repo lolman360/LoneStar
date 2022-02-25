@@ -177,7 +177,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 /obj/item/projectile/bullet/a50MG/contam
 	name = "12.7mm contaminated bullet"
 	damage = -10
-	var/smoke_radius = 3
+	var/smoke_radius = 1
 
 /obj/item/projectile/bullet/a50MG/contam/Initialize()
 	. = ..()
@@ -185,7 +185,6 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	reagents.add_reagent(/datum/reagent/toxin/metabtoxin, 15)
 
 /obj/item/projectile/bullet/a50MG/contam/on_hit(atom/target, blocked = FALSE)
-	..()
 	var/location = get_turf(src)
 	var/datum/effect_system/smoke_spread/chem/S = new
 	S.attach(location)
@@ -193,6 +192,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	if(S)
 		S.set_up(src, smoke_radius, location, 0)
 		S.start()
+	..()
 
 //////////////////////
 // 4.73 MM CASELESS //
@@ -300,3 +300,13 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	ricochet_decay_damage = 1
 	ricochet_decay_chance = 11
 	ricochet_chance = 100
+	var/penetratees = 3
+
+/obj/item/projectile/bullet/c2mm/blender/on_hit(atom/target)
+	. = ..()
+	if(isliving(target))
+		if(penetratees)
+			penetratees--
+			range++
+		if(range > 0)
+			return BULLET_ACT_FORCE_PIERCE

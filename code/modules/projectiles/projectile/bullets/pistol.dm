@@ -145,11 +145,11 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/c9mm/acid/Initialize()
 	. = ..()
-	create_reagents(5, NO_REACT, NO_REAGENTS_VALUE)
-	reagents.add_reagent(acid_type, 5)
+	create_reagents(2.5, NO_REACT, NO_REAGENTS_VALUE)
+	reagents.add_reagent(acid_type, 2.5)
 
 /obj/item/projectile/bullet/c9mm/acid/on_hit(atom/target, blocked = FALSE)
-	..()
+	. = ..()
 	if(isliving(target))
 		var/mob/living/M = target
 		reagents.reaction(M, TOUCH)
@@ -281,7 +281,7 @@ Uranium, Contaminated
 	reagents.add_reagent(acid_type, 5)
 
 /obj/item/projectile/bullet/a357/acid/on_hit(atom/target, blocked = FALSE)
-	..()
+	. = ..()
 	if(isliving(target))
 		var/mob/living/M = target
 		reagents.reaction(M, TOUCH)
@@ -347,7 +347,7 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/c4570/acid
 	name = ".45-70 acid-tipped bullet"
-	damage = -5
+	damage = -10
 	wound_bonus = 0
 	sharpness = SHARP_NONE
 	var/acid_type = /datum/reagent/toxin/acid/fluacid
@@ -358,7 +358,7 @@ Uranium, Contaminated
 	reagents.add_reagent(acid_type, 10)
 
 /obj/item/projectile/bullet/c4570/acid/on_hit(atom/target, blocked = FALSE)
-	..()
+	. = ..()
 	if(isliving(target))
 		var/mob/living/M = target
 		reagents.reaction(M, TOUCH)
@@ -392,7 +392,7 @@ Uranium, Contaminated
 /obj/item/projectile/bullet/mm14/contam
 	name = "14mm contaiminated bullet"
 	damage = -10
-	var/smoke_radius = 3
+	var/smoke_radius = 1
 
 /obj/item/projectile/bullet/mm14/contam/Initialize()
 	. = ..()
@@ -400,7 +400,7 @@ Uranium, Contaminated
 	reagents.add_reagent(/datum/reagent/toxin/metabtoxin, 15)
 
 /obj/item/projectile/bullet/mm14/contam/on_hit(atom/target, blocked = FALSE)
-	..()
+	. = ..()
 	var/location = get_turf(src)
 	var/datum/effect_system/smoke_spread/chem/S = new
 	S.attach(location)
@@ -408,6 +408,7 @@ Uranium, Contaminated
 	if(S)
 		S.set_up(src, smoke_radius, location, 0)
 		S.start()
+
 
 /obj/item/projectile/bullet/mm14/uraniumtipped
 	name = "14mm uranium-tipped bullet"

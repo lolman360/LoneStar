@@ -61,8 +61,8 @@
 /obj/item/ammo_box/shotgun/trainshot
 	name = "trainshot shotshell ammo box"
 	desc = "A box full of trainshot shells. For hunting trains, you suppose."
-	ammo_type = /obj/item/ammo_casing/shotgun/rubbershot
-	icon_state = "stunbox"
+	ammo_type = /obj/item/ammo_casing/shotgun/trainshot
+	icon_state = "trainshotbox"
 
 //.22 LR
 /obj/item/ammo_box/m22
