@@ -122,7 +122,6 @@
 /obj/item/mine/Destroy()
 	qdel(wires)
 	wires = null
-	target = null
 	return ..()
 
 /obj/item/mine/attack_self(mob/user)
