@@ -647,7 +647,7 @@ Raider
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/gun/ballistic/automatic/smg/greasegun = 1,
 		/obj/item/melee/onehanded/knife/switchblade = 1,
-		/obj/item/ammo_box/magazine/uzim9mm = 2,
+		/obj/item/ammo_box/magazine/greasegun = 2,
 		/obj/item/card/id/dogtag/town/mafia=1,
 		)
 
