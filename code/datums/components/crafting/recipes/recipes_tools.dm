@@ -123,7 +123,7 @@
 
 /datum/crafting_recipe/msreloader
 	name = "Makeshift Reloading Press"
-	result = /obj/item/weldingtool/crude
+	result = /obj/item/crafting/reloader
 	time = 80
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 				/obj/item/stack/sheet/metal = 2,
