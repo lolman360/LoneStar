@@ -97,3 +97,11 @@
 	damage = 10
 	wound_bonus = 30
 	sharpness = SHARP_EDGED
+
+/obj/item/shrapnel/bullet/a556/microshrapnel
+	name = "\improper 5.56mm microshrapnel bullet"
+	embedding = list(embed_chance=5, fall_chance=1, jostle_chance=1, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=6, rip_time=10, embed_chance_turf_mod=-100)
+
+/obj/item/shrapnel/bullet/a762/microshrapnel
+	name = "\improper 7.62mm microshrapnel bullet"
+	embedding = list(embed_chance=15, fall_chance=1, jostle_chance=1, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=6, rip_time=10, embed_chance_turf_mod=-100)

@@ -73,7 +73,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	bare_wound_bonus = 15
 	wound_falloff_tile = 0.5
 	embed_falloff_tile = 0.5
-	embedding = list(embed_chance=10, fall_chance=1, jostle_chance=1, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=10)
+	shrapnel_type = /obj/item/shrapnel/bullet/a556/microshrapnel
 
 /obj/item/projectile/bullet/a556/simple //for simple mobs, separate to allow balancing
 	name = "5.56 bullet"
@@ -126,7 +126,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	bare_wound_bonus = 15
 	wound_falloff_tile = 0.5
 	embed_falloff_tile = 0.5
-	embedding = list(embed_chance=15, fall_chance=1, jostle_chance=1, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=10)
+	shrapnel_type = /obj/item/shrapnel/bullet/a556/microshrapnel
 
 /////////
 // .50 //

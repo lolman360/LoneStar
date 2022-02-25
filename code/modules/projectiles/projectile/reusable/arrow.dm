@@ -80,16 +80,16 @@
 	name = "broadhead arrow"
 	desc = "An arrow that sticks in wounds. Badly."
 	armour_penetration = 0.1
-	damage = 25
-	embedding = list(embed_chance=75, fall_chance=0, jostle_chance=3, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=25)
+	damage = 20
+	embedding = list(embed_chance=100, fall_chance=0, jostle_chance=10, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.1, pain_mult=3, jostle_pain_mult=5, rip_time=25)
 	shrapnel_type = /obj/item/ammo_casing/caseless/arrow/broadhead
-
+//	 dropped = FALSE i might need this
 
 /obj/item/projectile/bullet/reusable/arrow/serrated
 	name = "serrated arrow"
 	desc = "An arrow that can sever arteries!"
 	wound_bonus = 25
 	bare_wound_bonus = 20
-	sharpess = SHARP_EDGED
+	sharpness = SHARP_EDGED
 	armour_penetration = 0.05
 	damage = 30
