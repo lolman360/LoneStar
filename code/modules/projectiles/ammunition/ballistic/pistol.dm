@@ -20,17 +20,22 @@
 	caliber = "9mm"
 	projectile_type = /obj/item/projectile/bullet/c9mm
 
+/obj/item/ammo_casing/c9mm/improv
+	name = "homemade 9mm bullet casing"
+	desc = "A homemade 9mm bullet casing."
+	projectile_type = /obj/item/projectile/bullet/c9mm/improv
+
 /obj/item/ammo_casing/c9mm/rubber
 	name = "9mm rubber bullet casing"
 	desc = "A 9mm rubber bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c9mm/rubber
 
-/obj/item/projectile/bullet/c9mm/acid
+/obj/item/ammo_casing/c9mm/acid
 	name = "9mm acid-tipped bullet casing"
 	desc = "A 9mm acid-tipped bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c9mm/acid
 
-/obj/item/projectile/bullet/c9mm/incendiary
+/obj/item/ammo_casing/c9mm/incendiary
 	name = "9mm incendiary bullet casing"
 	desc = "A 9mm incendiary bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c9mm/incendiary
@@ -65,7 +70,7 @@
 	desc = "A .22lr rubber bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c22/rubber
 
-/obj/item/projectile/bullet/c22/shock
+/obj/item/projectile/bullet/a22/shock
 	name = ".22lr shock bullet casing"
 	desc = "A .22lr shock bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c22/shock

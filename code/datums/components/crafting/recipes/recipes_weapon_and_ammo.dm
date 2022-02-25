@@ -208,7 +208,7 @@
 	result = /obj/item/ammo_box/m22/shock
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/cable_coil = 5,
-	obj/item/stack/crafting/electronicparts = 2,
+	/obj/item/stack/crafting/electronicparts = 2,
 	/obj/item/stack/sheet/metal = 1,
 	/datum/reagent/blackpowder = 50
 	)
@@ -219,7 +219,7 @@
 
 /datum/crafting_recipe/c9mm
 	name = "9mm handloaded ammo bag"
-	result = /obj/item/ammo_box/c9mm/improvised
+	result = /obj/item/ammo_box/c9mm/improv
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 	/datum/reagent/blackpowder = 25
 	)
@@ -233,7 +233,7 @@
 	result = /obj/item/ammo_box/c9mm/acid
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/sheet/metal = 5,
-	/datum/reagent/acid = 20,
+	/datum/reagent/toxin/acid = 20,
 	/datum/reagent/blackpowder = 50
 	)
 	tools = list(TOOL_AWORKBENCH)
@@ -261,7 +261,7 @@
 	result = /obj/item/ammo_box/c38box/acid
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/sheet/metal = 5,
-	/datum/reagent/acid = 20,
+	/datum/reagent/toxin/acid = 20,
 	/datum/reagent/blackpowder = 50
 	)
 	tools = list(TOOL_AWORKBENCH)
@@ -323,7 +323,7 @@
 	result = /obj/item/ammo_box/a357box/acid
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/sheet/metal = 5,
-	/datum/reagent/acid = 20,
+	/datum/reagent/toxin/acid = 20,
 	/datum/reagent/blackpowder = 50
 	)
 	tools = list(TOOL_AWORKBENCH)
@@ -401,7 +401,7 @@
 	result = /obj/item/ammo_box/c4570box/acid
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
 	/obj/item/stack/sheet/metal = 2,
-	/datum/reagent/acid/fluacid = 20,
+	/datum/reagent/toxin/acid/fluacid = 20,
 	/datum/reagent/blackpowder = 50
 	)
 	tools = list(TOOL_AWORKBENCH)
@@ -442,7 +442,7 @@
 	/obj/item/stack/sheet/mineral/titanium = 1,
 	/obj/item/stack/sheet/prewar = 1,
 	/obj/item/stack/cable_coil = 5,
-	obj/item/stack/crafting/electronicparts = 2,
+	/obj/item/stack/crafting/electronicparts = 2,
 	/datum/reagent/blackpowder = 50
 	)
 	tools = list(TOOL_AWORKBENCH)

@@ -78,6 +78,9 @@ Uranium, Contaminated
 	wound_bonus = 0
 	sharpness = SHARP_NONE
 
+/obj/item/projectile/bullet/c38/improv
+	damage = -3
+
 /obj/item/projectile/bullet/c38/acid
 	name = ".38 acid-tipped bullet"
 	damage = -5
@@ -92,8 +95,11 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/c38/acid/on_hit(atom/target, blocked = FALSE)
 	..()
-	reagents.reaction(M, TOUCH)
-	reagents.trans_to(M, reagents.total_volume)
+	if(isliving(target))
+		var/mob/living/M = target
+		reagents.reaction(M, TOUCH)
+		reagents.trans_to(M, reagents.total_volume)
+
 
 /obj/item/projectile/bullet/c38/incendiary
 	name = ".38 incendiary bullet"
@@ -144,8 +150,10 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/c9mm/acid/on_hit(atom/target, blocked = FALSE)
 	..()
-	reagents.reaction(M, TOUCH)
-	reagents.trans_to(M, reagents.total_volume)
+	if(isliving(target))
+		var/mob/living/M = target
+		reagents.reaction(M, TOUCH)
+		reagents.trans_to(M, reagents.total_volume)
 
 /obj/item/projectile/bullet/c9mm/incendiary
 	name = "9mm incendiary bullet"
@@ -159,6 +167,8 @@ Uranium, Contaminated
 		M.adjust_fire_stacks(fire_stacks)
 		M.IgniteMob()
 
+/obj/item/projectile/bullet/c9mm/improv
+	damage = -3
 
 /obj/item/projectile/bullet/c9mm/simple //for simple mobs, separate to allow balancing
 	name = "9mm bullet"
@@ -272,8 +282,10 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/a357/acid/on_hit(atom/target, blocked = FALSE)
 	..()
-	reagents.reaction(M, TOUCH)
-	reagents.trans_to(M, reagents.total_volume)
+	if(isliving(target))
+		var/mob/living/M = target
+		reagents.reaction(M, TOUCH)
+		reagents.trans_to(M, reagents.total_volume)
 
 /obj/item/projectile/bullet/a357/incendiary
 	name = ".357 incendiary bullet"
@@ -347,8 +359,10 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/c4570/acid/on_hit(atom/target, blocked = FALSE)
 	..()
-	reagents.reaction(M, TOUCH)
-	reagents.trans_to(M, reagents.total_volume)
+	if(isliving(target))
+		var/mob/living/M = target
+		reagents.reaction(M, TOUCH)
+		reagents.trans_to(M, reagents.total_volume)
 
 /obj/item/projectile/bullet/c4570/knockback
 	name = ".45-70 ultradense bullet"
