@@ -113,11 +113,12 @@
 	AddElement(/datum/element/empprotection, EMP_PROTECT_WIRES)
 
 /obj/item/mine/Initialize()
+	. = ..()
 	if(random)
 		wires = new /datum/wires/explosive/mine/random(src)
 	else
 		wires = new /datum/wires/explosive/mine(src)
-	..()
+	
 
 /obj/item/mine/Destroy()
 	qdel(wires)
