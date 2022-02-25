@@ -42,7 +42,7 @@
 	reqs = list(/datum/reagent/blackpowder = 50,
 				/obj/item/crafting/coffee_pot = 1,
 				/obj/item/stack/cable_coil = 1,
-				/obj/item/crafting/timer = 1,)
+				/obj/item/assembly/timer = 1,)
 	time = 30
 	category = CAT_EXPLOSIVE
 
@@ -142,9 +142,9 @@
 	reqs = list(
 			/obj/item/stack/sheet/metal = 10,
 			/obj/item/stack/crafting/metalparts = 5,
-			/obj/item/stack/crafting/goodparts = 1,
+			/obj/item/stack/crafting/goodparts = 2,
 			/obj/item/stack/crafting/electronicparts = 5,
-			/obj/item/stack/ore/blackpowder = 5,
+			/obj/item/stack/ore/blackpowder = 4,
 			/obj/item/assembly/prox_sensor = 1,
 			/obj/item/stack/cable_coil = 5
 	)
@@ -159,7 +159,7 @@
 	reqs = list(
 			/obj/item/stack/sheet/metal = 15,
 			/obj/item/stack/crafting/metalparts = 5,
-			/obj/item/stack/crafting/goodparts = 1,
+			/obj/item/stack/crafting/goodparts = 2,
 			/obj/item/stack/crafting/electronicparts = 5,
 			/obj/item/stack/ore/blackpowder = 2,
 			/obj/item/assembly/prox_sensor = 1,
@@ -176,7 +176,7 @@
 	reqs = list(
 			/obj/item/stack/sheet/metal = 15,
 			/obj/item/stack/crafting/metalparts = 5,
-			/obj/item/stack/crafting/goodparts = 1,
+			/obj/item/stack/crafting/goodparts = 3,
 			/obj/item/stack/crafting/electronicparts = 5,
 			/obj/item/stack/ore/blackpowder = 10,
 			/obj/item/assembly/prox_sensor = 1,
@@ -266,8 +266,7 @@
 			/obj/item/assembly/prox_sensor = 1,
 			/datum/reagent/iron = 30,
 			/datum/reagent/radium = 30,
-			/obj/item/crafting = 10,
-			/obj/item/stack/cable_coil = 200
+			/obj/item/stack/cable_coil = 60
 	)
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
@@ -296,8 +295,8 @@
 	reqs = list(
 		/obj/item/rocketshell = 1,
 		/obj/item/stack/crafting/electronicparts = 5,
+		/obj/item/stack/sheet/mineral/titanium = 5,
 		/obj/item/stack/ore/blackpowder = 3,
-		/obj/item/crafting = 5
 	)
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
@@ -326,7 +325,7 @@
 		/obj/item/stack/crafting/electronicparts = 15,
 		/obj/item/stack/sheet/prewar = 5,
 		/obj/item/stack/ore/blackpowder = 15,
-		/datum/reagent/napalm = 100
+		/datum/reagent/napalm = 120
 	)
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
