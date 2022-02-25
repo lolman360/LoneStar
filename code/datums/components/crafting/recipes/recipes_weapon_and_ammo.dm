@@ -257,7 +257,7 @@
 
 
 /datum/crafting_recipe/c38boxacid
-	name = ".38 acid-tipped ammo bag"
+	name = ".38 acid-tipped ammo box"
 	result = /obj/item/ammo_box/c38box/acid
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/sheet/metal = 5,
@@ -270,7 +270,7 @@
 	subcategory = CAT_AMMO
 
 /datum/crafting_recipe/c38boxincin
-	name = ".38 incendiary-tipped ammob ox"
+	name = ".38 incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/c38box/incendiary
 	reqs = list(/obj/item/stack/crafting/metalparts = 1,
 	/obj/item/stack/sheet/metal = 5,
