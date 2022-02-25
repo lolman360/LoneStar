@@ -96,9 +96,9 @@
 	subcategory = CAT_MELEE
 	always_available = FALSE
 
-/////////////////////////
-///POWER CELL RECYCLING//
-/////////////////////////
+////////////////
+///POWER CELLS//
+///////////////
 
 /datum/crafting_recipe/ecrecharge
 	name = "Small Energy Cell (recycle)"
@@ -149,6 +149,86 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+
+
+
+/////////////////
+///ammo        //
+/////////////////
+
+/datum/crafting_recipe/flamerfuel
+	name = "Flamethrower Fuel"
+	result = /obj/item/ammo_box/jerrycan
+	reqs = list(/datum/reagent/napalm = 50,
+				/obj/item/reagent_containers/glass/beaker/large)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/m22
+	name = ".22 Long Rifle ammo box"
+	result = /obj/item/ammo_box/m22
+	reqs = list(/obj/item/stack/crafting/metalparts = 1,
+	/obj/item/stack/sheet/metal = 1,
+	/datum/reagent/blackpowder = 30
+	)
+	tools = list(TOOL_WORKBENCH)
+	time = 75
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/m22rubber
+	name = ".22 Long Rifle rubber ammo box"
+	result = /obj/item/ammo_box/m22/rubber
+	reqs = list(/obj/item/stack/sheet/metal = 4,
+	/datum/reagent/blackpowder = 15
+	)
+	tools = list(TOOL_WORKBENCH)
+	time = 75
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/c9mm
+	name = "9mm handloaded ammo"
+	result = /obj/item/ammo_box/c9mm
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+	/datum/reagent/blackpowder = 25
+	)
+	tools = list(TOOL_MSRELOADER)
+	time = 75
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/c9mmms
+	name = "9mm micro-shrapnel ammo"
+	result = /obj/item/ammo_box/c9mm/microshrapnel
+	reqs = list(/obj/item/stack/crafting/metalparts = 1,
+	/obj/item/stack/sheet/metal = 5,
+	/obj/item/stack/sheet/glass = 2,
+	/datum/reagent/blackpowder = 50
+	)
+	tools = list(TOOL_AWORKBENCH)
+	time = 75
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/c9mmincin
+	name = "9mm micro-shrapnel ammo"
+	result = /obj/item/ammo_box/c9mm/microshrapnel
+	reqs = list(/obj/item/stack/crafting/metalparts = 1,
+	/obj/item/stack/sheet/metal = 5,
+	/datum/reagent/fuel = 20,
+	/datum/reagent/blackpowder = 50
+	)
+	tools = list(TOOL_AWORKBENCH)
+	time = 75
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/////////////////
+///GUN CRAFTING//
+/////////////////
 /datum/crafting_recipe/gun/rockitlauncher
 	name = "Rock-It-Launcher"
 	result = /obj/item/rockitlauncher_pack
@@ -163,22 +243,6 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-
-/datum/crafting_recipe/flamerfuel
-	name = "Flamethrower Fuel"
-	result = /obj/item/ammo_box/jerrycan
-	reqs = list(/datum/reagent/napalm = 50,
-				/obj/item/reagent_containers/glass/beaker/large)
-	tools = list(TOOL_WORKBENCH)
-	time = 30
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-
-
-
-/////////////////
-///GUN CRAFTING//
-/////////////////
 
 //Hobo Guns
 /datum/crafting_recipe/gun/zipgun

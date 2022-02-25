@@ -5,13 +5,30 @@
 //////////////////////
 /*
 FMJ (full metal jacket)		=	Baseline
-AP (armor piercing)			=	-20% damage. AP increased by 0.2. Wound bonus -50%
-JHP (jacketed hollow point)	=	+15% damage. AP reduced by 0.2 (not below zero). Wound bonus + 50%
-SWC (semi wadcutter)		=	AP reduced by 0.1. Wound bonus +50%
-P+ (overpressure)			=	extra speed 500. AP +25%
-Match						=	extra speed 200. AP +10%. Wound bonus -10%
-Civilian round				=	-10% damage for .223. AP reduced by 50%
++P/+P+ = used by simplemobs
+SHOCK = low-severity emp, -damage base, bonus burn damage (5-10)
+Incin = -damage, sets target on fire
+Acid = Heavy -damage, coats target in small amount of acid (1-5u)
+Uranium = Irradiates, high AP, lower damage
+Micro-Shrapnel = Wound bonus, embed bonus, high falloff for both
+Contaminated = -damage, spawns a gas cloud that heavily reduces healing efficiency
+Improvised = -1 to -4 damage
+Civilian round				=	-10% damage. AP reduced by 50%
 */
+
+/*
+Ammo groupings for specialty:
+5mm/22lr: Shock
+Small Pistol calibers (38 357 9mm): Acid/Incin
+Large Pistol Calibers (44 45 10mm): Incin
+Very Large pistol (45-70): Knockback, Acid
+autorifle calibers (5.56 7.62): Micro-Shrapnel (wound/embed)
+heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
+*/
+
+// Explanation: Two major ammo stats, AP and Damage. Bullets placed in classes. Light rounds for example balanced with each other, one more AP, one more Damage.
+// Balance between classes mostly done on the gun end, bigger rounds typically fire slower and have more recoil. They are not supposed to be totally equal either.
+
 
 // Explanation: Two major ammo stats, AP and Damage. Bullets placed in classes. Light rounds for example balanced with each other, one more AP, one more Damage.
 // Balance between classes mostly done on the gun end, bigger rounds typically fire slower and have more recoil. They are not supposed to be totally equal either.
@@ -49,11 +66,14 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 	wound_bonus = 0
 	bare_wound_bonus = 0
 
-/obj/item/projectile/bullet/a556/uraniumtipped
-	name = "5.56 uranium-tipped bullet"
+/obj/item/projectile/bullet/a556/shrapnel
+	name = "5.56 microshrapnel bullet"
 	damage = -5
-	armour_penetration = 0.1
-	irradiate = 300
+	wound_bonus = 15
+	bare_wound_bonus = 15
+	wound_falloff_tile = 0.5
+	embed_falloff_tile = 0.5
+	embedding = list(embed_chance=10, fall_chance=1, jostle_chance=1, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=10)
 
 /obj/item/projectile/bullet/a556/simple //for simple mobs, separate to allow balancing
 	name = "5.56 bullet"
@@ -99,6 +119,15 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 	armour_penetration = 0.18
 	irradiate = 300
 
+/obj/item/projectile/bullet/a762/shrapnel
+	name = "7.62 microshrapnel bullet"
+	damage = -7
+	wound_bonus = 15
+	bare_wound_bonus = 15
+	wound_falloff_tile = 0.5
+	embed_falloff_tile = 0.5
+	embedding = list(embed_chance=15, fall_chance=1, jostle_chance=1, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=10)
+
 /////////
 // .50 //
 /////////			-Very heavy rifle round.
@@ -138,6 +167,33 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 	name = ".50 penetrator round"
 	damage = -10
 	movement_type = FLYING | UNSTOPPABLE
+
+/obj/item/projectile/bullet/a50MG/uraniumtipped
+	name = "12.7mm uranium-tipped bullet"
+	damage = -15
+	armour_penetration = 0.2
+	irradiate = 500
+
+/obj/item/projectile/bullet/a50MG/contam
+	name = "12.7mm contaminated bullet"
+	damage = -10
+	var/smoke_radius = 3
+
+/obj/item/projectile/bullet/a50MG/contam/Initialize()
+	. = ..()
+	create_reagents(15, NO_REACT, NO_REAGENTS_VALUE)
+	reagents.add_reagent(/datum/reagent/toxin/metabtoxin, 15)
+
+/obj/item/projectile/bullet/a50MG/contam/on_hit(atom/target, blocked = FALSE)
+	..()
+	var/location = get_turf(src)
+	var/datum/effect_system/smoke_spread/chem/S = new
+	S.attach(location)
+	playsound(location, 'sound/effects/smoke.ogg', 50, 1, -3)
+	if(S)
+		S.set_up(holder, smoke_radius, location, 0)
+		S.start()
+		clear_reagents()
 
 
 //////////////////////
@@ -202,6 +258,21 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 	damage = 19
 	armour_penetration = 0.19
 
+/obj/item/projectile/bullet/m5mm/shock
+	name = "5mm shock bullet"
+	damage = -6 //about -30% damage
+	wound_bonus = 0
+	sharpness = SHARP_NONE
+	var/energy_damage = 5
+
+/obj/item/projectile/bullet/m5mm/shock/on_hit(atom/target, blocked = FALSE)
+	..()
+	target.emp_act(5)//5 severity is very, very low
+	if(blocked != 100 && isliving(target))
+		var/mob/living/L = target
+		L.electrocute_act(energy_damage, "shock bullet", 1, SHOCK_NOGLOVES | SHOCK_NOSTUN) //this might be spammy todo: check
+		//if it is, use O.take_damage(energy_damage, BURN, "energy", FALSE)
+
 //////////////////////////
 // 5 MM minigun special //
 //////////////////////////
@@ -219,3 +290,15 @@ Civilian round				=	-10% damage for .223. AP reduced by 50%
 	damage = 0
 	armour_penetration = 0.9 //if only one bullet has built in AP, its this one
 	pixels_per_second = TILES_TO_PIXELS(100)
+
+
+/obj/item/projectile/bullet/c2mm/blender //welcome to pain town
+	name = "2mm blender projectile"
+	damage = -15
+	hitscan = TRUE
+	armour_penetration = 1
+	ricochets_max = 3
+	ricochet_incidence_leeway = 130
+	ricochet_decay_damage = 1
+	ricochet_decay_chance = 11
+	ricochet_chance = 100

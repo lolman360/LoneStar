@@ -1101,3 +1101,22 @@
 		to_chat(M, "<span class='notice'>Ah, what was that? You thought you heard something...</span>")
 		M.confused += 5
 	return ..()
+
+/datum/reagent/toxin/metabtoxin
+	name = "metabolism-inhibiting toxin"
+	description = "A mix of hepatoxic and nephrotoxic chemicals that cause the liver and kidneys to process medicine less effectively."
+	reagent_state = SOLID
+	color = "#002b00" // rgb: 0 132 0
+	toxpwr = 0.25
+	metabolization_rate = 0.05 * REAGENTS_METABOLISM
+	taste_mult = 1.3
+	taste_description = "bitter sludge"
+	var/metab_inibition = 0.75
+
+/datum/reagent/toxin/metabtoxin/on_mob_metabolize(mob/living/L)
+	..()
+	L.metabolism_efficiency -= metab_inibition
+
+/datum/reagent/toxin/metabtoxin/on_mob_end_metabolize(mob/living/L)
+	..()
+	L.metabolism_efficiency += metab_inibition
