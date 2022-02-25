@@ -79,6 +79,6 @@
 
 /obj/item/ammo_casing/c2mm/blender
 	name = "2mm gauss blender projectile casing"
-	desc = "A 2mm gauss projectile casing, /"Blender/" variant. Bounces off walls at hypersonic speeds."
+	desc = "A 2mm gauss projectile casing, \"Blender\" variant. Bounces off walls at hypersonic speeds."
 	caliber = "2mm"
 	projectile_type = /obj/item/projectile/bullet/c2mm/blender
