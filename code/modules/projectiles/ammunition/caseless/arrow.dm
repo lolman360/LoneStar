@@ -37,6 +37,19 @@
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow/burning
 	icon_state = "arrow_burning"
 
+/obj/item/ammo_casing/caseless/arrow/broadhead
+	name = "broadhead arrow"
+	desc = "A sharp metal arrow with a broad head. Likely to stick in a wound."
+	icon_state = "arrow_broadhead"
+	projectile_type = /obj/item/projectile/bullet/reusable/arrow/broadhead
+	embedding = list(embed_chance=75, fall_chance=0, jostle_chance=3, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=25)
+
+/obj/item/ammo_casing/caseless/arrow/serrated
+	name = "serrated arrow"
+	desc = "A sharp metal arrow with a wicked sharp serrated teeth. Likely to shred an artery."
+	icon_state = "arrow_serrated"
+	projectile_type = /obj/item/projectile/bullet/reusable/arrow/broadhead
+
 //CIT ARROWS
 /obj/item/ammo_casing/caseless/arrow/wood
 	name = "wooden arrow"

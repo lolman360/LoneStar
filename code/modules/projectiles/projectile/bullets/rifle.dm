@@ -294,6 +294,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	name = "2mm blender projectile"
 	damage = -15
 	hitscan = TRUE
+	pass_flags = PASSTABLE | PASSMOB
 	armour_penetration = 1
 	ricochets_max = 3
 	ricochet_incidence_leeway = 130
@@ -305,8 +306,6 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 /obj/item/projectile/bullet/c2mm/blender/on_hit(atom/target)
 	. = ..()
 	if(isliving(target))
-		if(penetratees)
-			penetratees--
-			range++
-		if(range > 0)
-			return BULLET_ACT_FORCE_PIERCE
+		penetratees--
+		if(penetratees <= 0)
+			pass_flags = PASSTABLE
