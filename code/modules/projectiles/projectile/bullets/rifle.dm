@@ -66,7 +66,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	wound_bonus = 0
 	bare_wound_bonus = 0
 
-/obj/item/projectile/bullet/a556/shrapnel
+/obj/item/projectile/bullet/a556/microshrapnel
 	name = "5.56 microshrapnel bullet"
 	damage = -5
 	wound_bonus = 15
@@ -119,7 +119,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	armour_penetration = 0.18
 	irradiate = 300
 
-/obj/item/projectile/bullet/a762/shrapnel
+/obj/item/projectile/bullet/a762/microshrapnel
 	name = "7.62 microshrapnel bullet"
 	damage = -7
 	wound_bonus = 15

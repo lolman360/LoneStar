@@ -38,3 +38,9 @@
 	desc = "A 12.7mm explosive round where the explosive has been replaced with a chemical smoke payload."
 	icon_state = "50ex2"
 	projectile_type = /obj/item/projectile/bullet/a50MG/contam
+
+/obj/item/ammo_casing/a50MG/uraniumtipped
+	name = "12.7mm uranium-tipped bullet casing"
+	desc = "Enriched uranium-tipped 12.7mm rifle rounds."
+	projectile_type = /obj/item/projectile/bullet/a50MG/uraniumtipped
+	icon_state = "50ap2"

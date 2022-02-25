@@ -11,7 +11,7 @@
 	desc = "A .308 sporting bullet casing."
 	projectile_type = /obj/item/projectile/bullet/a762/sport
 
-/obj/item/ammo_casing/a762/shrapnel
+/obj/item/ammo_casing/a762/microshrapnel
 	name = "7.62mm microshrapnel bullet casing"
 	desc = "Like shrapnel, but smaller, and thus more annoying."
 	projectile_type = /obj/item/projectile/bullet/a762/microshrapnel
@@ -38,7 +38,7 @@
 	desc = "A 5.56mm rubber bullet casing, for training purposes."
 	projectile_type = /obj/item/projectile/bullet/a556/rubber
 
-/obj/item/ammo_casing/a556/shrapnel
+/obj/item/ammo_casing/a556/microshrapnel
 	name = "5.56mm microshrapnel bullet casing"
 	desc = "Like shrapnel, but smaller, and thus more annoying."
 	projectile_type = /obj/item/projectile/bullet/a556/microshrapnel

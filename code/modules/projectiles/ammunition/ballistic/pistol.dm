@@ -29,6 +29,11 @@
 	name = "9mm acid-tipped bullet casing"
 	desc = "A 9mm acid-tipped bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c9mm/acid
+
+/obj/item/projectile/bullet/c9mm/incendiary
+	name = "9mm incendiary bullet casing"
+	desc = "A 9mm incendiary bullet casing."
+	projectile_type = /obj/item/projectile/bullet/c9mm/incendiary
 //14mm
 /obj/item/ammo_casing/p14mm
 	name = "14mm FMJ bullet casing"
