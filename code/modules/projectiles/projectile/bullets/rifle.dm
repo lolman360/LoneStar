@@ -193,8 +193,6 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	if(S)
 		S.set_up(src, smoke_radius, location, 0)
 		S.start()
-		clear_reagents()
-
 
 //////////////////////
 // 4.73 MM CASELESS //

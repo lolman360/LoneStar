@@ -408,7 +408,6 @@ Uranium, Contaminated
 	if(S)
 		S.set_up(src, smoke_radius, location, 0)
 		S.start()
-		clear_reagents()
 
 /obj/item/projectile/bullet/mm14/uraniumtipped
 	name = "14mm uranium-tipped bullet"
