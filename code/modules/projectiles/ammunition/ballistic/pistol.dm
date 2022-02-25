@@ -70,7 +70,7 @@
 	desc = "A .22lr rubber bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c22/rubber
 
-/obj/item/projectile/bullet/a22/shock
+/obj/item/ammo_casing/a22/shock
 	name = ".22lr shock bullet casing"
 	desc = "A .22lr shock bullet casing."
 	projectile_type = /obj/item/projectile/bullet/c22/shock

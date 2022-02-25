@@ -191,7 +191,7 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 	S.attach(location)
 	playsound(location, 'sound/effects/smoke.ogg', 50, 1, -3)
 	if(S)
-		S.set_up(holder, smoke_radius, location, 0)
+		S.set_up(src, smoke_radius, location, 0)
 		S.start()
 		clear_reagents()
 

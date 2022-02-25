@@ -314,12 +314,12 @@ Uranium, Contaminated
 	name = ".44 bullet"
 	damage = 40
 
-/obj/item/projectile/bullet/c45/incendiary
-	name = ".45 incendiary bullet"
+/obj/item/projectile/bullet/m44/incendiary
+	name = ".44 incendiary bullet"
 	damage = -5
 	var/fire_stacks = 2
 
-/obj/item/projectile/bullet/c45/incendiary/on_hit(atom/target, blocked = FALSE)
+/obj/item/projectile/bullet/m44/incendiary/on_hit(atom/target, blocked = FALSE)
 	. = ..()
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
@@ -406,7 +406,7 @@ Uranium, Contaminated
 	S.attach(location)
 	playsound(location, 'sound/effects/smoke.ogg', 50, 1, -3)
 	if(S)
-		S.set_up(holder, smoke_radius, location, 0)
+		S.set_up(src, smoke_radius, location, 0)
 		S.start()
 		clear_reagents()
 
