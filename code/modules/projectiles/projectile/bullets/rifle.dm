@@ -292,20 +292,20 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 
 /obj/item/projectile/bullet/c2mm/blender //welcome to pain town
 	name = "2mm blender projectile"
-	damage = -15
+	damage = -20
 	hitscan = TRUE
-	pass_flags = PASSTABLE | PASSMOB
+	pass_flags = PASSTABLE
 	armour_penetration = 1
-	ricochets_max = 3
+	ricochets_max = 9 //ain't called the 'blender' for nothin'
 	ricochet_incidence_leeway = 130
 	ricochet_decay_damage = 1
 	ricochet_decay_chance = 11
 	ricochet_chance = 100
-	var/penetratees = 3
+	var/collats = 3
 
-/obj/item/projectile/bullet/c2mm/blender/on_hit(atom/target)
-	. = ..()
-	if(isliving(target))
-		penetratees--
-		if(penetratees <= 0)
-			pass_flags = PASSTABLE
+/obj/item/projectile/bullet/c2mm/blender/process_hit(turf/T, atom/target, qdel_self, hit_something = FALSE)
+	if(isliving(target) && collats)
+		collats--
+		temporary_unstoppable_movement = TRUE
+		ENABLE_BITFIELD(movement_type, UNSTOPPABLE)
+	..()
