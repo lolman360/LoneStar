@@ -1107,7 +1107,7 @@
 	description = "A mix of hepatoxic and nephrotoxic chemicals that cause the liver and kidneys to process medicine less effectively."
 	reagent_state = SOLID
 	color = "#30ff21" // rgb: 0 132 0
-	toxpwr = 0.25
+	toxpwr = 0.1
 	metabolization_rate = 0.07 * REAGENTS_METABOLISM
 	taste_mult = 1.3
 	taste_description = "bitter sludge"
