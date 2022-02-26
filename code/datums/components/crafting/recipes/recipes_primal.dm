@@ -298,7 +298,7 @@
 
 /datum/crafting_recipe/tribalwar/arrowembed
 	name = "Broadhead Arrow"
-	result = /obj/item/ammo_casing/caseless/arrow/Broadhead
+	result = /obj/item/ammo_casing/caseless/arrow/broadhead
 	time = 10
 	reqs = list(
 		/obj/item/stack/rods = 1,
