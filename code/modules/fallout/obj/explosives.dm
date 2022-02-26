@@ -118,7 +118,7 @@
 		wires = new /datum/wires/explosive/mine/random(src)
 	else
 		wires = new /datum/wires/explosive/mine(src)
-	
+
 
 /obj/item/mine/Destroy()
 	qdel(wires)
@@ -140,11 +140,17 @@
 		return
 	armed = TRUE
 
+/obj/item/mine/attackby(obj/item/I, mob/user, params)
+	if(is_wire_tool(I))
+		wires.interact(user)
+	else ..()
 
 /obj/item/mine/proc/mineEffect(mob/victim)
 	to_chat(victim, "<span class='danger'>*click*</span>")
 
 /obj/item/mine/Crossed(atom/movable/AM)
+	if(!armed)
+		return
 	if(triggered || !isturf(loc) || !isliving(AM) || isstructure(AM) || isnottriggermine(AM))
 		return
 	. = ..()
