@@ -81,8 +81,10 @@
 	desc = "An arrow that sticks in wounds. Badly."
 	armour_penetration = 0.1
 	damage = 20
+	sharpness = SHARP_EDGED
 	shrapnel_type = /obj/item/ammo_casing/caseless/arrow/broadhead
 	ammo_type = /obj/item/ammo_casing/caseless/arrow/broadhead
+	embedding = list(embed_chance=100, fall_chance=0, jostle_chance=3, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.2, pain_mult=3, jostle_pain_mult=5, rip_time=25)
 //	 dropped = FALSE i might need this
 
 /obj/item/projectile/bullet/reusable/arrow/serrated
@@ -93,4 +95,4 @@
 	sharpness = SHARP_EDGED
 	armour_penetration = 0.05
 	damage = 30
-	ammo_type = /obj/item/projectile/bullet/reusable/arrow/serrated
+	ammo_type = /obj/item/ammo_casing/caseless/arrow/serrated

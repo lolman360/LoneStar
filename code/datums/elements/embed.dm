@@ -38,7 +38,10 @@
 		return ELEMENT_INCOMPATIBLE
 
 	RegisterSignal(target, COMSIG_ELEMENT_ATTACH, .proc/severancePackage)
-	if(isitem(target))
+	if(isprojectile(target))
+		payload_type = projectile_payload
+		RegisterSignal(target, COMSIG_PROJECTILE_SELF_ON_HIT, .proc/checkEmbedProjectile)
+	else if(isitem(target))
 		RegisterSignal(target, COMSIG_MOVABLE_IMPACT_ZONE, .proc/checkEmbedMob)
 		RegisterSignal(target, COMSIG_MOVABLE_IMPACT, .proc/checkEmbedOther)
 		RegisterSignal(target, COMSIG_PARENT_EXAMINE, .proc/examined)
@@ -58,9 +61,7 @@
 			src.pain_stam_pct = pain_stam_pct
 			src.embed_chance_turf_mod = embed_chance_turf_mod
 			initialized = TRUE
-	else
-		payload_type = projectile_payload
-		RegisterSignal(target, COMSIG_PROJECTILE_SELF_ON_HIT, .proc/checkEmbedProjectile)
+
 
 
 /datum/element/embed/Detach(obj/target)
