@@ -229,7 +229,7 @@
 
 /obj/item/ammo_box/m44box/incendiary
 	name = "ammo box (.44 magnum incendiary-tipped)"
-	desc = "A box of 10mm incendiary-tipped rounds. Filled with a safe homemade naplam made from phosphorus, welding fuel, thickened with abraxo cleaner."
+	desc = "A box of .44 (not 10mm) incendiary-tipped rounds. Filled with a safe homemade naplam made from phosphorus, welding fuel, thickened with abraxo cleaner."
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	ammo_type = /obj/item/ammo_casing/m44/incendiary
 

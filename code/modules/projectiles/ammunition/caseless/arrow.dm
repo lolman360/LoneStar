@@ -43,7 +43,6 @@
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "arrow_broadhead"
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow/broadhead
-	embedding = list(embed_chance=100, fall_chance=0, jostle_chance=3, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.2, pain_mult=3, jostle_pain_mult=5, rip_time=25)
 
 /obj/item/ammo_casing/caseless/arrow/serrated
 	name = "serrated arrow"
