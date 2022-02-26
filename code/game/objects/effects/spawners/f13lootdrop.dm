@@ -820,7 +820,6 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 				/obj/effect/spawner/bundle/f13/thatgun,
 				/obj/effect/spawner/bundle/f13/n99,
 				/obj/effect/spawner/bundle/f13/colt357,
-				/obj/effect/spawner/bundle/f13/beretta,
 				/obj/effect/spawner/bundle/f13/huntingshotgun,
 				/obj/effect/spawner/bundle/f13/police_pistol,
 				/obj/effect/spawner/bundle/f13/guns/commando,
@@ -966,7 +965,7 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 	name = "9mm pistol and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/pistol/ninemil,
-				/obj/item/ammo_box/magazine/m9mm
+				/obj/item/ammo_box/magazine/m9mmds
 				)
 
 /obj/effect/spawner/bundle/f13/varmint
