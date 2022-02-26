@@ -1106,17 +1106,26 @@
 	name = "metabolism-inhibiting toxin"
 	description = "A mix of hepatoxic and nephrotoxic chemicals that cause the liver and kidneys to process medicine less effectively."
 	reagent_state = SOLID
-	color = "#002b00" // rgb: 0 132 0
+	color = "#30ff21" // rgb: 0 132 0
 	toxpwr = 0.25
-	metabolization_rate = 0.05 * REAGENTS_METABOLISM
+	metabolization_rate = 0.07 * REAGENTS_METABOLISM
 	taste_mult = 1.3
 	taste_description = "bitter sludge"
 	var/metab_inibition = 0.75
 
 /datum/reagent/toxin/metabtoxin/on_mob_metabolize(mob/living/L)
 	..()
+	var/obj/item/organ/liver/liber = L.getorganslot(ORGAN_SLOT_LIVER)
+	if(liber)
+		liber.applyOrganDamage(5)
+		liber.filterToxins = FALSE
 	L.metabolism_efficiency -= metab_inibition
 
 /datum/reagent/toxin/metabtoxin/on_mob_end_metabolize(mob/living/L)
 	..()
+	var/obj/item/organ/liver/liber = L.getorganslot(ORGAN_SLOT_LIVER)
+	if(liber)
+		liber.applyOrganDamage(5)
+		if(initial(liber.filterToxins) = TRUE)
+			liber.filterToxins = TRUE
 	L.metabolism_efficiency += metab_inibition

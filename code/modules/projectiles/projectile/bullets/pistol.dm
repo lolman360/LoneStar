@@ -373,7 +373,7 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/c4570/knockback/on_hit(atom/target, blocked = FALSE)
 	. = ..()
-	if(ismovable(target))
+	if(ismovable(target) && prob(50))
 		var/atom/movable/M = target
 		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
 		M.safe_throw_at(throw_target, 2, 3)
@@ -406,7 +406,7 @@ Uranium, Contaminated
 	S.attach(location)
 	playsound(location, 'sound/effects/smoke.ogg', 50, 1, -3)
 	if(S)
-		S.set_up(src, smoke_radius, location, 0)
+		S.set_up(src.reagents, smoke_radius, location, 0)
 		S.start()
 
 
