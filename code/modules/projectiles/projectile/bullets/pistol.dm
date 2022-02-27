@@ -49,7 +49,7 @@ Uranium, Contaminated
 
 /obj/item/projectile/bullet/c22/shock
 	name = ".22lr shock bullet"
-	damage = -6 //about -30% damage
+	damage = -8 //about -50% damage
 	wound_bonus = 0
 	sharpness = SHARP_NONE
 	var/energy_damage = 5
