@@ -114,7 +114,7 @@
 /obj/item/ammo_box/c9mm/incendiary
 	name = "ammo box (9mm incendiary-tipped)"
 	desc = "A box of 9mm incendiary-tipped rounds. This'll burn."
-	ammo_type = /obj/item/projectile/bullet/c9mm/incendiary
+	ammo_type = /obj/item/ammo_casing/c9mm/incendiary
 
 /obj/item/ammo_box/c9mm/improv
 	name = "bag with reloaded 9mm bullets"
@@ -149,7 +149,7 @@
 /obj/item/ammo_box/c38box/incendiary
 	name = "ammo box (.38 incendiary-tipped)"
 	desc = "A box of .38 incendiary-tipped rounds. This'll burn."
-	ammo_type = /obj/item/projectile/bullet/c38/incendiary
+	ammo_type = /obj/item/ammo_casing/c38/incendiary
 
 /obj/item/ammo_box/c38box/improvised
 	name = "bag with reloaded .38 bullets"
