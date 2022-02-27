@@ -106,12 +106,6 @@
 			recharge_newshot(TRUE)
 		update_icon()
 
-// ATTACK SELF IGNORING PARENT RETURN VALUE
-/obj/item/gun/energy/attack_self(mob/living/user)
-	. = ..()
-	if(can_select_fire(user))
-		select_fire(user)
-
 /obj/item/gun/energy/can_shoot()
 	var/obj/item/ammo_casing/energy/shot = ammo_type[current_firemode_index]
 	return !QDELETED(cell) ? (cell.charge >= shot.e_cost) : FALSE
@@ -366,7 +360,11 @@
 		return
 
 /obj/item/gun/energy/attack_self(mob/living/user)
-	if (!ishuman(user))
+	. = ..()
+	if(can_select_fire(user))
+		select_fire(user)
+		return
+	if(!ishuman(user))
 		return
 	if(cell)
 		if(can_charge == 0 && can_remove == 0)
