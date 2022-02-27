@@ -114,7 +114,7 @@
 	item_state = "plasma"
 	icon_state = "plasma"
 	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
+	weapon_weight = WEAPON_LIGHT //you need to wield it to fire it
 	slot_flags = ITEM_SLOT_BACK
 	desc = "An ergonomic pre-war plasmacaster designed for precision mining work. This one appears to be built into a single thick staff, with a bulbous hilt and sharp saturnite alloy blades ringing the caster assembly- strongly resembling sort of spear."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/miner)
@@ -131,7 +131,8 @@
 
 /obj/item/gun/energy/laser/plasma/spear/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=20, force_wielded=30, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=20, force_wielded=30, icon_wielded="[item_state]2")
+	AddElement(/datum/element/update_icon_updates_onmob)
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/allow_fire)
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/deny_fire)
 
