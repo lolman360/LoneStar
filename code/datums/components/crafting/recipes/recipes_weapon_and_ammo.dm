@@ -531,6 +531,22 @@
 	subcategory = CAT_AMMO
 
 
+/datum/crafting_recipe/m14mmboxcontaminated
+	name = "14mm contaminated ammo box"
+	result = /obj/item/ammo_box/m14mm/contam
+	reqs = list(/obj/item/stack/crafting/metalparts = 1,
+	/obj/item/stack/sheet/mineral/titanium = 2,
+	/obj/item/stack/sheet/prewar = 2,
+	/datum/reagent/toxin/formaldehyde = 30,
+	/datum/reagent/blackpowder = 50
+	)
+	tools = list(TOOL_AWORKBENCH)
+	time = 100
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+
+
 /datum/crafting_recipe/m2mmblender
 	name = "2mm \"Blender\" magazine"
 	result = /obj/item/ammo_box/magazine/m2mm/blender
