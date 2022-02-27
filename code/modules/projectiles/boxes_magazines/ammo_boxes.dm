@@ -215,6 +215,13 @@
 	desc = ".357 acid-tipped ammo. There's not much else to it, really."
 	ammo_type = /obj/item/ammo_casing/a357/acid
 
+/obj/item/ammo_box/a357box/improv
+	name = "bag with reloaded .357 bullets"
+	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
+	ammo_type = /obj/item/ammo_casing/a357/improv
+	icon_state = "improvshotbag"
+	multiple_sprites = 1
+
 //.44 Magnum
 /obj/item/ammo_box/m44box
 	name = "ammo box (.44 Magnum FMJ)"

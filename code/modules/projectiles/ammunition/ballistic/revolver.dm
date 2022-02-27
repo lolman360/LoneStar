@@ -15,6 +15,10 @@
 	desc = "A .357 incendiary bullet casing."
 	projectile_type = /obj/item/projectile/bullet/a357/incendiary
 
+/obj/item/ammo_casing/a357/improv
+	name = ".357 improvised bullet casing"
+	desc = "A .357 bullet casing, made by hand."
+	projectile_type = /obj/item/projectile/bullet/a357/improv
 
 /obj/item/ammo_casing/a357/acid
 	name = ".357 special acid-tipped bullet casing"

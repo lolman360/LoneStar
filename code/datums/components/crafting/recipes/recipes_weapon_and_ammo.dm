@@ -344,6 +344,17 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/a357boximprov
+	name = ".357 handloaded ammo bag"
+	result = /obj/item/ammo_box/a357box/improvised
+	reqs = list(/obj/item/stack/sheet/metal = 5,
+	/datum/reagent/blackpowder = 25
+	)
+	tools = list(TOOL_MSRELOADER)
+	time = 75
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
 /datum/crafting_recipe/m44boxincin
 	name = ".44 incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/m44box/incendiary

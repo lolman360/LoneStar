@@ -299,6 +299,9 @@ Uranium, Contaminated
 		M.adjust_fire_stacks(fire_stacks)
 		M.IgniteMob()
 
+/obj/item/projectile/bullet/a357/improv
+	name = "poor .357 bullet"
+	damage = -5
 ////////////////
 // .44 MAGNUM //
 ////////////////		- Higher power round
