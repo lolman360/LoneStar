@@ -215,7 +215,7 @@
 	desc = ".357 acid-tipped ammo. There's not much else to it, really."
 	ammo_type = /obj/item/ammo_casing/a357/acid
 
-/obj/item/ammo_box/a357box/improv
+/obj/item/ammo_box/a357box/improvised
 	name = "bag with reloaded .357 bullets"
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	ammo_type = /obj/item/ammo_casing/a357/improv
