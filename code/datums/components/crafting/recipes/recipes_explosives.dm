@@ -282,7 +282,7 @@
 	reqs = list(/obj/item/rocketshell = 1,
 		/obj/item/stack/crafting/electronicparts = 5,
 		/obj/item/stack/sheet/mineral/titanium = 5,
-		/obj/item/stack/ore/blackpowder = 3,
+		/obj/item/stack/ore/blackpowder = 3
 	)
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
@@ -295,7 +295,7 @@
 	reqs = list(/obj/item/rocketshell = 1,
 		/obj/item/stack/crafting/electronicparts = 15,
 		/obj/item/stack/sheet/prewar = 5,
-		/obj/item/stack/ore/blackpowder = 15,
+		/obj/item/stack/ore/blackpowder = 15
 	)
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
