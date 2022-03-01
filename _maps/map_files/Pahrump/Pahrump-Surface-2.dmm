@@ -6860,6 +6860,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/white,
 /area/f13/building)
+"cXr" = (
+/obj/structure/safe,
+/obj/effect/spawner/lootdrop/f13/cash_random_high,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh,
+/turf/open/floor/f13/wood,
+/area/f13/village)
 "cXt" = (
 /obj/structure/rack,
 /obj/item/reagent_containers/food/snacks/grown/oat,
@@ -27067,6 +27073,13 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building)
+"kYp" = (
+/obj/structure/safe,
+/obj/effect/spawner/lootdrop/f13/cash_random_high,
+/obj/item/stack/f13Cash/random/aureus/high,
+/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/turf/open/floor/f13/wood,
+/area/f13/village)
 "kYr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small,
@@ -41834,6 +41847,8 @@
 /area/f13/caves)
 "rqs" = (
 /obj/structure/safe,
+/obj/effect/spawner/lootdrop/f13/cash_legion_high,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/random_high,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "rqz" = (
@@ -46928,6 +46943,7 @@
 /area/f13/building)
 "tIM" = (
 /obj/structure/safe,
+/obj/effect/spawner/lootdrop/f13/cash_random_high,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/highmid,
 /turf/open/floor/f13/wood,
 /area/f13/village)
@@ -83133,7 +83149,7 @@ uRJ
 uRJ
 uRJ
 gjP
-rqs
+cXr
 vHQ
 uRJ
 ijg
@@ -93659,7 +93675,7 @@ dkg
 pcG
 pcG
 sUf
-rqs
+kYp
 pcG
 lok
 pWe
