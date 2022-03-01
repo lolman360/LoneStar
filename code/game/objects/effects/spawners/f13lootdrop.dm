@@ -562,12 +562,12 @@
 				/obj/item/reagent_containers/hypospray/medipen/medx,
 				/obj/item/storage/pill_bottle/chem_tin/buffout
 				)
-				
+
 
 obj/effect/spawner/lootdrop/f13/medical/rnd/mid
 	name = "mid dungeon science loot"	//to replace guns as treasure in slightly protected areas
 	lootcount = 1
-	
+
 	loot = list(
 		/obj/item/screwdriver/power,
 		/obj/item/wrench/power,
@@ -577,12 +577,12 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/mid
 		/obj/item/defibrillator/primitive,
 		/obj/item/reagent_containers/syringe/bluespace,
 		)
-		
+
 
 obj/effect/spawner/lootdrop/f13/medical/rnd/good
 	name = "good dungeon science loot"	//to replace guns as treasure in heavily guarded areas
 	lootcount = 1
-	
+
 	loot = list(
 		/obj/item/reagent_containers/glass/beaker/meta = 5,
 		/obj/item/stack/sheet/mineral/abductor/ten = 5,
@@ -599,7 +599,7 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 		/obj/item/book/granter/trait/midsurgery = 5,
 		/obj/item/reagent_containers/glass/bottle/FEV_solution = 1,
 		)
-		
+
 /*	------------------------------------------------
 	--------------WEAPON SPAWNERS-------------------
 	------------------------------------------------ */
@@ -857,7 +857,6 @@ obj/effect/spawner/lootdrop/f13/medical/rnd/good
 	loot = list(/obj/effect/spawner/bundle/f13/mp5,
 				/obj/effect/spawner/bundle/f13/smg10mm,
 				/obj/effect/spawner/bundle/f13/needler,
-				/obj/effect/spawner/bundle/f13/beretta/select,
 				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/guns/tommygun,
 				/obj/effect/spawner/bundle/f13/shotgunlever

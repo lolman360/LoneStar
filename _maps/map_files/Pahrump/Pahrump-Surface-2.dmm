@@ -46955,7 +46955,6 @@
 /obj/structure/safe,
 /obj/effect/spawner/lootdrop/f13/cash_random_high,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/highmid,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "tJe" = (
