@@ -28,7 +28,6 @@
 				),
 				CAT_MISC = list(
 					CAT_FARMING,
-					CAT_MISCELLANEOUS,
 					CAT_FURNITURE,
 					CAT_BOTTLE,
 				),

@@ -77,7 +77,6 @@
 #define CAT_FORGING	"Forging & Smithing"
 #define CAT_MISC	"Misc"
 #define CAT_SCAVENGING	"Scavenging & Tinkering"
-#define CAT_MISCELLANEOUS	"Miscellaneous"
 #define CAT_TOOL	"Tools & Workbench"
 #define CAT_FURNITURE	"Burial & Execution"
 #define CAT_FARMING	"Farming"

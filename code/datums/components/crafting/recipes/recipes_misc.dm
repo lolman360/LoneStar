@@ -5,7 +5,6 @@
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 				/obj/item/stack/sheet/glass = 5)
 	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
-
 	category = CAT_MISC
 
 /////////////////
@@ -36,7 +35,7 @@
 	result = /obj/machinery/door/unpowered/secure_bos
 	reqs = list(/obj/item/stack/sheet/metal = 35)
 	time = 60
-	
+
 	category = CAT_MISC
 	always_available = FALSE
 
@@ -56,7 +55,7 @@
 				/obj/item/stack/crafting/metalparts = 5)
 	time = 50
 
-	category = CAT_MISCELLANEOUS
+	category = CAT_MISC
 
 /datum/crafting_recipe/sink
 	name = "Sink"
@@ -64,8 +63,8 @@
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/stack/crafting/metalparts = 5)
 	time = 50
+	category = CAT_MISC
 
-	category = CAT_MISCELLANEOUS
 /datum/crafting_recipe/shower
 	name = "Shower"
 	result = /obj/machinery/shower
@@ -73,7 +72,6 @@
 				/obj/item/stack/crafting/metalparts = 10)
 	tools = list(TOOL_WRENCH, TOOL_SCREWDRIVER)
 	time = 80
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/showercurtain
@@ -82,7 +80,6 @@
 				/obj/item/stack/sheet/plastic = 2,
 				/obj/item/stack/rods = 1)
 	result = /obj/structure/curtain
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/curtain
@@ -90,7 +87,6 @@
 	reqs = list(/obj/item/stack/sheet/cloth = 2,
 				/obj/item/stack/rods = 1)
 	result = /obj/structure/curtain
-
 	category = CAT_MISC
 /datum/crafting_recipe/dogbed
 	name = "Dog Bed"
@@ -98,7 +94,6 @@
 	reqs = 	list(/obj/item/stack/sheet/cloth = 2,
 				/obj/item/stack/sheet/mineral/wood = 5)
 	time = 10
-
 	category = CAT_MISC
 
 ///////////////////////////
@@ -114,7 +109,7 @@
 	subcategory = CAT_SCAVENGING
 
 /datum/crafting_recipe/pin_removal
-	name = "Render gun unusable"
+	name = "Remove firing pin"
 	result = /obj/item/gun
 	reqs = list(/obj/item/gun = 1)
 	parts = list(/obj/item/gun = 1)
@@ -239,7 +234,6 @@
 	result = /obj/machinery/door/poddoor/shutters/old/preopen
 	tools = list(TOOL_SCREWDRIVER, TOOL_MULTITOOL, TOOL_WIRECUTTER, TOOL_WELDER)
 	time = 15 SECONDS
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/blast_doors
@@ -251,7 +245,6 @@
 	result = /obj/machinery/door/poddoor/preopen
 	tools = list(TOOL_SCREWDRIVER, TOOL_MULTITOOL, TOOL_WIRECUTTER, TOOL_WELDER)
 	time = 30 SECONDS
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/shutters/window
@@ -264,7 +257,6 @@
 	result = /obj/machinery/door/poddoor/shutters/window/preopen
 	tools = list(TOOL_SCREWDRIVER, TOOL_MULTITOOL, TOOL_WIRECUTTER, TOOL_WELDER)
 	time = 15 SECONDS
-
 	category = CAT_MISC
 
 /*
@@ -301,7 +293,6 @@
 	result = /obj/item/storage/box/papersack
 	time = 10
 	reqs = list(/obj/item/paper = 5)
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/smallcarton
@@ -309,7 +300,6 @@
 	result = /obj/item/reagent_containers/food/drinks/sillycup/smallcarton
 	time = 10
 	reqs = list(/obj/item/stack/sheet/cardboard = 1)
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/picket_sign
@@ -318,7 +308,6 @@
 	reqs = list(/obj/item/stack/rods = 1,
 				/obj/item/stack/sheet/cardboard = 2)
 	time = 80
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/wheelchair
@@ -327,14 +316,12 @@
 	reqs = list(/obj/item/stack/sheet/plasteel = 2,
 				/obj/item/stack/rods = 8)
 	time = 100
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/blackcarpet
 	name = "Black Carpet"
 	reqs = list(/obj/item/stack/tile/carpet = 50, /obj/item/toy/crayon/black = 1)
 	result = /obj/item/stack/tile/carpet/black/fifty
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/paperframes
@@ -342,7 +329,6 @@
 	result = /obj/item/stack/sheet/paperframes/five
 	time = 10
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 5, /obj/item/paper = 20)
-
 	category = CAT_MISC
 
 /datum/crafting_recipe/naturalpaper
@@ -351,7 +337,6 @@
 	reqs = list(/datum/reagent/water = 50, /obj/item/stack/sheet/mineral/wood = 1)
 	tools = list(/obj/item/hatchet)
 	result = /obj/item/paper_bin/bundlenatural
-
 	category = CAT_MISC
 
 /*
@@ -432,7 +417,6 @@
 	time = 20
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/poppy = 5,
 				/obj/item/stack/cable_coil = 3)
-
 	category = CAT_CLOTHING
 
 /datum/crafting_recipe/lilycrown
@@ -441,5 +425,4 @@
 	time = 20
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/poppy/lily = 3,
 				/obj/item/stack/cable_coil = 3)
-
 	category = CAT_CLOTHING
