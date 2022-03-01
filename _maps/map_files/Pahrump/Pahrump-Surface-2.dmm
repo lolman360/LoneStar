@@ -6862,8 +6862,8 @@
 /area/f13/building)
 "cXr" = (
 /obj/structure/safe,
-/obj/effect/spawner/lootdrop/f13/cash_random_high,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh,
+/obj/effect/spawner/lootdrop/f13/cash_random_med,
+/obj/item/gun/energy/laser/wattz,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "cXt" = (
@@ -27075,9 +27075,8 @@
 /area/f13/building)
 "kYp" = (
 /obj/structure/safe,
-/obj/effect/spawner/lootdrop/f13/cash_random_high,
-/obj/item/stack/f13Cash/random/aureus/high,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier3,
+/obj/effect/spawner/lootdrop/f13/cash_random_med,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "kYr" = (
@@ -29469,6 +29468,13 @@
 "lYi" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright2bottom"
+	},
+/area/f13/wasteland)
+"lYl" = (
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
+/turf/open/indestructible/ground/outside/ruins{
+	dir = 6;
+	icon_state = "rubble"
 	},
 /area/f13/wasteland)
 "lYo" = (
@@ -35503,6 +35509,10 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/wasteland)
+"oDo" = (
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
+/turf/closed/wall/f13/wood/house,
+/area/f13/village)
 "oDv" = (
 /obj/machinery/conveyor/auto{
 	dir = 6
@@ -41847,8 +41857,8 @@
 /area/f13/caves)
 "rqs" = (
 /obj/structure/safe,
-/obj/effect/spawner/lootdrop/f13/cash_legion_high,
-/obj/effect/spawner/lootdrop/f13/weapon/melee/random_high,
+/obj/effect/spawner/lootdrop/f13/cash_random_med,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "rqz" = (
@@ -46945,6 +46955,7 @@
 /obj/structure/safe,
 /obj/effect/spawner/lootdrop/f13/cash_random_high,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/highmid,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "tJe" = (
@@ -83672,7 +83683,7 @@ xaF
 soY
 lRX
 uvC
-gjP
+oDo
 miw
 oCA
 dJg
@@ -85222,7 +85233,7 @@ fyf
 hAC
 hAC
 nZS
-gPW
+lYl
 faW
 mji
 myh
