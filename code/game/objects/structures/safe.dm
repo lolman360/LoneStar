@@ -38,7 +38,10 @@ FLOOR SAFES
 
 	if(!mapload)
 		return
+	else
+		return INITIALIZE_HINT_LATELOAD
 
+obj/structure/safe/LateInitialize()
 	for(var/obj/item/I in loc)
 		if(space >= maxspace)
 			return
