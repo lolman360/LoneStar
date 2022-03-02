@@ -421,6 +421,7 @@
 	tools = list(TOOL_WORKBENCH)
 	always_available = FALSE
 
+/* tdo
 /datum/crafting_recipe/beartrap
 	name = "Bear Trap"
 	result = /obj/item/restraints/legcuffs/beartrap
@@ -429,5 +430,4 @@
 				/obj/item/stack/sheet/metal = 1)
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
-	
-
+*/

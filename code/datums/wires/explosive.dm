@@ -1,3 +1,6 @@
+/datum/wires/explosive
+	req_trait = TRAIT_EXPLOSIVE_CRAFTING
+
 /datum/wires/explosive/New(atom/holder)
 	add_duds(2) // In this case duds actually explode.
 	..()

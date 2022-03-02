@@ -47,21 +47,20 @@
 	category = CAT_EXPLOSIVE
 
 
-/datum/crafting_recipe/shrapnelmine
+/datum/crafting_recipe/explosive/shrapnelmine
 	name = "Shrapnel Mine"
 	result = /obj/item/mine/shrapnel/random
-	reqs = list(/obj/item/stack/sheet/metal = 15,
+	reqs = list(/obj/item/stack/sheet/metal = 10,
 			/obj/item/stack/crafting/metalparts = 2,
 			/obj/item/stack/crafting/electronicparts = 1,
 			/obj/item/stack/ore/blackpowder = 1,
 			/obj/item/assembly/prox_sensor = 1,
-			/obj/item/stack/cable_coil = 5
-	)
+			/obj/item/stack/cable_coil = 5)
 	time = 15
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
 
-/datum/crafting_recipe/explomine
+/datum/crafting_recipe/explosive/explomine
 	name = "High-Explosive Mine"
 	result = /obj/item/mine/explosive/random
 	reqs = list(/obj/item/stack/sheet/metal = 10,
@@ -76,7 +75,7 @@
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
 
-/datum/crafting_recipe/stingmine
+/datum/crafting_recipe/explosive/stingmine
 	name = "Stingball Mine"
 	result = /obj/item/mine/shrapnel/sting/random
 	reqs = list(/obj/item/stack/sheet/metal = 5,
@@ -91,7 +90,7 @@
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
 
-/datum/crafting_recipe/pulsemine
+/datum/crafting_recipe/explosive/pulsemine
 	name = "Pulse Mine"
 	result = /obj/item/mine/emp/random
 	reqs = list(/obj/item/stack/sheet/metal = 10,
@@ -107,9 +106,9 @@
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
 
-/datum/crafting_recipe/stunmine
+/datum/crafting_recipe/explosive/stunmine
 	name = "Stun Mine"
-	result = /obj/item/mine/stun
+	result = /obj/item/mine/stun/random
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 			/obj/item/stack/crafting/metalparts = 3,
 			/obj/item/stack/crafting/electronicparts = 5,
@@ -119,6 +118,7 @@
 	time = 15
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
+
 
 /datum/crafting_recipe/lance
 	name = "Explosive Spear (Grenade)"

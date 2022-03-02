@@ -127,7 +127,7 @@
 
 /obj/item/mine/attack_self(mob/user)
 	if(armed)
-		to_chat(user, "<span class='danger'>The mine is already armed!</span>")
+		to_chat(user, "<span class='danger'>The mine is already armed!</span>") //how did we get here
 	if(user.dropItemToGround(src))
 		anchored = TRUE
 		addtimer(CALLBACK(src, .proc/arm), 5 SECONDS)
@@ -135,6 +135,7 @@
 		return
 
 /obj/item/mine/proc/arm()
+	visible_message("<span class='danger'>[src] beeps!</span>")
 	if(armed)
 		triggermine()
 		return
