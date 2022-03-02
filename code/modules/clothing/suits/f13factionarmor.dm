@@ -768,7 +768,7 @@
 	desc = "An old military grade pre-war reinforced combat armor, now decorated with sinew and the bones of the hunted for its new wearer."
 	icon_state = "tribecombatarmor"
 	item_state = "tribecombatarmor"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS]
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 
 /obj/item/clothing/suit/armor/f13/tribe_armor
 	name = "light tribal armor"
