@@ -1114,7 +1114,7 @@
 
 /obj/item/book/granter/crafting_recipe/tribal/wayfarer
 	name = "Wayfarer traditions"
-	crafting_recipe_types = list(datum/crafting_recipe/tribalwar/lighttribe, /datum/crafting_recipe/tribalwar/heavytribe, /datum/crafting_recipe/warmace)
+	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/lighttribe, /datum/crafting_recipe/tribalwar/heavytribe, /datum/crafting_recipe/warmace)
 
 /obj/item/book/granter/crafting_recipe/tribal/bone
 	name = "Bone Dancer traditions"
