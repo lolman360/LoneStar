@@ -1724,7 +1724,12 @@ datum/job/wasteland/f13dendoctor
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	H.grant_language(/datum/language/tribal)
 	var/list/recipes = list(
-		/datum/crafting_recipe/punji_sticks,
+		/datum/crafting_recipe/tribal_pa,
+		/datum/crafting_recipe/tribal_pa_helmet,
+		/datum/crafting_recipe/tribal_combat_armor,
+		/datum/crafting_recipe/tribal_combat_armor_helmet,
+		/datum/crafting_recipe/tribal_r_combat_armor,
+		/datum/crafting_recipe/tribal_r_combat_armor_helmet,
 		/datum/crafting_recipe/tribalwar/chitinarmor,
 		/datum/crafting_recipe/tribalwar/deathclawspear,
 		/datum/crafting_recipe/tribalwar/lightcloak,
