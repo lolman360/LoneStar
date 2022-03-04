@@ -261,25 +261,6 @@
 		return ..()
 	return
 
-/obj/item/clothing/head/helmet/f13/power_armor/emp_act(mob/living/carbon/human/owner, severity)
-	. = ..()
-	if(. & EMP_PROTECT_SELF)
-		return
-	if(!powered)
-		return
-	var/curremp = emped
-	if(ismob(loc))
-		to_chat(L, "<span class='warning'>Warning: electromagnetic surge detected in helmet. Rerouting power to emergency systems.</span>")
-		addtimer(CALLBACK(src, .proc/end_emp_effect), 5 SECONDS)
-
-/obj/item/clothing/head/helmet/f13/power_armor/proc/end_emp_effect()
-	if(ismob(loc))
-		var/mob/living/L = loc
-		to_chat(L, "<span class='warning'>Helmet power reroute successful. All systems operational.</span>")
-		if(istype(L))
-			L.update_equipment_speed_mods()
-	return TRUE
-
 /obj/item/clothing/head/helmet/f13/power_armor/t45b
 	name = "salvaged T-45b helmet"
 	desc = "It's a salvaged T-45b power armor helmet."
