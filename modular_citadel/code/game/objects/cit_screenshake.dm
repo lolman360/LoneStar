@@ -7,6 +7,8 @@
 	var/client/C = M.client
 	if (C.prefs.screenshake==0)
 		return
+	if(HAS_TRAIT(M, TRAIT_NO_SCREENSHAKE))
+		return
 	var/oldx = C.pixel_x
 	var/oldy = C.pixel_y
 	var/clientscreenshake = (C.prefs.screenshake * 0.01)
