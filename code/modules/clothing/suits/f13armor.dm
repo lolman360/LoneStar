@@ -293,13 +293,14 @@
 		return
 	if(!powered)
 		return
-	if(isliving(loc))
+	if(isliving(loc) && prob(severity*1.5))
+		var/time_slowed = severity / 10 SECONDS
 		var/mob/living/L = loc
 		to_chat(L, "<span class='warning'>Warning: electromagnetic surge detected in armor. Rerouting power to emergency systems.</span>")
 		slowdown += 1.2
 		if(istype(L))
 			L.update_equipment_speed_mods()
-		addtimer(CALLBACK(src, .proc/end_emp_effect), 5 SECONDS)
+		addtimer(CALLBACK(src, .proc/end_emp_effect), time_slowed)
 
 /obj/item/clothing/suit/armor/f13/power_armor/proc/end_emp_effect()
 	if(isliving(loc))
