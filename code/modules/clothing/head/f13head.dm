@@ -254,6 +254,8 @@
 	var/mob/living/carbon/human/H = user
 	if(src == H.head) //Suit is already equipped
 		return ..()
+	if(!powered)
+		return ..()
 	if (!HAS_TRAIT(H, TRAIT_PA_WEAR) && slot == SLOT_HEAD && requires_training)
 		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
 		return 0

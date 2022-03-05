@@ -272,11 +272,12 @@
 	if (!HAS_TRAIT(H, TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
 		to_chat(user, "<span class='warning'>You don't have the proper training to operate the power armor!</span>")
 		return 0
+	if(!powered)
+		return ..()
 	if(slot == SLOT_WEAR_SUIT && powered)
 		ADD_TRAIT(user, TRAIT_STUNIMMUNE,	"PA_stun_immunity")
 		ADD_TRAIT(user, TRAIT_PUSHIMMUNE,	"PA_push_immunity")
 		ADD_TRAIT(user, SPREAD_CONTROL,	"PA_spreadcontrol")
-
 		return ..()
 	return
 
