@@ -258,6 +258,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/m1919
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1,
+		/obj/item/melee/powerfist/f13/goliath = 1,
 		/obj/item/ammo_box/magazine/mm762 = 1,
 		)
 
@@ -463,6 +464,8 @@ commented out pending rework*/
 	supervisors = "the Prime/Veteran Decanus and the Centurion"
 	display_order = JOB_DISPLAY_ORDER_DECANREC
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
+	access = list(ACCESS_LEGION, ACCESS_LEGION_COMMAND)
+	minimal_access = list(ACCESS_LEGION,  ACCESS_LEGION_COMMAND)
 	exp_requirements = 600
 
 	loadout_options = list(
@@ -541,6 +544,8 @@ commented out pending rework*/
 	supervisors = "the Veteran Decanus and Centurion"
 	display_order = JOB_DISPLAY_ORDER_VEXILLARIUS
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
+	access = list(ACCESS_LEGION, ACCESS_LEGION_COMMAND)
+	minimal_access = list(ACCESS_LEGION,  ACCESS_LEGION_COMMAND)
 	exp_requirements = 720
 
 	loadout_options = list(
@@ -697,6 +702,7 @@ commented out pending rework*/
 		/datum/outfit/loadout/vetshielder,	// .44 DA Revolver, Shield, Gladius, Armor plate
 		/datum/outfit/loadout/vetrifle,		// Trail gun, Gladius
 		/datum/outfit/loadout/vetberserker,	// Lever shotgun, Fireaxe, Bola
+		/datum/outfit/loadout/vetsmg, // Carl Gustaf
 		)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -762,7 +768,14 @@ commented out pending rework*/
 		/obj/item/restraints/legcuffs/bola = 2,
 		)
 
-
+/datum/outfit/loadout/vetsmg
+	name = "Flanker"
+	suit_store = /obj/item/gun/ballistic/automatic/smg/cg45
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/cg45 = 2,
+		/obj/item/gun/ballistic/revolver/colt357 = 1,
+		/obj/item/ammo_box/a357 = 1,
+		)
 // PRIME
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary

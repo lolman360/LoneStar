@@ -278,6 +278,7 @@
 		ADD_TRAIT(user, TRAIT_STUNIMMUNE,	"PA_stun_immunity")
 		ADD_TRAIT(user, TRAIT_PUSHIMMUNE,	"PA_push_immunity")
 		ADD_TRAIT(user, SPREAD_CONTROL,	"PA_spreadcontrol")
+
 		return ..()
 	return
 
