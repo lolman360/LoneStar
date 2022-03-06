@@ -150,8 +150,8 @@
 	damage = 15
 	stamina = 10
 	armour_penetration = 0.45
-	wound_bonus = 15
-	bare_wound_bonus = 15
+	wound_bonus = 10
+	bare_wound_bonus = 10
 	sharpness = SHARP_NONE //crunch
 	tile_dropoff = 0
 	tile_dropoff_s = 0
