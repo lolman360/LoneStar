@@ -33,6 +33,7 @@
 /obj/item/melee/smith/twohand
 	item_flags = NEEDS_PERMIT //it's a bigass sword/spear. beepsky is going to give you shit for it.
 	sharpness = SHARP_EDGED
+	attack_speed = CLICK_CD_MELEE * 1.1
 	material_flags = MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	force = 10
 	wielded_mult = 1.75
@@ -116,7 +117,7 @@
 	icon_state = "halberd"
 	w_class = WEIGHT_CLASS_HUGE
 	overlay_state = "spearhandle"
-	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2// high stam cost on swing
+	attack_speed = CLICK_CD_MELEE * 1.25
 	max_reach = 2
 	slot_flags = ITEM_SLOT_BACK
 	wielded_mult = 1.75
@@ -235,7 +236,7 @@
 	name = "zweihander"
 	icon_state = "zwei"
 	overlay_state = "zweihilt"
-	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 5//extremely high stam cost on swing
+	attack_speed = CLICK_CD_MELEE * 1.2
 	wielded_mult = 3.5 //affected more by quality due to its high wielded mult
 
 /obj/item/melee/smith/twohand/katana
