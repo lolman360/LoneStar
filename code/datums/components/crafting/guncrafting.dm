@@ -107,7 +107,7 @@
 			checkitem = thingy
 			if(!user.transferItemToLoc(checkitem, drop_location()))
 				break
-			if(do_after(user,1,target = src))
+			if(do_after(user,5,target = src))
 				if(HAS_TRAIT(user, TRAIT_TECHNOPHREAK))
 					var/obj/I = pick(checkitem.Loot)
 					new I (src.loc)
