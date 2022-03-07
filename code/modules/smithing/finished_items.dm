@@ -119,7 +119,7 @@
 	total_mass = TOTAL_MASS_MEDIEVAL_WEAPON * 2// high stam cost on swing
 	max_reach = 2
 	slot_flags = ITEM_SLOT_BACK
-	wielded_mult = 1.95
+	wielded_mult = 1.75
 
 /obj/item/melee/smith/twohand/halberd/ComponentInitialize()
 	. = ..()
