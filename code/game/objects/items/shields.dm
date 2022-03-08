@@ -50,11 +50,9 @@
 /obj/item/shield/proc/on_shield_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance)
 	return TRUE
 
-/obj/item/shield/alt_pre_attack(atom/A, mob/living/user, params)
-	user_shieldbash(user, A, user.a_intent == INTENT_HARM)
-	return TRUE
-
 /obj/item/shield/altafterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	if(!proximity_flag)
+		return
 	user_shieldbash(user, target, user.a_intent == INTENT_HARM)
 	return TRUE
 
@@ -272,8 +270,8 @@ obj/item/shield/riot/bullet_proof
 	repair_material = /obj/item/stack/sheet/mineral/titanium
 
 /datum/block_parry_data/shield/bulletproof
-	block_damage_multiplier_override = list("[ATTACK_TYPE_PROJECTILE]" = 0.65)
-	block_damage_absorption_override = list("[ATTACK_TYPE_PROJECTILE]" = 12.5)
+	block_damage_multiplier_override = list(ATTACK_TYPE_PROJECTILE_TEXT = 0.65)
+	block_damage_absorption_override = list(ATTACK_TYPE_PROJECTILE_TEXT = 12.5)
 	block_resting_stamina_penalty_multiplier = 2
 	block_projectile_mitigation = 90
 	block_damage_limit = 100

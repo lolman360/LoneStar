@@ -49,7 +49,7 @@
 	result = /obj/item/shield/riot/tower
 	reqs = list(/obj/item/stack/cable_coil = 30,
 				/obj/item/stack/sheet/metal = 15,
-				/obj/item/stack/sheet/crafting/metalparts = 5)
+				/obj/item/stack/crafting/metalparts = 5)
 	tools = list(TOOL_WELDER)
 	time = 100
 	category = CAT_WEAPONRY
