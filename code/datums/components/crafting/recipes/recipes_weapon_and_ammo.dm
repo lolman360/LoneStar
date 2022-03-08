@@ -513,6 +513,18 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/a308
+	name = ".308 ammo box"
+	result = /obj/item/ammo_box/a308box
+	reqs = list(/obj/item/stack/sheet/metal = 7,
+	/datum/reagent/blackpowder = 25
+	)
+	tools = list(TOOL_MSRELOADER)
+	time = 75
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+
 /datum/crafting_recipe/a50MGboxuranium
 	name = "12.7mm U-235 ammo box"
 	result = /obj/item/ammo_box/a50MGbox/uraniumtipped
@@ -553,6 +565,30 @@
 	)
 	tools = list(TOOL_AWORKBENCH)
 	time = 100
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/m14mmboxuranium
+	name = "14mm uranium-tipped ammo box"
+	result = /obj/item/ammo_box/m14mm/uraniumtipped
+	reqs = list(/obj/item/stack/crafting/metalparts = 1,
+	/obj/item/stack/sheet/mineral/titanium = 1,
+	/obj/item/stack/sheet/mineral/uranium = 1,
+	/datum/reagent/blackpowder = 50
+	)
+	tools = list(TOOL_AWORKBENCH)
+	time = 100
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/p14mm
+	name = "14mm handloaded ammo bag"
+	result = /obj/item/ammo_box/m14mm/improv
+	reqs = list(/obj/item/stack/sheet/metal = 6,
+	/datum/reagent/blackpowder = 30
+	)
+	tools = list(TOOL_MSRELOADER)
+	time = 75
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
