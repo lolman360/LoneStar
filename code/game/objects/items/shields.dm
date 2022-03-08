@@ -289,6 +289,8 @@ obj/item/shield/riot/bullet_proof
 	resistance_flags = FLAMMABLE
 	repair_material = /obj/item/stack/sheet/mineral/wood
 	shield_flags = SHIELD_FLAGS_LIGHT
+	shieldbash_push_distance = 0
+	shieldbash_knockback = 0
 
 /obj/item/shield/riot/buckler/shatter(mob/living/carbon/human/owner)
 	playsound(owner, 'sound/effects/bang.ogg', 50)
