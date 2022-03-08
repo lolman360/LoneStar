@@ -2,7 +2,7 @@
 // POWER FISTS //
 /////////////////		-Uses power (gas currently) for knockback. Heavy AP, specialized for attacking heavy armor
 
-// Power Fist			Throws targets. Max damage 44. Full AP.
+// Power Fist			Throws targets. Max damage 44. 50% ap
 /obj/item/melee/unarmed/powerfist
 	name = "power fist"
 	desc = "A metal gauntlet with a piston-powered ram on top for that extra 'oomph' in your punch."
@@ -15,7 +15,7 @@
 	force = 22
 	throwforce = 10
 	throw_range = 3
-	armour_penetration = 1
+	armour_penetration = 0.5
 	w_class = WEIGHT_CLASS_NORMAL
 	var/transfer_prints = TRUE //prevents runtimes with forensics when held in glove slot
 	var/throw_distance = 1 //multipled by power to give actual throw dist
@@ -58,7 +58,7 @@
 	throw_distance = 3
 
 
-// Ballistic Fist			Keywords: Damage max 42, AP 0.45, Shotgun
+// Ballistic Fist			Keywords: 30 damage, AP 0.45, Shotgun
 /obj/item/gun/ballistic/revolver/ballisticfist
 	name = "ballistic fist"
 	desc = "This powerfist has been modified to have two shotgun barrels welded to it, with the trigger integrated into the knuckle guard. For those times when you want to punch someone and shoot them in the face at the same time."
