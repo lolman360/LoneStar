@@ -27,7 +27,6 @@
 	. = ..()
 	AddComponent(/datum/component/knockback, throw_distance, FALSE, knockback_anchored)
 
-
 /obj/item/melee/unarmed/powerfist/attackby(obj/item/W, mob/user, params)
 	if(!power)
 		return
