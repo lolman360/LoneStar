@@ -59,7 +59,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-	actions_types = list()
+	actions_types = list(/datum/action/item_action/retract_spears)
 	casing_ejector = FALSE
 	var/list/ourcasings = list()
 
@@ -77,27 +77,19 @@
 		update_icon()
 		chamber_round()
 
-/obj/item/gun/item_action_slot_check(slot, mob/user, datum/action/A)
-	if(istype(A, /datum/action/item_action/toggle_scope_zoom) && slot != SLOT_HANDS)
-		return FALSE
-	return ..()
-/obj/item/gun/ui_action_click(mob/user, action)
-	if(istype(action, /datum/action/item_action/toggle_scope_zoom))
-		zoom(user)
-
 /datum/action/item_action/retract_spears
 	name = "Magentize Spears"
 	desc = "Magnetically re-attract all your launched spears!"
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_RESTRAINED|AB_CHECK_STUN|AB_CHECK_LYING
 	icon_icon = 'icons/mob/actions/actions_items.dmi'
-	button_icon_state = "sniper_zoom"
+	button_icon_state = "recall_spear"
 
 /datum/action/item_action/retract_spears/Trigger()
 	var/obj/item/gun/ballistic/automatic/speargun/SG = target
-	var/item/thethrown
+	var/obj/item/thethrown
 	for(var/i in SG.ourcasings)
 		thethrown = i
-		thethrown.safe_throw_at(owner, 20, 2)
+		thethrown.safe_throw_at(owner, 50, 2)
 	SG.ourcasings.Cut()
 
 /datum/action/item_action/retract_spears/IsAvailable()
