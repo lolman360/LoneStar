@@ -720,7 +720,7 @@ Scribe
 		)
 
 /*
-Senior Knight
+Senior 
 */
 
 /datum/job/bos/f13seniorknight
@@ -766,6 +766,7 @@ Senior Knight
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2ke)
 
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
