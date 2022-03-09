@@ -4,7 +4,7 @@
 	projectile_type = /obj/item/projectile/bullet/reusable/magspear
 	caliber = "speargun"
 	icon_state = "magspear"
-	throwforce = 15 //still deadly when thrown
+	throwforce = 30 //still deadly when thrown
 	throw_speed = 3
 
 /obj/item/ammo_casing/caseless/laser
