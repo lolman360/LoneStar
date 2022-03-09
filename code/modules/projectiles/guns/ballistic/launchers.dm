@@ -97,7 +97,7 @@
 	var/item/thethrown
 	for(var/i in SG.ourcasings)
 		thethrown = i
-		thethrown.safe_throw_at(owner, 7, 2)
+		thethrown.safe_throw_at(owner, 20, 2)
 	SG.ourcasings.Cut()
 
 /datum/action/item_action/retract_spears/IsAvailable()
