@@ -2,7 +2,8 @@
 	name = "survival kit"
 	desc = "A robust leather pouch containing the essentials for wasteland survival."
 	icon_state = "survivalkit"
-	w_class = WEIGHT_CLASS_SMALL
+	slot_flags = ITEM_SLOT_POCKET
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/storage/survivalkit/PopulateContents()
 	. = ..()
