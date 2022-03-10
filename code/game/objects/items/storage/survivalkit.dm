@@ -30,6 +30,10 @@
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/flashlight/flare/torch(src)
 
+/obj/item/storage/survivalkit/tribal/adv/PopulateContents()
+	. = ..()
+	new /obj/item/reagent_containers/pill/patch/healpoultice(src)
+
 /obj/item/storage/survivalkit/outlaw/PopulateContents()
 	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
 	new /obj/item/stack/medical/suture(src)
