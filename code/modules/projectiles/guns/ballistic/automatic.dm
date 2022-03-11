@@ -1307,14 +1307,14 @@
 			automatic = TRUE
 			spread = 12.5
 			recoil = 0.5
-			to_chat(user, "<span class='notice'>You switch to full auto.</span>")
+			to_chat(user, "<span class='notice'>You switch to full-auto.</span>")
 		if(2)
 			select = 0
 			burst_size = 1
 			automatic = FALSE
 			spread = 0
 			recoil = 0
-			to_chat(user, "<span class='notice'>You switch to semi auto.</span>")
+			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
 	playsound(user, 'sound/weapons/empty.ogg', 100, 1)
 	update_icon()
 	return
