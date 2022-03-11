@@ -1270,7 +1270,7 @@
 	item_state = "g11"
 	mag_type = /obj/item/ammo_box/magazine/m473
 	burst_size = 1
-	extra_damage = 20
+	extra_damage = 22.5
 	fire_delay = 2
 	is_automatic = TRUE
 	automatic = FALSE
