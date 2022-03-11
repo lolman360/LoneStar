@@ -111,7 +111,8 @@ Head Paladin
 	/datum/outfit/loadout/sentvet, //xl70e3
 	/datum/outfit/loadout/sentheavy, //Gauss + Glock
 	/datum/outfit/loadout/sentgat, // Gatling
-	/datum/outfit/loadout/sentmini // Minigun
+	/datum/outfit/loadout/sentmini, // Minigun
+	/datum/outfit/loadout/senttactical //G11, ammo choice box
 	)
 
 	outfit = /datum/outfit/job/bos/f13sentinel
@@ -192,6 +193,15 @@ Head Paladin
 		/obj/item/minigunpackbal5mm=1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
+	)
+
+/datum/outfit/loadout/senttactical
+	name = "Tactical Head Paladin"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/g11 = 1,
+		/obj/item/ammo_box/magazine/m473 = 2,
+		/obj/item/ammo_box/magazine/m473/empty = 1,
+		/obj/item/choice_beacon/box/g11ammo = 1,
 	)
 
 
@@ -374,7 +384,8 @@ Star Paladin
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //R91 Assault Rifle
 		/datum/outfit/loadout/spaladinb, //AER12
-		/datum/outfit/loadout/spaladinc  //Minigun
+		/datum/outfit/loadout/spaladinc,  //Minigun
+		/datum/outfit/loadout/spaladintactical //WT-550, ammo choice box
 		)
 
 	outfit = /datum/outfit/job/bos/f13seniorpaladin
@@ -448,6 +459,15 @@ Star Paladin
 		/obj/item/ammo_box/magazine/m2mm = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
+	)
+
+/datum/outfit/loadout/spaladintactical
+	name = "Tactical Senior Paladin"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/wt550 = 1,
+		/obj/item/ammo_box/magazine/m473/small = 3,
+		/obj/item/ammo_box/magazine/m473/small/empty = 3,
+		/obj/item/choice_beacon/box/g11ammo = 1,
 	)
 
 /*
@@ -720,7 +740,7 @@ Scribe
 		)
 
 /*
-Senior 
+Senior
 */
 
 /datum/job/bos/f13seniorknight
