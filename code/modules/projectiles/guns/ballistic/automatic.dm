@@ -1274,6 +1274,7 @@
 	fire_delay = 2
 	is_automatic = TRUE
 	automatic = FALSE
+	extra_penetration = 0.1
 	autofire_shot_delay = 2
 	burst_shot_delay = 0.5
 	can_attachments = TRUE
