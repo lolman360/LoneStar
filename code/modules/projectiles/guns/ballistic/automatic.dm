@@ -615,7 +615,7 @@
 	is_automatic = TRUE
 	automatic = TRUE
 	extra_damage = 20
-	autofire_shot_delay = 2
+	autofire_shot_delay = 1.75
 	extra_penetration = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
