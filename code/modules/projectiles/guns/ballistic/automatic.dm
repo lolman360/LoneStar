@@ -1285,6 +1285,7 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	actions_types = list(/datum/action/item_action/toggle_firemode)
+	select = 0
 
 /obj/item/gun/ballistic/automatic/g11/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/toggle_firemode))
@@ -1296,7 +1297,7 @@
 	var/mob/living/carbon/human/user = usr
 	switch(select)
 		if(0)
-			select += 1]
+			select += 1
 			if(burst_improvement)
 				burst_size = 5
 			else
