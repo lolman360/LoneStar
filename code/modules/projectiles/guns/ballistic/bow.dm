@@ -72,7 +72,7 @@
 
 /obj/item/gun/ballistic/bow/do_fire(atom/target, mob/living/user, message = TRUE, params, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	..()
-	if(HAS_TRAIT(user, TRAIT_AUTO_DRAW) && !chambered && get_ammo(FALSE))
+	if(HAS_TRAIT(user, TRAIT_AUTO_DRAW_BOWS) && !chambered && get_ammo(FALSE))
 		user.visible_message("<span class='warning'>[user] instinctively draws the string on [src]!</span>", "<span class='warning'>You instinctively draw the string on [src]!</span>")
 		draw(user, FALSE)
 		recentdraw = world.time + 2

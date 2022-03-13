@@ -1381,7 +1381,7 @@ datum/job/wasteland/f13dendoctor
 
 	access = list()
 	minimal_access = list()
-	body_traits = list(TRAIT_TRIBAL,TRAIT_TRAPPER,TRAIT_MACHINE_SPIRITS,TRAIT_AUTO_DRAW,TRAIT_HARD_YARDS)
+	body_traits = list(TRAIT_TRIBAL,TRAIT_TRAPPER,TRAIT_MACHINE_SPIRITS,TRAIT_AUTO_DRAW_BOWS,TRAIT_HARD_YARDS)
 	loadout_options = list(
 	/datum/outfit/loadout/brawler,
 	/datum/outfit/loadout/spearman,
