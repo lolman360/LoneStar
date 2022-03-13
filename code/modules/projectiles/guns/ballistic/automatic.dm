@@ -609,7 +609,7 @@
 /obj/item/gun/ballistic/automatic/wt550
 	name = "WT-550"
 	desc = "A compact PDW derived from the G11, firing the same 4.73mm rounds."
-	item_state = "wt550"
+	item_state = "WT550"
 	mag_type = /obj/item/ammo_box/magazine/m473/small
 	burst_size = 1
 	is_automatic = TRUE
