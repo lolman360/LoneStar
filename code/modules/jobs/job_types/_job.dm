@@ -104,9 +104,6 @@
 	for(var/trait in mind_traits)
 		ADD_TRAIT(spawner.mind, trait, JOB_TRAIT)
 
-	for(var/trait in body_traits)
-		ADD_TRAIT(spawner, trait, JOB_TRAIT)
-
 	if(/datum/quirk/paraplegic in blacklisted_quirks)
 		spawner.regenerate_limbs() //if you can't be a paraplegic, attempt to regenerate limbs to stop amputated limb selection
 		spawner.set_resting(FALSE, TRUE) //they probably shouldn't be on the floor because they had no legs then suddenly had legs
@@ -169,7 +166,8 @@
 
 	//Equip the rest of the gear
 	H.dna.species.before_equip_job(src, H, visualsOnly)
-
+	for(var/trait in body_traits)
+		ADD_TRAIT(H, trait, JOB_TRAIT)
 	var/datum/outfit/job/O = outfit_override || outfit
 	if(O)
 		H.equipOutfit(O, visualsOnly, preference_source) //mob doesn't have a client yet.
