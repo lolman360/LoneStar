@@ -1296,17 +1296,26 @@
 	var/mob/living/carbon/human/user = usr
 	switch(select)
 		if(0)
-			select += 1
-			burst_size = 3
+			select += 1]
+			if(burst_improvement)
+				burst_size = 5
+			else
+				burst_size = 3
 			automatic = FALSE
-			burst_spread = 7.5
+			if(recoil_decrease)
+				burst_spread = 5.5
+			else
+				burst_spread = 7.5
 			recoil = 0.25
 			to_chat(user, "<span class='notice'>You switch to burst fire.</span>")
 		if(1)
 			select += 1
 			burst_size = 1
 			automatic = TRUE
-			spread = 12.5
+			if(recoil_decrease)
+				burst_spread = 8.5
+			else
+				burst_spread = 12.5
 			recoil = 0.5
 			to_chat(user, "<span class='notice'>You switch to full-auto.</span>")
 		if(2)
