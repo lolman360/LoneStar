@@ -26,13 +26,6 @@
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/followers)
 
-//datum/outfit/job/followers/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-//	..()
-//	if(visualsOnly)
-//		return
-	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
-
-/*
 Administrator
 */
 /datum/job/followers/f13leadpractitioner
@@ -49,7 +42,7 @@ Administrator
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them.Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
 	selection_color = "#FF95FF"
 	exp_requirements = 1500
-
+	body_traits = list(TRAIT_TECHNOPHREAK,TRAIT_CHEMWHIZ, TRAIT_MEDICALEXPERT, TRAIT_SURGERY_HIGH)
 	outfit = /datum/outfit/job/followers/f13leadpractitioner
 
 	access = list(ACCESS_FOLLOWER, ACCESS_COMMAND, ACCESS_MILITARY, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS)
@@ -60,17 +53,12 @@ Administrator
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
+
 
 /datum/outfit/job/followers/f13leadpractitioner
 	name =	"Followers Administrator"
 	jobtype =	/datum/job/followers/f13leadpractitioner
 	id =	/obj/item/card/id/silver
-	chemwhiz =	TRUE
 	backpack =	/obj/item/storage/backpack/explorer
 	uniform =	/obj/item/clothing/under/f13/followers
 	suit=	/obj/item/clothing/suit/toggle/labcoat/cmo
@@ -150,7 +138,7 @@ Practitioner
 	enforces = "Followers are not fond of the NCR due to their corruption, but they will help them. They dislike the Brotherhood for hoarding tech, but will make deals to work with them if it furthers the spreading of knowledge. Legion is our mistake and its our job to correct the mistake by speaking of the truth, but recognize that the best way to fight the legion is to teach them and sometimes that can mean helping them.Preaching humanitarianism and valuing human life. Assist and provide medical services to any who require it, regardless of faction. Provide free education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
 	exp_requirements = 600
-
+	body_traits = list(TRAIT_MEDICALGRADUATE,TRAIT_CHEMWHIZ,TRAIT_SURGERY_MID)
 	outfit = /datum/outfit/job/followers/f13practitioner
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -175,10 +163,6 @@ Practitioner
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 
 	//the follower practitioner doesn't need access because it's already set in the /datum/job/follower
 	//personally, I don't think a practitioner should have more access than a volunteer.

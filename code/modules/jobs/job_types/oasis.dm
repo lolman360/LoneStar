@@ -27,7 +27,7 @@ Mayor
 	supervisors = "Oasis"
 	description = "You are the benevolent tyrant of Oasis, chosen by the people to represent and lead them. Pass laws to protect your citizens, distribute town funds and make deals with the powers present within the Region to better the people, and yourself, of course."
 	selection_color = "#d7b088"
-
+	body_traits = list(TRAIT_TECHNOPHREAK)
 	exp_requirements = 1500
 
 	outfit = /datum/outfit/job/den/f13mayor
@@ -54,8 +54,6 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /datum/outfit/job/den/f13mayor
 	name = "Mayor"
@@ -69,11 +67,11 @@ Mayor
 	shoes = 		/obj/item/clothing/shoes/f13/tan
 	uniform = /obj/item/clothing/under/f13/gentlesuit
 	head = /obj/item/clothing/head/f13/town/big
-	backpack_contents = list( 
+	backpack_contents = list(
 		/obj/item/storage/box/citizenship_permits = 1, \
 		/obj/item/pen/fountain/captain = 1,
 		)
-		
+
 
 
 /datum/outfit/loadout/dictator
@@ -97,7 +95,7 @@ Mayor
 		/obj/item/clothing/shoes/f13/cowboy = 1,
 		/obj/item/clothing/mask/cigarette/cigar = 1,
 		)
-	
+
 /datum/outfit/loadout/firstcitizen
 	name = "First Citizen"
 	backpack_contents = list(
@@ -208,6 +206,7 @@ Mayor
 	description = "You are the Mayor's best friend, you helped them get where they are. While they handle civil matters, you've been rewarded with more hands-on work, as preferred. With your loyal patrolmen, you maintain your claim to authority by keeping the peace, and protecting the citizens from threats within and without. Never leave Oasis undefended, and don't let its people die out. You have nowhere left to go, if this town falls, so will you."
 	selection_color = "#d7b088"
 	exp_requirements = 1500
+	body_traits = list(TRAIT_SELF_AWARE, TRAIT_HARD_YARDS, TRAIT_LIFEGIVER)
 
 	outfit = /datum/outfit/job/den/f13sheriff
 
@@ -289,10 +288,6 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
-
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13deputy
@@ -307,7 +302,7 @@ Mayor
 	exp_requirements = 12
 	exp_type = EXP_TYPE_OASIS
 	exp_requirements = 600
-
+	body_traits = list(TRAIT_HARD_YARDS)
 	loadout_options = list(
 	/datum/outfit/loadout/standardpd,
 	/datum/outfit/loadout/police,
@@ -404,7 +399,6 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_broken)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriot_ncr)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionriothelmet_ncr)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /*--------------------------------------------------------------*/
 
@@ -470,7 +464,7 @@ Mayor
 	supervisors = "Oasis Government & Police Department"
 	description = "Prospecting is a complicated business, some call it scrounging or looting, but there is more to it than sifting through rubble - few can boast the skills you possess in mining and delving through the ruins of the fallen empire. Not many survive this line of business, and the pay has always been uncertain, but perhaps today you'll strike gold."
 	selection_color = "#dcba97"
-
+	body_traits = list(TRAIT_TECHNOPHREAK)
 	outfit = /datum/outfit/job/den/f13prospector
 
 	access = list(ACCESS_BAR, ACCESS_MINING)
@@ -518,9 +512,6 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13dendoc
@@ -532,7 +523,7 @@ Mayor
 	supervisors = "law and order"
 	description = "Handy with a scalpel and scanner, your expertise in the practice of medicine makes you an indispensible asset to the Town. Just remember - medicine doesn't come free, and you aren't here out of the kindness of your heart. Be sure to turn a profit, or the Mayor might reconsider your position!"
 	selection_color = "#dcba97"
-
+	body_traits = list(TRAIT_SURGERY_HIGH)
 	outfit = /datum/outfit/job/den/f13dendoc
 	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
 	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_CLONING)
@@ -569,7 +560,6 @@ Mayor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 /*--------------------------------------------------------------*/
 
 /datum/job/oasis/f13barkeep
@@ -947,7 +937,7 @@ Mayor
 	description = "The greed of the United States survived better than its people. You are an organ of this greed. Ensure its continuation."
 	selection_color = "#dcba97"
 	exp_requirements = 600
-
+	body_traits = list(TRAIT_TECHNOPHREAK)
 	outfit = /datum/outfit/job/den/f13shopkeeper
 	access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
 	minimal_access = list(ACCESS_BAR, ACCESS_CARGO_BOT)
@@ -984,8 +974,6 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/policerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steelbib/heavy)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/a180)

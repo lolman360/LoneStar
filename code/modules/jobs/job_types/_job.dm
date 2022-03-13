@@ -69,6 +69,7 @@
 	var/paycheck_department = ACCOUNT_CIV
 
 	var/list/mind_traits // Traits added to the mind of the mob assigned this job
+	var/list/body_traits //traits added to the body of the mob
 	var/list/blacklisted_quirks		//list of quirk typepaths blacklisted.
 
 	var/display_order = JOB_DISPLAY_ORDER_DEFAULT
@@ -102,6 +103,9 @@
 
 	for(var/trait in mind_traits)
 		ADD_TRAIT(spawner.mind, trait, JOB_TRAIT)
+
+	for(var/trait in body_traits)
+		ADD_TRAIT(spawner, trait, JOB_TRAIT)
 
 	if(/datum/quirk/paraplegic in blacklisted_quirks)
 		spawner.regenerate_limbs() //if you can't be a paraplegic, attempt to regenerate limbs to stop amputated limb selection
@@ -262,14 +266,6 @@
 
 	var/pda_slot = SLOT_BELT
 
-	var/chemwhiz = FALSE //F13 Chemwhiz, for chemistry machines
-	var/pa_wear = FALSE //F13 pa_wear, ability to wear PA
-	var/gunsmith_one = FALSE //F13 gunsmith perk, ability to craft Tier 2 guns and ammo
-	var/gunsmith_two = FALSE //F13 gunsmith perk, ability to craft Tier 3 guns and ammo
-	var/gunsmith_three = FALSE //F13 gunsmith perk, ability to craft Tier 4 guns and ammo
-	var/gunsmith_four = FALSE //F13 gunsmith perk, ability to craft Tier 5 guns and ammo
-
-
 /datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	var/preference_backpack = preference_source?.prefs.backbag
 
@@ -299,24 +295,6 @@
 	else
 		holder = "[uniform]"
 	uniform = text2path(holder)
-
-	if(chemwhiz == TRUE)
-		ADD_TRAIT(H, TRAIT_CHEMWHIZ, "chemwhiz")
-
-	if(pa_wear == TRUE)
-		ADD_TRAIT(H, TRAIT_PA_WEAR, "pa_wear")
-
-	if(gunsmith_one == TRUE)
-		ADD_TRAIT(H, TRAIT_GUNSMITH_ONE, "gunsmith_one")
-
-	if(gunsmith_two == TRUE)
-		ADD_TRAIT(H, TRAIT_GUNSMITH_TWO, "gunsmith_two")
-
-	if(gunsmith_three == TRUE)
-		ADD_TRAIT(H, TRAIT_GUNSMITH_THREE, "gunsmith_three")
-
-	if(gunsmith_four == TRUE)
-		ADD_TRAIT(H, TRAIT_GUNSMITH_FOUR, "gunsmith_four")
 
 /datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	if(visualsOnly)

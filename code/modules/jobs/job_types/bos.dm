@@ -36,8 +36,7 @@ Main doors: ACCESS_CAPTAIN 20
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src) //this can stay here instead of body_traits so we dont have to write it again for every job
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombatarmor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombatarmormk2)
@@ -61,6 +60,7 @@ Elder
 
 	total_positions = 0
 	spawn_positions = 0
+	body_traits = list(TRAIT_CHEMWHIZ)
 
 	outfit = /datum/outfit/job/bos/f13elder
 
@@ -71,7 +71,6 @@ Elder
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 
 /datum/outfit/job/bos/f13elder
 	name = "Elder"
@@ -105,6 +104,7 @@ Head Paladin
 	selection_color = "#7f8c8d"
 
 	exp_requirements = 4800
+	body_traits = list(TRAIT_CHEMWHIZ, TRAIT_PA_WEAR, TRAIT_HARD_YARDS, TRAIT_LIFEGIVER, TRAIT_IRONFIST)
 
 	loadout_options = list(
 	/datum/outfit/loadout/sentstand, //Tribeam laser
@@ -123,16 +123,11 @@ Head Paladin
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
 /datum/outfit/job/bos/f13sentinel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	if(H.mind)
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
@@ -217,7 +212,7 @@ Head Scribe
 	/datum/outfit/loadout/hsstand,
 	/datum/outfit/loadout/hspract
 	)
-
+	body_traits = list(TRAIT_SURGERY_HIGH, TRAIT_CHEMWHIZ, TRAIT_CYBERNETICIST, TRAIT_CYBERNETICIST_EXPERT, TRAIT_MEDICALEXPERT)
 	outfit = /datum/outfit/job/bos/f13headscribe
 
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -227,12 +222,6 @@ Head Scribe
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
-	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)
-	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 
 /datum/outfit/job/bos/f13headscribe
 	name = "Head Scribe"
@@ -286,7 +275,7 @@ Head Knight
 	/datum/outfit/loadout/capsap, //Marksman
 	/datum/outfit/loadout/capalt //Neostead with buck because they don't know slugs are better
 	)
-
+	body_traits = list(TRAIT_CHEMWHIZ,TRAIT_PA_WEAR, TRAIT_GUNSMITH_ONE, TRAIT_GUNSMITH_TWO, TRAIT_GUNSMITH_THREE, TRAIT_GUNSMITH_FOUR)
 	outfit = /datum/outfit/job/bos/f13knightcap
 
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_ARMORY, ACCESS_BRIG)
@@ -296,8 +285,6 @@ Head Knight
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lightplasmapistol)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
@@ -305,15 +292,13 @@ Head Knight
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rcw)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/commando)
 
 
 /datum/outfit/job/bos/f13knightcap
 	name = "Head Knight"
 	jobtype = /datum/job/bos/f13knightcap
-	gunsmith_one = TRUE
-	gunsmith_two = TRUE
-	gunsmith_three = TRUE
-	gunsmith_four = TRUE
+
 	suit = 			/obj/item/clothing/suit/armor/f13/combat/brotherhood/captain
 	glasses =		/obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
@@ -370,7 +355,7 @@ Star Paladin
 
 	exp_requirements = 3000 //Not used right now anyways. Slot disabled.
 	exp_type = EXP_TYPE_BROTHERHOOD
-
+	body_traits = list(TRAIT_PA_WEAR, TRAIT_HARD_YARDS)
 	loadout_options = list(
 		/datum/outfit/loadout/spaladina, //R91 Assault Rifle
 		/datum/outfit/loadout/spaladinb, //AER12
@@ -397,13 +382,11 @@ Star Paladin
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
 /datum/outfit/job/bos/f13seniorpaladin/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
@@ -474,7 +457,7 @@ Paladin
 	/datum/outfit/loadout/paladine,
 	/datum/outfit/loadout/paladinf
 	)
-
+	body_traits = list(TRAIT_PA_WEAR, TRAIT_HARD_YARDS)
 	outfit = /datum/outfit/job/bos/f13paladin
 
 	access = list(ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
@@ -498,13 +481,11 @@ Paladin
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
 /datum/outfit/job/bos/f13paladin/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
@@ -598,7 +579,7 @@ Senior Scribe
 	exp_requirements = 1800
 
 	outfit = /datum/outfit/job/bos/f13seniorscribe
-
+	body_traits = list(TRAIT_CHEMWHIZ, TRAIT_SURGERY_HIGH, TRAIT_CYBERNETICIST)
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS)
 	matchmaking_allowed = list(
@@ -618,9 +599,6 @@ Senior Scribe
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
-	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
 
 /datum/outfit/job/bos/f13seniorscribe
 	name =	"Senior Scribe"
@@ -655,7 +633,7 @@ Scribe
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Senior Scribe and Head Scribe"
 	selection_color = "#95a5a6"
-
+	body_traits = list(TRAIT_CHEMWHIZ,TRAIT_SURGERY_MID,TRAIT_MEDICALGRADUATE)
 	exp_requirements = 600
 
 	loadout_options = list(
@@ -685,7 +663,6 @@ Scribe
 /datum/outfit/job/bos/f13scribe
 	name = "Scribe"
 	jobtype = /datum/job/bos/f13scribe
-	chemwhiz = TRUE
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	shoes = 		/obj/item/clothing/shoes/combat
 	belt = 			/obj/item/storage/belt/utility/full/engi
@@ -703,9 +680,6 @@ Scribe
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
-	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 
 /datum/outfit/loadout/scribea
 	name = "Junior Scribe"
@@ -720,7 +694,7 @@ Scribe
 		)
 
 /*
-Senior 
+Senior
 */
 
 /datum/job/bos/f13seniorknight
@@ -734,7 +708,7 @@ Senior
 	supervisors = "the Head Knight"
 	selection_color = "#95a5a6"
 	exp_requirements = 1800
-
+	body_traits = list(TRAIT_GUNSMITH_ONE, TRAIT_GUNSMITH_TWO, TRAIT_GUNSMITH_THREE, TRAIT_GUNSMITH_FOUR)
 	loadout_options = list(
 	/datum/outfit/loadout/sknighta, //AER9
 	/datum/outfit/loadout/sknightb, //Browning Auto-5
@@ -767,6 +741,7 @@ Senior
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2ke)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/commando)
 
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
@@ -780,10 +755,6 @@ Senior
 	neck =			/obj/item/storage/belt/holster
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	id = 			/obj/item/card/id/dogtag
-	gunsmith_one = TRUE
-	gunsmith_two = TRUE
-	gunsmith_three = TRUE
-	gunsmith_four = TRUE
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting=1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
@@ -839,7 +810,7 @@ Knight
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the wasteland. Experimentation and research."
 	supervisors = "the Senior Knight, and Head Knight"
 	selection_color = "#95a5a6"
-
+	body_traits = list(TRAIT_GUNSMITH_ONE, TRAIT_GUNSMITH_TWO, TRAIT_GUNSMITH_THREE, TRAIT_GUNSMITH_FOUR)
 	exp_requirements = 600
 
 	loadout_options = list(
@@ -877,6 +848,7 @@ Knight
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/commando)
 
 /datum/outfit/job/bos/f13knight
 	name = "Knight"
@@ -888,10 +860,6 @@ Knight
 	neck =			/obj/item/storage/belt/holster
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	id = 			/obj/item/card/id/dogtag
-	gunsmith_one = TRUE
-	gunsmith_two = TRUE
-	gunsmith_three = TRUE
-	gunsmith_four = TRUE
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival=1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1,
@@ -972,7 +940,7 @@ Initiate
 
 	exp_type = EXP_TYPE_FALLOUT
 	exp_requirements = 300
-
+	body_traits = list(TRAIT_SURGERY_LOW)
 	loadout_options = list(
 	/datum/outfit/loadout/initiatek, //AEP7 and Engibelt with combat armor, no helmet
 	/datum/outfit/loadout/initiates, //Medical belt and chem knowledge
@@ -1006,13 +974,6 @@ Initiate
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
 		)
-
-/datum/outfit/job/bos/f13initiate/post_equip(mob/living/carbon/human/H, visualsOnly)
-	..()
-	if(visualsOnly)
-		return
-	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
-
 
 /datum/outfit/loadout/initiatek
 	name = "Knight-Aspirant"

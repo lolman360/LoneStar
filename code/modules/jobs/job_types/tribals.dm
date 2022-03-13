@@ -21,11 +21,6 @@
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TRIBAL, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_TRAPPER, src)
-	ADD_TRAIT(H, TRAIT_MACHINE_SPIRITS, src)
 	H.grant_language(/datum/language/tribal)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/punji_sticks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribal_combat_armor)
@@ -62,8 +57,6 @@ Tribal Chief
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/tribal/f13chief
 	name =	"Tribal Chief"
@@ -118,8 +111,6 @@ Tribal Shaman
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_SPIRITUAL, src)
 
 /datum/outfit/job/tribal/f13shaman
 	name = "Shaman"
@@ -141,7 +132,6 @@ Tribal Shaman
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 
 /datum/outfit/loadout/invoker
 	name = "Invoker"
@@ -193,8 +183,6 @@ Tribal Head Hunter
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/tribal/f13Hhunter
 	name = "Hunter"
@@ -251,8 +239,6 @@ Druid
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_SPIRITUAL, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
 
 /datum/outfit/job/tribal/f13druid
 	name = "Druid"
@@ -409,8 +395,6 @@ Hunter
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/tribal/f13hunter
 	name = "Hunter"
@@ -507,8 +491,6 @@ Guardian
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/tribal/f13guardian
 	name = "Guardian"
@@ -524,4 +506,3 @@ Guardian
 		/obj/item/stack/medical/gauze=1,
 		/obj/item/flashlight/flare/torch=1,
 		/obj/item/restraints/legcuffs/bola/tactical=1)
-

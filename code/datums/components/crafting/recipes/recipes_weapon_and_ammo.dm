@@ -929,7 +929,7 @@
 	always_available = FALSE
 
 /datum/crafting_recipe/pps
-	name = "Ppsh-41"
+	name = "PPSH-41"
 	result = /obj/item/gun/ballistic/automatic/smg/ppsh
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,
@@ -942,7 +942,7 @@
 	always_available = FALSE
 
 /datum/crafting_recipe/commando
-	name = "DeLisle Commando Carbine"
+	name = "Commando Carbine"
 	result = /obj/item/gun/ballistic/automatic/delisle/commando
 	reqs = list(/obj/item/stack/sheet/metal = 5,
 				/obj/item/advanced_crafting_components/receiver = 1,

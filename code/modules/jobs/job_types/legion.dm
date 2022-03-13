@@ -77,8 +77,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TRIBAL, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_TRIBAL, src) //this can stay, again, because its easier than writing it in every body_traits list
 
 /obj/item/storage/box/legate
 	name = "legate belongings"
@@ -112,15 +111,12 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legate
 	access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS)
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS)
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIFEGIVER,TRAIT_IRONFIST,TRAIT_BIG_LEAGUES)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legate/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	if(H.mind)
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
@@ -157,6 +153,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	display_order = JOB_DISPLAY_ORDER_ORATOR
 	access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIFEGIVER,TRAIT_IRONFIST,TRAIT_BIG_LEAGUES)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13orator	// 10mm Revolver, Spatha
 	name = "Orator"
@@ -181,10 +178,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	if(H.mind)
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
@@ -208,7 +201,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	display_order = JOB_DISPLAY_ORDER_CENTURION
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion
 	exp_requirements = 1500
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIFEGIVER,TRAIT_IRONFIST,TRAIT_BIG_LEAGUES)
 	access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 
@@ -222,10 +215,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 	if(H.mind)
 		var/obj/effect/proc_holder/spell/terrifying_presence/S = new /obj/effect/proc_holder/spell/terrifying_presence
 		H.mind.AddSpell(S)
@@ -310,7 +299,7 @@ commented out pending rework*/
 
 	access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIFEGIVER,TRAIT_IRONFIST,TRAIT_BIG_LEAGUES)
 	loadout_options = list(
 		/datum/outfit/loadout/decvetfront,	// Carl Gustaf, Fireaxe, Smoke bomb, slightly better helmet
 		/datum/outfit/loadout/decvetrear,	// SKS, Spatha
@@ -321,10 +310,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanvet
 	name = "Legion Veteran Decanus"
@@ -386,7 +371,7 @@ commented out pending rework*/
 		/datum/outfit/loadout/decprimrear,	// Trail carbine, 10mm Revolver, Gladius, Smoke bomb
 		/datum/outfit/loadout/decprimboom, // Grenade rifle, .44 revolver, Gladius
 		)
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIFEGIVER,TRAIT_IRONFIST,TRAIT_BIG_LEAGUES)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/CaesarsLegion,
@@ -400,10 +385,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decan
 	name = "Prime Decanus"
@@ -467,7 +448,7 @@ commented out pending rework*/
 	access = list(ACCESS_LEGION, ACCESS_LEGION_COMMAND)
 	minimal_access = list(ACCESS_LEGION,  ACCESS_LEGION_COMMAND)
 	exp_requirements = 600
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIFEGIVER,TRAIT_BIG_LEAGUES)
 	loadout_options = list(
 		/datum/outfit/loadout/recdeclegion,	// .44 Revolver, Bumper sword, Smokebomb
 		/datum/outfit/loadout/recdectribal,	// Lever shotgun, Throwing spears, Reinforced machete
@@ -486,9 +467,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13decanrec
 	name = "Legion Recruit Decanus"
@@ -547,7 +525,7 @@ commented out pending rework*/
 	access = list(ACCESS_LEGION, ACCESS_LEGION_COMMAND)
 	minimal_access = list(ACCESS_LEGION,  ACCESS_LEGION_COMMAND)
 	exp_requirements = 720
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIFEGIVER,TRAIT_IRONFIST,TRAIT_BIG_LEAGUES)
 	loadout_options = list(
 		/datum/outfit/loadout/vexbear,	//	Classic FO13 Vex with his ripper: .223 pistol, Ripper
 		/datum/outfit/loadout/vexfox,	// 	Classic New Vegas Vex with his sniper: DKS sniper, Gladius
@@ -566,10 +544,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_IRONFIST, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13vexillarius
 	name = "Vexillarius"
@@ -624,7 +598,7 @@ commented out pending rework*/
 		/datum/outfit/loadout/expsniper,	// sniper rifle, .45 Revolver, Machete, Smokebomb
 		/datum/outfit/loadout/expambusher,	// mp5, .45 revolver, Bottlecap mine, Machete
 		)
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_BIG_LEAGUES)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/CaesarsLegion,
@@ -638,8 +612,6 @@ commented out pending rework*/
 	. = ..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13explorer
 	name = "Legion Explorer"
@@ -697,7 +669,7 @@ commented out pending rework*/
 	display_order = JOB_DISPLAY_ORDER_VETLEGIONARY
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	exp_requirements = 600
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIFEGIVER,TRAIT_BIG_LEAGUES)
 	loadout_options = list(
 		/datum/outfit/loadout/vetshielder,	// .44 DA Revolver, Shield, Gladius, Armor plate
 		/datum/outfit/loadout/vetrifle,		// Trail gun, Gladius
@@ -717,9 +689,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_LIFEGIVER, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	name = "Veteran Legionnaire"
@@ -788,7 +757,7 @@ commented out pending rework*/
 	display_order = JOB_DISPLAY_ORDER_LEGIONARY
 	exp_requirements = 120
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
-
+	body_traits = list(TRAIT_BIG_LEAGUES)
 	loadout_options = list(
 		/datum/outfit/loadout/primelancer,	// .45 Revolver, Buckler, Forged machete, Bola
 		/datum/outfit/loadout/primerifle,	// Cowboy repeater, Machete, Firebomb
@@ -808,7 +777,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	name = "Prime Legionnaire"
@@ -866,7 +834,7 @@ commented out pending rework*/
 	supervisors = "the Decani and Centurion."
 	display_order = JOB_DISPLAY_ORDER_RECRUITLEG
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
-
+	body_traits = list(TRAIT_BIG_LEAGUES)
 	loadout_options = list(
 		/datum/outfit/loadout/recruittribal,	// Lance, Bola, Big Leagues (Fresh tribal, meant to go melee)
 		/datum/outfit/loadout/recruitlegion,	// .357 Revolver, Machete, 2 x prefilled Molotovs
@@ -885,7 +853,6 @@ commented out pending rework*/
 	. = ..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
 	name = "Recruit Legionnaire"
@@ -939,6 +906,7 @@ commented out pending rework*/
 	display_order = JOB_DISPLAY_ORDER_IMMUNE
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
 	exp_requirements = 300
+	body_traits = list(TRAIT_MARS_TEACH)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
 	name = "Immune"
@@ -960,7 +928,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)
 
 // FORGE MASTER
 
@@ -974,6 +941,7 @@ commented out pending rework*/
 	display_order = JOB_DISPLAY_ORDER_CAMPFOLLOWER
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower
 	exp_requirements = 300
+	body_traits = list(TRAIT_BIG_LEAGUES,TRAIT_TECHNOPHREAK)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower
 	name = "Legion Forgemaster"
@@ -999,8 +967,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gladius)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/spatha)
@@ -1015,7 +981,7 @@ commented out pending rework*/
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/strongrocket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steeltower)
-	
+
 
 // AUXILIA - Civilians with special training. Can sow new uniforms for soldiers who lost theirs, and are loyal so they would never abuse this.
 
@@ -1055,6 +1021,7 @@ commented out pending rework*/
 	ears = /obj/item/radio/headset/headset_legion
 	gloves = null
 	belt = null
+	body_traits = list(TRAIT_SURGERY_LOW,TRAIT_MARS_TEACH,TRAIT_TECHNOPHREAK)
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
@@ -1065,9 +1032,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
-	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tailor/legionuniform)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/warpaint)
 
@@ -1112,7 +1076,7 @@ commented out pending rework*/
 	display_order = JOB_DISPLAY_ORDER_LEGIONSLAVE
 	exp_requirements = 120
 	outfit = /datum/outfit/job/CaesarsLegion/slave
-
+	trait_add = list(TRAIT_MARS_TEACH)
 	loadout_options = list(
 		/datum/outfit/loadout/slaveservant,
 		/datum/outfit/loadout/slaveworker,
@@ -1131,7 +1095,6 @@ commented out pending rework*/
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)
 
 /datum/outfit/job/CaesarsLegion/slave
 	name = "Legion Slave"
@@ -1207,15 +1170,12 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	display_order = JOB_DISPLAY_ORDER_VENATOR
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 	exp_requirements = 1500
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_BIG_LEAGUES)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
-	ADD_TRAIT(H, TRAIT_TRIBAL, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator
 	name = "Legion Venator"

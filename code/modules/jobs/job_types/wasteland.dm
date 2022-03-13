@@ -73,7 +73,7 @@
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
 	gloves = 		/obj/item/clothing/gloves/combat
 	id = 			/obj/item/card/id/dogtag/enclave
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_PA_WEAR)
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 		/obj/item/grenade/flashbang=1,
@@ -87,8 +87,6 @@
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
 /datum/job/wasteland/enclavesci
 	title = "Enclave Scientist"
@@ -105,6 +103,7 @@
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
+	body_traits = list(TRAIT_UNETHICAL_PRACTITIONER,TRAIT_CHEMWHIZ,TRAIT_SURGERY_HIGH,TRAIT_MEDICALEXPERT,TRAIT_CYBERNETICIST_EXPERT)
 
 	outfit = /datum/outfit/job/wasteland/enclavesci
 
@@ -139,12 +138,6 @@
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
-	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-	ADD_TRAIT(H, TRAIT_UNETHICAL_PRACTITIONER, src) // Brainwashing
-
 
 /datum/job/wasteland/enclavelt
 	title = "Enclave Lieutenant"
@@ -179,7 +172,7 @@
 	shoes = /obj/item/clothing/shoes/f13/enclave/serviceboots
 	gloves = /obj/item/clothing/gloves/combat
 	id = /obj/item/card/id/dogtag/enclave
-
+	body_traits = list(TRAIT_HARD_YARDS, TRAIT_PA_WEAR, TRAIT_LIFEGIVER)
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
 		/obj/item/grenade/flashbang = 1,
@@ -194,8 +187,6 @@
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
 /datum/outfit/job/wasteland/enclavelt/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -331,7 +322,7 @@ Raider
 	selection_color = "#ff4747"
 	exp_requirements = 600
 	exp_type = EXP_TYPE_WASTELAND
-
+	body_traits = list(TRAIT_LONGPORKLOVER)
 	outfit = /datum/outfit/job/wasteland/f13raider
 
 	access = list()
@@ -445,7 +436,6 @@ Raider
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)
 
 	H.social_faction = FACTION_RAIDERS
 	add_verb(H, /mob/living/proc/creategang)
@@ -1290,7 +1280,7 @@ datum/job/wasteland/f13dendoctor
 /datum/outfit/job/wasteland/f13vigilante
 	name = "Vigilante"
 	jobtype = /datum/job/wasteland/f13vigilante
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIGHT_STEP)
 	id = /obj/item/card/id/dogtag/vigilante
 	belt = /obj/item/storage/belt/military
 	shoes = /obj/item/clothing/shoes/f13/explorer
@@ -1309,8 +1299,6 @@ datum/job/wasteland/f13dendoctor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
 
 /datum/outfit/loadout/desert_ranger
 	name = "Desert Ranger"
@@ -1377,8 +1365,6 @@ datum/job/wasteland/f13dendoctor
 
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
-	ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
 
 //New tribal role. Replaces old tribe stuff.
 /datum/job/wasteland/f13tribal
@@ -1395,7 +1381,7 @@ datum/job/wasteland/f13dendoctor
 
 	access = list()
 	minimal_access = list()
-
+	body_traits = list(TRAIT_TRIBAL,TRAIT_TRAPPER,TRAIT_MACHINE_SPIRITS,TRAIT_AUTO_DRAW,TRAIT_HARD_YARDS)
 	loadout_options = list(
 	/datum/outfit/loadout/brawler,
 	/datum/outfit/loadout/spearman,
@@ -1424,12 +1410,6 @@ datum/job/wasteland/f13dendoctor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TRIBAL, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_TRAPPER, src)
-	ADD_TRAIT(H, TRAIT_MACHINE_SPIRITS, src)
-	ADD_TRAIT(H, TRAIT_AUTO_DRAW, src)
-	ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	H.grant_language(/datum/language/tribal)
 	var/list/recipes = list(
 		/datum/crafting_recipe/tribal_pa,

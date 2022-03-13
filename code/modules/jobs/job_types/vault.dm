@@ -20,8 +20,6 @@ here's a tip, go search DEFINES/access.dm
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
 /*
 Overseer
 */
@@ -169,9 +167,6 @@ Medical Doctor
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
-	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 
 /*
 Scientist
@@ -211,7 +206,6 @@ Scientist
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_SURGERY_MID, src) //they need this for dissections
 
 /*
 Security Officer
