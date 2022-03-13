@@ -327,11 +327,6 @@
 		if(preference_source && !PDA.equipped) //PDA's screen color, font style and look depend on client preferences.
 			PDA.update_style(preference_source)
 
-	if(chemwhiz == TRUE)
-		ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
-
-	if(pa_wear == TRUE)
-		ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
 	//Fortuna edit start. radio management
 	if(J.faction && ears)

@@ -995,7 +995,7 @@ commented out pending rework*/
 	display_order = JOB_DISPLAY_ORDER_AUXILIA
 	outfit = /datum/outfit/job/CaesarsLegion/auxilia
 	exp_requirements = 600
-
+	body_traits = list(TRAIT_SURGERY_LOW,TRAIT_MARS_TEACH,TRAIT_TECHNOPHREAK)
 	loadout_options = list(
 		/datum/outfit/loadout/auxassist, // Keep track of the money, handle trading beneath the warriors
 		/datum/outfit/loadout/auxmedicus, // Do surgery, medical tasks.
@@ -1021,7 +1021,6 @@ commented out pending rework*/
 	ears = /obj/item/radio/headset/headset_legion
 	gloves = null
 	belt = null
-	body_traits = list(TRAIT_SURGERY_LOW,TRAIT_MARS_TEACH,TRAIT_TECHNOPHREAK)
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/healingpowder = 2,
@@ -1076,7 +1075,7 @@ commented out pending rework*/
 	display_order = JOB_DISPLAY_ORDER_LEGIONSLAVE
 	exp_requirements = 120
 	outfit = /datum/outfit/job/CaesarsLegion/slave
-	trait_add = list(TRAIT_MARS_TEACH)
+	body_traits = list(TRAIT_MARS_TEACH)
 	loadout_options = list(
 		/datum/outfit/loadout/slaveservant,
 		/datum/outfit/loadout/slaveworker,

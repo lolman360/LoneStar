@@ -58,7 +58,7 @@
 	exp_type = EXP_TYPE_FALLOUT
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_PA_WEAR)
 	outfit = /datum/outfit/job/wasteland/enclavesgt
 
 /datum/outfit/job/wasteland/enclavesgt
@@ -73,7 +73,6 @@
 	shoes = 		/obj/item/clothing/shoes/f13/enclave/serviceboots
 	gloves = 		/obj/item/clothing/gloves/combat
 	id = 			/obj/item/card/id/dogtag/enclave
-	body_traits = list(TRAIT_HARD_YARDS,TRAIT_PA_WEAR)
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=2,
 		/obj/item/grenade/flashbang=1,
@@ -152,7 +151,7 @@
 	selection_color = "#323232"
 	exp_requirements = 1500
 	exp_type = EXP_TYPE_ENCLAVE
-
+	body_traits = list(TRAIT_HARD_YARDS, TRAIT_PA_WEAR, TRAIT_LIFEGIVER)
 	access = list(ACCESS_ENCLAVE)
 	minimal_access = list(ACCESS_ENCLAVE)
 
@@ -172,7 +171,7 @@
 	shoes = /obj/item/clothing/shoes/f13/enclave/serviceboots
 	gloves = /obj/item/clothing/gloves/combat
 	id = /obj/item/card/id/dogtag/enclave
-	body_traits = list(TRAIT_HARD_YARDS, TRAIT_PA_WEAR, TRAIT_LIFEGIVER)
+
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super = 2,
 		/obj/item/grenade/flashbang = 1,
@@ -1268,7 +1267,7 @@ datum/job/wasteland/f13dendoctor
 	selection_color = "#76885f"
 	exp_requirements = 3000
 	exp_type = EXP_TYPE_FALLOUT
-
+	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIGHT_STEP)
 	outfit = /datum/outfit/job/wasteland/f13vigilante
 
 	loadout_options = list(
@@ -1280,7 +1279,6 @@ datum/job/wasteland/f13dendoctor
 /datum/outfit/job/wasteland/f13vigilante
 	name = "Vigilante"
 	jobtype = /datum/job/wasteland/f13vigilante
-	body_traits = list(TRAIT_HARD_YARDS,TRAIT_LIGHT_STEP)
 	id = /obj/item/card/id/dogtag/vigilante
 	belt = /obj/item/storage/belt/military
 	shoes = /obj/item/clothing/shoes/f13/explorer

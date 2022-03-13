@@ -26,8 +26,8 @@
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/followers)
 
-Administrator
-*/
+//Administrator
+
 /datum/job/followers/f13leadpractitioner
 	title = "Followers Administrator"
 	flag = F13LEADPRACTITIONER
@@ -173,7 +173,6 @@ Practitioner
 	jobtype =	/datum/job/followers/f13practitioner
 	uniform =	/obj/item/clothing/under/f13/followers
 	id =	/obj/item/card/id/silver
-	chemwhiz =	TRUE
 	backpack =	/obj/item/storage/backpack/medic
 	belt = /obj/item/gun/energy/laser/complianceregulator
 	satchel =	/obj/item/storage/backpack/satchel/med

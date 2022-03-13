@@ -52,7 +52,7 @@ Overseer
 /datum/outfit/job/vault/f13overseer
 	name = "Overseer"
 	jobtype = /datum/job/vault/f13overseer
-	chemwhiz = TRUE
+
 
 	implants = list(/obj/item/implant/mindshield)
 
@@ -149,7 +149,7 @@ Medical Doctor
 /datum/outfit/job/vault/f13doctor
 	name = "Medical Doctor"
 	jobtype = /datum/job/vault/f13doctor
-	chemwhiz = TRUE
+
 	//pda
 	uniform = 		/obj/item/clothing/under/f13/vault13
 	ears = 			/obj/item/radio/headset/headset_vault
@@ -191,7 +191,7 @@ Scientist
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"
 	jobtype = /datum/job/vault/f13vaultscientist
-	chemwhiz = TRUE
+
 
 	//pda
 	uniform = 		/obj/item/clothing/under/f13/vault13

@@ -60,7 +60,7 @@ Elder
 
 	total_positions = 0
 	spawn_positions = 0
-	body_traits = list(TRAIT_CHEMWHIZ)
+	body_traits = list(TRAIT_CHEMWHIZ, TRAIT_PA_WEAR)
 
 	outfit = /datum/outfit/job/bos/f13elder
 
@@ -75,7 +75,6 @@ Elder
 /datum/outfit/job/bos/f13elder
 	name = "Elder"
 	jobtype = /datum/job/bos/f13elder
-	pa_wear = TRUE
 	suit =	/obj/item/clothing/suit/f13/elder
 	glasses =	/obj/item/clothing/glasses/night
 	accessory =	/obj/item/clothing/accessory/bos/elder
@@ -226,7 +225,6 @@ Head Scribe
 /datum/outfit/job/bos/f13headscribe
 	name = "Head Scribe"
 	jobtype = /datum/job/bos/f13headscribe
-	chemwhiz = TRUE
 	uniform = 		/obj/item/clothing/under/syndicate/brotherhood
 	accessory = 	/obj/item/clothing/accessory/bos/headscribe
 	glasses =       /obj/item/clothing/glasses/night
@@ -603,7 +601,6 @@ Senior Scribe
 /datum/outfit/job/bos/f13seniorscribe
 	name =	"Senior Scribe"
 	jobtype =	/datum/job/bos/f13seniorscribe
-	chemwhiz =	TRUE
 	uniform =	/obj/item/clothing/under/syndicate/brotherhood
 	shoes =	/obj/item/clothing/shoes/combat
 	belt =	/obj/item/storage/belt/utility/full/engi
