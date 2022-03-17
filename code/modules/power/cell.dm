@@ -409,6 +409,10 @@
 	name = "toy mag burst rifle power supply"
 	maxcharge = 4000
 
+/obj/item/stock_parts/cell/pneumatic
+	name = "compressed air reservoir "
+	maxcharge = 1600
+
 
 ////////////////////////
 // FALLOUT POWERCELLS //

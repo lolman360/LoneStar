@@ -19,7 +19,7 @@
 	caliber = "a762"
 	max_ammo = 5
 	multiload = 1
-	
+
 /obj/item/ammo_box/magazine/internal/boltaction/hunting/remington
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
@@ -34,3 +34,9 @@
 	caliber = "a50MG"
 	max_ammo = 4
 	multiload = 0 //one bullet at a time
+
+/obj/item/ammo_box/magazine/internal/tihar
+	ammo_type = /obj/item/ammo_casing/caseless/magnetic/bearing
+	caliber = "a15"
+	max_ammo = 15
+	multiload = 1

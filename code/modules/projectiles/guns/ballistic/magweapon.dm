@@ -99,3 +99,24 @@
 /obj/item/gun/ballistic/automatic/magrifle/pistol/nopin
 	pin = null
 	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/magrifle/tihar
+	name = "repeating air rifle"
+	desc = "A simple multi-stroke air rifle. Extremely quiet, with a good rate of fire. Suffers in performance as the tank runs out."
+	icon_state = "magrifle"
+	item_state = "arg"
+	mag_type = /obj/item/ammo_box/magazine/internal/tihar
+	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
+	suppressed = TRUE
+	can_suppress = FALSE
+	extra_damage = 37.5
+	burst_size = 1
+	fire_delay = 3
+	spread = 0
+	cell_type = /obj/item/stock_parts/cell/pneumatic //we use a fake cell
+
+/obj/item/gun/ballistic/automatic/magrifle/tihar/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
+	if(cell.charge)
+		extra_damage = (cell.charge / 160) > 6 ? 37.5 : (cell.charge / 160) * 5
+		extra_speed = TILES_TO_PIXELS((cell.charge / 160))
+	..()

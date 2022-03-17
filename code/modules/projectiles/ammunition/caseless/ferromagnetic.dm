@@ -37,3 +37,10 @@
 	pellets = 1
 	variance = 0
 
+/obj/item/ammo_casing/caseless/magnetic/bearing
+	name = "ball bearing"
+	projectile_type = /obj/item/projectile/bullet/bearing
+	desc = "A 15mm diameter ball bearing."
+	caliber = "a15"
+	icon_state = "mag-casing-live" //todo
+	energy_cost = 160
