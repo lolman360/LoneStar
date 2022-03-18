@@ -1091,6 +1091,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/marksmancarbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/plasmasniper)
 
 /datum/outfit/job/ncr/f13logisticsofficer		// Grease Gun, 9mm sidearm, Survival knife, C-4 bomb, Extra materials, Full blueprints
 	name = "NCR Logistics Officer"
