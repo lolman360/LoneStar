@@ -48,7 +48,8 @@
 
 /obj/item/gun/ballistic/automatic/magrifle/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	var/obj/item/ammo_casing/caseless/magnetic/shot = chambered
-	cell.use(shot.energy_cost)
+	if(istype(shot))
+		cell.use(shot.energy_cost)
 	. = ..()
 
 /obj/item/gun/ballistic/automatic/magrifle/get_cell()
@@ -129,7 +130,7 @@
 		else
 			user.visible_message("<span class='notice'>[user] starts pumping the handle on [src].</span>", \
 						"<span class='notice'>You start pumping the handle on [src].</span>")
-			for(cell.charge, cell.charge >= cell.maxcharge)
+			while(cell.charge < cell.maxcharge)
 				if(!do_after(user, 10, src))
 					break
 				playsound(get_turf(src),'sound/weapons/gunshot_silenced.ogg',25,1)
@@ -137,3 +138,76 @@
 			return
 	else
 		return ..()
+
+/obj/item/gun/ballistic/automatic/magrifle/tihar/helsing
+	name = "revolving pneumatic crossbow"
+	desc = "A multi-barrel airgun that fires arrows. Extremely quiet, with a good rate of fire. Suffers in performance as the tank runs out."
+	icon_state = "magrifle"
+	item_state = "arg"
+	mag_type = /obj/item/ammo_box/magazine/internal/bow/xbow
+	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
+	suppressed = TRUE
+	can_suppress = FALSE
+	extra_damage = 15
+	burst_size = 1
+	fire_delay = 8
+	var/fire_cost = 160
+
+/obj/item/gun/ballistic/automatic/magrifle/tihar/helsing/can_shoot()
+	if(QDELETED(cell))
+		return 0
+	if(cell.charge < fire_cost * burst_size)
+		return 0
+	if(!magazine || !magazine.ammo_count(0))
+		return 0
+	else
+		return 1
+
+/obj/item/gun/ballistic/automatic/magrifle/tihar/helsing/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
+	cell.use(fire_cost)
+	. = ..()
+
+/obj/item/gun/ballistic/automatic/magrifle/voltdriver
+	name = "improvised coilgun"
+	desc = "A simple coilgun powered by energy cells. Fires 15mm ball bearings."
+	icon_state = "gaussf2"
+	slot_flags = NONE
+	mag_type = /obj/item/ammo_box/magazine/internal/tihar
+	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
+	w_class = WEIGHT_CLASS_HUGE
+	fire_delay = 10
+	recoil = 1
+	extra_damage = 45
+	extra_speed = TILES_TO_PIXELS(100)
+	weapon_weight = WEAPON_HEAVY
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+
+/obj/item/gun/ballistic/automatic/magrifle/voltdriver/AltClick(mob/user)
+	if(get_dist(src, user)<2)
+		if(cell)
+			cell.forceMove(drop_location())
+			user.put_in_hands(cell)
+			cell.update_icon()
+			cell = null
+			to_chat(user, "<span class='notice'>You pull the cell out of \the [src].</span>")
+			playsound(src, 'sound/f13weapons/equipsounds/laserreload.ogg', 50, 1)
+		else
+			to_chat(user, "<span class='notice'>There's no cell in \the [src].</span>")
+		return
+	else
+		return
+
+/obj/item/gun/ballistic/automatic/magrifle/voltdriver/attackby(obj/item/A, mob/user, params)
+	..()
+	if (istype(A, /obj/item/stock_parts/cell))
+		var/obj/item/stock_parts/cell/CE = A
+		if(!cell && istype(CE, cell_type))
+			if(user.transferItemToLoc(CE, src))
+				cell = CE
+				to_chat(user, "<span class='notice'>You load a new cell into \the [src].</span>")
+				A.update_icon()
+				update_icon()
+				return 1
+			else
+				to_chat(user, "<span class='warning'>You cannot seem to get \the [src] out of your hands!</span>")
+				return

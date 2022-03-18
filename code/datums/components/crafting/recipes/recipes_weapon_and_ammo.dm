@@ -216,6 +216,29 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/a15mm
+	name = "15mm ball bearings box"
+	result = /obj/item/ammo_box/a15
+	reqs = list(
+	/obj/item/stack/crafting/goodparts = 1,
+	)
+	tools = list(TOOL_WELDER)
+	time = 40
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+/datum/crafting_recipe/a15mmmag
+	name = "15mm ball bearing speedtube"
+	result = /obj/item/ammo_box/tube/a15/empty
+	reqs = list(
+	/obj/item/stack/crafting/metalparts = 1,
+	)
+	tools = list(TOOL_WELDER)
+	time = 40
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+
+
 
 /datum/crafting_recipe/m22
 	name = ".22 Long Rifle ammo box"

@@ -932,7 +932,6 @@
 
 */
 
-//Trash for removal
 /obj/item/ammo_box/foambox
 	name = "ammo box (Foam Darts)"
 	icon = 'icons/obj/guns/toy.dmi'
@@ -952,3 +951,25 @@
 	icon_state = "foambox_riot"
 	ammo_type = /obj/item/ammo_casing/caseless/foam_dart/riot
 	custom_materials = list(/datum/material/iron = 50000)
+
+//15mm
+/obj/item/ammo_box/tube/a15
+	name = "speed loader tube (ball bearings)"
+	desc = "Designed to quickly reload air-rifles and improvised coilguns."
+	icon_state = "15tube"
+	caliber = "15"
+	ammo_type = /obj/item/ammo_casing/caseless/magnetic/bearing
+	max_ammo = 15
+
+/obj/item/ammo_box/tube/a15/empty
+	start_empty = TRUE
+
+/obj/item/ammo_box/a15
+	name = "box of 15mm ball bearings"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "ammobox"
+	multiple_sprites = 1
+	ammo_type = /obj/item/ammo_casing/caseless/magnetic/bearing
+	max_ammo = 60
+	w_class = WEIGHT_CLASS_SMALL
+	custom_materials = list(/datum/material/titaium = 10000)
