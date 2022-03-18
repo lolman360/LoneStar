@@ -31,7 +31,7 @@
 /obj/item/gun/ballistic/automatic/magrifle/examine(mob/user)
 	. = ..()
 	if(cell)
-		. += "<span class='notice'>[src]'s cell is [round(cell.charge / cell.maxcharge, 0.1) * 100]% full.</span>"
+		. += "<span class='notice'>[cell] in [src] is [round(cell.charge / cell.maxcharge, 0.1) * 100]% full.</span>"
 	else
 		. += "<span class='notice'>[src] doesn't seem to have a cell!</span>"
 
@@ -120,3 +120,20 @@
 		extra_damage = (cell.charge / 160) > 6 ? 37.5 : (cell.charge / 160) * 5
 		extra_speed = TILES_TO_PIXELS((cell.charge / 160))
 	..()
+
+/obj/item/gun/ballistic/automatic/magrifle/tihar/attack_hand(mob/user)
+	if(user.get_active_held_item() != src && src.loc == user)
+		if(cell.charge >= cell.maxcharge)
+			to_chat(user,"<span class = 'notice'>The [src]'s [cell] is already full!</span>")
+			return
+		else
+			user.visible_message("<span class='notice'>[user] starts pumping the handle on [src].</span>", \
+						"<span class='notice'>You start pumping the handle on [src].</span>")
+			for(cell.charge, cell.charge >= cell.maxcharge)
+				if(!do_after(user, 10, src))
+					break
+				playsound(get_turf(src),'sound/weapons/gunshot_silenced.ogg',25,1)
+				cell.charge += 1
+			return
+	else
+		return ..()
